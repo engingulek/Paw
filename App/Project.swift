@@ -12,7 +12,7 @@ let appTarget = Target(
     sources: "Sources/**",
     resources:"Resources/**",
     dependencies: [
-        .project(target: "DependencyKit", path: .relativeToRoot("Core/DependencyKit")),
+        .project(target: "DependencyKit", path: .relativeToRoot("Kits/CoreKits/DependencyKit")),
         .project(target: "OnboardingModule", path: .relativeToRoot("Modules/DomainModules/OnboardingModule"))
     ]
 )

@@ -1,18 +1,30 @@
-//
-//  OnboardiingViewController.swift
-//  OnboardingModule
-//
-//  Created by engin gülek on 8.11.2023.
-//
 
 import UIKit
-public final class OnboardiingViewController: UIViewController {
+import CommonKit
 
-   public override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .blue
+typealias Ables = UIViewControllerAble
+
+protocol OnboardiingViewControllerInterfaca : AnyObject,Ables {
+    var presenter : OnboardPresenterInterface? {get set}
+}
+
+public final class OnboardiingViewController: UIViewController {
+    
+    var presenter: OnboardPresenterInterface?
+    
+    public override func loadView() {
+        let onboardView = OnboardView()
+        view =  onboardView
     }
     
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter?.viewDidLoad()
+    }
+}
 
-
+extension OnboardiingViewController : OnboardiingViewControllerInterfaca {
+   
+    
+    
 }

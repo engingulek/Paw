@@ -5,11 +5,22 @@
       location = "group:App/Paw.xcodeproj">
    </FileRef>
    <Group
-      location = "group:Core"
-      name = "Core">
-      <FileRef
-         location = "group:DependencyKit/DependencyKit.xcodeproj">
-      </FileRef>
+      location = "group:Kits"
+      name = "Kits">
+      <Group
+         location = "group:CoreKits"
+         name = "CoreKits">
+         <FileRef
+            location = "group:DependencyKit/DependencyKit.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:SharedKits"
+         name = "SharedKits">
+         <FileRef
+            location = "group:CommonKit/CommonKit.xcodeproj">
+         </FileRef>
+      </Group>
    </Group>
    <Group
       location = "group:Modules"

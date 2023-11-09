@@ -14,10 +14,24 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "77A705E112BA78834D2901D0"
+               BuildableName = "CommonKit.framework"
+               BlueprintName = "CommonKit"
+               ReferencedContainer = "container:Kits/SharedKits/CommonKit/CommonKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "912734675B50508DEB00D7F3"
                BuildableName = "DependencyKit.framework"
                BlueprintName = "DependencyKit"
-               ReferencedContainer = "container:Core/DependencyKit/DependencyKit.xcodeproj">
+               ReferencedContainer = "container:Kits/CoreKits/DependencyKit/DependencyKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -45,6 +59,20 @@
                BlueprintIdentifier = "369EADD5F098B373878CEA76"
                BuildableName = "OnboardingModuleInterface.framework"
                BlueprintName = "OnboardingModuleInterface"
+               ReferencedContainer = "container:Modules/DomainModules/OnboardingModule/OnboardingModule.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "38F3660BE7257B6D1592379B"
+               BuildableName = "OnboardingModule_OnboardingModule.bundle"
+               BlueprintName = "OnboardingModule_OnboardingModule"
                ReferencedContainer = "container:Modules/DomainModules/OnboardingModule/OnboardingModule.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -85,10 +113,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "912734675B50508DEB00D7F3"
-            BuildableName = "DependencyKit.framework"
-            BlueprintName = "DependencyKit"
-            ReferencedContainer = "container:Core/DependencyKit/DependencyKit.xcodeproj">
+            BlueprintIdentifier = "77A705E112BA78834D2901D0"
+            BuildableName = "CommonKit.framework"
+            BlueprintName = "CommonKit"
+            ReferencedContainer = "container:Kits/SharedKits/CommonKit/CommonKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </LaunchAction>
@@ -101,10 +129,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "912734675B50508DEB00D7F3"
-            BuildableName = "DependencyKit.framework"
-            BlueprintName = "DependencyKit"
-            ReferencedContainer = "container:Core/DependencyKit/DependencyKit.xcodeproj">
+            BlueprintIdentifier = "77A705E112BA78834D2901D0"
+            BuildableName = "CommonKit.framework"
+            BlueprintName = "CommonKit"
+            ReferencedContainer = "container:Kits/SharedKits/CommonKit/CommonKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

@@ -9,8 +9,7 @@ protocol OnboardiingRouterInterface  {
 public final class  OnboardingRouter : OnboardingModuleInterfac {
     public init() {}
    public func onboardingViewController() -> UIViewController {
-       let view = UIViewController()
-       view.view.backgroundColor = .red
+       let view = OnboardiingViewController()
        return view
     }
 }

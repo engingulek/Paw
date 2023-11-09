@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		22129BBCDC8C69B441A9514C /* OnboardingModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 3D181EE3A6CDF26529E30209 /* OnboardingModuleInterface.framework */; };
+		2A067D029D309C6FCE749DE4 /* TuistAssets+OnboardingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A3C8C1B10322789F1DE24 /* TuistAssets+OnboardingModule.swift */; };
+		3CA22F8C6C34B7CBF0F205DE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 646BAC3F0AF89BC85645672A /* SnapKit */; };
+		401F19449352D90C52A51ECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A56FDDCFF56745A9107E53F /* Assets.xcassets */; };
+		67276A869E008ABD8FBE42D2 /* CommonKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 231D6D41433FEEF74D0FCA44 /* CommonKit.framework */; };
 		6796CB09086A695AD1FACF1C /* OnboardingModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7096757BC66320007DCE86E /* OnboardingModuleInterface.swift */; };
+		828A9BFC0AFB5B195910CB05 /* TuistBundle+OnboardingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566BD5A8A2AF50C374326034 /* TuistBundle+OnboardingModule.swift */; };
 		A6C5A36779CCD576D3A8B4AA /* OnboardiingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7187CCB1C58D14AC60053790 /* OnboardiingViewController.swift */; };
 		A7F3F3BDA5043F148F9F0895 /* DependencyKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = EB3A3E3C1659084A1AE6F0A2 /* DependencyKit.framework */; };
+		B0C583814F4EFFF01EEBA053 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5862F88E0528EC32913F6 /* OnboardView.swift */; };
+		C107BD06ECD29834B71EAD0D /* OnboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5568FCDDF47C6311EED1DC /* OnboardPresenter.swift */; };
 		F3BD2AA655143415C1A448B3 /* OnboardiingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF263EA1036EAA7CBF08022 /* OnboardiingRouter.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,9 +29,26 @@
 			remoteGlobalIDString = 369EADD5F098B373878CEA76;
 			remoteInfo = OnboardingModuleInterface;
 		};
+		8C944D6AA2F860B1A25363F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 864032F24C3D8E1ECEDA8B17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38F3660BE7257B6D1592379B;
+			remoteInfo = OnboardingModule_OnboardingModule;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1F7D2B04FD1168C0E40A5E7C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5197F99F85AF466AF6E0A263 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -40,6 +64,7 @@
 			buildActionMask = 8;
 			dstSubfolderSpec = 16;
 			files = (
+				67276A869E008ABD8FBE42D2 /* CommonKit.framework in Dependencies */,
 				A7F3F3BDA5043F148F9F0895 /* DependencyKit.framework in Dependencies */,
 				22129BBCDC8C69B441A9514C /* OnboardingModuleInterface.framework in Dependencies */,
 			);
@@ -60,16 +85,31 @@
 
 /* Begin PBXFileReference section */
 		06181049C7146633EAF76235 /* OnboardingModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingModuleInterface-Info.plist"; sourceTree = "<group>"; };
+		0A56FDDCFF56745A9107E53F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		231D6D41433FEEF74D0FCA44 /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D181EE3A6CDF26529E30209 /* OnboardingModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		566BD5A8A2AF50C374326034 /* TuistBundle+OnboardingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+OnboardingModule.swift"; sourceTree = "<group>"; };
 		6006C0517F34AF2F34B6511C /* OnboardingModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingModule-Info.plist"; sourceTree = "<group>"; };
 		6F517901FD839BD3A04C2113 /* OnboardingModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7187CCB1C58D14AC60053790 /* OnboardiingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardiingViewController.swift; sourceTree = "<group>"; };
+		8F5568FCDDF47C6311EED1DC /* OnboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPresenter.swift; sourceTree = "<group>"; };
+		9E6A3C8C1B10322789F1DE24 /* TuistAssets+OnboardingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+OnboardingModule.swift"; sourceTree = "<group>"; };
+		ACB5862F88E0528EC32913F6 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
 		ACF263EA1036EAA7CBF08022 /* OnboardiingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardiingRouter.swift; sourceTree = "<group>"; };
+		B2F4AB108A12A8C311564E7C /* OnboardingModule_OnboardingModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingModule_OnboardingModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7096757BC66320007DCE86E /* OnboardingModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModuleInterface.swift; sourceTree = "<group>"; };
+		BDB01826376F4CC1AF04CB6E /* OnboardingModule_OnboardingModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingModule_OnboardingModule-Info.plist"; sourceTree = "<group>"; };
 		EB3A3E3C1659084A1AE6F0A2 /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		205766E289B6B6D7D77278BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		660BA02F2B6C5D816662AADE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CA22F8C6C34B7CBF0F205DE /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +131,7 @@
 		080FCA91E2A05DAFA073B578 /* InfoPlists */ = {
 			isa = PBXGroup;
 			children = (
+				BDB01826376F4CC1AF04CB6E /* OnboardingModule_OnboardingModule-Info.plist */,
 				6006C0517F34AF2F34B6511C /* OnboardingModule-Info.plist */,
 				06181049C7146633EAF76235 /* OnboardingModuleInterface-Info.plist */,
 			);
@@ -101,6 +143,8 @@
 			children = (
 				ACF263EA1036EAA7CBF08022 /* OnboardiingRouter.swift */,
 				7187CCB1C58D14AC60053790 /* OnboardiingViewController.swift */,
+				8F5568FCDDF47C6311EED1DC /* OnboardPresenter.swift */,
+				ACB5862F88E0528EC32913F6 /* OnboardView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -117,8 +161,17 @@
 			isa = PBXGroup;
 			children = (
 				080FCA91E2A05DAFA073B578 /* InfoPlists */,
+				D38DC77CD6289AFF4BB8B3DA /* Sources */,
 			);
 			path = Derived;
+			sourceTree = "<group>";
+		};
+		6C6C76F895ABACC7803F454C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0A56FDDCFF56745A9107E53F /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		954D5EDBCEDF4873EC7AD2B8 /* Frameworks */ = {
@@ -133,6 +186,7 @@
 			children = (
 				5A0EF76108511371EF05D423 /* Derived */,
 				44B853167B8D3C431B182C42 /* InterfaceSource */,
+				6C6C76F895ABACC7803F454C /* Resources */,
 				3B9039ED2CF016B05478A155 /* Sources */,
 			);
 			name = Project;
@@ -147,10 +201,21 @@
 			);
 			sourceTree = "<group>";
 		};
+		D38DC77CD6289AFF4BB8B3DA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9E6A3C8C1B10322789F1DE24 /* TuistAssets+OnboardingModule.swift */,
+				566BD5A8A2AF50C374326034 /* TuistBundle+OnboardingModule.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		EF72315DC57188DB40B41395 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				231D6D41433FEEF74D0FCA44 /* CommonKit.framework */,
 				EB3A3E3C1659084A1AE6F0A2 /* DependencyKit.framework */,
+				B2F4AB108A12A8C311564E7C /* OnboardingModule_OnboardingModule.bundle */,
 				6F517901FD839BD3A04C2113 /* OnboardingModule.framework */,
 				3D181EE3A6CDF26529E30209 /* OnboardingModuleInterface.framework */,
 			);
@@ -178,6 +243,23 @@
 			productReference = 3D181EE3A6CDF26529E30209 /* OnboardingModuleInterface.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		38F3660BE7257B6D1592379B /* OnboardingModule_OnboardingModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49127BBB127807458BE37D37 /* Build configuration list for PBXNativeTarget "OnboardingModule_OnboardingModule" */;
+			buildPhases = (
+				B67CD4680EDF077CEA3DA70F /* Resources */,
+				1F7D2B04FD1168C0E40A5E7C /* Embed Frameworks */,
+				205766E289B6B6D7D77278BA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OnboardingModule_OnboardingModule;
+			productName = OnboardingModule_OnboardingModule;
+			productReference = B2F4AB108A12A8C311564E7C /* OnboardingModule_OnboardingModule.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		F49C9490020276A82EBF4B85 /* OnboardingModule */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 245BCF5E47B65D773BE02455 /* Build configuration list for PBXNativeTarget "OnboardingModule" */;
@@ -192,8 +274,12 @@
 			);
 			dependencies = (
 				086BD3293B29C38FF0EA2497 /* PBXTargetDependency */,
+				6E5A6F4774365BBA380982D2 /* PBXTargetDependency */,
 			);
 			name = OnboardingModule;
+			packageProductDependencies = (
+				646BAC3F0AF89BC85645672A /* SnapKit */,
+			);
 			productName = OnboardingModule;
 			productReference = 6F517901FD839BD3A04C2113 /* OnboardingModule.framework */;
 			productType = "com.apple.product-type.framework";
@@ -217,11 +303,15 @@
 				en,
 			);
 			mainGroup = CD36309821B63ECCFB065221;
+			packageReferences = (
+				3C7DF6745EC84E00FCBBF8D8 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = EF72315DC57188DB40B41395 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				F49C9490020276A82EBF4B85 /* OnboardingModule */,
+				38F3660BE7257B6D1592379B /* OnboardingModule_OnboardingModule */,
 				369EADD5F098B373878CEA76 /* OnboardingModuleInterface */,
 			);
 		};
@@ -242,6 +332,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B67CD4680EDF077CEA3DA70F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				401F19449352D90C52A51ECA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -257,6 +355,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A067D029D309C6FCE749DE4 /* TuistAssets+OnboardingModule.swift in Sources */,
+				828A9BFC0AFB5B195910CB05 /* TuistBundle+OnboardingModule.swift in Sources */,
+				C107BD06ECD29834B71EAD0D /* OnboardPresenter.swift in Sources */,
+				B0C583814F4EFFF01EEBA053 /* OnboardView.swift in Sources */,
 				F3BD2AA655143415C1A448B3 /* OnboardiingRouter.swift in Sources */,
 				A6C5A36779CCD576D3A8B4AA /* OnboardiingViewController.swift in Sources */,
 			);
@@ -270,6 +372,12 @@
 			name = OnboardingModuleInterface;
 			target = 369EADD5F098B373878CEA76 /* OnboardingModuleInterface */;
 			targetProxy = 7DAF426F69714CBA59576474 /* PBXContainerItemProxy */;
+		};
+		6E5A6F4774365BBA380982D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OnboardingModule_OnboardingModule;
+			target = 38F3660BE7257B6D1592379B /* OnboardingModule_OnboardingModule */;
+			targetProxy = 8C944D6AA2F860B1A25363F7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -308,6 +416,26 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		4708347F2A39E86906D18D4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/OnboardingModule_OnboardingModule-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.OnboardingModule.resources;
+				PRODUCT_NAME = OnboardingModule_OnboardingModule;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
 		};
 		564993F472B27CAEFDA89866 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -365,6 +493,27 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		89ACA31DF1CC9461194C3AA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/OnboardingModule_OnboardingModule-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.OnboardingModule.resources;
+				PRODUCT_NAME = OnboardingModule_OnboardingModule;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -545,6 +694,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		49127BBB127807458BE37D37 /* Build configuration list for PBXNativeTarget "OnboardingModule_OnboardingModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89ACA31DF1CC9461194C3AA4 /* Debug */,
+				4708347F2A39E86906D18D4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B09C2A4DE7D1BAB19EF20DBE /* Build configuration list for PBXProject "OnboardingModule" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -555,6 +713,24 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3C7DF6745EC84E00FCBBF8D8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		646BAC3F0AF89BC85645672A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 864032F24C3D8E1ECEDA8B17 /* Project object */;
 }

@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		24FDA39EE873309DBD7E8813 /* OnboardingModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB464AE38F621748E4F61BF /* OnboardingModuleInterface.framework */; };
 		2E53B569F24FBC83A974CB42 /* TuistBundle+Paw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10348E04D5F333A54C38FDFB /* TuistBundle+Paw.swift */; };
+		3D827966CCB96EF58D23FFCB /* CommonKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E65F1E8D330DFCBD100AAF9C /* CommonKit.framework */; };
 		409A4827EAACA9109DCFFF6D /* DependencyRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC07A8937CC26D4CA47454 /* DependencyRegister.swift */; };
+		570C1CB5BA50656C7AAE0CA5 /* OnboardingModule_OnboardingModule.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 9DE43C9C6BAE2591578EC6B0 /* OnboardingModule_OnboardingModule.bundle */; };
+		81BFEAB2DE7FA233F5CC89B1 /* OnboardingModule_OnboardingModule.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DE43C9C6BAE2591578EC6B0 /* OnboardingModule_OnboardingModule.bundle */; };
 		953526606B257D91EDA97A29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FBF796437F4D7943A366A3 /* AppDelegate.swift */; };
 		CD489541748176B9530562FF /* DependencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B46EAE9B881910DFED69AC /* DependencyKit.framework */; };
 		D31CA952D482AE8BF6FAE34A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F760D7C788EB003230DE08D5 /* LaunchScreen.storyboard */; };
@@ -17,6 +20,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		556430381C4058E7339A3AC4 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				570C1CB5BA50656C7AAE0CA5 /* OnboardingModule_OnboardingModule.bundle in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		F885D342BA9A7C7C199651EA /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,8 +48,10 @@
 		60FBF796437F4D7943A366A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7960F6481FA40E69436C4DF6 /* Paw-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Paw-Info.plist"; sourceTree = "<group>"; };
 		996DF3855B80F01B4D7F0AF4 /* Paw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paw.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DE43C9C6BAE2591578EC6B0 /* OnboardingModule_OnboardingModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingModule_OnboardingModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADC07A8937CC26D4CA47454 /* DependencyRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyRegister.swift; sourceTree = "<group>"; };
 		DFB464AE38F621748E4F61BF /* OnboardingModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E65F1E8D330DFCBD100AAF9C /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F509BB75EF7C7A9609A5DF43 /* OnboardingModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F760D7C788EB003230DE08D5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D827966CCB96EF58D23FFCB /* CommonKit.framework in Frameworks */,
 				CD489541748176B9530562FF /* DependencyKit.framework in Frameworks */,
 				DC37F4176E3FD8015547FAB4 /* OnboardingModule.framework in Frameworks */,
 				24FDA39EE873309DBD7E8813 /* OnboardingModuleInterface.framework in Frameworks */,
@@ -58,7 +74,9 @@
 		42150FA3DD58CAF2A63483F5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				E65F1E8D330DFCBD100AAF9C /* CommonKit.framework */,
 				23B46EAE9B881910DFED69AC /* DependencyKit.framework */,
+				9DE43C9C6BAE2591578EC6B0 /* OnboardingModule_OnboardingModule.bundle */,
 				F509BB75EF7C7A9609A5DF43 /* OnboardingModule.framework */,
 				DFB464AE38F621748E4F61BF /* OnboardingModuleInterface.framework */,
 				996DF3855B80F01B4D7F0AF4 /* Paw.app */,
@@ -145,6 +163,7 @@
 				A7421AAEA4267B24ED72E4C2 /* Resources */,
 				F885D342BA9A7C7C199651EA /* Embed Frameworks */,
 				4C0FCAC812F1D7243A934E73 /* Frameworks */,
+				556430381C4058E7339A3AC4 /* Dependencies */,
 			);
 			buildRules = (
 			);
@@ -189,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D31CA952D482AE8BF6FAE34A /* LaunchScreen.storyboard in Resources */,
+				81BFEAB2DE7FA233F5CC89B1 /* OnboardingModule_OnboardingModule.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

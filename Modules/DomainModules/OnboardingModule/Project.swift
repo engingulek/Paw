@@ -1,6 +1,6 @@
 
 import ProjectDescription
-
+import ProjectDescriptionHelpers
 
 /*let interfaceTarget = Target(
     name: "OnboardingModuleInterface",
@@ -27,8 +27,11 @@ let interfaceTarget  = Target(
 )
 
 let dependensies : [TargetDependency] = [
-    .project(target: "DependencyKit", path: .relativeToRoot("Core/DependencyKit")),
-    .project(target: "OnboardingModuleInterface", path: .relativeToRoot("Modules/DomainModules/OnboardingModule"))
+    .project(target: "DependencyKit", path: .relativeToRoot("Kits/CoreKits/DependencyKit")),
+    .project(target: "OnboardingModuleInterface", path: .relativeToRoot("Modules/DomainModules/OnboardingModule")),
+    .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),
+    snapKit
+    
    
 ]
 
@@ -40,10 +43,10 @@ let framworkTarget =  Target(
     deploymentTarget: .iOS(targetVersion: "16.0", devices: .iphone),
     infoPlist: .default,
     sources: "Sources/**",
-    resources: ["Resources"],
+    resources: ["Resources/Assets.xcassets/**"],
     dependencies: dependensies
 )
 
 
 
-let project = Project(name: "OnboardingModule",packages: [],targets:[framworkTarget,interfaceTarget])
+let project = Project(name: "OnboardingModule",packages: [.snapKit],targets:[framworkTarget,interfaceTarget])
