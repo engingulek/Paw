@@ -29,6 +29,9 @@
          location = "group:DomainModules"
          name = "DomainModules">
          <FileRef
+            location = "group:AdoptingHomeModule/AdoptingHomeModule.xcodeproj">
+         </FileRef>
+         <FileRef
             location = "group:OnboardingModule/OnboardingModule.xcodeproj">
          </FileRef>
       </Group>

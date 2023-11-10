@@ -2,14 +2,15 @@
 import Foundation
 
 protocol OnboardPresenterInterface : AnyObject {
-    var router : OnboardiingRouterInterface? {get set}
-    var view : OnboardiingViewControllerInterfaca? {get set}
+   
     
     func viewDidLoad()
+    func selectedAdoptingView()
 }
 
 
 final class OnboardPresenter : OnboardPresenterInterface {
+   
     var router: OnboardiingRouterInterface?
     weak var view: OnboardiingViewControllerInterfaca?
     
@@ -23,4 +24,10 @@ extension OnboardPresenter {
     func viewDidLoad() {
         view?.setBackColorAble(color: .white)
     }
+    
+    func selectedAdoptingView() {
+        print("Test")
+        router?.toAdoptingViewController(view:view)
+    }
+    
 }

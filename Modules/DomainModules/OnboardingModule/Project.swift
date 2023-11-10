@@ -2,17 +2,7 @@
 import ProjectDescription
 import ProjectDescriptionHelpers
 
-/*let interfaceTarget = Target(
-    name: "OnboardingModuleInterface",
-    platform: .iOS,
-    product: .staticFramework,
-    bundleId: "com.ios.OnboardingModuleInterface",
-    deploymentTarget: .iOS(targetVersion: "16.0", devices: .iphone),
-    sources: "InterfaceSource/**")
 
-let interfaceTargetDependency : TargetDependency =  Project(
-    name: )
-                              */*/
 
 let interfaceTarget  = Target(
     name: "OnboardingModuleInterface",
@@ -27,10 +17,12 @@ let interfaceTarget  = Target(
 )
 
 let dependensies : [TargetDependency] = [
-    .project(target: "DependencyKit", path: .relativeToRoot("Kits/CoreKits/DependencyKit")),
+    //.project(target: "DependencyKit", path: .relativeToRoot("Kits/CoreKits/DependencyKit")),
     .project(target: "OnboardingModuleInterface", path: .relativeToRoot("Modules/DomainModules/OnboardingModule")),
-    .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),
+    .project(target: "AdoptingHomeModuleInterface", path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule")),
     snapKit
+ 
+   // snapKit
     
    
 ]

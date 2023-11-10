@@ -12,10 +12,12 @@
 		3D827966CCB96EF58D23FFCB /* CommonKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E65F1E8D330DFCBD100AAF9C /* CommonKit.framework */; };
 		409A4827EAACA9109DCFFF6D /* DependencyRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC07A8937CC26D4CA47454 /* DependencyRegister.swift */; };
 		570C1CB5BA50656C7AAE0CA5 /* OnboardingModule_OnboardingModule.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 9DE43C9C6BAE2591578EC6B0 /* OnboardingModule_OnboardingModule.bundle */; };
+		81258CEC95FEFCFA6ACEB640 /* AdoptingHomeModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F703F19229EC05131B52073 /* AdoptingHomeModuleInterface.framework */; };
 		81BFEAB2DE7FA233F5CC89B1 /* OnboardingModule_OnboardingModule.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DE43C9C6BAE2591578EC6B0 /* OnboardingModule_OnboardingModule.bundle */; };
 		953526606B257D91EDA97A29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FBF796437F4D7943A366A3 /* AppDelegate.swift */; };
 		CD489541748176B9530562FF /* DependencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B46EAE9B881910DFED69AC /* DependencyKit.framework */; };
 		D31CA952D482AE8BF6FAE34A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F760D7C788EB003230DE08D5 /* LaunchScreen.storyboard */; };
+		D8DB805337450EF309DB7A0B /* AdoptingHomeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA24D5D262416DF4DBA0FCB /* AdoptingHomeModule.framework */; };
 		DC37F4176E3FD8015547FAB4 /* OnboardingModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F509BB75EF7C7A9609A5DF43 /* OnboardingModule.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,10 +47,12 @@
 /* Begin PBXFileReference section */
 		10348E04D5F333A54C38FDFB /* TuistBundle+Paw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Paw.swift"; sourceTree = "<group>"; };
 		23B46EAE9B881910DFED69AC /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F703F19229EC05131B52073 /* AdoptingHomeModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60FBF796437F4D7943A366A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7960F6481FA40E69436C4DF6 /* Paw-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Paw-Info.plist"; sourceTree = "<group>"; };
 		996DF3855B80F01B4D7F0AF4 /* Paw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE43C9C6BAE2591578EC6B0 /* OnboardingModule_OnboardingModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingModule_OnboardingModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FA24D5D262416DF4DBA0FCB /* AdoptingHomeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADC07A8937CC26D4CA47454 /* DependencyRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyRegister.swift; sourceTree = "<group>"; };
 		DFB464AE38F621748E4F61BF /* OnboardingModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E65F1E8D330DFCBD100AAF9C /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8DB805337450EF309DB7A0B /* AdoptingHomeModule.framework in Frameworks */,
+				81258CEC95FEFCFA6ACEB640 /* AdoptingHomeModuleInterface.framework in Frameworks */,
 				3D827966CCB96EF58D23FFCB /* CommonKit.framework in Frameworks */,
 				CD489541748176B9530562FF /* DependencyKit.framework in Frameworks */,
 				DC37F4176E3FD8015547FAB4 /* OnboardingModule.framework in Frameworks */,
@@ -74,6 +80,8 @@
 		42150FA3DD58CAF2A63483F5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				9FA24D5D262416DF4DBA0FCB /* AdoptingHomeModule.framework */,
+				5F703F19229EC05131B52073 /* AdoptingHomeModuleInterface.framework */,
 				E65F1E8D330DFCBD100AAF9C /* CommonKit.framework */,
 				23B46EAE9B881910DFED69AC /* DependencyKit.framework */,
 				9DE43C9C6BAE2591578EC6B0 /* OnboardingModule_OnboardingModule.bundle */,
@@ -193,6 +201,9 @@
 				en,
 			);
 			mainGroup = A5676BCB914CF0FD13150EF2;
+			packageReferences = (
+				D4375D7B926E7FC9E84C1C95 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 42150FA3DD58CAF2A63483F5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -413,6 +424,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D4375D7B926E7FC9E84C1C95 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 6E06A37E977E02D79F577AA3 /* Project object */;
 }

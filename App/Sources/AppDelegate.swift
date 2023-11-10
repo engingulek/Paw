@@ -2,7 +2,7 @@
 import UIKit
 import DependencyKit
 import OnboardingModuleInterface
-import OnboardingModule
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -12,12 +12,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
     ) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        //let view = UIViewController()
         let dependencyRegister = DependencyRegister()
         dependencyRegister.registerDependecies()
+        
         @Dependency var onboardingRouter : OnboardingModuleInterfac
         let view = onboardingRouter.onboardingViewController()
-        window?.rootViewController = view
+        window?.rootViewController = UINavigationController(rootViewController: view)
         
         window?.makeKeyAndVisible()
         return true

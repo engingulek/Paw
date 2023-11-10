@@ -2,8 +2,13 @@ import Foundation
 import SnapKit
 import UIKit
 
+protocol OnboardingViewDelegate {
+    func selectedAdoptinView()
+}
+
 final class OnboardView : UIView {
     private let title:String = "Paw"
+    var delegate : OnboardingViewDelegate?
     
     private lazy var titleLabel : UILabel = {
         let label = UILabel()
@@ -40,8 +45,11 @@ final class OnboardView : UIView {
         uiView.layer.cornerRadius = 10
         uiView.layer.borderWidth = 1
         uiView.layer.borderColor = UIColor.red.cgColor
+        uiView.isUserInteractionEnabled = true
         return uiView
     }()
+    
+ 
     
     private lazy var  dogWalkingLabel : UILabel = {
         let label = UILabel()
@@ -91,6 +99,9 @@ final class OnboardView : UIView {
         dogWalkView.addSubview(dogWalkingImageView)
         adoptingView.addSubview(adoptingImageView)
         adoptingView.addSubview(adoptingLabel)
+        
+        let actionTap = UITapGestureRecognizer(target: self, action: #selector(adoptinViewTap))
+        adoptingView.addGestureRecognizer(actionTap)
         
        // addSubview(userNameSurname)
       //  addSubview(dogWalkView)
@@ -153,15 +164,17 @@ final class OnboardView : UIView {
             make.centerX.equalToSuperview()
             make.bottom.equalToSuperview().offset(-25)
         }
-        
-        
-        
-        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    @objc private func adoptinViewTap() {
+        self.delegate?.selectedAdoptinView()
+    }
+  
+    
     
     
     
