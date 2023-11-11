@@ -2,11 +2,12 @@
 import Foundation
 import UIKit
 import OnboardingModuleInterface
-import AdoptingHomeModuleInterface
+
+import TabbarModuleInterface
 import DependencyKit
 
 protocol OnboardiingRouterInterface  {
-    func toAdoptingViewController(view : OnboardiingViewControllerInterfaca?)
+    func toTabbarController(view : OnboardiingViewControllerInterfaca?)
 }
 public final class  OnboardingRouter : OnboardingModuleInterfac {
    
@@ -21,11 +22,14 @@ public final class  OnboardingRouter : OnboardingModuleInterfac {
     }
 }
 extension OnboardingRouter :  OnboardiingRouterInterface  {
-    func toAdoptingViewController(view : OnboardiingViewControllerInterfaca?) {
-        @Dependency var adoptionHpmeViewModule : AdoptingHomeModuleInterface
-       let viewController = adoptionHpmeViewModule.adoptingHomeViewController()
-        view?.pushViewControllerAble(viewController, animated: true)
+    func toTabbarController(view: OnboardiingViewControllerInterfaca?) {
+        @Dependency var tabbarModuleInterface : TabbarModuleInterface
+        let viewController = tabbarModuleInterface.tabbarViewController()
+        viewController.modalPresentationStyle = .fullScreen
+        view?.presentViewControllerAble(viewController, animated: true)
     }
+    
+  
     
     
 }

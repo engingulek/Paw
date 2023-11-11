@@ -10,8 +10,11 @@ import Foundation
 import OnboardingModule
 import OnboardingModuleInterface
 import AdoptingHomeModuleInterface
-import DependencyKit
 import AdoptingHomeModule
+import TabbarModuleInterface
+import TabbarModule
+import DependencyKit
+
 
 
 final class DependencyRegister {
@@ -19,5 +22,7 @@ final class DependencyRegister {
         let dependecyEngine = DependencyEngine.shared
         dependecyEngine.register(value: OnboardingRouter(), for: OnboardingModuleInterfac.self)
         dependecyEngine.register(value: AdoptingRouter(), for: AdoptingHomeModuleInterface.self)
+        dependecyEngine.register(value: TabbarRouter(), for: TabbarModuleInterface.self)
+        
     }
 }

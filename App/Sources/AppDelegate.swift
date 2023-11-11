@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let dependencyRegister = DependencyRegister()
         dependencyRegister.registerDependecies()
         
-        @Dependency var onboardingRouter : OnboardingModuleInterfac
-        let view = onboardingRouter.onboardingViewController()
+        @Dependency var onboardModuleInterface : OnboardingModuleInterfac
+        let view = onboardModuleInterface.onboardingViewController()
         window?.rootViewController = UINavigationController(rootViewController: view)
         
         window?.makeKeyAndVisible()

@@ -11,13 +11,15 @@
 		2A067D029D309C6FCE749DE4 /* TuistAssets+OnboardingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A3C8C1B10322789F1DE24 /* TuistAssets+OnboardingModule.swift */; };
 		3CA22F8C6C34B7CBF0F205DE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 646BAC3F0AF89BC85645672A /* SnapKit */; };
 		401F19449352D90C52A51ECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A56FDDCFF56745A9107E53F /* Assets.xcassets */; };
+		67276A869E008ABD8FBE42D2 /* CommonKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 231D6D41433FEEF74D0FCA44 /* CommonKit.framework */; };
 		6796CB09086A695AD1FACF1C /* OnboardingModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7096757BC66320007DCE86E /* OnboardingModuleInterface.swift */; };
 		828A9BFC0AFB5B195910CB05 /* TuistBundle+OnboardingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566BD5A8A2AF50C374326034 /* TuistBundle+OnboardingModule.swift */; };
+		94514F704066AFBB36D38FA2 /* TabbarModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 0EBCABFABE4C1939EAF3C0B9 /* TabbarModuleInterface.framework */; };
 		A6C5A36779CCD576D3A8B4AA /* OnboardiingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7187CCB1C58D14AC60053790 /* OnboardiingViewController.swift */; };
+		A7F3F3BDA5043F148F9F0895 /* DependencyKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = EB3A3E3C1659084A1AE6F0A2 /* DependencyKit.framework */; };
 		B0C583814F4EFFF01EEBA053 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5862F88E0528EC32913F6 /* OnboardView.swift */; };
 		C107BD06ECD29834B71EAD0D /* OnboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5568FCDDF47C6311EED1DC /* OnboardPresenter.swift */; };
 		F3BD2AA655143415C1A448B3 /* OnboardiingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF263EA1036EAA7CBF08022 /* OnboardiingRouter.swift */; };
-		F7401AE4800EA794DEC6BE8C /* AdoptingHomeModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = F7B04851CD9EBC1DD465304C /* AdoptingHomeModuleInterface.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +65,10 @@
 			buildActionMask = 8;
 			dstSubfolderSpec = 16;
 			files = (
-				F7401AE4800EA794DEC6BE8C /* AdoptingHomeModuleInterface.framework in Dependencies */,
+				67276A869E008ABD8FBE42D2 /* CommonKit.framework in Dependencies */,
+				A7F3F3BDA5043F148F9F0895 /* DependencyKit.framework in Dependencies */,
 				22129BBCDC8C69B441A9514C /* OnboardingModuleInterface.framework in Dependencies */,
+				94514F704066AFBB36D38FA2 /* TabbarModuleInterface.framework in Dependencies */,
 			);
 			name = Dependencies;
 			runOnlyForDeploymentPostprocessing = 1;
@@ -84,6 +88,8 @@
 /* Begin PBXFileReference section */
 		06181049C7146633EAF76235 /* OnboardingModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		0A56FDDCFF56745A9107E53F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0EBCABFABE4C1939EAF3C0B9 /* TabbarModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TabbarModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		231D6D41433FEEF74D0FCA44 /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D181EE3A6CDF26529E30209 /* OnboardingModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		566BD5A8A2AF50C374326034 /* TuistBundle+OnboardingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+OnboardingModule.swift"; sourceTree = "<group>"; };
 		6006C0517F34AF2F34B6511C /* OnboardingModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingModule-Info.plist"; sourceTree = "<group>"; };
@@ -96,7 +102,7 @@
 		B2F4AB108A12A8C311564E7C /* OnboardingModule_OnboardingModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingModule_OnboardingModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7096757BC66320007DCE86E /* OnboardingModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModuleInterface.swift; sourceTree = "<group>"; };
 		BDB01826376F4CC1AF04CB6E /* OnboardingModule_OnboardingModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingModule_OnboardingModule-Info.plist"; sourceTree = "<group>"; };
-		F7B04851CD9EBC1DD465304C /* AdoptingHomeModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB3A3E3C1659084A1AE6F0A2 /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,10 +216,12 @@
 		EF72315DC57188DB40B41395 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F7B04851CD9EBC1DD465304C /* AdoptingHomeModuleInterface.framework */,
+				231D6D41433FEEF74D0FCA44 /* CommonKit.framework */,
+				EB3A3E3C1659084A1AE6F0A2 /* DependencyKit.framework */,
 				B2F4AB108A12A8C311564E7C /* OnboardingModule_OnboardingModule.bundle */,
 				6F517901FD839BD3A04C2113 /* OnboardingModule.framework */,
 				3D181EE3A6CDF26529E30209 /* OnboardingModuleInterface.framework */,
+				0EBCABFABE4C1939EAF3C0B9 /* TabbarModuleInterface.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";

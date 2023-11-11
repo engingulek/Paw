@@ -3,18 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1A0AFF10B2F3D96AE75A3883 /* AdoptingHomeModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */; };
 		69EBC4C6923F958E39F33102 /* AdoptingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24403685C36FFC4747C9AE12 /* AdoptingHomeViewController.swift */; };
+		7140D3FE18DBDB824D5918FC /* TuistBundle+AdoptingHomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A321EDCDDFD38ACB98C9B6D /* TuistBundle+AdoptingHomeModule.swift */; };
+		9750EB978EC39123E8EDC693 /* TuistAssets+AdoptingHomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F6BB70CCEB5C61D5E37200 /* TuistAssets+AdoptingHomeModule.swift */; };
 		A8DC5A94BF053A4E1AE31468 /* AdoptingHomeModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A588D78800B284F365072 /* AdoptingHomeModuleInterface.swift */; };
+		AB0B0B9FFE351F2B3F8DFFBE /* AdoptingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289B843B3378891F8BF1EDA /* AdoptingHeaderView.swift */; };
 		B904353EC64D14649D2E62FA /* AdoptingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */; };
+		D64A492C67F41529A7E887E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D9D4185A599211379B19A /* Assets.xcassets */; };
 		DB1000F271CE7A6433BFCF45 /* AdoptinHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		10C06B77110F5325C1CBFC64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA06BA0C3CB7B3A6483742DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AA8D5C97597F1EBABF0979F;
+			remoteInfo = AdoptingHomeModule_AdoptingHomeModule;
+		};
 		9D19DCCAD8A5A6363739F64F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA06BA0C3CB7B3A6483742DA /* Project object */;
@@ -25,6 +36,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		28950E28203C6A8A68DBC573 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		344B2DE2CE623C1D0B9A1F5D /* Dependencies */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 8;
@@ -62,13 +83,26 @@
 		1BBE107AA97AC1629AB93287 /* AdoptingHomeModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeModule-Info.plist"; sourceTree = "<group>"; };
 		24403685C36FFC4747C9AE12 /* AdoptingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHomeViewController.swift; sourceTree = "<group>"; };
 		3F5A588D78800B284F365072 /* AdoptingHomeModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHomeModuleInterface.swift; sourceTree = "<group>"; };
+		64F6BB70CCEB5C61D5E37200 /* TuistAssets+AdoptingHomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+AdoptingHomeModule.swift"; sourceTree = "<group>"; };
+		72B229059F63005A256DDDEC /* AdoptingHomeModule_AdoptingHomeModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeModule_AdoptingHomeModule-Info.plist"; sourceTree = "<group>"; };
+		7C0D9D4185A599211379B19A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F07FC7490EF408185796733 /* AdoptingHomeModule_AdoptingHomeModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdoptingHomeModule_AdoptingHomeModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A321EDCDDFD38ACB98C9B6D /* TuistBundle+AdoptingHomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+AdoptingHomeModule.swift"; sourceTree = "<group>"; };
 		A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C289B843B3378891F8BF1EDA /* AdoptingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHeaderView.swift; sourceTree = "<group>"; };
 		D053F1E43EE3E9515DA00734 /* AdoptingHomeModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptinHomePresenter.swift; sourceTree = "<group>"; };
 		E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2E6F081ACC1C2DFE94859E0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB94C6727D552ED9DD7F8B9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				A0C3190D42ECDA64808DA3B7 /* InfoPlists */,
+				FBF35CEA49926AF9982C5A36 /* Sources */,
 			);
 			path = Derived;
 			sourceTree = "<group>";
@@ -106,6 +141,7 @@
 			children = (
 				24403685C36FFC4747C9AE12 /* AdoptingHomeViewController.swift */,
 				E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */,
+				C289B843B3378891F8BF1EDA /* AdoptingHeaderView.swift */,
 				D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */,
 			);
 			path = Sources;
@@ -116,6 +152,7 @@
 			children = (
 				1068B8F92035E69292AE9BC0 /* Derived */,
 				CF3A2DE98BE43894DF0A0B1A /* InterfaceSource */,
+				C0F259146F67EBAB52FADB83 /* Resources */,
 				62B2AA6CFFA29B87690D6C3A /* Sources */,
 			);
 			name = Project;
@@ -124,6 +161,7 @@
 		A0C3190D42ECDA64808DA3B7 /* InfoPlists */ = {
 			isa = PBXGroup;
 			children = (
+				72B229059F63005A256DDDEC /* AdoptingHomeModule_AdoptingHomeModule-Info.plist */,
 				1BBE107AA97AC1629AB93287 /* AdoptingHomeModule-Info.plist */,
 				D053F1E43EE3E9515DA00734 /* AdoptingHomeModuleInterface-Info.plist */,
 			);
@@ -139,6 +177,14 @@
 			);
 			sourceTree = "<group>";
 		};
+		C0F259146F67EBAB52FADB83 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7C0D9D4185A599211379B19A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		CF3A2DE98BE43894DF0A0B1A /* InterfaceSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,15 +196,42 @@
 		D63CB5569E3F46153F74AF78 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				8F07FC7490EF408185796733 /* AdoptingHomeModule_AdoptingHomeModule.bundle */,
 				1286FFE3486C129976D1A1B7 /* AdoptingHomeModule.framework */,
 				A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		FBF35CEA49926AF9982C5A36 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				64F6BB70CCEB5C61D5E37200 /* TuistAssets+AdoptingHomeModule.swift */,
+				9A321EDCDDFD38ACB98C9B6D /* TuistBundle+AdoptingHomeModule.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0AA8D5C97597F1EBABF0979F /* AdoptingHomeModule_AdoptingHomeModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCCB8DFB85FA4231FA75C21C /* Build configuration list for PBXNativeTarget "AdoptingHomeModule_AdoptingHomeModule" */;
+			buildPhases = (
+				7B025F48C3E69EB1F34E7402 /* Resources */,
+				28950E28203C6A8A68DBC573 /* Embed Frameworks */,
+				2E6F081ACC1C2DFE94859E0F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AdoptingHomeModule_AdoptingHomeModule;
+			productName = AdoptingHomeModule_AdoptingHomeModule;
+			productReference = 8F07FC7490EF408185796733 /* AdoptingHomeModule_AdoptingHomeModule.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		5D6A542A0846B5CF22692A7B /* AdoptingHomeModuleInterface */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F5C0DE95466016714899B35 /* Build configuration list for PBXNativeTarget "AdoptingHomeModuleInterface" */;
@@ -191,6 +264,7 @@
 			);
 			dependencies = (
 				A06F04DA1F3C0167522BC636 /* PBXTargetDependency */,
+				53408676D2465D2BFFBFC266 /* PBXTargetDependency */,
 			);
 			name = AdoptingHomeModule;
 			productName = AdoptingHomeModule;
@@ -204,8 +278,6 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 77D98B1AF4882E4754013F59 /* Build configuration list for PBXProject "AdoptingHomeModule" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -221,6 +293,7 @@
 			projectRoot = "";
 			targets = (
 				A8457562E5B599B7D8615875 /* AdoptingHomeModule */,
+				0AA8D5C97597F1EBABF0979F /* AdoptingHomeModule_AdoptingHomeModule */,
 				5D6A542A0846B5CF22692A7B /* AdoptingHomeModuleInterface */,
 			);
 		};
@@ -241,6 +314,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7B025F48C3E69EB1F34E7402 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D64A492C67F41529A7E887E3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -256,15 +337,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9750EB978EC39123E8EDC693 /* TuistAssets+AdoptingHomeModule.swift in Sources */,
+				7140D3FE18DBDB824D5918FC /* TuistBundle+AdoptingHomeModule.swift in Sources */,
 				DB1000F271CE7A6433BFCF45 /* AdoptinHomePresenter.swift in Sources */,
 				69EBC4C6923F958E39F33102 /* AdoptingHomeViewController.swift in Sources */,
 				B904353EC64D14649D2E62FA /* AdoptingRouter.swift in Sources */,
+				AB0B0B9FFE351F2B3F8DFFBE /* AdoptingHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		53408676D2465D2BFFBFC266 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AdoptingHomeModule_AdoptingHomeModule;
+			target = 0AA8D5C97597F1EBABF0979F /* AdoptingHomeModule_AdoptingHomeModule */;
+			targetProxy = 10C06B77110F5325C1CBFC64 /* PBXContainerItemProxy */;
+		};
 		A06F04DA1F3C0167522BC636 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AdoptingHomeModuleInterface;
@@ -274,6 +364,27 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0153CA9E5227BE13B3725FA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/AdoptingHomeModule_AdoptingHomeModule-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.AdoptingHomeModule.resources;
+				PRODUCT_NAME = AdoptingHomeModule_AdoptingHomeModule;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
 		0E875E36EEE1AC6C7AC54966 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -524,6 +635,26 @@
 			};
 			name = Release;
 		};
+		CB754FABF36BBE97191864AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/AdoptingHomeModule_AdoptingHomeModule-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.AdoptingHomeModule.resources;
+				PRODUCT_NAME = AdoptingHomeModule_AdoptingHomeModule;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -541,6 +672,15 @@
 			buildConfigurations = (
 				24FEBC65F4F9D779A187691A /* Debug */,
 				A4E17F40B7BA8A9A9CD5884D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCCB8DFB85FA4231FA75C21C /* Build configuration list for PBXNativeTarget "AdoptingHomeModule_AdoptingHomeModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0153CA9E5227BE13B3725FA9 /* Debug */,
+				CB754FABF36BBE97191864AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

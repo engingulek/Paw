@@ -17,14 +17,11 @@ let interfaceTarget  = Target(
 )
 
 let dependensies : [TargetDependency] = [
-    //.project(target: "DependencyKit", path: .relativeToRoot("Kits/CoreKits/DependencyKit")),
+    .project(target: "DependencyKit", path: .relativeToRoot("Kits/CoreKits/DependencyKit")),
+    .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),
     .project(target: "OnboardingModuleInterface", path: .relativeToRoot("Modules/DomainModules/OnboardingModule")),
-    .project(target: "AdoptingHomeModuleInterface", path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule")),
+    .project(target: "TabbarModuleInterface", path: .relativeToRoot("Modules/DomainModules/TabbarModule")),
     snapKit
- 
-   // snapKit
-    
-   
 ]
 
 let framworkTarget =  Target(

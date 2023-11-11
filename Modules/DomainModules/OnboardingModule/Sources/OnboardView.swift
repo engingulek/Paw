@@ -81,14 +81,9 @@ final class OnboardView : UIView {
         return image
     }()
     
-    
-    
-    
-    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         let uiScreenHeight = UIScreen.main.bounds.height
-        let uiScreenWidth = UIScreen.main.bounds.width
         backgroundColor = .white
         addSubview(titleLabel)
         addSubview(onboardImageView)

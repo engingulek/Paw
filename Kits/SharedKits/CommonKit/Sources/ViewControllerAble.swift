@@ -15,12 +15,19 @@ extension UIViewControllerAble where Self : UIViewController {
 
 // MARK : - NavConAble
 public protocol NavConAble {
-    func pushViewControllerAble(_ vc:UIViewController,animated:Bool)
-  
+    func presentViewControllerAble(_ vc:UIViewController,animated:Bool)
+   // func navigationBackButtonHidden(isHidden:Bool)
+    
 }
 
 extension NavConAble  where Self : UIViewController{
-  public func pushViewControllerAble(_ vc:UIViewController,animated:Bool) {
-        navigationController?.pushViewController(vc, animated: true)
+    public func presentViewControllerAble(_ vc:UIViewController,animated:Bool) {
+        navigationController?.present(vc, animated: true)
+        navigationController?.navigationBar.isHidden  = true
     }
+    
+    /*public func navigationBackButtonHidden(isHidden:Bool) {
+       
+    }*/
+
 }

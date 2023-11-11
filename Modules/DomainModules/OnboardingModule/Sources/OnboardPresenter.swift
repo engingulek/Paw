@@ -27,7 +27,7 @@ extension OnboardPresenter {
     
     func selectedAdoptingView() {
         print("Test")
-        router?.toAdoptingViewController(view:view)
+        router?.toTabbarController(view: view)
     }
     
 }

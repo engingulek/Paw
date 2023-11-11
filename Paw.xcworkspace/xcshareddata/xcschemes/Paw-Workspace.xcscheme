@@ -42,6 +42,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0AA8D5C97597F1EBABF0979F"
+               BuildableName = "AdoptingHomeModule_AdoptingHomeModule.bundle"
+               BlueprintName = "AdoptingHomeModule_AdoptingHomeModule"
+               ReferencedContainer = "container:Modules/DomainModules/AdoptingHomeModule/AdoptingHomeModule.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "77A705E112BA78834D2901D0"
                BuildableName = "CommonKit.framework"
                BlueprintName = "CommonKit"
@@ -116,6 +130,34 @@
                BuildableName = "Paw.app"
                BlueprintName = "Paw"
                ReferencedContainer = "container:App/Paw.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "95E9A7F0BB75F346983F357F"
+               BuildableName = "TabbarModule.framework"
+               BlueprintName = "TabbarModule"
+               ReferencedContainer = "container:Modules/DomainModules/TabbarModule/TabbarModule.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A3C134D9CA3AC70D65D26B0B"
+               BuildableName = "TabbarModuleInterface.framework"
+               BlueprintName = "TabbarModuleInterface"
+               ReferencedContainer = "container:Modules/DomainModules/TabbarModule/TabbarModule.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

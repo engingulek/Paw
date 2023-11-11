@@ -6,9 +6,12 @@ protocol AdoptinHomePresenterInterface {
     var view : AdoptingHomeViewControllerInterfaca? {get set}
     
     func viewDidload()
+  
 }
 
 final class AdoptinHomePresenter : AdoptinHomePresenterInterface {
+  
+    
     var router: AdoptingRouterInterface?
     weak var view: AdoptingHomeViewControllerInterfaca?
     
@@ -19,7 +22,9 @@ final class AdoptinHomePresenter : AdoptinHomePresenterInterface {
     
     func viewDidload() {
         view?.setBackColorAble(color: .white)
+        
     }
+    
     
     
 }

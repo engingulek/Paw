@@ -34,6 +34,9 @@
          <FileRef
             location = "group:OnboardingModule/OnboardingModule.xcodeproj">
          </FileRef>
+         <FileRef
+            location = "group:TabbarModule/TabbarModule.xcodeproj">
+         </FileRef>
       </Group>
    </Group>
 </Workspace>

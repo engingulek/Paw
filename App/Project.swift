@@ -13,12 +13,10 @@ let appTarget = Target(
     sources: "Sources/**",
     resources:"Resources/**",
     dependencies: [
-        .project(target: "DependencyKit", path: .relativeToRoot("Kits/CoreKits/DependencyKit")),
-        .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),
-        
         .project(target: "OnboardingModule", path: .relativeToRoot("Modules/DomainModules/OnboardingModule")),
+        .project(target: "TabbarModule", path: .relativeToRoot("Modules/DomainModules/TabbarModule")),
         .project(target: "AdoptingHomeModule", path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule"))
     ]
 )
 
-let project = Project(name: "Paw",packages: [.snapKit],targets: [appTarget])
+let project = Project(name: "Paw",packages: [],targets: [appTarget])
