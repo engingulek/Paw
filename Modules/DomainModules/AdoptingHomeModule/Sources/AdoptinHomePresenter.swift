@@ -6,12 +6,12 @@ protocol AdoptinHomePresenterInterface {
     var view : AdoptingHomeViewControllerInterfaca? {get set}
     
     func viewDidload()
+    func categorNumberOfItems() -> Int
+    func categoryCellForItemAt(index:Int) -> Category
   
 }
 
 final class AdoptinHomePresenter : AdoptinHomePresenterInterface {
-  
-    
     var router: AdoptingRouterInterface?
     weak var view: AdoptingHomeViewControllerInterfaca?
     
@@ -22,8 +22,20 @@ final class AdoptinHomePresenter : AdoptinHomePresenterInterface {
     
     func viewDidload() {
         view?.setBackColorAble(color: .white)
+        view?.prepareCollectionView()
         
     }
+    
+    func categorNumberOfItems() -> Int {
+        return Category.exampleCategory.count
+    }
+    
+    func categoryCellForItemAt(index: Int) -> Category {
+        let category = Category.exampleCategory[index]
+        return category
+    }
+    
+    
     
     
     

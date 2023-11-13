@@ -10,9 +10,11 @@
 		1A0AFF10B2F3D96AE75A3883 /* AdoptingHomeModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */; };
 		69EBC4C6923F958E39F33102 /* AdoptingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24403685C36FFC4747C9AE12 /* AdoptingHomeViewController.swift */; };
 		7140D3FE18DBDB824D5918FC /* TuistBundle+AdoptingHomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A321EDCDDFD38ACB98C9B6D /* TuistBundle+AdoptingHomeModule.swift */; };
+		7DAFDD972B028283004B7995 /* AdvertCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFDD962B028283004B7995 /* AdvertCollectionViewCell.swift */; };
+		7DAFDD992B0282C3004B7995 /* AdoptingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFDD982B0282C3004B7995 /* AdoptingHeaderView.swift */; };
+		7DAFDD9C2B02853D004B7995 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFDD9B2B02853D004B7995 /* Category.swift */; };
 		9750EB978EC39123E8EDC693 /* TuistAssets+AdoptingHomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F6BB70CCEB5C61D5E37200 /* TuistAssets+AdoptingHomeModule.swift */; };
 		A8DC5A94BF053A4E1AE31468 /* AdoptingHomeModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A588D78800B284F365072 /* AdoptingHomeModuleInterface.swift */; };
-		AB0B0B9FFE351F2B3F8DFFBE /* AdoptingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289B843B3378891F8BF1EDA /* AdoptingHeaderView.swift */; };
 		B904353EC64D14649D2E62FA /* AdoptingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */; };
 		D64A492C67F41529A7E887E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D9D4185A599211379B19A /* Assets.xcassets */; };
 		DB1000F271CE7A6433BFCF45 /* AdoptinHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */; };
@@ -86,10 +88,12 @@
 		64F6BB70CCEB5C61D5E37200 /* TuistAssets+AdoptingHomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+AdoptingHomeModule.swift"; sourceTree = "<group>"; };
 		72B229059F63005A256DDDEC /* AdoptingHomeModule_AdoptingHomeModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeModule_AdoptingHomeModule-Info.plist"; sourceTree = "<group>"; };
 		7C0D9D4185A599211379B19A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7DAFDD962B028283004B7995 /* AdvertCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertCollectionViewCell.swift; sourceTree = "<group>"; };
+		7DAFDD982B0282C3004B7995 /* AdoptingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHeaderView.swift; sourceTree = "<group>"; };
+		7DAFDD9B2B02853D004B7995 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		8F07FC7490EF408185796733 /* AdoptingHomeModule_AdoptingHomeModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdoptingHomeModule_AdoptingHomeModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A321EDCDDFD38ACB98C9B6D /* TuistBundle+AdoptingHomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+AdoptingHomeModule.swift"; sourceTree = "<group>"; };
 		A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C289B843B3378891F8BF1EDA /* AdoptingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHeaderView.swift; sourceTree = "<group>"; };
 		D053F1E43EE3E9515DA00734 /* AdoptingHomeModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptinHomePresenter.swift; sourceTree = "<group>"; };
 		E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingRouter.swift; sourceTree = "<group>"; };
@@ -141,8 +145,10 @@
 			children = (
 				24403685C36FFC4747C9AE12 /* AdoptingHomeViewController.swift */,
 				E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */,
-				C289B843B3378891F8BF1EDA /* AdoptingHeaderView.swift */,
 				D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */,
+				7DAFDD962B028283004B7995 /* AdvertCollectionViewCell.swift */,
+				7DAFDD982B0282C3004B7995 /* AdoptingHeaderView.swift */,
+				7DAFDD9B2B02853D004B7995 /* Category.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -337,12 +343,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DAFDD972B028283004B7995 /* AdvertCollectionViewCell.swift in Sources */,
 				9750EB978EC39123E8EDC693 /* TuistAssets+AdoptingHomeModule.swift in Sources */,
 				7140D3FE18DBDB824D5918FC /* TuistBundle+AdoptingHomeModule.swift in Sources */,
 				DB1000F271CE7A6433BFCF45 /* AdoptinHomePresenter.swift in Sources */,
+				7DAFDD992B0282C3004B7995 /* AdoptingHeaderView.swift in Sources */,
 				69EBC4C6923F958E39F33102 /* AdoptingHomeViewController.swift in Sources */,
 				B904353EC64D14649D2E62FA /* AdoptingRouter.swift in Sources */,
-				AB0B0B9FFE351F2B3F8DFFBE /* AdoptingHeaderView.swift in Sources */,
+				7DAFDD9C2B02853D004B7995 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
