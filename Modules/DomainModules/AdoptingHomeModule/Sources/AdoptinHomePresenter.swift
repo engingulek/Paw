@@ -23,6 +23,7 @@ final class AdoptinHomePresenter : AdoptinHomePresenterInterface {
     func viewDidload() {
         view?.setBackColorAble(color: .white)
         view?.prepareCollectionView()
+        view?.prepareTableView()
         
     }
     

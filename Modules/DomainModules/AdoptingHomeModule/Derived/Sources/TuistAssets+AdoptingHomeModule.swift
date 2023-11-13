@@ -20,6 +20,7 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum AdoptingHomeModuleAsset {
+  public static let dog = AdoptingHomeModuleImages(name: "dog")
   public static let paw = AdoptingHomeModuleImages(name: "paw")
   public static let searhViewBack = AdoptingHomeModuleColors(name: "searhViewBack")
 }

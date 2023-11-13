@@ -7,6 +7,7 @@ typealias Ables = UIViewControllerAble & NavConAble
 
 protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
     func prepareCollectionView()
+    func prepareTableView()
 }
 
 final class AdoptingHomeViewController: UIViewController{
@@ -20,12 +21,22 @@ final class AdoptingHomeViewController: UIViewController{
         layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 5, height:UIScreen.main.bounds.height / 15 )
         layout.scrollDirection = .horizontal
         let  collectionview = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionview.register(AdvertCollectionViewCell.self, forCellWithReuseIdentifier: AdvertCollectionViewCell.identifier)
+        collectionview.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
         
         collectionview.showsHorizontalScrollIndicator = false
         collectionview.backgroundColor = UIColor.white
         return collectionview
     }()
+    
+    private lazy var advertTableView :  UITableView = {
+        let tableView = UITableView()
+        tableView.register(AdvertTableViewCell.self, forCellReuseIdentifier: AdvertTableViewCell.identifier)
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
+        return tableView
+    }()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +60,15 @@ final class AdoptingHomeViewController: UIViewController{
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.height.equalToSuperview().multipliedBy(0.1)
+        }
         
+        
+        view.addSubview(advertTableView)
+        advertTableView.snp.makeConstraints { make in
+            make.top.equalTo(collectionview.snp.bottom).offset(10)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
     }
 }
@@ -66,7 +85,7 @@ extension AdoptingHomeViewController : UICollectionViewDelegate,UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AdvertCollectionViewCell.identifier, for: indexPath) as? AdvertCollectionViewCell else {return UICollectionViewCell()}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as? CategoryCollectionViewCell else {return UICollectionViewCell()}
         
         let category  = presenter.categoryCellForItemAt(index: indexPath.item)
         cell.configureData(category: category)
@@ -77,10 +96,35 @@ extension AdoptingHomeViewController : UICollectionViewDelegate,UICollectionView
     }
 }
 
+
+extension AdoptingHomeViewController : UITableViewDelegate,UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: AdvertTableViewCell.identifier, for: indexPath) as? AdvertTableViewCell else {return UITableViewCell()}
+         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UIScreen.main.bounds.height / 5
+    }
+    
+    
+}
+
 extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
+    
     func prepareCollectionView() {
         collectionview.dataSource = self
         collectionview.delegate = self
+    }
+    
+    
+    func prepareTableView() {
+        advertTableView.delegate = self
+        advertTableView.dataSource = self
     }
     
 }

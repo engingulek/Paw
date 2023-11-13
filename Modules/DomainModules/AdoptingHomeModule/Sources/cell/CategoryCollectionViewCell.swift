@@ -2,26 +2,25 @@
 import UIKit
 import SnapKit
 
-final class AdvertCollectionViewCell : UICollectionViewCell {
+final class CategoryCollectionViewCell : UICollectionViewCell {
     static let identifier : String = "cell"
     
-    private lazy var testLabel : UILabel = {
+    private lazy var categoryLabel : UILabel = {
         let label = UILabel()
-        label.text = "test"
         return label
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(testLabel)
-        testLabel.snp.makeConstraints { make in
+        addSubview(categoryLabel)
+        categoryLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
         }
     }
     
     func configureData(category:Category){
-        testLabel.text = category.name
+        categoryLabel.text = category.name
     }
     
     required init?(coder: NSCoder) {

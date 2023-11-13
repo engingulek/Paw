@@ -3,21 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		067CBBF45D04083A81E0A018 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F284C31292C72BDC1FE97B /* CategoryCollectionViewCell.swift */; };
 		1A0AFF10B2F3D96AE75A3883 /* AdoptingHomeModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */; };
 		69EBC4C6923F958E39F33102 /* AdoptingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24403685C36FFC4747C9AE12 /* AdoptingHomeViewController.swift */; };
 		7140D3FE18DBDB824D5918FC /* TuistBundle+AdoptingHomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A321EDCDDFD38ACB98C9B6D /* TuistBundle+AdoptingHomeModule.swift */; };
-		7DAFDD972B028283004B7995 /* AdvertCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFDD962B028283004B7995 /* AdvertCollectionViewCell.swift */; };
-		7DAFDD992B0282C3004B7995 /* AdoptingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFDD982B0282C3004B7995 /* AdoptingHeaderView.swift */; };
-		7DAFDD9C2B02853D004B7995 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFDD9B2B02853D004B7995 /* Category.swift */; };
+		7BAE35C0A236C5443E392F70 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7CC6CBF2450872DEA66F /* Category.swift */; };
+		8FB543E0F784707D794FF8FF /* AdoptingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C5A464420F9144C3389A0 /* AdoptingHeaderView.swift */; };
 		9750EB978EC39123E8EDC693 /* TuistAssets+AdoptingHomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F6BB70CCEB5C61D5E37200 /* TuistAssets+AdoptingHomeModule.swift */; };
 		A8DC5A94BF053A4E1AE31468 /* AdoptingHomeModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A588D78800B284F365072 /* AdoptingHomeModuleInterface.swift */; };
 		B904353EC64D14649D2E62FA /* AdoptingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */; };
 		D64A492C67F41529A7E887E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D9D4185A599211379B19A /* Assets.xcassets */; };
 		DB1000F271CE7A6433BFCF45 /* AdoptinHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */; };
+		E4180A093827E6DC20EC2BB7 /* AdvertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AED772C9BB786D519313222 /* AdvertTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,16 +85,17 @@
 		1286FFE3486C129976D1A1B7 /* AdoptingHomeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BBE107AA97AC1629AB93287 /* AdoptingHomeModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeModule-Info.plist"; sourceTree = "<group>"; };
 		24403685C36FFC4747C9AE12 /* AdoptingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHomeViewController.swift; sourceTree = "<group>"; };
+		3AED772C9BB786D519313222 /* AdvertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertTableViewCell.swift; sourceTree = "<group>"; };
 		3F5A588D78800B284F365072 /* AdoptingHomeModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHomeModuleInterface.swift; sourceTree = "<group>"; };
 		64F6BB70CCEB5C61D5E37200 /* TuistAssets+AdoptingHomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+AdoptingHomeModule.swift"; sourceTree = "<group>"; };
 		72B229059F63005A256DDDEC /* AdoptingHomeModule_AdoptingHomeModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeModule_AdoptingHomeModule-Info.plist"; sourceTree = "<group>"; };
 		7C0D9D4185A599211379B19A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7DAFDD962B028283004B7995 /* AdvertCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertCollectionViewCell.swift; sourceTree = "<group>"; };
-		7DAFDD982B0282C3004B7995 /* AdoptingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHeaderView.swift; sourceTree = "<group>"; };
-		7DAFDD9B2B02853D004B7995 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		8F07FC7490EF408185796733 /* AdoptingHomeModule_AdoptingHomeModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdoptingHomeModule_AdoptingHomeModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		948C5A464420F9144C3389A0 /* AdoptingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHeaderView.swift; sourceTree = "<group>"; };
 		9A321EDCDDFD38ACB98C9B6D /* TuistBundle+AdoptingHomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+AdoptingHomeModule.swift"; sourceTree = "<group>"; };
 		A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDFF7CC6CBF2450872DEA66F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		C6F284C31292C72BDC1FE97B /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		D053F1E43EE3E9515DA00734 /* AdoptingHomeModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptinHomePresenter.swift; sourceTree = "<group>"; };
 		E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingRouter.swift; sourceTree = "<group>"; };
@@ -143,12 +145,12 @@
 		62B2AA6CFFA29B87690D6C3A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B9355C647457ED7AE5E68BDE /* cell */,
+				948C5A464420F9144C3389A0 /* AdoptingHeaderView.swift */,
 				24403685C36FFC4747C9AE12 /* AdoptingHomeViewController.swift */,
 				E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */,
 				D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */,
-				7DAFDD962B028283004B7995 /* AdvertCollectionViewCell.swift */,
-				7DAFDD982B0282C3004B7995 /* AdoptingHeaderView.swift */,
-				7DAFDD9B2B02853D004B7995 /* Category.swift */,
+				BDFF7CC6CBF2450872DEA66F /* Category.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -181,6 +183,15 @@
 				07C0E384376C1C415F966F5D /* Frameworks */,
 				D63CB5569E3F46153F74AF78 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		B9355C647457ED7AE5E68BDE /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				3AED772C9BB786D519313222 /* AdvertTableViewCell.swift */,
+				C6F284C31292C72BDC1FE97B /* CategoryCollectionViewCell.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		C0F259146F67EBAB52FADB83 /* Resources */ = {
@@ -284,6 +295,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 77D98B1AF4882E4754013F59 /* Build configuration list for PBXProject "AdoptingHomeModule" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -343,14 +356,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DAFDD972B028283004B7995 /* AdvertCollectionViewCell.swift in Sources */,
 				9750EB978EC39123E8EDC693 /* TuistAssets+AdoptingHomeModule.swift in Sources */,
 				7140D3FE18DBDB824D5918FC /* TuistBundle+AdoptingHomeModule.swift in Sources */,
 				DB1000F271CE7A6433BFCF45 /* AdoptinHomePresenter.swift in Sources */,
-				7DAFDD992B0282C3004B7995 /* AdoptingHeaderView.swift in Sources */,
+				8FB543E0F784707D794FF8FF /* AdoptingHeaderView.swift in Sources */,
 				69EBC4C6923F958E39F33102 /* AdoptingHomeViewController.swift in Sources */,
 				B904353EC64D14649D2E62FA /* AdoptingRouter.swift in Sources */,
-				7DAFDD9C2B02853D004B7995 /* Category.swift in Sources */,
+				7BAE35C0A236C5443E392F70 /* Category.swift in Sources */,
+				E4180A093827E6DC20EC2BB7 /* AdvertTableViewCell.swift in Sources */,
+				067CBBF45D04083A81E0A018 /* CategoryCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
