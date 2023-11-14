@@ -1,15 +1,10 @@
-
-
 import ProjectDescription
 
-
-
-
 let interfaceTarget  = Target(
-    name: "AdoptingHomeModuleInterface",
+    name: "AdvertDetailModuleInterface",
     platform: .iOS,
     product: .staticFramework,
-    bundleId: "com.ios.AdoptingHomeModuleInterface",
+    bundleId: "com.ios.AdvertDetailModuleInterface",
     deploymentTarget: .iOS(targetVersion: "16.0", devices: .iphone),
     infoPlist: .default,
     sources: "InterfaceSource/**",
@@ -18,24 +13,22 @@ let interfaceTarget  = Target(
 )
 
 let dependensies : [TargetDependency] = [
-    .project(target: "AdoptingHomeModuleInterface",
-             path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule")),
     .project(target: "AdvertDetailModuleInterface",
              path: .relativeToRoot("Modules/DomainModules/AdvertDetailModule"))
 ]
 
+
 let framworkTarget =  Target(
-    name: "AdoptingHomeModule",
+    name: "AdvertDetailModule",
     platform: .iOS,
     product: .staticFramework,
-    bundleId: "com.ios.AdoptingHomeModule",
+    bundleId: "com.ios.AdvertDetailModule",
     deploymentTarget: .iOS(targetVersion: "16.0", devices: .iphone),
     infoPlist: .default,
     sources: "Sources/**",
-    resources: ["Resources/Assets.xcassets/**"],
+    resources: ["Resources"],
     dependencies: dependensies
 )
 
 
-
-let project = Project(name: "AdoptingHomeModule",packages: [],targets:[framworkTarget,interfaceTarget])
+let project = Project(name: "AdvertDetailModule",packages: [],targets:[framworkTarget,interfaceTarget])

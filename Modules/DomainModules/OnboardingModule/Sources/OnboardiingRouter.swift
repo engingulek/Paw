@@ -2,7 +2,6 @@
 import Foundation
 import UIKit
 import OnboardingModuleInterface
-
 import TabbarModuleInterface
 import DependencyKit
 
@@ -23,6 +22,7 @@ public final class  OnboardingRouter : OnboardingModuleInterfac {
 }
 extension OnboardingRouter :  OnboardiingRouterInterface  {
     func toTabbarController(view: OnboardiingViewControllerInterfaca?) {
+      
         @Dependency var tabbarModuleInterface : TabbarModuleInterface
         let viewController = tabbarModuleInterface.tabbarViewController()
         viewController.modalPresentationStyle = .fullScreen

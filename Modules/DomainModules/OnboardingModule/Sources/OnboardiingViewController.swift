@@ -26,6 +26,8 @@ final class OnboardiingViewController: UIViewController{
 }
 
 extension OnboardiingViewController : OnboardiingViewControllerInterfaca {
+   
+    
     
 }
 

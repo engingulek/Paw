@@ -13,6 +13,8 @@ import AdoptingHomeModuleInterface
 import AdoptingHomeModule
 import TabbarModuleInterface
 import TabbarModule
+import AdvertDetailModuleInterface
+import AdvertDetailModule
 import DependencyKit
 
 
@@ -23,6 +25,7 @@ final class DependencyRegister {
         dependecyEngine.register(value: OnboardingRouter(), for: OnboardingModuleInterfac.self)
         dependecyEngine.register(value: AdoptingRouter(), for: AdoptingHomeModuleInterface.self)
         dependecyEngine.register(value: TabbarRouter(), for: TabbarModuleInterface.self)
+        dependecyEngine.register(value: AdvertDetailRouter(), for: AdvertDetailModuleInterface.self)
         
     }
 }

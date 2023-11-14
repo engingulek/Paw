@@ -15,7 +15,9 @@ let appTarget = Target(
     dependencies: [
         .project(target: "OnboardingModule", path: .relativeToRoot("Modules/DomainModules/OnboardingModule")),
         .project(target: "TabbarModule", path: .relativeToRoot("Modules/DomainModules/TabbarModule")),
-        .project(target: "AdoptingHomeModule", path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule"))
+        .project(target: "AdoptingHomeModule", path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule")),
+        .project(target: "AdvertDetailModule", path: .relativeToRoot("Modules/DomainModules/AdvertDetailModule"))
+        
     ]
 )
 

@@ -4,6 +4,7 @@ import Foundation
 
 public protocol UIViewControllerAble {
     func setBackColorAble(color:UIColor)
+   
 }
 
 extension UIViewControllerAble where Self : UIViewController {
@@ -13,23 +14,40 @@ extension UIViewControllerAble where Self : UIViewController {
 }
 
 
+
+
 // MARK : - NavConAble
 public protocol NavConAble {
     func presentViewControllerAble(_ vc:UIViewController,animated:Bool)
-   // func navigationBackButtonHidden(isHidden:Bool)
-    
+    func pushViewControllerAble (_ vc:UIViewController,animated:Bool)
+    func navigationBackButtonHiddenAble(isHidden:Bool)
 }
 
 extension NavConAble  where Self : UIViewController{
     public func presentViewControllerAble(_ vc:UIViewController,animated:Bool) {
         navigationController?.present(vc, animated: true)
-        navigationController?.navigationBar.isHidden  = true
+        
     }
     
-    /*public func navigationBackButtonHidden(isHidden:Bool) {
-       
-    }*/
+    public func pushViewControllerAble (_ vc:UIViewController,animated:Bool) {
+        navigationController?.pushViewController(vc, animated: animated)
+    }
+    
+    public func navigationBackButtonHiddenAble(isHidden:Bool) {
+        navigationController?.navigationBar.isHidden = isHidden
+    }
+}
 
+// MARK : - TabbarConAble
+
+public protocol TabbarConAble {
+  func tabbarisHidden(isHidden : Bool)
+}
+
+extension TabbarConAble  where Self : UIViewController  {
+    public func tabbarisHidden(isHidden : Bool) {
+        tabBarController?.tabBar.isHidden =  isHidden
+    }
 }
 
 

@@ -2,10 +2,11 @@
 import UIKit
 import CommonKit
 import SnapKit
-typealias Ables = UIViewControllerAble & NavConAble
+typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble
 
 
 protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
+    var presenter : AdoptinHomePresenterInterface {get set}
     func prepareCollectionView()
     func prepareTableView()
 }
@@ -37,12 +38,17 @@ final class AdoptingHomeViewController: UIViewController{
     }()
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        presenter.viewWillAppear()
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
        
         presenter.viewDidload()
-        navigationController?.navigationBar.isHidden  = true
+      
+        //navigationController?.navigationBar.isHidden  = true
         configureData()
     }
     
@@ -111,10 +117,15 @@ extension AdoptingHomeViewController : UITableViewDelegate,UITableViewDataSource
         return UIScreen.main.bounds.height / 5
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didSelectItem(index: indexPath.row)
+    }
+    
     
 }
 
 extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
+   
     
     func prepareCollectionView() {
         collectionview.dataSource = self

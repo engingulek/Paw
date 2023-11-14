@@ -18,8 +18,10 @@
 		81258CEC95FEFCFA6ACEB640 /* AdoptingHomeModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F703F19229EC05131B52073 /* AdoptingHomeModuleInterface.framework */; };
 		81BFEAB2DE7FA233F5CC89B1 /* OnboardingModule_OnboardingModule.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DE43C9C6BAE2591578EC6B0 /* OnboardingModule_OnboardingModule.bundle */; };
 		953526606B257D91EDA97A29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FBF796437F4D7943A366A3 /* AppDelegate.swift */; };
+		97E32100E20A06B5E292BA43 /* AdvertDetailModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D28737DD9CE5CD960E51E74 /* AdvertDetailModule.framework */; };
 		B3789AEF144397026AB3CBC8 /* AdoptingHomeModule_AdoptingHomeModule.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = E23C61CC8746D3FA65B22D48 /* AdoptingHomeModule_AdoptingHomeModule.bundle */; };
 		CD489541748176B9530562FF /* DependencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B46EAE9B881910DFED69AC /* DependencyKit.framework */; };
+		D11D2BAC145D539CF927950F /* AdvertDetailModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F24752CAC75C5524624AEE6 /* AdvertDetailModuleInterface.framework */; };
 		D31CA952D482AE8BF6FAE34A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F760D7C788EB003230DE08D5 /* LaunchScreen.storyboard */; };
 		D8DB805337450EF309DB7A0B /* AdoptingHomeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA24D5D262416DF4DBA0FCB /* AdoptingHomeModule.framework */; };
 		DC37F4176E3FD8015547FAB4 /* OnboardingModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F509BB75EF7C7A9609A5DF43 /* OnboardingModule.framework */; };
@@ -52,9 +54,11 @@
 /* Begin PBXFileReference section */
 		10348E04D5F333A54C38FDFB /* TuistBundle+Paw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Paw.swift"; sourceTree = "<group>"; };
 		23B46EAE9B881910DFED69AC /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D28737DD9CE5CD960E51E74 /* AdvertDetailModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F703F19229EC05131B52073 /* AdoptingHomeModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60FBF796437F4D7943A366A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7960F6481FA40E69436C4DF6 /* Paw-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Paw-Info.plist"; sourceTree = "<group>"; };
+		8F24752CAC75C5524624AEE6 /* AdvertDetailModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		996DF3855B80F01B4D7F0AF4 /* Paw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE43C9C6BAE2591578EC6B0 /* OnboardingModule_OnboardingModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingModule_OnboardingModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA24D5D262416DF4DBA0FCB /* AdoptingHomeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +79,8 @@
 			files = (
 				D8DB805337450EF309DB7A0B /* AdoptingHomeModule.framework in Frameworks */,
 				81258CEC95FEFCFA6ACEB640 /* AdoptingHomeModuleInterface.framework in Frameworks */,
+				97E32100E20A06B5E292BA43 /* AdvertDetailModule.framework in Frameworks */,
+				D11D2BAC145D539CF927950F /* AdvertDetailModuleInterface.framework in Frameworks */,
 				3D827966CCB96EF58D23FFCB /* CommonKit.framework in Frameworks */,
 				CD489541748176B9530562FF /* DependencyKit.framework in Frameworks */,
 				DC37F4176E3FD8015547FAB4 /* OnboardingModule.framework in Frameworks */,
@@ -93,6 +99,8 @@
 				E23C61CC8746D3FA65B22D48 /* AdoptingHomeModule_AdoptingHomeModule.bundle */,
 				9FA24D5D262416DF4DBA0FCB /* AdoptingHomeModule.framework */,
 				5F703F19229EC05131B52073 /* AdoptingHomeModuleInterface.framework */,
+				5D28737DD9CE5CD960E51E74 /* AdvertDetailModule.framework */,
+				8F24752CAC75C5524624AEE6 /* AdvertDetailModuleInterface.framework */,
 				E65F1E8D330DFCBD100AAF9C /* CommonKit.framework */,
 				23B46EAE9B881910DFED69AC /* DependencyKit.framework */,
 				9DE43C9C6BAE2591578EC6B0 /* OnboardingModule_OnboardingModule.bundle */,

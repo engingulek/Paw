@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		067CBBF45D04083A81E0A018 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F284C31292C72BDC1FE97B /* CategoryCollectionViewCell.swift */; };
 		1A0AFF10B2F3D96AE75A3883 /* AdoptingHomeModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */; };
+		4F3729A4BC6F7103724A281D /* AdvertDetailModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = D3475F2A68D9E3C2E3D46A8D /* AdvertDetailModuleInterface.framework */; };
 		69EBC4C6923F958E39F33102 /* AdoptingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24403685C36FFC4747C9AE12 /* AdoptingHomeViewController.swift */; };
 		7140D3FE18DBDB824D5918FC /* TuistBundle+AdoptingHomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A321EDCDDFD38ACB98C9B6D /* TuistBundle+AdoptingHomeModule.swift */; };
 		7BAE35C0A236C5443E392F70 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7CC6CBF2450872DEA66F /* Category.swift */; };
@@ -55,6 +56,7 @@
 			dstSubfolderSpec = 16;
 			files = (
 				1A0AFF10B2F3D96AE75A3883 /* AdoptingHomeModuleInterface.framework in Dependencies */,
+				4F3729A4BC6F7103724A281D /* AdvertDetailModuleInterface.framework in Dependencies */,
 			);
 			name = Dependencies;
 			runOnlyForDeploymentPostprocessing = 1;
@@ -97,6 +99,7 @@
 		BDFF7CC6CBF2450872DEA66F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		C6F284C31292C72BDC1FE97B /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		D053F1E43EE3E9515DA00734 /* AdoptingHomeModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeModuleInterface-Info.plist"; sourceTree = "<group>"; };
+		D3475F2A68D9E3C2E3D46A8D /* AdvertDetailModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptinHomePresenter.swift; sourceTree = "<group>"; };
 		E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,6 +219,7 @@
 				8F07FC7490EF408185796733 /* AdoptingHomeModule_AdoptingHomeModule.bundle */,
 				1286FFE3486C129976D1A1B7 /* AdoptingHomeModule.framework */,
 				A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */,
+				D3475F2A68D9E3C2E3D46A8D /* AdvertDetailModuleInterface.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";

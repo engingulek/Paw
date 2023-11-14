@@ -56,6 +56,34 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5D69A159F32406F462F6DE91"
+               BuildableName = "AdvertDetailModule.framework"
+               BlueprintName = "AdvertDetailModule"
+               ReferencedContainer = "container:Modules/DomainModules/AdvertDetailModule/AdvertDetailModule.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8A624C823BC02129830E58FF"
+               BuildableName = "AdvertDetailModuleInterface.framework"
+               BlueprintName = "AdvertDetailModuleInterface"
+               ReferencedContainer = "container:Modules/DomainModules/AdvertDetailModule/AdvertDetailModule.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "77A705E112BA78834D2901D0"
                BuildableName = "CommonKit.framework"
                BlueprintName = "CommonKit"

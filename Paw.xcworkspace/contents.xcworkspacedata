@@ -32,6 +32,9 @@
             location = "group:AdoptingHomeModule/AdoptingHomeModule.xcodeproj">
          </FileRef>
          <FileRef
+            location = "group:AdvertDetailModule/AdvertDetailModule.xcodeproj">
+         </FileRef>
+         <FileRef
             location = "group:OnboardingModule/OnboardingModule.xcodeproj">
          </FileRef>
          <FileRef

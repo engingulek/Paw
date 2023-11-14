@@ -6,8 +6,10 @@ protocol AdoptinHomePresenterInterface {
     var view : AdoptingHomeViewControllerInterfaca? {get set}
     
     func viewDidload()
+    func viewWillAppear()
     func categorNumberOfItems() -> Int
     func categoryCellForItemAt(index:Int) -> Category
+    func didSelectItem(index : Int)
   
 }
 
@@ -22,9 +24,14 @@ final class AdoptinHomePresenter : AdoptinHomePresenterInterface {
     
     func viewDidload() {
         view?.setBackColorAble(color: .white)
+        view?.navigationBackButtonHiddenAble(isHidden:true )
+        
         view?.prepareCollectionView()
         view?.prepareTableView()
-        
+    }
+    
+    func viewWillAppear() {
+        view?.tabbarisHidden(isHidden: false)
     }
     
     func categorNumberOfItems() -> Int {
@@ -34,6 +41,11 @@ final class AdoptinHomePresenter : AdoptinHomePresenterInterface {
     func categoryCellForItemAt(index: Int) -> Category {
         let category = Category.exampleCategory[index]
         return category
+    }
+    
+    func didSelectItem(index: Int) {
+        print("Test111")
+        router?.toAdvertDetail(view: view)
     }
     
     
