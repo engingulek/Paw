@@ -10,6 +10,7 @@ protocol AdvertDetailViewControllerInterface: AnyObject ,Ables {
 final class AdvertDetailViewController: UIViewController,AdvertDetailViewControllerInterface {
     lazy var presenter: AdvertDetailPresenterInterface = AdvertDetailPresenter(view: self,advertDetailImageView: detailImageView)
     private lazy var detailImageView = AdvertDetailImagesImages()
+    private lazy var detailInfoView = AdvertDetailInfoView()
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +23,19 @@ final class AdvertDetailViewController: UIViewController,AdvertDetailViewControl
     
     private func configureData(){
         view.addSubview(detailImageView)
+        view.addSubview(detailInfoView)
         detailImageView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
             make.height.equalTo(UIScreen.main.bounds.height / 3)
+        }
+        
+        detailInfoView.snp.makeConstraints { make in
+            make.top.equalTo(detailImageView.snp.bottom)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
         }
     }
 }
