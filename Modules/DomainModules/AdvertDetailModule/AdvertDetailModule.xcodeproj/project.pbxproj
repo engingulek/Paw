@@ -8,13 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		30C42A9EEF66B88115EFA371 /* AdvertDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999E0CB5BE688E04D1BCD866 /* AdvertDetailPresenter.swift */; };
+		33C4510DDA0F7241309A2237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5FD754B790324D706EE4238 /* Assets.xcassets */; };
 		406A3A28312FF91A67E07947 /* AdvertDetailModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 81B0DBC68EF58408B5E9A265 /* AdvertDetailModuleInterface.framework */; };
+		9DB1D58273CEA988050AAD63 /* TuistAssets+AdvertDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7265EAC3F80ADF44A78551C /* TuistAssets+AdvertDetailModule.swift */; };
+		AFC4A94FBF9514735D23A870 /* TuistBundle+AdvertDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A73B895A012C83C926DD623 /* TuistBundle+AdvertDetailModule.swift */; };
 		B91503EC2209C308AD84A404 /* AdvertDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0BB20D19A07F8C8F9DE749 /* AdvertDetailRouter.swift */; };
+		C0498D8376BB550534D600C2 /* AdvertDetailImagesImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44184ABF1DA04CC7EC65792A /* AdvertDetailImagesImages.swift */; };
 		DA4EE76057B9F23DE819E53B /* AdvertDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF0A9B17DA7CA08420706D3 /* AdvertDetailViewController.swift */; };
 		F1DA1700E29B63D6E6FAC71E /* AdvertDetailModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D843BADC1C314D07C95DC /* AdvertDetailModuleInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AACECBDBA73489F3DDF78EC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31CBC1A481141BF8DB2107B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04AA7E661C36968731E69A47;
+			remoteInfo = AdvertDetailModule_AdvertDetailModule;
+		};
 		BD305E6F0B177FBE1466D605 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 31CBC1A481141BF8DB2107B9 /* Project object */;
@@ -55,21 +66,44 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FCDD95B3C3E6FD6750806B58 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2CF0A9B17DA7CA08420706D3 /* AdvertDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetailViewController.swift; sourceTree = "<group>"; };
 		2E7E1FD0195B11F3CE6514CD /* AdvertDetailModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdvertDetailModule-Info.plist"; sourceTree = "<group>"; };
 		3E0BB20D19A07F8C8F9DE749 /* AdvertDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetailRouter.swift; sourceTree = "<group>"; };
+		44184ABF1DA04CC7EC65792A /* AdvertDetailImagesImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetailImagesImages.swift; sourceTree = "<group>"; };
 		48B39F8836CC4D5B9EEA5EC2 /* AdvertDetailModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A73B895A012C83C926DD623 /* TuistBundle+AdvertDetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+AdvertDetailModule.swift"; sourceTree = "<group>"; };
 		81B0DBC68EF58408B5E9A265 /* AdvertDetailModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		999E0CB5BE688E04D1BCD866 /* AdvertDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetailPresenter.swift; sourceTree = "<group>"; };
 		9F7D843BADC1C314D07C95DC /* AdvertDetailModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetailModuleInterface.swift; sourceTree = "<group>"; };
+		AA72C3F699587393B9416713 /* AdvertDetailModule_AdvertDetailModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdvertDetailModule_AdvertDetailModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB44869E83937E58D2F777B3 /* AdvertDetailModule_AdvertDetailModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdvertDetailModule_AdvertDetailModule-Info.plist"; sourceTree = "<group>"; };
+		C5FD754B790324D706EE4238 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7265EAC3F80ADF44A78551C /* TuistAssets+AdvertDetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+AdvertDetailModule.swift"; sourceTree = "<group>"; };
 		F3F78B7E4C4B47ED734642A0 /* AdvertDetailModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdvertDetailModuleInterface-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		195B8F70303E37AFA3F76BED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36B53AD6DD53DA4741E3467B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -86,9 +120,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A170B7457AC05574134F4D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44184ABF1DA04CC7EC65792A /* AdvertDetailImagesImages.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		32380FAB03945FD8CD9567D1 /* InfoPlists */ = {
 			isa = PBXGroup;
 			children = (
+				BB44869E83937E58D2F777B3 /* AdvertDetailModule_AdvertDetailModule-Info.plist */,
 				2E7E1FD0195B11F3CE6514CD /* AdvertDetailModule-Info.plist */,
 				F3F78B7E4C4B47ED734642A0 /* AdvertDetailModuleInterface-Info.plist */,
 			);
@@ -99,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				32380FAB03945FD8CD9567D1 /* InfoPlists */,
+				C02E59ED81CBDEB5CEE5FB95 /* Sources */,
 			);
 			path = Derived;
 			sourceTree = "<group>";
@@ -111,9 +155,18 @@
 			path = InterfaceSource;
 			sourceTree = "<group>";
 		};
+		78F2DF335D852E7DFCDD70B8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C5FD754B790324D706EE4238 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		7EE07C4AA6CD8BB2C1D6E81B /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				AA72C3F699587393B9416713 /* AdvertDetailModule_AdvertDetailModule.bundle */,
 				48B39F8836CC4D5B9EEA5EC2 /* AdvertDetailModule.framework */,
 				81B0DBC68EF58408B5E9A265 /* AdvertDetailModuleInterface.framework */,
 			);
@@ -132,9 +185,19 @@
 			children = (
 				69CEBA8831CB10CE61CF0430 /* Derived */,
 				7551EE2BE2991E70B06F1D17 /* InterfaceSource */,
+				78F2DF335D852E7DFCDD70B8 /* Resources */,
 				F034D42E342893CBCA964FEE /* Sources */,
 			);
 			name = Project;
+			sourceTree = "<group>";
+		};
+		C02E59ED81CBDEB5CEE5FB95 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C7265EAC3F80ADF44A78551C /* TuistAssets+AdvertDetailModule.swift */,
+				4A73B895A012C83C926DD623 /* TuistBundle+AdvertDetailModule.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		C730F4698936069B24A481B3 = {
@@ -149,6 +212,7 @@
 		F034D42E342893CBCA964FEE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1A170B7457AC05574134F4D5 /* View */,
 				999E0CB5BE688E04D1BCD866 /* AdvertDetailPresenter.swift */,
 				3E0BB20D19A07F8C8F9DE749 /* AdvertDetailRouter.swift */,
 				2CF0A9B17DA7CA08420706D3 /* AdvertDetailViewController.swift */,
@@ -159,6 +223,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		04AA7E661C36968731E69A47 /* AdvertDetailModule_AdvertDetailModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6BBD55F13799204619C76C7 /* Build configuration list for PBXNativeTarget "AdvertDetailModule_AdvertDetailModule" */;
+			buildPhases = (
+				4C686F65E7A4197D82CF8B9A /* Resources */,
+				FCDD95B3C3E6FD6750806B58 /* Embed Frameworks */,
+				36B53AD6DD53DA4741E3467B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AdvertDetailModule_AdvertDetailModule;
+			productName = AdvertDetailModule_AdvertDetailModule;
+			productReference = AA72C3F699587393B9416713 /* AdvertDetailModule_AdvertDetailModule.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		5D69A159F32406F462F6DE91 /* AdvertDetailModule */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C51B1AC42D2B17797AB849C6 /* Build configuration list for PBXNativeTarget "AdvertDetailModule" */;
@@ -173,6 +254,7 @@
 			);
 			dependencies = (
 				D7BAC79F7DF1F902628ADEBF /* PBXTargetDependency */,
+				3428FEB3598A8A1EC125FB09 /* PBXTargetDependency */,
 			);
 			name = AdvertDetailModule;
 			productName = AdvertDetailModule;
@@ -221,6 +303,7 @@
 			projectRoot = "";
 			targets = (
 				5D69A159F32406F462F6DE91 /* AdvertDetailModule */,
+				04AA7E661C36968731E69A47 /* AdvertDetailModule_AdvertDetailModule */,
 				8A624C823BC02129830E58FF /* AdvertDetailModuleInterface */,
 			);
 		};
@@ -231,6 +314,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C686F65E7A4197D82CF8B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33C4510DDA0F7241309A2237 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,9 +339,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DB1D58273CEA988050AAD63 /* TuistAssets+AdvertDetailModule.swift in Sources */,
+				AFC4A94FBF9514735D23A870 /* TuistBundle+AdvertDetailModule.swift in Sources */,
 				30C42A9EEF66B88115EFA371 /* AdvertDetailPresenter.swift in Sources */,
 				B91503EC2209C308AD84A404 /* AdvertDetailRouter.swift in Sources */,
 				DA4EE76057B9F23DE819E53B /* AdvertDetailViewController.swift in Sources */,
+				C0498D8376BB550534D600C2 /* AdvertDetailImagesImages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +359,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3428FEB3598A8A1EC125FB09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AdvertDetailModule_AdvertDetailModule;
+			target = 04AA7E661C36968731E69A47 /* AdvertDetailModule_AdvertDetailModule */;
+			targetProxy = AACECBDBA73489F3DDF78EC5 /* PBXContainerItemProxy */;
+		};
 		D7BAC79F7DF1F902628ADEBF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AdvertDetailModuleInterface;
@@ -307,6 +407,27 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		1C64ABCC6B60D99E37483B55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/AdvertDetailModule_AdvertDetailModule-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.AdvertDetailModule.resources;
+				PRODUCT_NAME = AdvertDetailModule_AdvertDetailModule;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
 		};
 		2205B48681C168571EBB1D69 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -376,6 +497,26 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		A56D94D8493C3CA77DD0A4CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/AdvertDetailModule_AdvertDetailModule-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.AdvertDetailModule.resources;
+				PRODUCT_NAME = AdvertDetailModule_AdvertDetailModule;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
 		};
 		D47285ED7A439381C74A40A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -541,6 +682,15 @@
 			buildConfigurations = (
 				EF7C41389C9B103C0766D9C7 /* Debug */,
 				2205B48681C168571EBB1D69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6BBD55F13799204619C76C7 /* Build configuration list for PBXNativeTarget "AdvertDetailModule_AdvertDetailModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C64ABCC6B60D99E37483B55 /* Debug */,
+				A56D94D8493C3CA77DD0A4CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

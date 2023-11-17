@@ -26,7 +26,7 @@ let framworkTarget =  Target(
     deploymentTarget: .iOS(targetVersion: "16.0", devices: .iphone),
     infoPlist: .default,
     sources: "Sources/**",
-    resources: ["Resources"],
+    resources: ["Resources/Assets.xcassets/**"],
     dependencies: dependensies
 )
 
