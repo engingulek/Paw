@@ -1,7 +1,7 @@
 
 
 import ProjectDescription
-
+import ProjectDescriptionHelpers
 
 
 
@@ -18,10 +18,14 @@ let interfaceTarget  = Target(
 )
 
 let dependensies : [TargetDependency] = [
+    .project(target: "DependencyKit", path: .relativeToRoot("Kits/CoreKits/DependencyKit")),
     .project(target: "AdoptingHomeModuleInterface",
              path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule")),
     .project(target: "AdvertDetailModuleInterface",
-             path: .relativeToRoot("Modules/DomainModules/AdvertDetailModule"))
+             path: .relativeToRoot("Modules/DomainModules/AdvertDetailModule")),
+    .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),
+    snapKit
+    
 ]
 
 let framworkTarget =  Target(
@@ -36,6 +40,19 @@ let framworkTarget =  Target(
     dependencies: dependensies
 )
 
+let unitTestTarget = Target(
+    name: "AdoptingHomeUnitTests",
+    platform: .iOS,
+    product: .unitTests,
+    bundleId: "com.ios.AdoptingHomeUnitTests",
+    deploymentTarget: .iOS(targetVersion: "16.0", devices: .iphone),
+    infoPlist: .default,
+    sources: ["Tests/**"],
+    dependencies: [
+        .target(name: "AdoptingHomeModule")
+    ]
+)
 
 
-let project = Project(name: "AdoptingHomeModule",packages: [],targets:[framworkTarget,interfaceTarget])
+
+let project = Project(name: "AdoptingHomeModule",packages: [.snapKit],targets:[unitTestTarget,framworkTarget,interfaceTarget])

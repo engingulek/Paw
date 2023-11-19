@@ -125,6 +125,8 @@ extension AdoptingHomeViewController : UITableViewDelegate,UITableViewDataSource
 }
 
 extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
+  
+    
    
     
     func prepareCollectionView() {

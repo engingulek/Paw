@@ -40,7 +40,7 @@ final class OnboardingPresenterUnitTest : XCTestCase {
         XCTAssertEqual(router.invokedToTabbarContoller, false)
         XCTAssertEqual(router.invokedToTabbarContollerCount, 0)
         
-        router.toTabbarController(view: view)
+        sut.selectedAdoptingView()
         
         // MockMockOnboardingRouter
         XCTAssertEqual(router.invokedToTabbarContoller, true)

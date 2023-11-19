@@ -56,6 +56,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6435DDC7DDD631D23736175B"
+               BuildableName = "AdoptingHomeUnitTests.xctest"
+               BlueprintName = "AdoptingHomeUnitTests"
+               ReferencedContainer = "container:Modules/DomainModules/AdoptingHomeModule/AdoptingHomeModule.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "5D69A159F32406F462F6DE91"
                BuildableName = "AdvertDetailModule.framework"
                BlueprintName = "AdvertDetailModule"
@@ -224,6 +238,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6435DDC7DDD631D23736175B"
+               BuildableName = "AdoptingHomeUnitTests.xctest"
+               BlueprintName = "AdoptingHomeUnitTests"
+               ReferencedContainer = "container:Modules/DomainModules/AdoptingHomeModule/AdoptingHomeModule.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference

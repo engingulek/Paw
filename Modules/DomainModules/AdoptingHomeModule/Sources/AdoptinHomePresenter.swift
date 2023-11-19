@@ -44,7 +44,7 @@ final class AdoptinHomePresenter : AdoptinHomePresenterInterface {
     }
     
     func didSelectItem(index: Int) {
-        print("Test111")
+       
         router?.toAdvertDetail(view: view)
     }
     
