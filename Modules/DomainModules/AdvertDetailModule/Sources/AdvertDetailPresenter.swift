@@ -38,14 +38,14 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
     }
     
     func selectedADIOne() {
-        advertDetailImageView?.changeOpacityWhenSelectedImageOne(opacity:0.50)
+        advertDetailImageView?.changeOpacityWhenSelectedImageOne(opacity:0.50,defaultOpacity: 1)
     }
     
     func selectedADITwo() {
-        advertDetailImageView?.changeOpacityWhenSelectedImageTwo(opacity:0.50)
+        advertDetailImageView?.changeOpacityWhenSelectedImageTwo(opacity:0.50,defaultOpacity: 1)
     }
     
     func selectedADIThree() {
-        advertDetailImageView?.changeOpacityWhenSelectedImageThree(opacity:0.50)
+        advertDetailImageView?.changeOpacityWhenSelectedImageThree(opacity:0.50,defaultOpacity: 1)
     }
 }

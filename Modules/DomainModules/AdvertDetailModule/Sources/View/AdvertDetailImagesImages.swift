@@ -5,9 +5,9 @@ import SnapKit
 import UIKit
 
 protocol AdvertDetailImagesImagesInterface {
-    func changeOpacityWhenSelectedImageOne(opacity:Float)
-    func changeOpacityWhenSelectedImageTwo(opacity:Float)
-    func changeOpacityWhenSelectedImageThree(opacity:Float)
+    func changeOpacityWhenSelectedImageOne(opacity:Float,defaultOpacity:Float)
+    func changeOpacityWhenSelectedImageTwo(opacity:Float,defaultOpacity:Float)
+    func changeOpacityWhenSelectedImageThree(opacity:Float,defaultOpacity:Float)
 }
 
 protocol AdvertDetailImagesImagesDelegate {
@@ -155,25 +155,25 @@ final class AdvertDetailImagesImages : UIView {
 }
 
 extension AdvertDetailImagesImages : AdvertDetailImagesImagesInterface {
-    func changeOpacityWhenSelectedImageOne(opacity:Float) {
+    func changeOpacityWhenSelectedImageOne(opacity:Float,defaultOpacity:Float) {
         print("One")
         advertDetailImageViewOne.layer.opacity = opacity
-        advertDetailImageViewTwo.layer.opacity = 1
-        advertDetailImageViewThree.layer.opacity = 1
+        advertDetailImageViewTwo.layer.opacity = defaultOpacity
+        advertDetailImageViewThree.layer.opacity = defaultOpacity
     }
     
-    func changeOpacityWhenSelectedImageTwo(opacity:Float) {
+    func changeOpacityWhenSelectedImageTwo(opacity:Float,defaultOpacity:Float) {
         print("Two")
         advertDetailImageViewTwo.layer.opacity = opacity
-        advertDetailImageViewOne.layer.opacity = 1
-        advertDetailImageViewThree.layer.opacity = 1
+        advertDetailImageViewOne.layer.opacity = defaultOpacity
+        advertDetailImageViewThree.layer.opacity = defaultOpacity
     }
     
-    func changeOpacityWhenSelectedImageThree(opacity:Float) {
+    func changeOpacityWhenSelectedImageThree(opacity:Float,defaultOpacity:Float) {
         print("Three")
         advertDetailImageViewThree.layer.opacity = opacity
-        advertDetailImageViewTwo.layer.opacity = 1
-        advertDetailImageViewOne.layer.opacity = 1
+        advertDetailImageViewTwo.layer.opacity = defaultOpacity
+        advertDetailImageViewOne.layer.opacity = defaultOpacity
     }
     
     

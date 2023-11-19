@@ -112,6 +112,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "334DCA37532AAA0B5C1B0F34"
+               BuildableName = "AdvertDetailUnitTests.xctest"
+               BlueprintName = "AdvertDetailUnitTests"
+               ReferencedContainer = "container:Modules/DomainModules/AdvertDetailModule/AdvertDetailModule.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "77A705E112BA78834D2901D0"
                BuildableName = "CommonKit.framework"
                BlueprintName = "CommonKit"
@@ -246,6 +260,16 @@
                BuildableName = "AdoptingHomeUnitTests.xctest"
                BlueprintName = "AdoptingHomeUnitTests"
                ReferencedContainer = "container:Modules/DomainModules/AdoptingHomeModule/AdoptingHomeModule.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "334DCA37532AAA0B5C1B0F34"
+               BuildableName = "AdvertDetailUnitTests.xctest"
+               BlueprintName = "AdvertDetailUnitTests"
+               ReferencedContainer = "container:Modules/DomainModules/AdvertDetailModule/AdvertDetailModule.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference

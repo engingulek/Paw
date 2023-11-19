@@ -69,7 +69,7 @@ final class AdoptingHomePresenterUnitTests : XCTest {
         XCTAssertEqual(view.invokedTabbarIsHiddenStatus, false)
         XCTAssertEqual(view.invokedTabbarIsHiddenCount, 0)
         
-        sut.viewDidload()
+        sut.viewWillAppear()
         
         XCTAssertEqual(view.invokedTabbarIsHiddenStatus, true)
         XCTAssertEqual(view.invokedTabbarIsHiddenCount, 1)
