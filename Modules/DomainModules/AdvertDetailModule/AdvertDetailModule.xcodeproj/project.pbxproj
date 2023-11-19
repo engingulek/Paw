@@ -3,14 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		30C42A9EEF66B88115EFA371 /* AdvertDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999E0CB5BE688E04D1BCD866 /* AdvertDetailPresenter.swift */; };
 		33C4510DDA0F7241309A2237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5FD754B790324D706EE4238 /* Assets.xcassets */; };
 		406A3A28312FF91A67E07947 /* AdvertDetailModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 81B0DBC68EF58408B5E9A265 /* AdvertDetailModuleInterface.framework */; };
-		7DA3C1C42B07FBA00055DF2C /* AdvertDetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA3C1C32B07FBA00055DF2C /* AdvertDetailInfoView.swift */; };
+		79DD8AA8A1B41247FAAD2E43 /* AdvertDetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BF9306776D197A91819534 /* AdvertDetailInfoView.swift */; };
 		9DB1D58273CEA988050AAD63 /* TuistAssets+AdvertDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7265EAC3F80ADF44A78551C /* TuistAssets+AdvertDetailModule.swift */; };
 		AFC4A94FBF9514735D23A870 /* TuistBundle+AdvertDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A73B895A012C83C926DD623 /* TuistBundle+AdvertDetailModule.swift */; };
 		B91503EC2209C308AD84A404 /* AdvertDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0BB20D19A07F8C8F9DE749 /* AdvertDetailRouter.swift */; };
@@ -86,7 +86,7 @@
 		44184ABF1DA04CC7EC65792A /* AdvertDetailImagesImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetailImagesImages.swift; sourceTree = "<group>"; };
 		48B39F8836CC4D5B9EEA5EC2 /* AdvertDetailModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A73B895A012C83C926DD623 /* TuistBundle+AdvertDetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+AdvertDetailModule.swift"; sourceTree = "<group>"; };
-		7DA3C1C32B07FBA00055DF2C /* AdvertDetailInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetailInfoView.swift; sourceTree = "<group>"; };
+		63BF9306776D197A91819534 /* AdvertDetailInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetailInfoView.swift; sourceTree = "<group>"; };
 		81B0DBC68EF58408B5E9A265 /* AdvertDetailModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		999E0CB5BE688E04D1BCD866 /* AdvertDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetailPresenter.swift; sourceTree = "<group>"; };
 		9F7D843BADC1C314D07C95DC /* AdvertDetailModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetailModuleInterface.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				44184ABF1DA04CC7EC65792A /* AdvertDetailImagesImages.swift */,
-				7DA3C1C32B07FBA00055DF2C /* AdvertDetailInfoView.swift */,
+				63BF9306776D197A91819534 /* AdvertDetailInfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,6 +289,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = E4F984FE73B7FFED1F282E29 /* Build configuration list for PBXProject "AdvertDetailModule" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -346,7 +348,7 @@
 				B91503EC2209C308AD84A404 /* AdvertDetailRouter.swift in Sources */,
 				DA4EE76057B9F23DE819E53B /* AdvertDetailViewController.swift in Sources */,
 				C0498D8376BB550534D600C2 /* AdvertDetailImagesImages.swift in Sources */,
-				7DA3C1C42B07FBA00055DF2C /* AdvertDetailInfoView.swift in Sources */,
+				79DD8AA8A1B41247FAAD2E43 /* AdvertDetailInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

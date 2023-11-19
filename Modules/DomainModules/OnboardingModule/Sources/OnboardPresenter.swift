@@ -26,7 +26,6 @@ extension OnboardPresenter {
     }
     
     func selectedAdoptingView() {
-        print("Test")
         router?.toTabbarController(view: view)
     }
     

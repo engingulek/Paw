@@ -7,22 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1241FCBBFABA1425748EDA24 /* OnboardingModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D181EE3A6CDF26529E30209 /* OnboardingModuleInterface.framework */; };
+		12B1989A74BEBC9FECD4DAED /* OnboardingModule_OnboardingModule.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = B2F4AB108A12A8C311564E7C /* OnboardingModule_OnboardingModule.bundle */; };
 		22129BBCDC8C69B441A9514C /* OnboardingModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 3D181EE3A6CDF26529E30209 /* OnboardingModuleInterface.framework */; };
 		2A067D029D309C6FCE749DE4 /* TuistAssets+OnboardingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A3C8C1B10322789F1DE24 /* TuistAssets+OnboardingModule.swift */; };
 		3CA22F8C6C34B7CBF0F205DE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 646BAC3F0AF89BC85645672A /* SnapKit */; };
 		401F19449352D90C52A51ECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A56FDDCFF56745A9107E53F /* Assets.xcassets */; };
+		5C91979D741087AD2EFCBC63 /* TabbarModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBCABFABE4C1939EAF3C0B9 /* TabbarModuleInterface.framework */; };
 		67276A869E008ABD8FBE42D2 /* CommonKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 231D6D41433FEEF74D0FCA44 /* CommonKit.framework */; };
 		6796CB09086A695AD1FACF1C /* OnboardingModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7096757BC66320007DCE86E /* OnboardingModuleInterface.swift */; };
 		828A9BFC0AFB5B195910CB05 /* TuistBundle+OnboardingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566BD5A8A2AF50C374326034 /* TuistBundle+OnboardingModule.swift */; };
 		94514F704066AFBB36D38FA2 /* TabbarModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 0EBCABFABE4C1939EAF3C0B9 /* TabbarModuleInterface.framework */; };
 		A6C5A36779CCD576D3A8B4AA /* OnboardiingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7187CCB1C58D14AC60053790 /* OnboardiingViewController.swift */; };
 		A7F3F3BDA5043F148F9F0895 /* DependencyKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = EB3A3E3C1659084A1AE6F0A2 /* DependencyKit.framework */; };
+		AA87EB6A69A0FB5C3E7E59D2 /* CommonKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 231D6D41433FEEF74D0FCA44 /* CommonKit.framework */; };
 		B0C583814F4EFFF01EEBA053 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5862F88E0528EC32913F6 /* OnboardView.swift */; };
 		C107BD06ECD29834B71EAD0D /* OnboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5568FCDDF47C6311EED1DC /* OnboardPresenter.swift */; };
+		D704523ED87A17043C4DB877 /* MockOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82881C3F6C8DC08A142C1D62 /* MockOnboardingViewController.swift */; };
+		DA8E9B3DCA29669C8C639330 /* DependencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3A3E3C1659084A1AE6F0A2 /* DependencyKit.framework */; };
+		ED0FC94576A2AED5FA0FC951 /* MockOnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D68E029064E52A791D52F4 /* MockOnboardingRouter.swift */; };
+		EDD4360509BD352F7EDCE942 /* OnboardingModule_OnboardingModule.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B2F4AB108A12A8C311564E7C /* OnboardingModule_OnboardingModule.bundle */; };
+		F171FA16C4A2BE9B398CCC6E /* OnboardingPresenterUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D05EE9F28226A930D7BDB9 /* OnboardingPresenterUnitTest.swift */; };
 		F3BD2AA655143415C1A448B3 /* OnboardiingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF263EA1036EAA7CBF08022 /* OnboardiingRouter.swift */; };
+		F8D8E09674B08435D7FA6BF9 /* OnboardingModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F517901FD839BD3A04C2113 /* OnboardingModule.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		62E9B7A033ED9FACD866D180 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 864032F24C3D8E1ECEDA8B17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F49C9490020276A82EBF4B85;
+			remoteInfo = OnboardingModule;
+		};
 		7DAF426F69714CBA59576474 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 864032F24C3D8E1ECEDA8B17 /* Project object */;
@@ -60,6 +77,26 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		778507C665727185D7F397E1 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				12B1989A74BEBC9FECD4DAED /* OnboardingModule_OnboardingModule.bundle in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		985D3DA1D6A04528458AFD21 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AB52F0118286D3FF23060016 /* Dependencies */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 8;
@@ -86,19 +123,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01EA5ABA276B09BE40D266F4 /* OnboardingUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06181049C7146633EAF76235 /* OnboardingModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		0A56FDDCFF56745A9107E53F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EBCABFABE4C1939EAF3C0B9 /* TabbarModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TabbarModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		231D6D41433FEEF74D0FCA44 /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D181EE3A6CDF26529E30209 /* OnboardingModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45D68E029064E52A791D52F4 /* MockOnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOnboardingRouter.swift; sourceTree = "<group>"; };
+		49D05EE9F28226A930D7BDB9 /* OnboardingPresenterUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenterUnitTest.swift; sourceTree = "<group>"; };
 		566BD5A8A2AF50C374326034 /* TuistBundle+OnboardingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+OnboardingModule.swift"; sourceTree = "<group>"; };
 		6006C0517F34AF2F34B6511C /* OnboardingModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingModule-Info.plist"; sourceTree = "<group>"; };
 		6F517901FD839BD3A04C2113 /* OnboardingModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7187CCB1C58D14AC60053790 /* OnboardiingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardiingViewController.swift; sourceTree = "<group>"; };
+		82881C3F6C8DC08A142C1D62 /* MockOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOnboardingViewController.swift; sourceTree = "<group>"; };
 		8F5568FCDDF47C6311EED1DC /* OnboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPresenter.swift; sourceTree = "<group>"; };
 		9E6A3C8C1B10322789F1DE24 /* TuistAssets+OnboardingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+OnboardingModule.swift"; sourceTree = "<group>"; };
 		ACB5862F88E0528EC32913F6 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
 		ACF263EA1036EAA7CBF08022 /* OnboardiingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardiingRouter.swift; sourceTree = "<group>"; };
+		B230E61CB4718D3476ADBAE1 /* OnboardingUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingUnitTests-Info.plist"; sourceTree = "<group>"; };
 		B2F4AB108A12A8C311564E7C /* OnboardingModule_OnboardingModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingModule_OnboardingModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7096757BC66320007DCE86E /* OnboardingModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModuleInterface.swift; sourceTree = "<group>"; };
 		BDB01826376F4CC1AF04CB6E /* OnboardingModule_OnboardingModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingModule_OnboardingModule-Info.plist"; sourceTree = "<group>"; };
@@ -128,6 +170,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4EABD642AF3BDDBB9B0251B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA87EB6A69A0FB5C3E7E59D2 /* CommonKit.framework in Frameworks */,
+				DA8E9B3DCA29669C8C639330 /* DependencyKit.framework in Frameworks */,
+				F8D8E09674B08435D7FA6BF9 /* OnboardingModule.framework in Frameworks */,
+				1241FCBBFABA1425748EDA24 /* OnboardingModuleInterface.framework in Frameworks */,
+				5C91979D741087AD2EFCBC63 /* TabbarModuleInterface.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -137,6 +191,7 @@
 				BDB01826376F4CC1AF04CB6E /* OnboardingModule_OnboardingModule-Info.plist */,
 				6006C0517F34AF2F34B6511C /* OnboardingModule-Info.plist */,
 				06181049C7146633EAF76235 /* OnboardingModuleInterface-Info.plist */,
+				B230E61CB4718D3476ADBAE1 /* OnboardingUnitTests-Info.plist */,
 			);
 			path = InfoPlists;
 			sourceTree = "<group>";
@@ -184,6 +239,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		ADD5FF32DC2204BBF54CBD99 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				45D68E029064E52A791D52F4 /* MockOnboardingRouter.swift */,
+				82881C3F6C8DC08A142C1D62 /* MockOnboardingViewController.swift */,
+				49D05EE9F28226A930D7BDB9 /* OnboardingPresenterUnitTest.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		C7A96691D0B3DC1FF519D812 /* Project */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +256,7 @@
 				44B853167B8D3C431B182C42 /* InterfaceSource */,
 				6C6C76F895ABACC7803F454C /* Resources */,
 				3B9039ED2CF016B05478A155 /* Sources */,
+				ADD5FF32DC2204BBF54CBD99 /* Tests */,
 			);
 			name = Project;
 			sourceTree = "<group>";
@@ -221,6 +287,7 @@
 				B2F4AB108A12A8C311564E7C /* OnboardingModule_OnboardingModule.bundle */,
 				6F517901FD839BD3A04C2113 /* OnboardingModule.framework */,
 				3D181EE3A6CDF26529E30209 /* OnboardingModuleInterface.framework */,
+				01EA5ABA276B09BE40D266F4 /* OnboardingUnitTests.xctest */,
 				0EBCABFABE4C1939EAF3C0B9 /* TabbarModuleInterface.framework */,
 			);
 			name = Products;
@@ -263,6 +330,26 @@
 			productName = OnboardingModule_OnboardingModule;
 			productReference = B2F4AB108A12A8C311564E7C /* OnboardingModule_OnboardingModule.bundle */;
 			productType = "com.apple.product-type.bundle";
+		};
+		A5888216DB4A531746BBDA1A /* OnboardingUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 989D0D010768DFACECEBA33C /* Build configuration list for PBXNativeTarget "OnboardingUnitTests" */;
+			buildPhases = (
+				BA43E6AF02AC9E235C44CB8E /* Sources */,
+				26185F591E5334CB306931A0 /* Resources */,
+				985D3DA1D6A04528458AFD21 /* Embed Frameworks */,
+				E4EABD642AF3BDDBB9B0251B /* Frameworks */,
+				778507C665727185D7F397E1 /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2AD2940ABFE2B839D8370811 /* PBXTargetDependency */,
+			);
+			name = OnboardingUnitTests;
+			productName = OnboardingUnitTests;
+			productReference = 01EA5ABA276B09BE40D266F4 /* OnboardingUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		F49C9490020276A82EBF4B85 /* OnboardingModule */ = {
 			isa = PBXNativeTarget;
@@ -314,6 +401,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				A5888216DB4A531746BBDA1A /* OnboardingUnitTests */,
 				F49C9490020276A82EBF4B85 /* OnboardingModule */,
 				38F3660BE7257B6D1592379B /* OnboardingModule_OnboardingModule */,
 				369EADD5F098B373878CEA76 /* OnboardingModuleInterface */,
@@ -322,6 +410,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		26185F591E5334CB306931A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD4360509BD352F7EDCE942 /* OnboardingModule_OnboardingModule.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		76A7CB7697E54735833794E3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -368,6 +464,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BA43E6AF02AC9E235C44CB8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED0FC94576A2AED5FA0FC951 /* MockOnboardingRouter.swift in Sources */,
+				D704523ED87A17043C4DB877 /* MockOnboardingViewController.swift in Sources */,
+				F171FA16C4A2BE9B398CCC6E /* OnboardingPresenterUnitTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -376,6 +482,12 @@
 			name = OnboardingModuleInterface;
 			target = 369EADD5F098B373878CEA76 /* OnboardingModuleInterface */;
 			targetProxy = 7DAF426F69714CBA59576474 /* PBXContainerItemProxy */;
+		};
+		2AD2940ABFE2B839D8370811 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OnboardingModule;
+			target = F49C9490020276A82EBF4B85 /* OnboardingModule */;
+			targetProxy = 62E9B7A033ED9FACD866D180 /* PBXContainerItemProxy */;
 		};
 		6E5A6F4774365BBA380982D2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -500,6 +612,30 @@
 			};
 			name = Debug;
 		};
+		61743A6D34AA3A968BA3D58F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/OnboardingUnitTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.OnboardingUnitTests;
+				PRODUCT_NAME = OnboardingUnitTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		89ACA31DF1CC9461194C3AA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -554,6 +690,31 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		BCF1C3711A89B3FCBD26C8EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/OnboardingUnitTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.OnboardingUnitTests;
+				PRODUCT_NAME = OnboardingUnitTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
 		};
 		CC96B52A1FA017B962943E9A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -703,6 +864,15 @@
 			buildConfigurations = (
 				89ACA31DF1CC9461194C3AA4 /* Debug */,
 				4708347F2A39E86906D18D4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		989D0D010768DFACECEBA33C /* Build configuration list for PBXNativeTarget "OnboardingUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCF1C3711A89B3FCBD26C8EA /* Debug */,
+				61743A6D34AA3A968BA3D58F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

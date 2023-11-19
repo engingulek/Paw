@@ -36,6 +36,19 @@ let framworkTarget =  Target(
     dependencies: dependensies
 )
 
+let unitTestTarget = Target(
+    name: "OnboardingUnitTests",
+    platform: .iOS,
+    product: .unitTests,
+    bundleId: "com.ios.OnboardingUnitTests",
+    deploymentTarget: .iOS(targetVersion: "16.0", devices: .iphone),
+    infoPlist: .default,
+    sources: ["Tests/**"],
+    dependencies: [
+        .target(name: "OnboardingModule")
+    ]
+)
 
 
-let project = Project(name: "OnboardingModule",packages: [.snapKit],targets:[framworkTarget,interfaceTarget])
+
+let project = Project(name: "OnboardingModule",packages: [.snapKit],targets:[unitTestTarget,framworkTarget,interfaceTarget])

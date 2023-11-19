@@ -168,6 +168,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A5888216DB4A531746BBDA1A"
+               BuildableName = "OnboardingUnitTests.xctest"
+               BlueprintName = "OnboardingUnitTests"
+               ReferencedContainer = "container:Modules/DomainModules/OnboardingModule/OnboardingModule.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "F4125E53B71213C228981713"
                BuildableName = "Paw.app"
                BlueprintName = "Paw"
@@ -210,6 +224,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A5888216DB4A531746BBDA1A"
+               BuildableName = "OnboardingUnitTests.xctest"
+               BlueprintName = "OnboardingUnitTests"
+               ReferencedContainer = "container:Modules/DomainModules/OnboardingModule/OnboardingModule.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

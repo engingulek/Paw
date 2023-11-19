@@ -5,7 +5,7 @@ import CommonKit
 typealias Ables = UIViewControllerAble & NavConAble
 
 protocol OnboardiingViewControllerInterfaca : AnyObject,Ables {
-    var presenter : OnboardPresenterInterface {get set}
+   // var presenter : OnboardPresenterInterface {get set}
 }
 
 final class OnboardiingViewController: UIViewController{
