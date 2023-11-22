@@ -11,6 +11,7 @@
 		0DC410F63FD2B23B4F2819BE /* MockAdoptingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9368A8557F5B25DA77F9F1F /* MockAdoptingHomeViewController.swift */; };
 		0FA03CAD1A8224DBC63E2EE1 /* DependencyKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 0CFC9AAF62998923D0D3002C /* DependencyKit.framework */; };
 		1A0AFF10B2F3D96AE75A3883 /* AdoptingHomeModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */; };
+		217D79C25DE3C29E0DA05722 /* AdoptingHomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC2AD0177ECA70DFE726F8 /* AdoptingHomeService.swift */; };
 		244E063E8798A52A5FB26B16 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 57F6BB2AF2A459228AF81A3E /* SnapKit */; };
 		2E970B4589DF8F2FA0D4D099 /* AdoptingHomeModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */; };
 		302966D011F82A9ED1DB4177 /* AdoptingHomeModule_AdoptingHomeModule.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8F07FC7490EF408185796733 /* AdoptingHomeModule_AdoptingHomeModule.bundle */; };
@@ -19,11 +20,13 @@
 		58FF35EDF5706087122D0D5C /* DependencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFC9AAF62998923D0D3002C /* DependencyKit.framework */; };
 		5A8912016A17D616C4BBC8D5 /* AdvertDetailModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3475F2A68D9E3C2E3D46A8D /* AdvertDetailModuleInterface.framework */; };
 		69EBC4C6923F958E39F33102 /* AdoptingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24403685C36FFC4747C9AE12 /* AdoptingHomeViewController.swift */; };
+		6A66DDB0566FA96CFC09259E /* NetworkKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = E241539E38D68026B3905BB0 /* NetworkKit.framework */; };
 		711B46F108356117B831AF30 /* CommonKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 81C90816647AB47395E4CD61 /* CommonKit.framework */; };
 		7140D3FE18DBDB824D5918FC /* TuistBundle+AdoptingHomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A321EDCDDFD38ACB98C9B6D /* TuistBundle+AdoptingHomeModule.swift */; };
 		7BAE35C0A236C5443E392F70 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7CC6CBF2450872DEA66F /* Category.swift */; };
 		8FB543E0F784707D794FF8FF /* AdoptingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C5A464420F9144C3389A0 /* AdoptingHeaderView.swift */; };
 		9750EB978EC39123E8EDC693 /* TuistAssets+AdoptingHomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F6BB70CCEB5C61D5E37200 /* TuistAssets+AdoptingHomeModule.swift */; };
+		9ECF01694FEA627D13500E17 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E241539E38D68026B3905BB0 /* NetworkKit.framework */; };
 		A8DC5A94BF053A4E1AE31468 /* AdoptingHomeModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A588D78800B284F365072 /* AdoptingHomeModuleInterface.swift */; };
 		B904353EC64D14649D2E62FA /* AdoptingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */; };
 		BE34CEF9B0A57A2635B6DF99 /* AdoptingHomeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1286FFE3486C129976D1A1B7 /* AdoptingHomeModule.framework */; };
@@ -79,6 +82,7 @@
 				4F3729A4BC6F7103724A281D /* AdvertDetailModuleInterface.framework in Dependencies */,
 				711B46F108356117B831AF30 /* CommonKit.framework in Dependencies */,
 				0FA03CAD1A8224DBC63E2EE1 /* DependencyKit.framework in Dependencies */,
+				6A66DDB0566FA96CFC09259E /* NetworkKit.framework in Dependencies */,
 			);
 			name = Dependencies;
 			runOnlyForDeploymentPostprocessing = 1;
@@ -134,6 +138,7 @@
 		3AED772C9BB786D519313222 /* AdvertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertTableViewCell.swift; sourceTree = "<group>"; };
 		3F5A588D78800B284F365072 /* AdoptingHomeModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHomeModuleInterface.swift; sourceTree = "<group>"; };
 		478F72C81B678FD4728C13B3 /* AdoptingHomePresenterUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHomePresenterUnitTests.swift; sourceTree = "<group>"; };
+		4EDC2AD0177ECA70DFE726F8 /* AdoptingHomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHomeService.swift; sourceTree = "<group>"; };
 		64F6BB70CCEB5C61D5E37200 /* TuistAssets+AdoptingHomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+AdoptingHomeModule.swift"; sourceTree = "<group>"; };
 		72B229059F63005A256DDDEC /* AdoptingHomeModule_AdoptingHomeModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeModule_AdoptingHomeModule-Info.plist"; sourceTree = "<group>"; };
 		7C0D9D4185A599211379B19A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,6 +153,7 @@
 		D3475F2A68D9E3C2E3D46A8D /* AdvertDetailModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptinHomePresenter.swift; sourceTree = "<group>"; };
 		D9368A8557F5B25DA77F9F1F /* MockAdoptingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAdoptingHomeViewController.swift; sourceTree = "<group>"; };
+		E241539E38D68026B3905BB0 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingRouter.swift; sourceTree = "<group>"; };
 		ED9525AE617857ADB6F6D4A4 /* AdoptingHomeUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeUnitTests-Info.plist"; sourceTree = "<group>"; };
 		F49F148570DB44487B567077 /* AdoptingHomeUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdoptingHomeUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +176,7 @@
 				5A8912016A17D616C4BBC8D5 /* AdvertDetailModuleInterface.framework in Frameworks */,
 				E29119481EE4605A10E8B5E4 /* CommonKit.framework in Frameworks */,
 				58FF35EDF5706087122D0D5C /* DependencyKit.framework in Frameworks */,
+				9ECF01694FEA627D13500E17 /* NetworkKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +229,7 @@
 			children = (
 				B9355C647457ED7AE5E68BDE /* cell */,
 				948C5A464420F9144C3389A0 /* AdoptingHeaderView.swift */,
+				4EDC2AD0177ECA70DFE726F8 /* AdoptingHomeService.swift */,
 				24403685C36FFC4747C9AE12 /* AdoptingHomeViewController.swift */,
 				E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */,
 				D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */,
@@ -297,6 +305,7 @@
 				D3475F2A68D9E3C2E3D46A8D /* AdvertDetailModuleInterface.framework */,
 				81C90816647AB47395E4CD61 /* CommonKit.framework */,
 				0CFC9AAF62998923D0D3002C /* DependencyKit.framework */,
+				E241539E38D68026B3905BB0 /* NetworkKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -486,6 +495,7 @@
 				7140D3FE18DBDB824D5918FC /* TuistBundle+AdoptingHomeModule.swift in Sources */,
 				DB1000F271CE7A6433BFCF45 /* AdoptinHomePresenter.swift in Sources */,
 				8FB543E0F784707D794FF8FF /* AdoptingHeaderView.swift in Sources */,
+				217D79C25DE3C29E0DA05722 /* AdoptingHomeService.swift in Sources */,
 				69EBC4C6923F958E39F33102 /* AdoptingHomeViewController.swift in Sources */,
 				B904353EC64D14649D2E62FA /* AdoptingRouter.swift in Sources */,
 				7BAE35C0A236C5443E392F70 /* Category.swift in Sources */,

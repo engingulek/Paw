@@ -154,6 +154,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DC93B437E5CFD867C043748F"
+               BuildableName = "NetworkKit.framework"
+               BlueprintName = "NetworkKit"
+               ReferencedContainer = "container:Kits/DomainKits/NetworkKit/NetworkKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "F49C9490020276A82EBF4B85"
                BuildableName = "OnboardingModule.framework"
                BlueprintName = "OnboardingModule"

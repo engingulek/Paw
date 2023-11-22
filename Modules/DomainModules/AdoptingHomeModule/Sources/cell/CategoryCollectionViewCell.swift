@@ -20,7 +20,7 @@ final class CategoryCollectionViewCell : UICollectionViewCell {
     }
     
     func configureData(category:Category){
-        categoryLabel.text = category.name
+        categoryLabel.text = category.category
     }
     
     required init?(coder: NSCoder) {

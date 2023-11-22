@@ -15,6 +15,13 @@
          </FileRef>
       </Group>
       <Group
+         location = "group:DomainKits"
+         name = "DomainKits">
+         <FileRef
+            location = "group:NetworkKit/NetworkKit.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
          location = "group:SharedKits"
          name = "SharedKits">
          <FileRef

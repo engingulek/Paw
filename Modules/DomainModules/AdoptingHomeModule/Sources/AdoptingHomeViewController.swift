@@ -9,6 +9,7 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
     var presenter : AdoptinHomePresenterInterface {get set}
     func prepareCollectionView()
     func prepareTableView()
+    func reloadCollectionView()
 }
 
 final class AdoptingHomeViewController: UIViewController{
@@ -42,13 +43,9 @@ final class AdoptingHomeViewController: UIViewController{
         presenter.viewWillAppear()
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         presenter.viewDidload()
-      
-        //navigationController?.navigationBar.isHidden  = true
         configureData()
     }
     
@@ -87,13 +84,14 @@ extension AdoptingHomeViewController : UICollectionViewDelegate,UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return presenter.categorNumberOfItems()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as? CategoryCollectionViewCell else {return UICollectionViewCell()}
         
-        let category  = presenter.categoryCellForItemAt(index: indexPath.item)
+        let category  = presenter.categoryCellForItem(at: indexPath)
         cell.configureData(category: category)
         cell.layer.cornerRadius = 10
         cell.layer.borderWidth = 1
@@ -125,19 +123,22 @@ extension AdoptingHomeViewController : UITableViewDelegate,UITableViewDataSource
 }
 
 extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
-  
-    
-   
-    
     func prepareCollectionView() {
         collectionview.dataSource = self
         collectionview.delegate = self
     }
     
-    
     func prepareTableView() {
         advertTableView.delegate = self
         advertTableView.dataSource = self
+    }
+    
+    func reloadCollectionView() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.collectionview.reloadData()
+        }
+       
     }
     
 }
