@@ -5,9 +5,14 @@ typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble
 
 protocol AdvertDetailViewControllerInterface: AnyObject ,Ables {
     var presenter : AdvertDetailPresenterInterface {get set}
+    
+    func configureData(advertDetail: AdvertDetail)
 }
 
 final class AdvertDetailViewController: UIViewController,AdvertDetailViewControllerInterface {
+    
+    var advertId : Int?
+    
     lazy var presenter: AdvertDetailPresenterInterface = AdvertDetailPresenter(view: self,advertDetailImageView: detailImageView)
     private lazy var detailImageView = AdvertDetailImagesImages()
     private lazy var detailInfoView = AdvertDetailInfoView()
@@ -15,13 +20,16 @@ final class AdvertDetailViewController: UIViewController,AdvertDetailViewControl
     public override func viewDidLoad() {
         super.viewDidLoad()
         detailImageView.delegate = self
-        presenter.viewDidLoad()
+        
+        guard let id = advertId else {return}
+        presenter.viewDidLoad(id: id)
+        
         let list : [String] = ["1.square","2.square","3.square"]
         detailImageView.configureData(baseImageViewName: "1.square", imageList: list)
-        configureData()
+        configureView()
     }
     
-    private func configureData(){
+    private func configureView(){
         view.addSubview(detailImageView)
         view.addSubview(detailInfoView)
         detailImageView.snp.makeConstraints { make in
@@ -38,23 +46,28 @@ final class AdvertDetailViewController: UIViewController,AdvertDetailViewControl
             make.bottom.equalToSuperview()
         }
     }
+    
+    func configureData(advertDetail:AdvertDetail){
+        print("Detail \(advertDetail.name)")
+        DispatchQueue.main.async {
+            self.detailInfoView.configureData(advertDetail: advertDetail)
+        }
+       
+    }
 }
 
 extension AdvertDetailViewController : AdvertDetailImagesImagesDelegate {
    
     
     func selectedImageOne() {
-        print("A")
         presenter.selectedADIOne()
     }
     
     func selectedImageTwo() {
-        print("B")
         presenter.selectedADITwo()
     }
     
     func selectedImageThree() {
-        print("C")
         presenter.selectedADIThree()
     }
     

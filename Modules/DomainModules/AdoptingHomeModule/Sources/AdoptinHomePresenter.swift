@@ -11,10 +11,11 @@ protocol AdoptinHomePresenterInterface {
     
     func categorNumberOfItems() -> Int
     func categoryCellForItem(at indexPath :IndexPath) -> Category
-    func didSelectItem(index : Int)
+    
     
     func cellForRowAt(at indexPath:IndexPath) -> AdoptingAdvert
     func numberOfRowsInSection() -> Int
+    func didSelectRowAt(at indexPath:IndexPath)
   
 }
 
@@ -63,6 +64,8 @@ final class AdoptinHomePresenter  {
 extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
    
     
+   
+    
     func viewDidload() {
         view?.setBackColorAble(color: .white)
         view?.navigationBackButtonHiddenAble(isHidden:true )
@@ -92,9 +95,7 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
         return category
     }
     
-    func didSelectItem(index: Int) {
-        router?.toAdvertDetail(view: view)
-    }
+   
    
     func numberOfRowsInSection() -> Int {
         return adoptingAdverts.count
@@ -103,6 +104,12 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
     func cellForRowAt(at indexPath: IndexPath) -> AdoptingAdvert {
         let adoptingAdvert = adoptingAdverts[indexPath.row]
         return adoptingAdvert
+    }
+    
+    func didSelectRowAt(at indexPath:IndexPath) {
+        let id = adoptingAdverts[indexPath.row].id
+        print("Adopting Home Presenter \(id)")
+        router?.toAdvertDetail(view: view,id: id)
     }
     
     

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		0DC410F63FD2B23B4F2819BE /* MockAdoptingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9368A8557F5B25DA77F9F1F /* MockAdoptingHomeViewController.swift */; };
 		0FA03CAD1A8224DBC63E2EE1 /* DependencyKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 0CFC9AAF62998923D0D3002C /* DependencyKit.framework */; };
 		1A0AFF10B2F3D96AE75A3883 /* AdoptingHomeModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */; };
+		1DEC4D7B21AC399DEF6CF2F7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166C8DD2DD3982E988BBF68 /* Category.swift */; };
 		217D79C25DE3C29E0DA05722 /* AdoptingHomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC2AD0177ECA70DFE726F8 /* AdoptingHomeService.swift */; };
 		244E063E8798A52A5FB26B16 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 57F6BB2AF2A459228AF81A3E /* SnapKit */; };
 		2E970B4589DF8F2FA0D4D099 /* AdoptingHomeModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */; };
@@ -23,8 +24,6 @@
 		6A66DDB0566FA96CFC09259E /* NetworkKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = E241539E38D68026B3905BB0 /* NetworkKit.framework */; };
 		711B46F108356117B831AF30 /* CommonKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 81C90816647AB47395E4CD61 /* CommonKit.framework */; };
 		7140D3FE18DBDB824D5918FC /* TuistBundle+AdoptingHomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A321EDCDDFD38ACB98C9B6D /* TuistBundle+AdoptingHomeModule.swift */; };
-		7BAE35C0A236C5443E392F70 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF7CC6CBF2450872DEA66F /* Category.swift */; };
-		7DA5C42F2B0E929500B5FE4C /* AdoptingAdvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5C42E2B0E929500B5FE4C /* AdoptingAdvert.swift */; };
 		8FB543E0F784707D794FF8FF /* AdoptingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C5A464420F9144C3389A0 /* AdoptingHeaderView.swift */; };
 		9750EB978EC39123E8EDC693 /* TuistAssets+AdoptingHomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F6BB70CCEB5C61D5E37200 /* TuistAssets+AdoptingHomeModule.swift */; };
 		9ECF01694FEA627D13500E17 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E241539E38D68026B3905BB0 /* NetworkKit.framework */; };
@@ -32,6 +31,7 @@
 		B904353EC64D14649D2E62FA /* AdoptingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */; };
 		BE34CEF9B0A57A2635B6DF99 /* AdoptingHomeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1286FFE3486C129976D1A1B7 /* AdoptingHomeModule.framework */; };
 		C12073432242D50299460609 /* MockAdoptinHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E53DAF5916892824358BE8 /* MockAdoptinHomeRouter.swift */; };
+		D5E2274BFA53F59B36BC683C /* AdoptingAdvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D2F01ECF4DA0DDFAF47E5 /* AdoptingAdvert.swift */; };
 		D64A492C67F41529A7E887E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D9D4185A599211379B19A /* Assets.xcassets */; };
 		DB1000F271CE7A6433BFCF45 /* AdoptinHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */; };
 		E29119481EE4605A10E8B5E4 /* CommonKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C90816647AB47395E4CD61 /* CommonKit.framework */; };
@@ -143,19 +143,19 @@
 		64F6BB70CCEB5C61D5E37200 /* TuistAssets+AdoptingHomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+AdoptingHomeModule.swift"; sourceTree = "<group>"; };
 		72B229059F63005A256DDDEC /* AdoptingHomeModule_AdoptingHomeModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeModule_AdoptingHomeModule-Info.plist"; sourceTree = "<group>"; };
 		7C0D9D4185A599211379B19A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7DA5C42E2B0E929500B5FE4C /* AdoptingAdvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingAdvert.swift; sourceTree = "<group>"; };
 		81C90816647AB47395E4CD61 /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F07FC7490EF408185796733 /* AdoptingHomeModule_AdoptingHomeModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdoptingHomeModule_AdoptingHomeModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		948C5A464420F9144C3389A0 /* AdoptingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHeaderView.swift; sourceTree = "<group>"; };
 		9A321EDCDDFD38ACB98C9B6D /* TuistBundle+AdoptingHomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+AdoptingHomeModule.swift"; sourceTree = "<group>"; };
 		A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDFF7CC6CBF2450872DEA66F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		B166C8DD2DD3982E988BBF68 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		C6F284C31292C72BDC1FE97B /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		D053F1E43EE3E9515DA00734 /* AdoptingHomeModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		D3475F2A68D9E3C2E3D46A8D /* AdvertDetailModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptinHomePresenter.swift; sourceTree = "<group>"; };
 		D9368A8557F5B25DA77F9F1F /* MockAdoptingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAdoptingHomeViewController.swift; sourceTree = "<group>"; };
 		E241539E38D68026B3905BB0 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E88D2F01ECF4DA0DDFAF47E5 /* AdoptingAdvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingAdvert.swift; sourceTree = "<group>"; };
 		E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingRouter.swift; sourceTree = "<group>"; };
 		ED9525AE617857ADB6F6D4A4 /* AdoptingHomeUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeUnitTests-Info.plist"; sourceTree = "<group>"; };
 		F49F148570DB44487B567077 /* AdoptingHomeUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdoptingHomeUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,8 +229,8 @@
 		62B2AA6CFFA29B87690D6C3A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				7DA5C42D2B0E928200B5FE4C /* model */,
 				B9355C647457ED7AE5E68BDE /* cell */,
+				8E1540A0BA827A25D2EA55C5 /* model */,
 				948C5A464420F9144C3389A0 /* AdoptingHeaderView.swift */,
 				4EDC2AD0177ECA70DFE726F8 /* AdoptingHomeService.swift */,
 				24403685C36FFC4747C9AE12 /* AdoptingHomeViewController.swift */,
@@ -252,11 +252,11 @@
 			name = Project;
 			sourceTree = "<group>";
 		};
-		7DA5C42D2B0E928200B5FE4C /* model */ = {
+		8E1540A0BA827A25D2EA55C5 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				BDFF7CC6CBF2450872DEA66F /* Category.swift */,
-				7DA5C42E2B0E929500B5FE4C /* AdoptingAdvert.swift */,
+				E88D2F01ECF4DA0DDFAF47E5 /* AdoptingAdvert.swift */,
+				B166C8DD2DD3982E988BBF68 /* Category.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -419,6 +419,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 77D98B1AF4882E4754013F59 /* Build configuration list for PBXProject "AdoptingHomeModule" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -504,13 +506,13 @@
 				7140D3FE18DBDB824D5918FC /* TuistBundle+AdoptingHomeModule.swift in Sources */,
 				DB1000F271CE7A6433BFCF45 /* AdoptinHomePresenter.swift in Sources */,
 				8FB543E0F784707D794FF8FF /* AdoptingHeaderView.swift in Sources */,
-				7DA5C42F2B0E929500B5FE4C /* AdoptingAdvert.swift in Sources */,
 				217D79C25DE3C29E0DA05722 /* AdoptingHomeService.swift in Sources */,
 				69EBC4C6923F958E39F33102 /* AdoptingHomeViewController.swift in Sources */,
 				B904353EC64D14649D2E62FA /* AdoptingRouter.swift in Sources */,
-				7BAE35C0A236C5443E392F70 /* Category.swift in Sources */,
 				E4180A093827E6DC20EC2BB7 /* AdvertTableViewCell.swift in Sources */,
 				067CBBF45D04083A81E0A018 /* CategoryCollectionViewCell.swift in Sources */,
+				D5E2274BFA53F59B36BC683C /* AdoptingAdvert.swift in Sources */,
+				1DEC4D7B21AC399DEF6CF2F7 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

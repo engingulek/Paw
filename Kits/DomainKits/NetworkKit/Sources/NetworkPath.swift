@@ -5,6 +5,7 @@ import Foundation
 public enum NetworkPath {
     case categories
     case adoptingAdvert
+    case advertDetail(Int)
 }
 
 extension NetworkPath : TargetType {
@@ -18,6 +19,8 @@ extension NetworkPath : TargetType {
             return "categories/getCategories"
         case .adoptingAdvert:
             return "adverts/getAdverts"
+        case .advertDetail(let id):
+            return "adverts/getAdvertDetail?id=\(id)"
         }
     }
     

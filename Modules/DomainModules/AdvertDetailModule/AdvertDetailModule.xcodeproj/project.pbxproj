@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		134B21AF333CAB9038C95748 /* AdvertDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14359C2BCF46855388B4B4D9 /* AdvertDetailInteractor.swift */; };
 		30C42A9EEF66B88115EFA371 /* AdvertDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999E0CB5BE688E04D1BCD866 /* AdvertDetailPresenter.swift */; };
 		31B9FB46A2D654C89F5B3251 /* AdvertDetailModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B39F8836CC4D5B9EEA5EC2 /* AdvertDetailModule.framework */; };
 		33C4510DDA0F7241309A2237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5FD754B790324D706EE4238 /* Assets.xcassets */; };
@@ -14,12 +15,15 @@
 		406A3A28312FF91A67E07947 /* AdvertDetailModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 81B0DBC68EF58408B5E9A265 /* AdvertDetailModuleInterface.framework */; };
 		44FFD2331D39E4DB1FF006AF /* CommonKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B6D0B8C69409A96DA14CAF4 /* CommonKit.framework */; };
 		4E4C54F9D5836D207D51DBB6 /* AdvertDetailPresenterUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AC3505A999C266CD2A54F /* AdvertDetailPresenterUnitTest.swift */; };
+		5B7E0CAC913CCEB2D5CA9C5F /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847FF1E0CDEEB13A0DEFE940 /* NetworkKit.framework */; };
 		72264E4FB6A9C41B6CBF9560 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C162CDF8101B78C5CDA06432 /* SnapKit */; };
+		77DED97678EFC0E4C7AC4762 /* AdvertDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E67BE050AB39E34BB644E3 /* AdvertDetail.swift */; };
 		79DD8AA8A1B41247FAAD2E43 /* AdvertDetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BF9306776D197A91819534 /* AdvertDetailInfoView.swift */; };
 		9DB1D58273CEA988050AAD63 /* TuistAssets+AdvertDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7265EAC3F80ADF44A78551C /* TuistAssets+AdvertDetailModule.swift */; };
 		AFC4A94FBF9514735D23A870 /* TuistBundle+AdvertDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A73B895A012C83C926DD623 /* TuistBundle+AdvertDetailModule.swift */; };
 		B91503EC2209C308AD84A404 /* AdvertDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0BB20D19A07F8C8F9DE749 /* AdvertDetailRouter.swift */; };
 		BA0C0163D7E34E280F0383BD /* AdvertDetailModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B0DBC68EF58408B5E9A265 /* AdvertDetailModuleInterface.framework */; };
+		BB9CB58F42B994CD8064EC25 /* NetworkKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 847FF1E0CDEEB13A0DEFE940 /* NetworkKit.framework */; };
 		C0498D8376BB550534D600C2 /* AdvertDetailImagesImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44184ABF1DA04CC7EC65792A /* AdvertDetailImagesImages.swift */; };
 		CE7D287E9AA2BA7FE7027BFD /* CommonKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 7B6D0B8C69409A96DA14CAF4 /* CommonKit.framework */; };
 		D7674C24F238F16314BBB733 /* AdvertDetailModule_AdvertDetailModule.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA72C3F699587393B9416713 /* AdvertDetailModule_AdvertDetailModule.bundle */; };
@@ -92,6 +96,7 @@
 			files = (
 				406A3A28312FF91A67E07947 /* AdvertDetailModuleInterface.framework in Dependencies */,
 				CE7D287E9AA2BA7FE7027BFD /* CommonKit.framework in Dependencies */,
+				BB9CB58F42B994CD8064EC25 /* NetworkKit.framework in Dependencies */,
 			);
 			name = Dependencies;
 			runOnlyForDeploymentPostprocessing = 1;
@@ -120,6 +125,7 @@
 
 /* Begin PBXFileReference section */
 		130BEC2F4D74A6208C9582BB /* AdvertDetailUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdvertDetailUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14359C2BCF46855388B4B4D9 /* AdvertDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetailInteractor.swift; sourceTree = "<group>"; };
 		2CF0A9B17DA7CA08420706D3 /* AdvertDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetailViewController.swift; sourceTree = "<group>"; };
 		2E7E1FD0195B11F3CE6514CD /* AdvertDetailModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdvertDetailModule-Info.plist"; sourceTree = "<group>"; };
 		3E0BB20D19A07F8C8F9DE749 /* AdvertDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetailRouter.swift; sourceTree = "<group>"; };
@@ -131,6 +137,8 @@
 		645E33743CC9A546CCFED546 /* MockAdvertDetailImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAdvertDetailImages.swift; sourceTree = "<group>"; };
 		7B6D0B8C69409A96DA14CAF4 /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B0DBC68EF58408B5E9A265 /* AdvertDetailModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		847FF1E0CDEEB13A0DEFE940 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87E67BE050AB39E34BB644E3 /* AdvertDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetail.swift; sourceTree = "<group>"; };
 		92648B4534371DC62CEA6FFF /* MockAdvertDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAdvertDetailController.swift; sourceTree = "<group>"; };
 		999E0CB5BE688E04D1BCD866 /* AdvertDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetailPresenter.swift; sourceTree = "<group>"; };
 		9F7D843BADC1C314D07C95DC /* AdvertDetailModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetailModuleInterface.swift; sourceTree = "<group>"; };
@@ -165,6 +173,7 @@
 				31B9FB46A2D654C89F5B3251 /* AdvertDetailModule.framework in Frameworks */,
 				BA0C0163D7E34E280F0383BD /* AdvertDetailModuleInterface.framework in Frameworks */,
 				44FFD2331D39E4DB1FF006AF /* CommonKit.framework in Frameworks */,
+				5B7E0CAC913CCEB2D5CA9C5F /* NetworkKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +252,7 @@
 				81B0DBC68EF58408B5E9A265 /* AdvertDetailModuleInterface.framework */,
 				130BEC2F4D74A6208C9582BB /* AdvertDetailUnitTests.xctest */,
 				7B6D0B8C69409A96DA14CAF4 /* CommonKit.framework */,
+				847FF1E0CDEEB13A0DEFE940 /* NetworkKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -288,6 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				1A170B7457AC05574134F4D5 /* View */,
+				87E67BE050AB39E34BB644E3 /* AdvertDetail.swift */,
+				14359C2BCF46855388B4B4D9 /* AdvertDetailInteractor.swift */,
 				999E0CB5BE688E04D1BCD866 /* AdvertDetailPresenter.swift */,
 				3E0BB20D19A07F8C8F9DE749 /* AdvertDetailRouter.swift */,
 				2CF0A9B17DA7CA08420706D3 /* AdvertDetailViewController.swift */,
@@ -451,6 +463,8 @@
 			files = (
 				9DB1D58273CEA988050AAD63 /* TuistAssets+AdvertDetailModule.swift in Sources */,
 				AFC4A94FBF9514735D23A870 /* TuistBundle+AdvertDetailModule.swift in Sources */,
+				77DED97678EFC0E4C7AC4762 /* AdvertDetail.swift in Sources */,
+				134B21AF333CAB9038C95748 /* AdvertDetailInteractor.swift in Sources */,
 				30C42A9EEF66B88115EFA371 /* AdvertDetailPresenter.swift in Sources */,
 				B91503EC2209C308AD84A404 /* AdvertDetailRouter.swift in Sources */,
 				DA4EE76057B9F23DE819E53B /* AdvertDetailViewController.swift in Sources */,

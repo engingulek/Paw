@@ -119,7 +119,7 @@ extension AdoptingHomeViewController : UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.didSelectItem(index: indexPath.row)
+        presenter.didSelectRowAt(at: indexPath)
     }
     
     

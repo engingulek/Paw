@@ -6,7 +6,7 @@ import AdvertDetailModuleInterface
 import DependencyKit
 
 protocol AdoptingRouterInterface {
-    func toAdvertDetail(view: AdoptingHomeViewControllerInterfaca?)
+    func toAdvertDetail(view: AdoptingHomeViewControllerInterfaca?,id:Int)
 }
 
 public final class AdoptingRouter : AdoptingHomeModuleInterface {
@@ -22,11 +22,12 @@ public final class AdoptingRouter : AdoptingHomeModuleInterface {
 }
 
 extension AdoptingRouter : AdoptingRouterInterface {
-    func toAdvertDetail(view : AdoptingHomeViewControllerInterfaca?) {
-        print("Test11122")
+    func toAdvertDetail(view : AdoptingHomeViewControllerInterfaca?,id:Int) {
+        print("AdoptingRouter \(id)")
         
         @Dependency var advertDetailHomeModuleInterface : AdvertDetailModuleInterface
-        let viewController = advertDetailHomeModuleInterface.advertDetailViewController()
+        let viewController = advertDetailHomeModuleInterface.advertDetailViewController(id:id)
+        
         view?.pushViewControllerAble(viewController, animated: true)
         
     }

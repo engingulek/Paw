@@ -7,7 +7,6 @@ final class AdvertDetailInfoView : UIView {
     
     private lazy var animalName : UILabel = {
         let label = UILabel()
-        label.text = "Leo"
         label.font = .systemFont(ofSize: 30, weight: .semibold)
         label.textColor = .black
         return label
@@ -128,6 +127,15 @@ final class AdvertDetailInfoView : UIView {
             make.trailing.equalToSuperview().offset(-20)
             make.height.equalTo(50)
         }
+    }
+    func configureData(advertDetail:AdvertDetail){
+        animalName.text = advertDetail.name
+        animalAge.text = "\(advertDetail.age) years old"
+        let gender = advertDetail.gender ==
+        "male" ? "♂" :"♀"
+        genderLabel.text = gender
+        locationInfo.text = "\(advertDetail.city)/\(advertDetail.district)"
+        animalInfo.text =  advertDetail.about
     }
     
     required init?(coder: NSCoder) {
