@@ -18,7 +18,6 @@ final class AdvertTableViewCell : UITableViewCell {
     
     private lazy var nameLabel : UILabel = {
         let label = UILabel()
-        label.text = "Leo"
         label.font = .systemFont(ofSize: 25,weight: .semibold)
         return label
     }()
@@ -102,6 +101,16 @@ final class AdvertTableViewCell : UITableViewCell {
             make.leading.equalTo(advertImageView.snp.trailing).offset(10)
         }
         
+    }
+    
+    func configureData(advert : AdoptingAdvert){
+        nameLabel.text = advert.name
+        ageLabel.text = "\(advert.age) years old"
+        genusLabel.text = "\(advert.genus),\(advert.category)"
+        let gender = advert.gender == 
+        "male" ? "♂" :"♀"
+        genderLabel.text = gender
+        locationInfo.text = "\(advert.city)/\(advert.district)"
     }
     
     override func layoutSubviews() {

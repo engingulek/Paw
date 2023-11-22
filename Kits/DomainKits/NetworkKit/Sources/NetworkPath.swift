@@ -4,6 +4,7 @@ import Foundation
 
 public enum NetworkPath {
     case categories
+    case adoptingAdvert
 }
 
 extension NetworkPath : TargetType {
@@ -15,12 +16,14 @@ extension NetworkPath : TargetType {
         switch self {
         case .categories:
             return "categories/getCategories"
+        case .adoptingAdvert:
+            return "adverts/getAdverts"
         }
     }
     
     var method: AlamofireMethod {
         switch self {
-        case .categories:
+        default:
             return .GET
         }
     }

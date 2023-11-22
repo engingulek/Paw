@@ -8,21 +8,27 @@ protocol AdoptinHomePresenterInterface {
     
     func viewDidload()
     func viewWillAppear()
+    
     func categorNumberOfItems() -> Int
     func categoryCellForItem(at indexPath :IndexPath) -> Category
     func didSelectItem(index : Int)
+    
+    func cellForRowAt(at indexPath:IndexPath) -> AdoptingAdvert
+    func numberOfRowsInSection() -> Int
   
 }
 
-final class AdoptinHomePresenter : AdoptinHomePresenterInterface {
-   
+final class AdoptinHomePresenter  {
+    
     var router: AdoptingRouterInterface?
     weak var view: AdoptingHomeViewControllerInterfaca?
     var interactor: AdoptingHomeServiceProtocol
+    
     private var categories : [Category] = []
+    private var adoptingAdverts : [AdoptingAdvert] = []
     
     
-    init(router: AdoptingRouterInterface? = nil, 
+    init(router: AdoptingRouterInterface? = nil,
          view: AdoptingHomeViewControllerInterfaca?,
          interactor : AdoptingHomeServiceProtocol = AdoptingHomeService.shared) {
         self.router = router
@@ -35,12 +41,27 @@ final class AdoptinHomePresenter : AdoptinHomePresenterInterface {
             let result = try await interactor.fetchCategories()
             categories = result
             view?.reloadCollectionView()
-            
         }catch{
-            print("Presenter Error \(error.localizedDescription)")
+            categories = []
+            //print("Presenter Error \(error.localizedDescription)")
         }
-         
     }
+    
+    private func fetchAdoptingAdverts() async {
+        do {
+            let result = try await interactor.fetchAdoptinAdvert()
+            adoptingAdverts = result
+            view?.reloadTableView()
+        }catch{
+            adoptingAdverts = []
+            //print("Presenter Error \(error.localizedDescription)")
+        }
+    }
+}
+
+//MARK: - AdoptinHomePresenterInterface
+extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
+   
     
     func viewDidload() {
         view?.setBackColorAble(color: .white)
@@ -49,6 +70,7 @@ final class AdoptinHomePresenter : AdoptinHomePresenterInterface {
         Task {
             @MainActor in
             await fetchCategorie()
+            await fetchAdoptingAdverts()
         }
         
       
@@ -66,17 +88,28 @@ final class AdoptinHomePresenter : AdoptinHomePresenterInterface {
     }
     
     func categoryCellForItem(at indexPath :IndexPath) -> Category {
-        let category = categories[indexPath.row]
+        let category = categories[indexPath.item]
         return category
     }
     
     func didSelectItem(index: Int) {
-       
         router?.toAdvertDetail(view: view)
+    }
+   
+    func numberOfRowsInSection() -> Int {
+        return adoptingAdverts.count
+    }
+    
+    func cellForRowAt(at indexPath: IndexPath) -> AdoptingAdvert {
+        let adoptingAdvert = adoptingAdverts[indexPath.row]
+        return adoptingAdvert
     }
     
     
     
     
     
+    
+    
+
 }

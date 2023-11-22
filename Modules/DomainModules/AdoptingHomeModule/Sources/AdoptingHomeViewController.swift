@@ -10,6 +10,7 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
     func prepareCollectionView()
     func prepareTableView()
     func reloadCollectionView()
+    func reloadTableView()
 }
 
 final class AdoptingHomeViewController: UIViewController{
@@ -103,11 +104,13 @@ extension AdoptingHomeViewController : UICollectionViewDelegate,UICollectionView
 
 extension AdoptingHomeViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return presenter.numberOfRowsInSection()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AdvertTableViewCell.identifier, for: indexPath) as? AdvertTableViewCell else {return UITableViewCell()}
+        let advert = presenter.cellForRowAt(at: indexPath)
+        cell.configureData(advert: advert)
          return cell
     }
     
@@ -138,7 +141,13 @@ extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
             guard let self = self else { return }
             self.collectionview.reloadData()
         }
-       
+    }
+    
+    func reloadTableView(){
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.advertTableView.reloadData()
+        }
     }
     
 }
