@@ -3,6 +3,7 @@
 import Foundation
 import SnapKit
 import UIKit
+import Kingfisher
 
 protocol AdvertDetailImagesImagesInterface {
     func changeOpacityWhenSelectedImageOne(opacity:Float,defaultOpacity:Float)
@@ -67,11 +68,22 @@ final class AdvertDetailImagesImages : UIView {
     
    
     
-    func configureData(baseImageViewName : String,imageList:[String]){
-        baseImageView.image = AdvertDetailModuleAsset.dog.image
-        advertDetailImageViewOne.image = AdvertDetailModuleAsset.dog.image
-        advertDetailImageViewTwo.image = AdvertDetailModuleAsset.dog.image
-        advertDetailImageViewThree.image = AdvertDetailModuleAsset.dog.image
+    func configureData(imageList:[String]){
+        let baseImageUrl = URL(string: imageList[0])
+        let firsImageUrl = URL(string: imageList[0])
+        let secondImageUrl = URL(string: imageList[1])
+        let thirdImageUrl = URL(string: imageList[2])
+        
+        let imageUrlList = [baseImageUrl,firsImageUrl,secondImageUrl,thirdImageUrl]
+        
+        [
+            baseImageView,
+            advertDetailImageViewOne,
+            advertDetailImageViewTwo,
+            advertDetailImageViewThree
+        ].enumerated().forEach {
+            $1.kf.setImage(with: imageUrlList[$0])
+        }
     }
     
     override init(frame: CGRect) {
@@ -156,21 +168,22 @@ final class AdvertDetailImagesImages : UIView {
 
 extension AdvertDetailImagesImages : AdvertDetailImagesImagesInterface {
     func changeOpacityWhenSelectedImageOne(opacity:Float,defaultOpacity:Float) {
-        print("One")
+        baseImageView.image = advertDetailImageViewOne.image
         advertDetailImageViewOne.layer.opacity = opacity
         advertDetailImageViewTwo.layer.opacity = defaultOpacity
         advertDetailImageViewThree.layer.opacity = defaultOpacity
     }
     
     func changeOpacityWhenSelectedImageTwo(opacity:Float,defaultOpacity:Float) {
-        print("Two")
+        baseImageView.image = advertDetailImageViewTwo.image
         advertDetailImageViewTwo.layer.opacity = opacity
         advertDetailImageViewOne.layer.opacity = defaultOpacity
         advertDetailImageViewThree.layer.opacity = defaultOpacity
     }
     
     func changeOpacityWhenSelectedImageThree(opacity:Float,defaultOpacity:Float) {
-        print("Three")
+        // TASK : This change will be made after the image change in the database
+        baseImageView.image = advertDetailImageViewThree.image
         advertDetailImageViewThree.layer.opacity = opacity
         advertDetailImageViewTwo.layer.opacity = defaultOpacity
         advertDetailImageViewOne.layer.opacity = defaultOpacity

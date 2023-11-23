@@ -31,6 +31,7 @@
 		B904353EC64D14649D2E62FA /* AdoptingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */; };
 		BE34CEF9B0A57A2635B6DF99 /* AdoptingHomeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1286FFE3486C129976D1A1B7 /* AdoptingHomeModule.framework */; };
 		C12073432242D50299460609 /* MockAdoptinHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E53DAF5916892824358BE8 /* MockAdoptinHomeRouter.swift */; };
+		D3693F874567C0417DF7F408 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F125C79E9E48AABBCD3B5EB7 /* Kingfisher */; };
 		D5E2274BFA53F59B36BC683C /* AdoptingAdvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D2F01ECF4DA0DDFAF47E5 /* AdoptingAdvert.swift */; };
 		D64A492C67F41529A7E887E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D9D4185A599211379B19A /* Assets.xcassets */; };
 		DB1000F271CE7A6433BFCF45 /* AdoptinHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */; };
@@ -194,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				244E063E8798A52A5FB26B16 /* SnapKit in Frameworks */,
+				D3693F874567C0417DF7F408 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +409,7 @@
 			name = AdoptingHomeModule;
 			packageProductDependencies = (
 				57F6BB2AF2A459228AF81A3E /* SnapKit */,
+				F125C79E9E48AABBCD3B5EB7 /* Kingfisher */,
 			);
 			productName = AdoptingHomeModule;
 			productReference = 1286FFE3486C129976D1A1B7 /* AdoptingHomeModule.framework */;
@@ -433,6 +436,7 @@
 			mainGroup = AA173B3763030F7A91402AD2;
 			packageReferences = (
 				D2435F0B3F5B533698A6DB07 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				4B9C83871A8968DD8DC77C9A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = D63CB5569E3F46153F74AF78 /* Products */;
 			projectDirPath = "";
@@ -931,6 +935,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4B9C83871A8968DD8DC77C9A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		D2435F0B3F5B533698A6DB07 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -945,6 +957,10 @@
 		57F6BB2AF2A459228AF81A3E /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SnapKit;
+		};
+		F125C79E9E48AABBCD3B5EB7 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

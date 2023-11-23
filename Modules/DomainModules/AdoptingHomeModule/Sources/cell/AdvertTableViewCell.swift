@@ -1,7 +1,7 @@
 
 import UIKit
 import SnapKit
-
+import Kingfisher
 
 
 final class AdvertTableViewCell : UITableViewCell {
@@ -111,6 +111,16 @@ final class AdvertTableViewCell : UITableViewCell {
         "male" ? "♂" :"♀"
         genderLabel.text = gender
         locationInfo.text = "\(advert.city)/\(advert.district)"
+        
+        let urlImage = URL(string: advert.images.first ?? "")
+        
+        advertImageView.kf.setImage(
+            with: urlImage,
+        placeholder: UIImage(systemName: "pawprint.fill"),
+        options: [
+            .transition(.fade(1))
+        ]
+        )
     }
     
     override func layoutSubviews() {

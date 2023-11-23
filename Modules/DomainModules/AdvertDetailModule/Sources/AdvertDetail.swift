@@ -10,5 +10,5 @@ struct AdvertDetail: Codable {
     let age: Int
     let city, district, about: String
     let userId: Int
-    let userName, userSurname: String
+    let userImage,userName, userSurname: String
 }

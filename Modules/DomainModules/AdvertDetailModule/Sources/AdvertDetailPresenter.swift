@@ -62,7 +62,7 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
     }
     
     func sendAdvertDetail() -> AdvertDetail {
-        return advertDetail ?? AdvertDetail(id: 0, images: [""], name: "", gender: "", genus: "", category: "", age: 0, city: "", district: "", about: "", userId: 0, userName: "", userSurname: "")
+        return advertDetail ?? AdvertDetail(id: 0, images: [""], name: "", gender: "", genus: "", category: "", age: 0, city: "", district: "", about: "", userId: 0, userImage: "", userName: "", userSurname: "")
     }
     
     func selectedADIOne() {

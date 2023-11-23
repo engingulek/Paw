@@ -24,8 +24,7 @@ final class AdvertDetailViewController: UIViewController,AdvertDetailViewControl
         guard let id = advertId else {return}
         presenter.viewDidLoad(id: id)
         
-        let list : [String] = ["1.square","2.square","3.square"]
-        detailImageView.configureData(baseImageViewName: "1.square", imageList: list)
+        
         configureView()
     }
     
@@ -49,8 +48,10 @@ final class AdvertDetailViewController: UIViewController,AdvertDetailViewControl
     
     func configureData(advertDetail:AdvertDetail){
         print("Detail \(advertDetail.name)")
-        DispatchQueue.main.async {
+        DispatchQueue.main.async {[weak self] in
+            guard let self = self else { return }
             self.detailInfoView.configureData(advertDetail: advertDetail)
+            self.detailImageView.configureData(imageList: advertDetail.images)
         }
        
     }

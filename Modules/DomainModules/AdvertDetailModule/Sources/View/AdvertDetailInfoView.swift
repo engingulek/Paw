@@ -2,6 +2,7 @@
 import UIKit
 import CommonKit
 import SnapKit
+import Kingfisher
 
 final class AdvertDetailInfoView : UIView {
     
@@ -19,9 +20,26 @@ final class AdvertDetailInfoView : UIView {
         return imageView
     }()
     
+    
+    private lazy var userImage : UIImageView = {
+        let imageView = UIImageView()
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleToFill
+        imageView.layer.cornerRadius = 10
+        imageView.isUserInteractionEnabled = true
+        return imageView
+    }()
+    
+    
+    private lazy var userNameSurname : UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 20, weight: .semibold)
+        label.textColor = .black
+        return label
+    }()
+    
     private lazy var animalAge : UILabel = {
         let label = UILabel()
-        label.text = "3 years Old"
         label.font = .systemFont(ofSize: 20, weight: .semibold)
         label.textColor = .black
         return label
@@ -74,6 +92,8 @@ final class AdvertDetailInfoView : UIView {
         
         addSubview(animalName)
         addSubview(favIcon)
+        addSubview(userImage)
+        addSubview(userNameSurname)
         addSubview(animalAge)
         addSubview(genderLabel)
         addSubview(locationInfo)
@@ -85,7 +105,7 @@ final class AdvertDetailInfoView : UIView {
             make.top.equalToSuperview().offset(20)
             make.leading.equalToSuperview().offset(20)
         }
-        
+
         favIcon.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
@@ -93,8 +113,21 @@ final class AdvertDetailInfoView : UIView {
             make.width.equalTo(25)
         }
         
-        animalAge.snp.makeConstraints { make in
+        userImage.snp.makeConstraints { make in
             make.top.equalTo(animalName.snp.bottom).offset(5)
+            make.leading.equalToSuperview().offset(20)
+            make.width.equalTo(50)
+            make.height.equalTo(50)
+        }
+        
+        userNameSurname.snp.makeConstraints { make in
+            make.centerY.equalTo(userImage.snp.centerY)
+           // make.top.equalTo(animalName.snp.bottom).offset(5)
+            make.leading.equalTo(userImage.snp.trailing).offset(20)
+        }
+        
+        animalAge.snp.makeConstraints { make in
+            make.top.equalTo(userImage.snp.bottom).offset(5)
             make.leading.equalToSuperview().offset(20)
         }
         
@@ -130,12 +163,24 @@ final class AdvertDetailInfoView : UIView {
     }
     func configureData(advertDetail:AdvertDetail){
         animalName.text = advertDetail.name
+        userNameSurname.text = "\(advertDetail.userName) \(advertDetail.userSurname)"
         animalAge.text = "\(advertDetail.age) years old"
         let gender = advertDetail.gender ==
         "male" ? "♂" :"♀"
         genderLabel.text = gender
         locationInfo.text = "\(advertDetail.city)/\(advertDetail.district)"
         animalInfo.text =  advertDetail.about
+        let urlImage = URL(string: advertDetail.userImage)
+        
+        userImage.kf.setImage(
+            with: urlImage,
+            placeholder: UIImage(systemName: "person.circle")?.withTintColor(.red),
+        options: [
+            .transition(.fade(1))
+        ]
+            )
+
+       
     }
     
     required init?(coder: NSCoder) {

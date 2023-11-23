@@ -17,6 +17,7 @@ let dependensies : [TargetDependency] = [
              path: .relativeToRoot("Modules/DomainModules/AdvertDetailModule")),
     .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),
     snapKit,
+    kingfisher,
     .project(target: "NetworkKit", path: .relativeToRoot("Kits/DomainKits/NetworkKit"))
 ]
 
@@ -48,4 +49,4 @@ let unitTestTarget = Target(
 
 
 
-let project = Project(name: "AdvertDetailModule",packages: [.snapKit],targets:[unitTestTarget,framworkTarget,interfaceTarget])
+let project = Project(name: "AdvertDetailModule",packages: [.snapKit,.kingfisher],targets:[unitTestTarget,framworkTarget,interfaceTarget])
