@@ -3,8 +3,13 @@ import Foundation
 import SnapKit
 import UIKit
 
+
+protocol AdoptingHeaderViewDelegate {
+    func searchTextFieldDidChange(text:String)
+}
+
 final class AdoptingHeaderView : UIView {
-    
+    var delegate : AdoptingHeaderViewDelegate?
     private lazy var userImageView : UIImageView = {
         let image = UIImageView()
         image.image = AdoptingHomeModuleAsset.paw.image
@@ -39,6 +44,7 @@ final class AdoptingHeaderView : UIView {
         let image = UIImage(systemName: "magnifyingglass")?.withTintColor(.lightGray,renderingMode: .alwaysOriginal)
         imageView.image = image
         textField.leftView = imageView
+        textField.addTarget(self, action: #selector(searchTextFieldDidChange), for: .editingChanged)
         return textField
     }()
     
@@ -55,6 +61,14 @@ final class AdoptingHeaderView : UIView {
     private lazy var filterButtonAction : UIAction =  UIAction { _ in
         print("filter button title action")
         
+    }
+    
+    @objc func searchTextFieldDidChange(_ textField: UITextField) {
+        guard let searchText = textField.text else {
+            delegate?.searchTextFieldDidChange(text: "")
+           return
+        }
+        delegate?.searchTextFieldDidChange(text: searchText)
     }
     
     override init(frame: CGRect) {

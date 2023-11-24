@@ -71,17 +71,13 @@ final class AdoptingHomeViewController: UIViewController{
         super.viewDidLoad()
         presenter.viewDidload()
         navigationController?.navigationBar.isHidden = true
+        adoptingHeaderView.delegate = self
         configureData()
     }
     
     // MARK: - ConfigureData
     private func configureData(){
         view.addSubview(adoptingHeaderView)
-       /* adoptingHeaderView.snp.makeConstraints { make in
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-            make.top.equalToSuperview()
-        }*/
         view.addSubview(collectionview)
         collectionview.snp.makeConstraints { make in
             make.top.equalTo(adoptingHeaderView.snp.bottom).offset(10)
@@ -167,6 +163,12 @@ extension AdoptingHomeViewController : UITableViewDelegate,UITableViewDataSource
     
 }
 
+extension AdoptingHomeViewController : AdoptingHeaderViewDelegate {
+    func searchTextFieldDidChange(text: String) {
+        presenter.searchTextFieldDidChange(searchText: text)
+    }
+}
+
 extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
   
     
@@ -218,9 +220,6 @@ extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
             
         }
     }
-    
- 
-    
 }
 
 

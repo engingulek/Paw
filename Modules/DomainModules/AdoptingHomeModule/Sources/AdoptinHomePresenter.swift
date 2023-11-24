@@ -25,6 +25,8 @@ protocol AdoptinHomePresenterInterface {
     func numberOfRowsInSection() -> Int
     func didSelectRowAt(at indexPath:IndexPath)
     
+    func searchTextFieldDidChange(searchText : String)
+    
     
 }
 
@@ -47,7 +49,7 @@ final class AdoptinHomePresenter  {
         self.interactor = interactor
     }
     
-   private func fetchCategorie() async throws {
+   private func fetchCategorie() async {
         do {
             let result = try await interactor.fetchCategories()
             categories = result
@@ -59,7 +61,7 @@ final class AdoptinHomePresenter  {
         }
     }
     
-    private func fetchAdoptingAdverts() async throws {
+    private func fetchAdoptingAdverts() async {
         view?.startTableViewLoding()
         do {
             let result = try await interactor.fetchAdoptinAdvert()
@@ -78,10 +80,34 @@ final class AdoptinHomePresenter  {
         }
     }
     
-    private func advertFilterByCategory(categoryId:Int) async throws {
+    private func advertFilterByCategory(categoryId:Int) async {
         view?.startTableViewLoding()
         do {
             let result = try await interactor.advertFilterByCategory(categoryId: categoryId)
+            adoptingAdverts = result
+            if adoptingAdverts.isEmpty {
+                 view?.advertListMessage(isHidden: false, message: "No Data")
+            }else{
+                view?.advertListMessage(isHidden: true, message: "")
+            }
+            view?.finishTableViewLoading()
+            view?.reloadTableView()
+        }catch{
+            adoptingAdverts = []
+            view?.advertListMessage(isHidden: false, message: "Something went wrong")
+        }
+    }
+    
+    private func advertFilterBySearchText(searchText:String) async throws {
+        view?.startTableViewLoding()
+        var result : [AdoptingAdvert] = []
+        do {
+            if searchText.isEmpty {
+                result = try await interactor.fetchAdoptinAdvert()
+            }else{
+                result = try await interactor.advertFilterBySearchText(searchText: searchText.lowercased())
+            }
+          
             adoptingAdverts = result
             if adoptingAdverts.isEmpty {
                  view?.advertListMessage(isHidden: false, message: "No Data")
@@ -105,8 +131,8 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
         
         Task {
             @MainActor in
-            try await fetchCategorie()
-            try await fetchAdoptingAdverts()
+             await fetchCategorie()
+             await fetchAdoptingAdverts()
         }
         
         view?.prepareCollectionView()
@@ -116,6 +142,15 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
     func viewWillAppear() {
         view?.tabbarisHidden(isHidden: false)
         view?.setNavigationBarHidden(isHidden: true, animated: true)
+    }
+    
+    func searchTextFieldDidChange(searchText : String){
+        Task {
+            @MainActor in
+           try await advertFilterBySearchText(searchText: searchText.lowercased())
+
+            
+        }
     }
     
 }
@@ -179,9 +214,9 @@ extension AdoptinHomePresenter {
         Task {
             @MainActor in
             if id == 0{
-                try await fetchAdoptingAdverts()
+                 await fetchAdoptingAdverts()
             }else {
-                try await advertFilterByCategory(categoryId:id)
+                 await advertFilterByCategory(categoryId:id)
             }
         }
         
