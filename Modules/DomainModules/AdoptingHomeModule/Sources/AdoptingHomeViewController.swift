@@ -13,12 +13,18 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
     func reloadTableView()
     func startTableViewLoding()
     func finishTableViewLoading()
+    func advertListMessage(isHidden:Bool,message:String)
 }
 
 final class AdoptingHomeViewController: UIViewController{
     
     lazy var presenter : AdoptinHomePresenterInterface = AdoptinHomePresenter(view: self)
-    private lazy var  adoptingHeaderView = AdoptingHeaderView()
+    private lazy var  adoptingHeaderView = AdoptingHeaderView(
+        frame:CGRect(
+            x: 0,
+            y: 0,
+            width: view.frame.width,
+            height: self.view.layer.frame.height / 5 ) )
     
     private lazy var collectionview : UICollectionView  = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -48,6 +54,14 @@ final class AdoptingHomeViewController: UIViewController{
         return tableView
     }()
     
+    private lazy var messageLabel : UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.font = .systemFont(ofSize: 20,weight: .semibold)
+        label.isHidden = true
+        return label
+    }()
+    
     
     override func viewWillAppear(_ animated: Bool) {
         presenter.viewWillAppear()
@@ -56,20 +70,21 @@ final class AdoptingHomeViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidload()
+        navigationController?.navigationBar.isHidden = true
         configureData()
     }
     
     // MARK: - ConfigureData
     private func configureData(){
         view.addSubview(adoptingHeaderView)
-        adoptingHeaderView.snp.makeConstraints { make in
+       /* adoptingHeaderView.snp.makeConstraints { make in
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.top.equalToSuperview()
-        }
+        }*/
         view.addSubview(collectionview)
         collectionview.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(200)
+            make.top.equalTo(adoptingHeaderView.snp.bottom).offset(10)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.height.equalToSuperview().multipliedBy(0.1)
@@ -86,6 +101,12 @@ final class AdoptingHomeViewController: UIViewController{
         
         view.addSubview(tableViewActivityIndicator)
         tableViewActivityIndicator.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+        }
+        
+        view.addSubview(messageLabel)
+        messageLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
         }
@@ -107,12 +128,18 @@ extension AdoptingHomeViewController : UICollectionViewDelegate,UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as? CategoryCollectionViewCell else {return UICollectionViewCell()}
         
-        let category  = presenter.categoryCellForItem(at: indexPath)
-        cell.configureData(category: category)
-        cell.layer.cornerRadius = 10
-        cell.layer.borderWidth = 1
-        cell.layer.borderColor = UIColor.black.cgColor
+        let item  = presenter.categoryCellForItem(at: indexPath)
+        cell.configureData(category: item.category)
+        cell.layer.cornerRadius = item.cornerRadius
+        cell.layer.borderWidth = item.borderWidth
+        cell.layer.borderColor = item.borderColor.cgColor
+        cell.backgroundColor = item.backColor
+        cell.configureCategoryLabel(color: item.labelColor)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.didSelectItemAt(at: indexPath)
     }
 }
 
@@ -180,6 +207,16 @@ extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
             self.tableViewActivityIndicator.stopAnimating()
         }
         
+    }
+    
+    func advertListMessage(isHidden:Bool,message:String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.advertTableView.isHidden = !isHidden
+            self.messageLabel.isHidden = isHidden
+            self.messageLabel.text = message
+            
+        }
     }
     
  

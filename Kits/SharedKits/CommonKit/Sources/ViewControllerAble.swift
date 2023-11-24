@@ -21,6 +21,7 @@ public protocol NavConAble {
     func presentViewControllerAble(_ vc:UIViewController,animated:Bool)
     func pushViewControllerAble (_ vc:UIViewController,animated:Bool)
     func navigationBackButtonHiddenAble(isHidden:Bool)
+    func setNavigationBarHidden(isHidden:Bool,animated:Bool)
 }
 
 extension NavConAble  where Self : UIViewController{
@@ -35,6 +36,10 @@ extension NavConAble  where Self : UIViewController{
     
     public func navigationBackButtonHiddenAble(isHidden:Bool) {
         navigationController?.navigationBar.isHidden = isHidden
+    }
+    
+    public func setNavigationBarHidden(isHidden:Bool,animated:Bool){
+        navigationController?.setNavigationBarHidden(isHidden, animated: animated)
     }
 }
 

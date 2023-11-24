@@ -23,6 +23,10 @@ final class CategoryCollectionViewCell : UICollectionViewCell {
         categoryLabel.text = category.category
     }
     
+    func configureCategoryLabel(color:UIColor){
+        categoryLabel.textColor =  color
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

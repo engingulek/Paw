@@ -6,6 +6,7 @@ public enum NetworkPath {
     case categories
     case adoptingAdvert
     case advertDetail(Int)
+    case getAdvertFilterByCategory(Int)
 }
 
 extension NetworkPath : TargetType {
@@ -21,6 +22,8 @@ extension NetworkPath : TargetType {
             return "adverts/getAdverts"
         case .advertDetail(let id):
             return "adverts/getAdvertDetail?id=\(id)"
+        case .getAdvertFilterByCategory(let categoryId):
+            return "adverts/getAdvertFilterByCategory?categoryId=\(categoryId)"
         }
     }
     

@@ -5,6 +5,7 @@ import NetworkKit
 protocol AdoptingHomeServiceProtocol {
     func fetchCategories() async throws -> [Category]
     func fetchAdoptinAdvert() async throws -> [AdoptingAdvert]
+    func advertFilterByCategory(categoryId:Int) async throws ->  [AdoptingAdvert]
 }
 
 final class AdoptingHomeService : AdoptingHomeServiceProtocol {
@@ -25,11 +26,25 @@ final class AdoptingHomeService : AdoptingHomeServiceProtocol {
     }
     
     func fetchAdoptinAdvert() async throws -> [AdoptingAdvert] {
-       
+        do {
             let response = try await NetworkManager.shared.fetch(
                 target: .adoptingAdvert,
                 responseClass: [AdoptingAdvert].self)
             return response
-      
+        }catch{
+            throw error
+        }
     }
+    
+    func advertFilterByCategory(categoryId: Int) async throws -> [AdoptingAdvert] {
+        do{
+            let response = try await NetworkManager.shared.fetch(
+                target: .getAdvertFilterByCategory(categoryId),
+                responseClass: [AdoptingAdvert].self)
+            return response
+        }catch{
+            throw error
+        }
+    }
+    
 }

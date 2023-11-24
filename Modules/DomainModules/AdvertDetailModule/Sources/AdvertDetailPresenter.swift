@@ -55,6 +55,7 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
         view?.setBackColorAble(color: .white)
         view?.navigationBackButtonHiddenAble(isHidden: false)
         view?.tabbarisHidden(isHidden: true)
+        view?.setNavigationBarHidden(isHidden: false, animated: true)
         Task {
             @MainActor in
             await fetchAdvertDetail(id:id)

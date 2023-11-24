@@ -23,8 +23,6 @@ final class AdvertDetailViewController: UIViewController,AdvertDetailViewControl
         
         guard let id = advertId else {return}
         presenter.viewDidLoad(id: id)
-        
-        
         configureView()
     }
     
