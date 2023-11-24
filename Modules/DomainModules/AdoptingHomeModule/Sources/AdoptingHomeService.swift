@@ -18,19 +18,18 @@ final class AdoptingHomeService : AdoptingHomeServiceProtocol {
                 target: .categories,
                 responseClass: [Category].self)
             return response
-        }catch {
+        }catch{
             throw error
         }
+        
     }
     
     func fetchAdoptinAdvert() async throws -> [AdoptingAdvert] {
-        do {
+       
             let response = try await NetworkManager.shared.fetch(
                 target: .adoptingAdvert,
                 responseClass: [AdoptingAdvert].self)
             return response
-        }catch {
-            throw error
-        }
+      
     }
 }

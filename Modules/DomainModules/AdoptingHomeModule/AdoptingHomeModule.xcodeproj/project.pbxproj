@@ -8,36 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		067CBBF45D04083A81E0A018 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F284C31292C72BDC1FE97B /* CategoryCollectionViewCell.swift */; };
-		0DC410F63FD2B23B4F2819BE /* MockAdoptingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9368A8557F5B25DA77F9F1F /* MockAdoptingHomeViewController.swift */; };
 		0FA03CAD1A8224DBC63E2EE1 /* DependencyKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 0CFC9AAF62998923D0D3002C /* DependencyKit.framework */; };
 		1A0AFF10B2F3D96AE75A3883 /* AdoptingHomeModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */; };
 		1DEC4D7B21AC399DEF6CF2F7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166C8DD2DD3982E988BBF68 /* Category.swift */; };
 		217D79C25DE3C29E0DA05722 /* AdoptingHomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC2AD0177ECA70DFE726F8 /* AdoptingHomeService.swift */; };
 		244E063E8798A52A5FB26B16 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 57F6BB2AF2A459228AF81A3E /* SnapKit */; };
-		2E970B4589DF8F2FA0D4D099 /* AdoptingHomeModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */; };
-		302966D011F82A9ED1DB4177 /* AdoptingHomeModule_AdoptingHomeModule.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8F07FC7490EF408185796733 /* AdoptingHomeModule_AdoptingHomeModule.bundle */; };
-		4095EBC180D12C161524AE1F /* AdoptingHomeModule_AdoptingHomeModule.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 8F07FC7490EF408185796733 /* AdoptingHomeModule_AdoptingHomeModule.bundle */; };
 		4F3729A4BC6F7103724A281D /* AdvertDetailModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = D3475F2A68D9E3C2E3D46A8D /* AdvertDetailModuleInterface.framework */; };
-		58FF35EDF5706087122D0D5C /* DependencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFC9AAF62998923D0D3002C /* DependencyKit.framework */; };
-		5A8912016A17D616C4BBC8D5 /* AdvertDetailModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3475F2A68D9E3C2E3D46A8D /* AdvertDetailModuleInterface.framework */; };
 		69EBC4C6923F958E39F33102 /* AdoptingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24403685C36FFC4747C9AE12 /* AdoptingHomeViewController.swift */; };
 		6A66DDB0566FA96CFC09259E /* NetworkKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = E241539E38D68026B3905BB0 /* NetworkKit.framework */; };
 		711B46F108356117B831AF30 /* CommonKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 81C90816647AB47395E4CD61 /* CommonKit.framework */; };
 		7140D3FE18DBDB824D5918FC /* TuistBundle+AdoptingHomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A321EDCDDFD38ACB98C9B6D /* TuistBundle+AdoptingHomeModule.swift */; };
 		8FB543E0F784707D794FF8FF /* AdoptingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C5A464420F9144C3389A0 /* AdoptingHeaderView.swift */; };
 		9750EB978EC39123E8EDC693 /* TuistAssets+AdoptingHomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F6BB70CCEB5C61D5E37200 /* TuistAssets+AdoptingHomeModule.swift */; };
-		9ECF01694FEA627D13500E17 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E241539E38D68026B3905BB0 /* NetworkKit.framework */; };
 		A8DC5A94BF053A4E1AE31468 /* AdoptingHomeModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A588D78800B284F365072 /* AdoptingHomeModuleInterface.swift */; };
 		B904353EC64D14649D2E62FA /* AdoptingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */; };
-		BE34CEF9B0A57A2635B6DF99 /* AdoptingHomeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1286FFE3486C129976D1A1B7 /* AdoptingHomeModule.framework */; };
-		C12073432242D50299460609 /* MockAdoptinHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E53DAF5916892824358BE8 /* MockAdoptinHomeRouter.swift */; };
 		D3693F874567C0417DF7F408 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F125C79E9E48AABBCD3B5EB7 /* Kingfisher */; };
 		D5E2274BFA53F59B36BC683C /* AdoptingAdvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D2F01ECF4DA0DDFAF47E5 /* AdoptingAdvert.swift */; };
 		D64A492C67F41529A7E887E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D9D4185A599211379B19A /* Assets.xcassets */; };
 		DB1000F271CE7A6433BFCF45 /* AdoptinHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */; };
-		E29119481EE4605A10E8B5E4 /* CommonKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C90816647AB47395E4CD61 /* CommonKit.framework */; };
 		E4180A093827E6DC20EC2BB7 /* AdvertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AED772C9BB786D519313222 /* AdvertTableViewCell.swift */; };
-		EF044020D31B31F653A626EC /* AdoptingHomePresenterUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478F72C81B678FD4728C13B3 /* AdoptingHomePresenterUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,13 +36,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 0AA8D5C97597F1EBABF0979F;
 			remoteInfo = AdoptingHomeModule_AdoptingHomeModule;
-		};
-		2883C4EE68B3A4485EB790DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA06BA0C3CB7B3A6483742DA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A8457562E5B599B7D8615875;
-			remoteInfo = AdoptingHomeModule;
 		};
 		9D19DCCAD8A5A6363739F64F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -99,26 +81,6 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F45E1118BBD916E02FE136E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		82037A673A843C6ACF1C56F2 /* Dependencies */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
-			dstSubfolderSpec = 16;
-			files = (
-				4095EBC180D12C161524AE1F /* AdoptingHomeModule_AdoptingHomeModule.bundle in Dependencies */,
-			);
-			name = Dependencies;
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 		B67FE5AF2CE236EDC7043A99 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,10 +98,8 @@
 		1286FFE3486C129976D1A1B7 /* AdoptingHomeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BBE107AA97AC1629AB93287 /* AdoptingHomeModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeModule-Info.plist"; sourceTree = "<group>"; };
 		24403685C36FFC4747C9AE12 /* AdoptingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHomeViewController.swift; sourceTree = "<group>"; };
-		32E53DAF5916892824358BE8 /* MockAdoptinHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAdoptinHomeRouter.swift; sourceTree = "<group>"; };
 		3AED772C9BB786D519313222 /* AdvertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertTableViewCell.swift; sourceTree = "<group>"; };
 		3F5A588D78800B284F365072 /* AdoptingHomeModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHomeModuleInterface.swift; sourceTree = "<group>"; };
-		478F72C81B678FD4728C13B3 /* AdoptingHomePresenterUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHomePresenterUnitTests.swift; sourceTree = "<group>"; };
 		4EDC2AD0177ECA70DFE726F8 /* AdoptingHomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHomeService.swift; sourceTree = "<group>"; };
 		64F6BB70CCEB5C61D5E37200 /* TuistAssets+AdoptingHomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+AdoptingHomeModule.swift"; sourceTree = "<group>"; };
 		72B229059F63005A256DDDEC /* AdoptingHomeModule_AdoptingHomeModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeModule_AdoptingHomeModule-Info.plist"; sourceTree = "<group>"; };
@@ -154,12 +114,9 @@
 		D053F1E43EE3E9515DA00734 /* AdoptingHomeModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		D3475F2A68D9E3C2E3D46A8D /* AdvertDetailModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptinHomePresenter.swift; sourceTree = "<group>"; };
-		D9368A8557F5B25DA77F9F1F /* MockAdoptingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAdoptingHomeViewController.swift; sourceTree = "<group>"; };
 		E241539E38D68026B3905BB0 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88D2F01ECF4DA0DDFAF47E5 /* AdoptingAdvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingAdvert.swift; sourceTree = "<group>"; };
 		E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingRouter.swift; sourceTree = "<group>"; };
-		ED9525AE617857ADB6F6D4A4 /* AdoptingHomeUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeUnitTests-Info.plist"; sourceTree = "<group>"; };
-		F49F148570DB44487B567077 /* AdoptingHomeUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdoptingHomeUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,19 +124,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9D90DFC95906AA3520B0A027 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE34CEF9B0A57A2635B6DF99 /* AdoptingHomeModule.framework in Frameworks */,
-				2E970B4589DF8F2FA0D4D099 /* AdoptingHomeModuleInterface.framework in Frameworks */,
-				5A8912016A17D616C4BBC8D5 /* AdvertDetailModuleInterface.framework in Frameworks */,
-				E29119481EE4605A10E8B5E4 /* CommonKit.framework in Frameworks */,
-				58FF35EDF5706087122D0D5C /* DependencyKit.framework in Frameworks */,
-				9ECF01694FEA627D13500E17 /* NetworkKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,16 +162,6 @@
 			path = Derived;
 			sourceTree = "<group>";
 		};
-		4D50788617C31BDCAEAAD1C3 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				478F72C81B678FD4728C13B3 /* AdoptingHomePresenterUnitTests.swift */,
-				D9368A8557F5B25DA77F9F1F /* MockAdoptingHomeViewController.swift */,
-				32E53DAF5916892824358BE8 /* MockAdoptinHomeRouter.swift */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
 		62B2AA6CFFA29B87690D6C3A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,7 +183,6 @@
 				CF3A2DE98BE43894DF0A0B1A /* InterfaceSource */,
 				C0F259146F67EBAB52FADB83 /* Resources */,
 				62B2AA6CFFA29B87690D6C3A /* Sources */,
-				4D50788617C31BDCAEAAD1C3 /* Tests */,
 			);
 			name = Project;
 			sourceTree = "<group>";
@@ -269,7 +202,6 @@
 				72B229059F63005A256DDDEC /* AdoptingHomeModule_AdoptingHomeModule-Info.plist */,
 				1BBE107AA97AC1629AB93287 /* AdoptingHomeModule-Info.plist */,
 				D053F1E43EE3E9515DA00734 /* AdoptingHomeModuleInterface-Info.plist */,
-				ED9525AE617857ADB6F6D4A4 /* AdoptingHomeUnitTests-Info.plist */,
 			);
 			path = InfoPlists;
 			sourceTree = "<group>";
@@ -314,7 +246,6 @@
 				8F07FC7490EF408185796733 /* AdoptingHomeModule_AdoptingHomeModule.bundle */,
 				1286FFE3486C129976D1A1B7 /* AdoptingHomeModule.framework */,
 				A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */,
-				F49F148570DB44487B567077 /* AdoptingHomeUnitTests.xctest */,
 				D3475F2A68D9E3C2E3D46A8D /* AdvertDetailModuleInterface.framework */,
 				81C90816647AB47395E4CD61 /* CommonKit.framework */,
 				0CFC9AAF62998923D0D3002C /* DependencyKit.framework */,
@@ -370,26 +301,6 @@
 			productReference = A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6435DDC7DDD631D23736175B /* AdoptingHomeUnitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8C29CF9811347A5ADAE861C4 /* Build configuration list for PBXNativeTarget "AdoptingHomeUnitTests" */;
-			buildPhases = (
-				20CF194FEDCE6D9EE87D8B86 /* Sources */,
-				7110D657E5A6FC780B2559BC /* Resources */,
-				5F45E1118BBD916E02FE136E /* Embed Frameworks */,
-				9D90DFC95906AA3520B0A027 /* Frameworks */,
-				82037A673A843C6ACF1C56F2 /* Dependencies */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BDDC7858C93F376D910F0001 /* PBXTargetDependency */,
-			);
-			name = AdoptingHomeUnitTests;
-			productName = AdoptingHomeUnitTests;
-			productReference = F49F148570DB44487B567077 /* AdoptingHomeUnitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		A8457562E5B599B7D8615875 /* AdoptingHomeModule */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5317B9ECD6B76744579F237 /* Build configuration list for PBXNativeTarget "AdoptingHomeModule" */;
@@ -442,7 +353,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6435DDC7DDD631D23736175B /* AdoptingHomeUnitTests */,
 				A8457562E5B599B7D8615875 /* AdoptingHomeModule */,
 				0AA8D5C97597F1EBABF0979F /* AdoptingHomeModule_AdoptingHomeModule */,
 				5D6A542A0846B5CF22692A7B /* AdoptingHomeModuleInterface */,
@@ -465,14 +375,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7110D657E5A6FC780B2559BC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				302966D011F82A9ED1DB4177 /* AdoptingHomeModule_AdoptingHomeModule.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7B025F48C3E69EB1F34E7402 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -484,16 +386,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		20CF194FEDCE6D9EE87D8B86 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EF044020D31B31F653A626EC /* AdoptingHomePresenterUnitTests.swift in Sources */,
-				C12073432242D50299460609 /* MockAdoptinHomeRouter.swift in Sources */,
-				0DC410F63FD2B23B4F2819BE /* MockAdoptingHomeViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		38390231AB8BE073537361EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -534,12 +426,6 @@
 			name = AdoptingHomeModuleInterface;
 			target = 5D6A542A0846B5CF22692A7B /* AdoptingHomeModuleInterface */;
 			targetProxy = 9D19DCCAD8A5A6363739F64F /* PBXContainerItemProxy */;
-		};
-		BDDC7858C93F376D910F0001 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AdoptingHomeModule;
-			target = A8457562E5B599B7D8615875 /* AdoptingHomeModule */;
-			targetProxy = 2883C4EE68B3A4485EB790DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -728,55 +614,6 @@
 			};
 			name = Debug;
 		};
-		421B95D3910B0C39D084760D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Derived/InfoPlists/AdoptingHomeUnitTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ios.AdoptingHomeUnitTests;
-				PRODUCT_NAME = AdoptingHomeUnitTests;
-				SDKROOT = iphoneos;
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_COMPILATION_MODE = singlefile;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		44680353315CB4DABCCE53CE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Derived/InfoPlists/AdoptingHomeUnitTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ios.AdoptingHomeUnitTests;
-				PRODUCT_NAME = AdoptingHomeUnitTests;
-				SDKROOT = iphoneos;
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
 		539B6351DE70832E1610A383 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -901,15 +738,6 @@
 			buildConfigurations = (
 				24FEBC65F4F9D779A187691A /* Debug */,
 				A4E17F40B7BA8A9A9CD5884D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8C29CF9811347A5ADAE861C4 /* Build configuration list for PBXNativeTarget "AdoptingHomeUnitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				421B95D3910B0C39D084760D /* Debug */,
-				44680353315CB4DABCCE53CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

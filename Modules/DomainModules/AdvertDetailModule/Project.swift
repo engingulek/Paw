@@ -34,19 +34,8 @@ let framworkTarget =  Target(
     dependencies: dependensies
 )
 
-let unitTestTarget = Target(
-    name: "AdvertDetailUnitTests",
-    platform: .iOS,
-    product: .unitTests,
-    bundleId: "com.ios.AdvertDetailUnitTests",
-    deploymentTarget: .iOS(targetVersion: "16.0", devices: .iphone),
-    infoPlist: .default,
-    sources: ["Tests/**"],
-    dependencies: [
-        .target(name: "AdvertDetailModule")
-    ]
-)
 
 
 
-let project = Project(name: "AdvertDetailModule",packages: [.snapKit,.kingfisher],targets:[unitTestTarget,framworkTarget,interfaceTarget])
+
+let project = Project(name: "AdvertDetailModule",packages: [.snapKit,.kingfisher],targets:[framworkTarget,interfaceTarget])

@@ -56,20 +56,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6435DDC7DDD631D23736175B"
-               BuildableName = "AdoptingHomeUnitTests.xctest"
-               BlueprintName = "AdoptingHomeUnitTests"
-               ReferencedContainer = "container:Modules/DomainModules/AdoptingHomeModule/AdoptingHomeModule.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "5D69A159F32406F462F6DE91"
                BuildableName = "AdvertDetailModule.framework"
                BlueprintName = "AdvertDetailModule"
@@ -101,20 +87,6 @@
                BlueprintIdentifier = "04AA7E661C36968731E69A47"
                BuildableName = "AdvertDetailModule_AdvertDetailModule.bundle"
                BlueprintName = "AdvertDetailModule_AdvertDetailModule"
-               ReferencedContainer = "container:Modules/DomainModules/AdvertDetailModule/AdvertDetailModule.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "334DCA37532AAA0B5C1B0F34"
-               BuildableName = "AdvertDetailUnitTests.xctest"
-               BlueprintName = "AdvertDetailUnitTests"
                ReferencedContainer = "container:Modules/DomainModules/AdvertDetailModule/AdvertDetailModule.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -210,20 +182,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A5888216DB4A531746BBDA1A"
-               BuildableName = "OnboardingUnitTests.xctest"
-               BlueprintName = "OnboardingUnitTests"
-               ReferencedContainer = "container:Modules/DomainModules/OnboardingModule/OnboardingModule.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "F4125E53B71213C228981713"
                BuildableName = "Paw.app"
                BlueprintName = "Paw"
@@ -266,36 +224,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6435DDC7DDD631D23736175B"
-               BuildableName = "AdoptingHomeUnitTests.xctest"
-               BlueprintName = "AdoptingHomeUnitTests"
-               ReferencedContainer = "container:Modules/DomainModules/AdoptingHomeModule/AdoptingHomeModule.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "334DCA37532AAA0B5C1B0F34"
-               BuildableName = "AdvertDetailUnitTests.xctest"
-               BlueprintName = "AdvertDetailUnitTests"
-               ReferencedContainer = "container:Modules/DomainModules/AdvertDetailModule/AdvertDetailModule.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A5888216DB4A531746BBDA1A"
-               BuildableName = "OnboardingUnitTests.xctest"
-               BlueprintName = "OnboardingUnitTests"
-               ReferencedContainer = "container:Modules/DomainModules/OnboardingModule/OnboardingModule.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

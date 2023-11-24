@@ -1,5 +1,6 @@
 
 import Foundation
+import UIKit
 
 protocol AdoptinHomePresenterInterface {
     var router : AdoptingRouterInterface? {get set}
@@ -11,11 +12,13 @@ protocol AdoptinHomePresenterInterface {
     
     func categorNumberOfItems() -> Int
     func categoryCellForItem(at indexPath :IndexPath) -> Category
+    func numberOfSections() -> Int
     
     
     func cellForRowAt(at indexPath:IndexPath) -> AdoptingAdvert
     func numberOfRowsInSection() -> Int
     func didSelectRowAt(at indexPath:IndexPath)
+  
   
 }
 
@@ -37,21 +40,24 @@ final class AdoptinHomePresenter  {
         self.interactor = interactor
     }
     
-    private func fetchCategorie() async {
+    func fetchCategorie() async throws {
         do {
             let result = try await interactor.fetchCategories()
             categories = result
             view?.reloadCollectionView()
         }catch{
+            print("Presenter \(error)")
             categories = []
             //print("Presenter Error \(error.localizedDescription)")
         }
     }
     
     private func fetchAdoptingAdverts() async {
+        view?.startTableViewLoding()
         do {
             let result = try await interactor.fetchAdoptinAdvert()
             adoptingAdverts = result
+            view?.finishTableViewLoading()
             view?.reloadTableView()
         }catch{
             adoptingAdverts = []
@@ -62,21 +68,15 @@ final class AdoptinHomePresenter  {
 
 //MARK: - AdoptinHomePresenterInterface
 extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
-   
-    
-   
-    
     func viewDidload() {
         view?.setBackColorAble(color: .white)
         view?.navigationBackButtonHiddenAble(isHidden:true )
         
         Task {
             @MainActor in
-            await fetchCategorie()
-            await fetchAdoptingAdverts()
+            try await fetchCategorie()
+           await fetchAdoptingAdverts()
         }
-        
-      
         
         view?.prepareCollectionView()
         view?.prepareTableView()
@@ -86,6 +86,10 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
         view?.tabbarisHidden(isHidden: false)
     }
     
+}
+
+// MARK: - For CollectionView
+extension AdoptinHomePresenter {
     func categorNumberOfItems() -> Int {
         return categories.count
     }
@@ -95,8 +99,15 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
         return category
     }
     
-   
-   
+    func numberOfSections() -> Int {
+        return 1
+    }
+}
+
+
+// MARK: - For TableView
+extension AdoptinHomePresenter {
+    
     func numberOfRowsInSection() -> Int {
         return adoptingAdverts.count
     }
@@ -112,11 +123,5 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
         router?.toAdvertDetail(view: view,id: id)
     }
     
-    
-    
-    
-    
-    
-    
-
+ 
 }

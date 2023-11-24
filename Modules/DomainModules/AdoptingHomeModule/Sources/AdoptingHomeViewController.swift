@@ -11,10 +11,12 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
     func prepareTableView()
     func reloadCollectionView()
     func reloadTableView()
+    func startTableViewLoding()
+    func finishTableViewLoading()
 }
 
 final class AdoptingHomeViewController: UIViewController{
-
+    
     lazy var presenter : AdoptinHomePresenterInterface = AdoptinHomePresenter(view: self)
     private lazy var  adoptingHeaderView = AdoptingHeaderView()
     
@@ -29,6 +31,13 @@ final class AdoptingHomeViewController: UIViewController{
         collectionview.showsHorizontalScrollIndicator = false
         collectionview.backgroundColor = UIColor.white
         return collectionview
+    }()
+    
+    private lazy var tableViewActivityIndicator : UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView()
+        indicator.hidesWhenStopped = true
+        indicator.color = .black
+        return indicator
     }()
     
     private lazy var advertTableView :  UITableView = {
@@ -74,6 +83,12 @@ final class AdoptingHomeViewController: UIViewController{
             make.trailing.equalToSuperview()
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
+        
+        view.addSubview(tableViewActivityIndicator)
+        tableViewActivityIndicator.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+        }
     }
 }
 
@@ -81,7 +96,7 @@ final class AdoptingHomeViewController: UIViewController{
 extension AdoptingHomeViewController : UICollectionViewDelegate,UICollectionViewDataSource{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return presenter.numberOfSections()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -111,7 +126,7 @@ extension AdoptingHomeViewController : UITableViewDelegate,UITableViewDataSource
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AdvertTableViewCell.identifier, for: indexPath) as? AdvertTableViewCell else {return UITableViewCell()}
         let advert = presenter.cellForRowAt(at: indexPath)
         cell.configureData(advert: advert)
-         return cell
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -126,6 +141,8 @@ extension AdoptingHomeViewController : UITableViewDelegate,UITableViewDataSource
 }
 
 extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
+  
+    
     func prepareCollectionView() {
         collectionview.dataSource = self
         collectionview.delegate = self
@@ -149,6 +166,23 @@ extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
             self.advertTableView.reloadData()
         }
     }
+    
+    func startTableViewLoding() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.tableViewActivityIndicator.startAnimating()
+        }
+    }
+    
+    func finishTableViewLoading() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.tableViewActivityIndicator.stopAnimating()
+        }
+        
+    }
+    
+ 
     
 }
 
