@@ -39,6 +39,7 @@ final class AdoptinHomePresenter  {
     private var categories : [Category] = []
     private var adoptingAdverts : [AdoptingAdvert] = []
     private var selectedCategory : Int  = 0
+    private var enterSearhText : String = ""
     
     
     init(router: AdoptingRouterInterface? = nil,
@@ -49,7 +50,8 @@ final class AdoptinHomePresenter  {
         self.interactor = interactor
     }
     
-   private func fetchCategorie() async {
+    // MARK: - Fetch Categories
+    private func fetchCategorie() async {
         do {
             let result = try await interactor.fetchCategories()
             categories = result
@@ -61,32 +63,36 @@ final class AdoptinHomePresenter  {
         }
     }
     
+    // MARK: - FethAdoptingAdverts
     private func fetchAdoptingAdverts() async {
         view?.startTableViewLoding()
         do {
             let result = try await interactor.fetchAdoptinAdvert()
             adoptingAdverts = result
             if adoptingAdverts.isEmpty {
-                 view?.advertListMessage(isHidden: false, message: "No Data")
+                view?.advertListMessage(isHidden: false, message: "No Data")
             }else{
                 view?.advertListMessage(isHidden: true, message: "")
             }
             view?.finishTableViewLoading()
             view?.reloadTableView()
-          
+            
         }catch{
             adoptingAdverts = []
             view?.advertListMessage(isHidden: false, message: "Something went wrong")
+            view?.finishTableViewLoading()
+            view?.reloadTableView()
         }
     }
     
+    // MARK: - AdvertFilterByCategory
     private func advertFilterByCategory(categoryId:Int) async {
         view?.startTableViewLoding()
         do {
             let result = try await interactor.advertFilterByCategory(categoryId: categoryId)
             adoptingAdverts = result
             if adoptingAdverts.isEmpty {
-                 view?.advertListMessage(isHidden: false, message: "No Data")
+                view?.advertListMessage(isHidden: false, message: "No Data")
             }else{
                 view?.advertListMessage(isHidden: true, message: "")
             }
@@ -94,23 +100,22 @@ final class AdoptinHomePresenter  {
             view?.reloadTableView()
         }catch{
             adoptingAdverts = []
+            view?.finishTableViewLoading()
+            view?.reloadTableView()
             view?.advertListMessage(isHidden: false, message: "Something went wrong")
         }
     }
     
-    private func advertFilterBySearchText(searchText:String) async throws {
+    //MARK: - AdvertFilterBySearchText
+    private func advertFilterBySearchText(searchText:String) async  {
         view?.startTableViewLoding()
         var result : [AdoptingAdvert] = []
         do {
-            if searchText.isEmpty {
-                result = try await interactor.fetchAdoptinAdvert()
-            }else{
-                result = try await interactor.advertFilterBySearchText(searchText: searchText.lowercased())
-            }
-          
+            
+            result = try await interactor.advertFilterBySearchText(searchText: searchText)
             adoptingAdverts = result
             if adoptingAdverts.isEmpty {
-                 view?.advertListMessage(isHidden: false, message: "No Data")
+                view?.advertListMessage(isHidden: false, message: "No Data")
             }else{
                 view?.advertListMessage(isHidden: true, message: "")
             }
@@ -119,6 +124,34 @@ final class AdoptinHomePresenter  {
         }catch{
             adoptingAdverts = []
             view?.advertListMessage(isHidden: false, message: "Something went wrong")
+            view?.finishTableViewLoading()
+            view?.reloadTableView()
+        }
+    }
+    
+    // MARK: - AdvertFilterBySearchTextAndCategory
+    private func advertFilterBySearchTextAndCategory(caregoryId:Int,searchText:String) async {
+        view?.startTableViewLoding()
+        var result : [AdoptingAdvert] = []
+        do {
+            
+            result = try await interactor.advertFilterBySearchTextAndCategoryId(
+                categoryId: caregoryId,
+                searchText: searchText)
+            
+            adoptingAdverts = result
+            if adoptingAdverts.isEmpty {
+                view?.advertListMessage(isHidden: false, message: "No Data")
+            }else{
+                view?.advertListMessage(isHidden: true, message: "")
+            }
+            view?.finishTableViewLoading()
+            view?.reloadTableView()
+        }catch{
+            adoptingAdverts = []
+            view?.advertListMessage(isHidden: false, message: "Something went wrong")
+            view?.finishTableViewLoading()
+            view?.reloadTableView()
         }
     }
 }
@@ -131,8 +164,8 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
         
         Task {
             @MainActor in
-             await fetchCategorie()
-             await fetchAdoptingAdverts()
+            await fetchCategorie()
+            await fetchAdoptingAdverts()
         }
         
         view?.prepareCollectionView()
@@ -144,15 +177,34 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
         view?.setNavigationBarHidden(isHidden: true, animated: true)
     }
     
-    func searchTextFieldDidChange(searchText : String){
-        Task {
-            @MainActor in
-           try await advertFilterBySearchText(searchText: searchText.lowercased())
-
-            
+    private func advertsFilterAndSearchText(categoryId:Int,searchText:String) async{
+        if categoryId == 0{
+            if searchText.isEmpty {
+                await fetchAdoptingAdverts()
+            }else{
+                await advertFilterBySearchText(searchText: searchText)
+            }
+        }else{
+            if searchText.isEmpty {
+                await advertFilterByCategory(categoryId:categoryId)
+            }else{
+                await advertFilterBySearchTextAndCategory(caregoryId: categoryId, searchText: searchText)
+            }
         }
     }
     
+    
+}
+// MARK : - SearchTextFieldDidChange
+extension AdoptinHomePresenter {
+    func searchTextFieldDidChange(searchText : String) {
+        enterSearhText = searchText.lowercased()
+        
+        Task {
+            @MainActor in
+            await advertsFilterAndSearchText(categoryId:selectedCategory,searchText:enterSearhText)
+        }
+    }
 }
 
 // MARK: - For CollectionView
@@ -210,16 +262,10 @@ extension AdoptinHomePresenter {
         let id = categories[indexPath.item].id
         selectedCategory = id
         view?.reloadCollectionView()
-        
         Task {
             @MainActor in
-            if id == 0{
-                 await fetchAdoptingAdverts()
-            }else {
-                 await advertFilterByCategory(categoryId:id)
-            }
+            await advertsFilterAndSearchText(categoryId:selectedCategory,searchText:enterSearhText)
         }
-        
     }
 }
 
@@ -241,6 +287,4 @@ extension AdoptinHomePresenter {
         router?.toAdvertDetail(view: view,id: id)
         
     }
-    
-    
 }

@@ -7,6 +7,9 @@ protocol AdoptingHomeServiceProtocol {
     func fetchAdoptinAdvert() async throws -> [AdoptingAdvert]
     func advertFilterByCategory(categoryId:Int) async throws ->  [AdoptingAdvert]
     func advertFilterBySearchText(searchText:String) async throws -> [AdoptingAdvert]
+    func advertFilterBySearchTextAndCategoryId(
+        categoryId:Int,
+        searchText:String)  async throws -> [AdoptingAdvert]
 }
 
 final class AdoptingHomeService : AdoptingHomeServiceProtocol {
@@ -57,6 +60,19 @@ final class AdoptingHomeService : AdoptingHomeServiceProtocol {
         }catch{
             throw error
         }
+    }
+    
+    func advertFilterBySearchTextAndCategoryId(
+        categoryId: Int,
+        searchText: String) async throws -> [AdoptingAdvert] {
+            do {
+                let response = try await NetworkManager.shared.fetch(
+                    target: .getAdvertFilterByCategoryAndSearchText(searchText, categoryId),
+                    responseClass: [AdoptingAdvert].self)
+                return response
+            }catch{
+                throw error
+            }
         
     }
 }

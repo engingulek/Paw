@@ -9,18 +9,7 @@ protocol Request {
     var method : HTTPMethod {get}
 }
 
-extension Request {
-    var asURLRequest : URLRequest {
-        var url = URL(string: baseUrl + path)!
-        url.append(queryItems: queryItems)
-        var request = URLRequest(url: url)
-        request.httpMethod = method.rawValue
-        headers.forEach { key,value in
-            request.setValue(value, forHTTPHeaderField: key)
-        }
-        return request
-    }
-}
+
 
 enum HTTPMethod  : String {
     case GET
