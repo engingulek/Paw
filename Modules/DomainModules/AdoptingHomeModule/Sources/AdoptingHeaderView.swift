@@ -40,7 +40,7 @@ final class AdoptingHeaderView : UIView {
         let textField = UITextField()
         textField.leftViewMode = .always
         textField.placeholder = "Search Pet"
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         let image = UIImage(systemName: "magnifyingglass")?.withTintColor(.lightGray,renderingMode: .alwaysOriginal)
         imageView.image = image
         textField.leftView = imageView
@@ -49,14 +49,31 @@ final class AdoptingHeaderView : UIView {
     }()
     
     private lazy var filterButton : UIButton = {
-        let button = UIButton()
-        let image = UIImage(systemName: "slider.horizontal.3")?.withTintColor(.lightGray,renderingMode: .alwaysOriginal)
-        button.setImage(image, for: .normal)
+        var filled = UIButton.Configuration.filled()
+        filled.buttonSize = .large
+        filled.image = UIImage(systemName: "slider.horizontal.3")?.withTintColor(.red,renderingMode: .alwaysOriginal)
+        filled.baseBackgroundColor = .white
+        filled.imagePlacement = .trailing
+        filled.imagePadding = 5
+        let button = UIButton(configuration: filled, primaryAction: nil)
         button.addAction(filterButtonAction, for: .touchUpInside)
         return button
     }()
     
-  
+    
+    
+    private lazy var badgeLabel : UILabel = {
+        let label = UILabel()
+        label.backgroundColor = UIColor(red: 235/255, green: 68/255, blue: 90/255, alpha: 1)
+        label.layer.masksToBounds = true
+        label.text = "1"
+        label.textAlignment = .center
+        label.textColor = .white
+        label.font = .systemFont(ofSize: 15)
+        label.layer.cornerRadius = 10
+        return label
+    }()
+    
     
     private lazy var filterButtonAction : UIAction =  UIAction { _ in
         print("filter button title action")
@@ -66,7 +83,7 @@ final class AdoptingHeaderView : UIView {
     @objc func searchTextFieldDidChange(_ textField: UITextField) {
         guard let searchText = textField.text else {
             delegate?.searchTextFieldDidChange(text: "")
-           return
+            return
         }
         delegate?.searchTextFieldDidChange(text: searchText)
     }
@@ -74,11 +91,19 @@ final class AdoptingHeaderView : UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
+        confifureUI()
+        
+      
+        
+    }
+    
+    private func confifureUI(){
         addSubview(userImageView)
         addSubview(userNameSurname)
         addSubview(searchUIView)
         searchUIView.addSubview(searchTextField)
-        searchUIView.addSubview(filterButton)
+        addSubview(filterButton)
+        filterButton.addSubview(badgeLabel)
         
         userImageView.snp.makeConstraints { make in
             make.trailing.equalToSuperview().offset(-20)
@@ -97,22 +122,31 @@ final class AdoptingHeaderView : UIView {
             make.centerX.equalToSuperview()
             make.height.equalTo(50)
             make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(-25)
+            make.width.equalToSuperview().multipliedBy(0.8)
         }
         
         searchTextField.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(10)
-            make.trailing.equalTo(filterButton.snp.leading).offset(-5)
+            make.trailing.equalToSuperview()
         }
         
         filterButton.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
+            make.centerY.equalTo(searchUIView.snp.centerY)
+            make.height.equalTo(40)
+            make.width.equalTo(40)
             make.trailing.equalToSuperview().offset(-10)
+        }
+        
+        badgeLabel.snp.makeConstraints { make in
+            make.trailing.equalToSuperview().offset(-4)
+            make.top.equalToSuperview()
+            make.width.equalTo(20)
+            make.height.equalTo(20)
         }
     }
     
-   
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
