@@ -2,8 +2,8 @@
 import Foundation
 
 protocol AdvertDetailPresenterInterface {
-    var router : AdvertDetailRouterInterface? {get set}
-    var view : AdvertDetailViewControllerInterface? {get set}
+    var router : AdvertDetailRouterInterface? {get}
+    var view : AdvertDetailViewControllerInterface? {get}
     
     func viewDidLoad(id:Int)
     func sendAdvertDetail() -> AdvertDetail

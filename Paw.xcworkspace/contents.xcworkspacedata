@@ -48,5 +48,12 @@
             location = "group:TabbarModule/TabbarModule.xcodeproj">
          </FileRef>
       </Group>
+      <Group
+         location = "group:SharedModules"
+         name = "SharedModules">
+         <FileRef
+            location = "group:AdvertFilterModule/AdvertFilterModule.xcodeproj">
+         </FileRef>
+      </Group>
    </Group>
 </Workspace>

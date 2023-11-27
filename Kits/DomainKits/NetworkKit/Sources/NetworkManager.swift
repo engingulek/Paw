@@ -5,8 +5,8 @@ import Alamofire
 enum NetworkError : Error {
     case invalidResponse
     case defaultStatusCode
-    case doNotCompleted
     case valueError
+    case noRequestResource
 }
 
 public protocol NetworkManagerProtocol{
@@ -48,6 +48,8 @@ public final class NetworkManager : NetworkManagerProtocol  {
                     throw NetworkError.valueError
                 }
                 return value.data
+            case 404:
+                throw NetworkError.noRequestResource
             default:
                 print("defaultStatusCode")
                 throw NetworkError.defaultStatusCode

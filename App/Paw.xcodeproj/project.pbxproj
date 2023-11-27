@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04497039A3B8528F819F0789 /* AdvertFilterModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9486B84DB1D1EEB0D90EA73 /* AdvertFilterModuleInterface.framework */; };
+		1D4466DACD4159DF907DA20A /* AdvertFilterModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1970530577B520C47B3FA6 /* AdvertFilterModule.framework */; };
 		24FDA39EE873309DBD7E8813 /* OnboardingModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB464AE38F621748E4F61BF /* OnboardingModuleInterface.framework */; };
 		2C9E2A4EC38DB327977D6266 /* AdoptingHomeModule_AdoptingHomeModule.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E23C61CC8746D3FA65B22D48 /* AdoptingHomeModule_AdoptingHomeModule.bundle */; };
 		2E53B569F24FBC83A974CB42 /* TuistBundle+Paw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10348E04D5F333A54C38FDFB /* TuistBundle+Paw.swift */; };
@@ -65,8 +67,10 @@
 		7960F6481FA40E69436C4DF6 /* Paw-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Paw-Info.plist"; sourceTree = "<group>"; };
 		8F24752CAC75C5524624AEE6 /* AdvertDetailModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		996DF3855B80F01B4D7F0AF4 /* Paw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paw.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D1970530577B520C47B3FA6 /* AdvertFilterModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertFilterModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE43C9C6BAE2591578EC6B0 /* OnboardingModule_OnboardingModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingModule_OnboardingModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA24D5D262416DF4DBA0FCB /* AdoptingHomeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9486B84DB1D1EEB0D90EA73 /* AdvertFilterModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertFilterModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADC07A8937CC26D4CA47454 /* DependencyRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyRegister.swift; sourceTree = "<group>"; };
 		AEDDAC3A771DD98B35EE8780 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE15F2428FB76894A071121 /* TabbarModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TabbarModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +91,8 @@
 				81258CEC95FEFCFA6ACEB640 /* AdoptingHomeModuleInterface.framework in Frameworks */,
 				97E32100E20A06B5E292BA43 /* AdvertDetailModule.framework in Frameworks */,
 				D11D2BAC145D539CF927950F /* AdvertDetailModuleInterface.framework in Frameworks */,
+				1D4466DACD4159DF907DA20A /* AdvertFilterModule.framework in Frameworks */,
+				04497039A3B8528F819F0789 /* AdvertFilterModuleInterface.framework in Frameworks */,
 				3D827966CCB96EF58D23FFCB /* CommonKit.framework in Frameworks */,
 				CD489541748176B9530562FF /* DependencyKit.framework in Frameworks */,
 				7A0044D57CD9CA6126BF042C /* NetworkKit.framework in Frameworks */,
@@ -109,6 +115,8 @@
 				355861AAD73B2F3794B225D0 /* AdvertDetailModule_AdvertDetailModule.bundle */,
 				5D28737DD9CE5CD960E51E74 /* AdvertDetailModule.framework */,
 				8F24752CAC75C5524624AEE6 /* AdvertDetailModuleInterface.framework */,
+				9D1970530577B520C47B3FA6 /* AdvertFilterModule.framework */,
+				A9486B84DB1D1EEB0D90EA73 /* AdvertFilterModuleInterface.framework */,
 				E65F1E8D330DFCBD100AAF9C /* CommonKit.framework */,
 				23B46EAE9B881910DFED69AC /* DependencyKit.framework */,
 				AEDDAC3A771DD98B35EE8780 /* NetworkKit.framework */,

@@ -3,16 +3,16 @@ import Foundation
 import UIKit
 
 protocol AdoptinHomePresenterInterface {
-    var router : AdoptingRouterInterface? {get set}
-    var view : AdoptingHomeViewControllerInterfaca? {get set}
-    var interactor : AdoptingHomeServiceProtocol {get set}
+    var router : AdoptingRouterInterface? {get}
+    var view : AdoptingHomeViewControllerInterfaca? {get}
+    var interactor : AdoptingHomeServiceProtocol {get}
     
     func viewDidload()
     func viewWillAppear()
     
     func categorNumberOfItems() -> Int
     func categoryCellForItem(at indexPath :IndexPath) -> (
-        category:Category,
+        category:CategoryResult,
         borderColor:UIColor,
         backColor:UIColor,
         cornerRadius :Double,
@@ -26,6 +26,7 @@ protocol AdoptinHomePresenterInterface {
     func didSelectRowAt(at indexPath:IndexPath)
     
     func searchTextFieldDidChange(searchText : String)
+    func toAdvertFilterController()
     
     
 }
@@ -36,12 +37,11 @@ final class AdoptinHomePresenter  {
     weak var view: AdoptingHomeViewControllerInterfaca?
     var interactor: AdoptingHomeServiceProtocol
     
-    private var categories : [Category] = []
+    private var categories : [CategoryResult] = []
     private var adoptingAdverts : [AdoptingAdvert] = []
     private var selectedCategory : Int  = 0
     private var enterSearhText : String = ""
-    
-    
+
     init(router: AdoptingRouterInterface? = nil,
          view: AdoptingHomeViewControllerInterfaca?,
          interactor : AdoptingHomeServiceProtocol = AdoptingHomeService.shared) {
@@ -55,7 +55,7 @@ final class AdoptinHomePresenter  {
         do {
             let result = try await interactor.fetchCategories()
             categories = result
-            let allCategory = Category(id: 0, category: "All")
+            let allCategory = CategoryResult(id: 0, category: "All")
             categories.insert(allCategory, at: 0)
             view?.reloadCollectionView()
         }catch{
@@ -158,9 +158,11 @@ final class AdoptinHomePresenter  {
 
 //MARK: - AdoptinHomePresenterInterface
 extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
+  
+    
     func viewDidload() {
         view?.setBackColorAble(color: .white)
-        view?.navigationBackButtonHiddenAble(isHidden:true )
+        view?.navigationBackButtonHiddenAble(isHidden:true)
         
         Task {
             @MainActor in
@@ -170,6 +172,7 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
         
         view?.prepareCollectionView()
         view?.prepareTableView()
+       // view?.badgeLabelInHeaderView(isHidden: true, count: 0)
     }
     
     func viewWillAppear() {
@@ -193,6 +196,11 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
         }
     }
     
+    // MARK: - ToAdvertFilterController
+    func toAdvertFilterController() {
+        router?.toAdvertFilter(view: view)
+    }
+    
     
 }
 // MARK : - SearchTextFieldDidChange
@@ -214,14 +222,14 @@ extension AdoptinHomePresenter {
     }
     
     func categoryCellForItem(at indexPath :IndexPath) -> (
-        category:Category,
+        category:CategoryResult,
         borderColor:UIColor,
         backColor:UIColor,
         cornerRadius :Double,
         borderWidth:Double,
         labelColor:UIColor
     ) {
-        let category : Category
+        let category : CategoryResult
         let borderColor : UIColor
         let backColor : UIColor
         let cornerRadius : Double

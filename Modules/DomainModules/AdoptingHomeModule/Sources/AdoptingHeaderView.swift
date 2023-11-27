@@ -6,6 +6,7 @@ import UIKit
 
 protocol AdoptingHeaderViewDelegate {
     func searchTextFieldDidChange(text:String)
+    func selectedFilterButton()
 }
 
 final class AdoptingHeaderView : UIView {
@@ -49,20 +50,54 @@ final class AdoptingHeaderView : UIView {
     }()
     
     private lazy var filterButton : UIButton = {
-        var filled = UIButton.Configuration.filled()
-        filled.buttonSize = .large
-        filled.image = UIImage(systemName: "slider.horizontal.3")?.withTintColor(.red,renderingMode: .alwaysOriginal)
-        filled.baseBackgroundColor = .white
-        filled.imagePlacement = .trailing
-        filled.imagePadding = 5
-        let button = UIButton(configuration: filled, primaryAction: nil)
+        let button = UIButton()
+        button.setTitle("Filter", for: .normal)
+        button.backgroundColor = .white
+        button.setTitleColor(.red, for: .normal)
+        button.layer.borderColor = UIColor.red.cgColor
+        button.layer.borderWidth = 1
+        button.layer.cornerRadius = 10
         button.addAction(filterButtonAction, for: .touchUpInside)
         return button
     }()
     
     
+    private lazy var filterButtonAction : UIAction =  UIAction { _ in
+        self.delegate?.selectedFilterButton()
+        
+    }
     
-    private lazy var badgeLabel : UILabel = {
+    private lazy var sortButton : UIButton = {
+        let button = UIButton()
+        button.setTitle("Sort", for: .normal)
+        button.backgroundColor = .white
+        button.setTitleColor(.red, for: .normal)
+        button.layer.borderColor = UIColor.red.cgColor
+        button.layer.borderWidth = 1
+        button.layer.cornerRadius = 10
+        button.addAction(sortButtonAction, for: .touchUpInside)
+        return button
+    }()
+    
+    
+    private lazy var sortButtonAction : UIAction =  UIAction { _ in
+        
+    }
+    
+    private lazy var actionButttonStackViews : UIStackView = {
+        let stackView = UIStackView(
+            arrangedSubviews: [sortButton,filterButton])
+        stackView.axis = .horizontal
+        stackView.distribution  = .fillEqually
+        stackView.spacing = 20
+        stackView.alignment = .center
+        return stackView
+        
+    }()
+    
+    
+    
+    /*private lazy var badgeLabel : UILabel = {
         let label = UILabel()
         label.backgroundColor = UIColor(red: 235/255, green: 68/255, blue: 90/255, alpha: 1)
         label.layer.masksToBounds = true
@@ -72,13 +107,9 @@ final class AdoptingHeaderView : UIView {
         label.font = .systemFont(ofSize: 15)
         label.layer.cornerRadius = 10
         return label
-    }()
+    }()*/
     
-    
-    private lazy var filterButtonAction : UIAction =  UIAction { _ in
-        print("filter button title action")
-        
-    }
+ 
     
     @objc func searchTextFieldDidChange(_ textField: UITextField) {
         guard let searchText = textField.text else {
@@ -92,18 +123,22 @@ final class AdoptingHeaderView : UIView {
         super.init(frame: frame)
         backgroundColor = .white
         confifureUI()
-        
-      
-        
     }
+    
+    
+   /* func badgeStatus(isHidden:Bool,count:Int){
+       // badgeLabel.isHidden = isHidden
+       // badgeLabel.text = "\(count)"
+    }*/
     
     private func confifureUI(){
         addSubview(userImageView)
         addSubview(userNameSurname)
         addSubview(searchUIView)
         searchUIView.addSubview(searchTextField)
-        addSubview(filterButton)
-        filterButton.addSubview(badgeLabel)
+        addSubview(actionButttonStackViews)
+       // addSubview(filterButton)
+       // filterButton.addSubview(badgeLabel)
         
         userImageView.snp.makeConstraints { make in
             make.trailing.equalToSuperview().offset(-20)
@@ -122,28 +157,35 @@ final class AdoptingHeaderView : UIView {
             make.centerX.equalToSuperview()
             make.height.equalTo(50)
             make.leading.equalToSuperview().offset(25)
-            make.width.equalToSuperview().multipliedBy(0.8)
+            make.trailing.equalToSuperview().offset(-25)
         }
         
         searchTextField.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(10)
-            make.trailing.equalToSuperview()
+            make.trailing.equalToSuperview().offset(-10)
         }
         
-        filterButton.snp.makeConstraints { make in
+        
+        actionButttonStackViews.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-10)
+            make.top.equalTo(searchUIView.snp.bottom).offset(10)
+        }
+        
+       /* filterButton.snp.makeConstraints { make in
             make.centerY.equalTo(searchUIView.snp.centerY)
             make.height.equalTo(40)
             make.width.equalTo(40)
             make.trailing.equalToSuperview().offset(-10)
-        }
+        }*/
         
-        badgeLabel.snp.makeConstraints { make in
+       /* badgeLabel.snp.makeConstraints { make in
             make.trailing.equalToSuperview().offset(-4)
             make.top.equalToSuperview()
             make.width.equalTo(20)
             make.height.equalTo(20)
-        }
+        }*/
     }
     
     

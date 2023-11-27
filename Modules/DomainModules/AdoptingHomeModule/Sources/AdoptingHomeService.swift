@@ -3,7 +3,7 @@ import Foundation
 import NetworkKit
 
 protocol AdoptingHomeServiceProtocol {
-    func fetchCategories() async throws -> [Category]
+    func fetchCategories() async throws -> [CategoryResult]
     func fetchAdoptinAdvert() async throws -> [AdoptingAdvert]
     func advertFilterByCategory(categoryId:Int) async throws ->  [AdoptingAdvert]
     func advertFilterBySearchText(searchText:String) async throws -> [AdoptingAdvert]
@@ -17,11 +17,11 @@ final class AdoptingHomeService : AdoptingHomeServiceProtocol {
     static let shared = AdoptingHomeService()
     
     // MARK: - FethCategories
-    func fetchCategories() async throws -> [Category] {
+    func fetchCategories() async throws -> [CategoryResult] {
         do {
             let response = try await NetworkManager.shared.fetch(
                 target: .categories,
-                responseClass: [Category].self)
+                responseClass: [CategoryResult].self)
             return response
         }catch{
             throw error

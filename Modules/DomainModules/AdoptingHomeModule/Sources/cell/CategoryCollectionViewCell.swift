@@ -19,7 +19,7 @@ final class CategoryCollectionViewCell : UICollectionViewCell {
         }
     }
     
-    func configureData(category:Category){
+    func configureData(category:CategoryResult){
         categoryLabel.text = category.category
     }
     

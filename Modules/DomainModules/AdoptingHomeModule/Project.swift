@@ -21,6 +21,9 @@ let dependensies : [TargetDependency] = [
     .project(target: "DependencyKit", path: .relativeToRoot("Kits/CoreKits/DependencyKit")),
     .project(target: "AdoptingHomeModuleInterface",
              path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule")),
+    .project(
+        target: "AdvertFilterModuleInterface",
+        path: .relativeToRoot("Modules/SharedModules/AdvertFilterModule")),
     .project(target: "AdvertDetailModuleInterface",
              path: .relativeToRoot("Modules/DomainModules/AdvertDetailModule")),
     .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),

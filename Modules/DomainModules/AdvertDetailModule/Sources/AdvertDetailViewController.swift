@@ -4,7 +4,7 @@ import SnapKit
 typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble
 
 protocol AdvertDetailViewControllerInterface: AnyObject ,Ables {
-    var presenter : AdvertDetailPresenterInterface {get set}
+    
     
     func configureData(advertDetail: AdvertDetail)
 }

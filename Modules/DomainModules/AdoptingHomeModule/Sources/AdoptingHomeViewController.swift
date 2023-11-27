@@ -6,7 +6,7 @@ typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble
 
 
 protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
-    var presenter : AdoptinHomePresenterInterface {get set}
+    var presenter : AdoptinHomePresenterInterface {get}
     func prepareCollectionView()
     func prepareTableView()
     func reloadCollectionView()
@@ -14,6 +14,7 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
     func startTableViewLoding()
     func finishTableViewLoading()
     func advertListMessage(isHidden:Bool,message:String)
+   // func badgeLabelInHeaderView(isHidden:Bool,count:Int)
 }
 
 final class AdoptingHomeViewController: UIViewController{
@@ -24,7 +25,7 @@ final class AdoptingHomeViewController: UIViewController{
             x: 0,
             y: 0,
             width: view.frame.width,
-            height: self.view.layer.frame.height / 5 ) )
+            height: self.view.layer.frame.height / 4 ) )
     
     private lazy var collectionview : UICollectionView  = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -163,7 +164,12 @@ extension AdoptingHomeViewController : UITableViewDelegate,UITableViewDataSource
     
 }
 
+// MARK: - AdoptingHeaderViewDelegate
 extension AdoptingHomeViewController : AdoptingHeaderViewDelegate {
+    func selectedFilterButton() {
+        presenter.toAdvertFilterController()
+    }
+    
     func searchTextFieldDidChange(text: String) {
         presenter.searchTextFieldDidChange(searchText: text)
     }
@@ -220,6 +226,13 @@ extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
             
         }
     }
+    
+    /*func badgeLabelInHeaderView(isHidden:Bool,count:Int) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.adoptingHeaderView.badgeStatus(isHidden: isHidden, count: count)
+        }
+    }*/
 }
 
 
