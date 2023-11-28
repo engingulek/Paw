@@ -1,6 +1,46 @@
 
 
+
 import Foundation
+import SnapKit
+import UIKit
+
+
+final class FilterTableViewCell :   UITableViewCell {
+    static let identifier = "FilterTableViewCell"
+    
+    private lazy var filterTitle : UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 20,weight: .medium)
+        label.text = "Test"
+        label.textColor = .black
+        return label
+    }()
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.addSubview(filterTitle)
+       
+
+        filterTitle.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.leading.equalToSuperview().offset(20)
+        }
+        
+    }
+    
+    
+    func configureData(filterText:String){
+        filterTitle.text = filterText
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+
+/*import Foundation
 import SnapKit
 import UIKit
 
@@ -50,4 +90,4 @@ final class FilterTableViewCell :   UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
+}*/
