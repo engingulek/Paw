@@ -19,6 +19,8 @@ let dependensies : [TargetDependency] = [
     .project(
         target: "AdvertFilterModuleInterface",
         path: .relativeToRoot("Modules/SharedModules/AdvertFilterModule")),
+    .project(target: "AdoptingHomeModuleInterface",
+             path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule")),
     .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),
     snapKit
 ]

@@ -4,12 +4,18 @@ import Foundation
 
 public protocol UIViewControllerAble {
     func setBackColorAble(color:UIColor)
+    func dismessAble()
    
 }
 
 extension UIViewControllerAble where Self : UIViewController {
     public func setBackColorAble(color:UIColor){
         view.backgroundColor = color
+    }
+    
+    public func dismessAble(){
+        self.dismiss(animated: true)
+        
     }
 }
 
@@ -22,6 +28,7 @@ public protocol NavConAble {
     func pushViewControllerAble (_ vc:UIViewController,animated:Bool)
     func navigationBackButtonHiddenAble(isHidden:Bool)
     func setNavigationBarHidden(isHidden:Bool,animated:Bool)
+    func popViewControllerAble()
 }
 
 extension NavConAble  where Self : UIViewController{
@@ -40,6 +47,11 @@ extension NavConAble  where Self : UIViewController{
     
     public func setNavigationBarHidden(isHidden:Bool,animated:Bool){
         navigationController?.setNavigationBarHidden(isHidden, animated: animated)
+    }
+    
+    public func popViewControllerAble(){
+        
+        navigationController?.popViewController(animated: true)
     }
 }
 

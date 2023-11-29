@@ -13,7 +13,7 @@ private struct FilterData{
 
 protocol AdvertFilterPresenterInterface {
     var view : AdvertFilterControllerInterface? {get set}
-    var router : AdvertFilterRouter? {get set}
+    var router : AdvertFilterRouterInterface? {get set}
     func viewDidLoad()
     func numberOfSections() -> Int
     func numberOfRowsInSection(at section:Int) -> Int
@@ -26,17 +26,18 @@ protocol AdvertFilterPresenterInterface {
     
     func didSelectRow(at indexPath:IndexPath)
     func deSelectRow(at indexPath:IndexPath)
+    func toAdoptingHomeViewController()
 }
 
 
 final class AdvertFilterPresenter  {
     var view: AdvertFilterControllerInterface?
-    var router: AdvertFilterRouter?
+    var router: AdvertFilterRouterInterface?
     
     private var genderList : [String] = []
     private var cityList : [String] = []
     
-    init(view: AdvertFilterControllerInterface?, router: AdvertFilterRouter? = nil) {
+    init(view: AdvertFilterControllerInterface?, router: AdvertFilterRouterInterface? = nil) {
         self.view = view
         self.router = router
     }
@@ -53,7 +54,7 @@ final class AdvertFilterPresenter  {
 
 
 extension AdvertFilterPresenter  : AdvertFilterPresenterInterface {
-   
+    
     func numberOfSections() -> Int {
         return FilterData.filterDatas.count
     }
@@ -104,5 +105,14 @@ extension AdvertFilterPresenter  : AdvertFilterPresenterInterface {
             return
         }
     }
+    
+    func toAdoptingHomeViewController() {
+       // router?.toAdvertHomeWithPopViewController(view: view, test: "FADSKF")
+        //router?.popViewControllerSendData(view:view,test: "cancazım")
+       // router?.toAdoptingHomeViewController(view: view)
+       // router?.sendFilterDatasToAdoptingViewController(view:view,test: "Daaaaa")
+    }
+    
+   
 }
 

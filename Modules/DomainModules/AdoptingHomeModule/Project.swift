@@ -14,7 +14,6 @@ let interfaceTarget  = Target(
     infoPlist: .default,
     sources: "InterfaceSource/**",
     dependencies: []
-
 )
 
 let dependensies : [TargetDependency] = [

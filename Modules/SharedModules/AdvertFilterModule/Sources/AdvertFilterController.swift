@@ -16,16 +16,40 @@ protocol AdvertFilterControllerInterface : AnyObject,Ables {
 }
 
 
+
 final class AdvertFilterController: UIViewController {
     lazy var presenter : AdvertFilterPresenterInterface = AdvertFilterPresenter(view: self)
-    
     private lazy var filterTableView : UITableView = {
         let tableView = UITableView()
         tableView.register(FilterTableViewCell.self, forCellReuseIdentifier: FilterTableViewCell.identifier)
         tableView.allowsMultipleSelection = true
+        tableView.tableFooterView =  footerViewForFilterTableViewUIView
         return tableView
     }()
-    var indexPathOfSelectedRowPaidBy: NSIndexPath?
+    
+    private lazy var footerViewForFilterTableViewUIView : UIView = {
+        let uiView = UIView(frame: CGRectMake(0, 0, 200, 80))
+        uiView.backgroundColor = .white
+        return uiView
+    }()
+    
+    private lazy var applyButton : UIButton = {
+        let button = UIButton()
+        button.setTitle("Apply", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .red
+        button.layer.cornerRadius = 10
+        button.addAction(applyButtonAction, for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var applyButtonAction : UIAction =  UIAction { _ in
+        self.presenter.toAdoptingHomeViewController()
+        
+    }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +61,15 @@ final class AdvertFilterController: UIViewController {
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
         }
+        
+        footerViewForFilterTableViewUIView.addSubview(applyButton)
+        applyButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.height.equalTo(50)
+            make.width.equalTo(150)
+        }
+        
     }
 }
 
@@ -85,12 +118,8 @@ extension AdvertFilterController :UITableViewDelegate,UITableViewDataSource {
         tableView.cellForRow(at: indexPath)?.accessoryType = .none
         presenter.deSelectRow(at: indexPath)
     }
-    
-    
-    
-   
-    
 }
+
 
 extension AdvertFilterController : AdvertFilterControllerInterface {
     func prepareTableView() {
@@ -103,80 +132,3 @@ extension AdvertFilterController : AdvertFilterControllerInterface {
     }
 }
 
-
-
-
-
-
-
-
-/*import UIKit
-import SnapKit
-import CommonKit
-
-typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble
-
-protocol AdvertFilterControllerInterface : AnyObject,Ables {
-    var presenter : AdvertFilterPresenterInterface {get}
-    func prepareTableView()
-    func reloadTableView()
-}
-
-
-final class AdvertFilterController: UIViewController {
-    lazy var presenter : AdvertFilterPresenterInterface = AdvertFilterPresenter(view: self)
-    
-    private lazy var filterTableView : UITableView = {
-        let tableView = UITableView()
-        tableView.register(FilterTableViewCell.self, forCellReuseIdentifier: FilterTableViewCell.identifier)
-        
-        return tableView
-    }()
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        presenter.viewDidLoad()
-        view.addSubview(filterTableView)
-        filterTableView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.bottom.equalToSuperview()
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-        }
-    }
-}
-
-
-//MARK: FilterTableViewDelegate And Datasource
-
-
-extension AdvertFilterController :UITableViewDelegate,UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: FilterTableViewCell.identifier, for: indexPath) as? FilterTableViewCell else {return UITableViewCell()}
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
-    }
-}
-
-extension AdvertFilterController : AdvertFilterControllerInterface {
-    func prepareTableView() {
-        filterTableView.delegate = self
-        filterTableView.dataSource = self
-    }
-    
-    func reloadTableView() {
-        filterTableView.reloadData()
-    }
-}*/

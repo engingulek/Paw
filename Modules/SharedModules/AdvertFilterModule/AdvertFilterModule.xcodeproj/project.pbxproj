@@ -11,11 +11,12 @@
 		334F26241E43418395862C74 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FCA206D8C158F7B3A6F1C9 /* FilterTableViewCell.swift */; };
 		354F1D0FF6AD874FB49A2458 /* AdvertFilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542D2E333D04BA9BD5EF4556 /* AdvertFilterPresenter.swift */; };
 		4AA0DF657CB85162CAF0F159 /* AdvertFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BEF9E79FCB999993DB3EFA /* AdvertFilterController.swift */; };
-		7D8009E02B1676BD001F3C5E /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8009DF2B1676BD001F3C5E /* SectionHeader.swift */; };
+		65F7F53E0472DCEEC0B755CA /* AdoptingHomeModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 1B65E18E625BA0A446CC0173 /* AdoptingHomeModuleInterface.framework */; };
 		8BB2A54265983B582B5B71B9 /* AdvertFilterModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = B06DFAD9E7FEFF3A84C1974B /* AdvertFilterModuleInterface.framework */; };
 		A79A8A0C3C9F2C9A4CADBD42 /* AdvertFilterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A095B2DA070FCFCD0B9282D8 /* AdvertFilterRouter.swift */; };
 		CF37872DBEE432FBAEE5C785 /* CommonKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 235FFEE10E25448253E01A35 /* CommonKit.framework */; };
 		DD22440DCDA813DFD7498C6B /* AdvertFilterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19227C59CEDA0918EDB365E7 /* AdvertFilterInterface.swift */; };
+		F7042CA06D4C67AB09A61C97 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF98BBDC588013D7ED17F5C /* SectionHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 			buildActionMask = 8;
 			dstSubfolderSpec = 16;
 			files = (
+				65F7F53E0472DCEEC0B755CA /* AdoptingHomeModuleInterface.framework in Dependencies */,
 				8BB2A54265983B582B5B71B9 /* AdvertFilterModuleInterface.framework in Dependencies */,
 				CF37872DBEE432FBAEE5C785 /* CommonKit.framework in Dependencies */,
 			);
@@ -65,11 +67,12 @@
 /* Begin PBXFileReference section */
 		18EA0E42477F846D2730D7CC /* AdvertFilterModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdvertFilterModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		19227C59CEDA0918EDB365E7 /* AdvertFilterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertFilterInterface.swift; sourceTree = "<group>"; };
+		1B65E18E625BA0A446CC0173 /* AdoptingHomeModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		235FFEE10E25448253E01A35 /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FF98BBDC588013D7ED17F5C /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		542D2E333D04BA9BD5EF4556 /* AdvertFilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertFilterPresenter.swift; sourceTree = "<group>"; };
 		69FCA206D8C158F7B3A6F1C9 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		73BEF9E79FCB999993DB3EFA /* AdvertFilterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertFilterController.swift; sourceTree = "<group>"; };
-		7D8009DF2B1676BD001F3C5E /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		88218C8677D82E24C12D341C /* AdvertFilterModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertFilterModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A095B2DA070FCFCD0B9282D8 /* AdvertFilterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertFilterRouter.swift; sourceTree = "<group>"; };
 		B06DFAD9E7FEFF3A84C1974B /* AdvertFilterModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertFilterModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,7 +113,7 @@
 				542D2E333D04BA9BD5EF4556 /* AdvertFilterPresenter.swift */,
 				A095B2DA070FCFCD0B9282D8 /* AdvertFilterRouter.swift */,
 				69FCA206D8C158F7B3A6F1C9 /* FilterTableViewCell.swift */,
-				7D8009DF2B1676BD001F3C5E /* SectionHeader.swift */,
+				2FF98BBDC588013D7ED17F5C /* SectionHeader.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 		B83F4AC2BADCEC29CBDC895F /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				1B65E18E625BA0A446CC0173 /* AdoptingHomeModuleInterface.framework */,
 				88218C8677D82E24C12D341C /* AdvertFilterModule.framework */,
 				B06DFAD9E7FEFF3A84C1974B /* AdvertFilterModuleInterface.framework */,
 				235FFEE10E25448253E01A35 /* CommonKit.framework */,
@@ -274,9 +278,9 @@
 			files = (
 				4AA0DF657CB85162CAF0F159 /* AdvertFilterController.swift in Sources */,
 				354F1D0FF6AD874FB49A2458 /* AdvertFilterPresenter.swift in Sources */,
-				7D8009E02B1676BD001F3C5E /* SectionHeader.swift in Sources */,
 				A79A8A0C3C9F2C9A4CADBD42 /* AdvertFilterRouter.swift in Sources */,
 				334F26241E43418395862C74 /* FilterTableViewCell.swift in Sources */,
+				F7042CA06D4C67AB09A61C97 /* SectionHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,6 @@ protocol AdoptinHomePresenterInterface {
     
     func viewDidload()
     func viewWillAppear()
-    
     func categorNumberOfItems() -> Int
     func categoryCellForItem(at indexPath :IndexPath) -> (
         category:CategoryResult,
@@ -29,6 +28,8 @@ protocol AdoptinHomePresenterInterface {
     func toAdvertFilterController()
     
     
+    
+    
 }
 
 final class AdoptinHomePresenter  {
@@ -41,6 +42,7 @@ final class AdoptinHomePresenter  {
     private var adoptingAdverts : [AdoptingAdvert] = []
     private var selectedCategory : Int  = 0
     private var enterSearhText : String = ""
+   
 
     init(router: AdoptingRouterInterface? = nil,
          view: AdoptingHomeViewControllerInterfaca?,
@@ -163,11 +165,12 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
     func viewDidload() {
         view?.setBackColorAble(color: .white)
         view?.navigationBackButtonHiddenAble(isHidden:true)
-        
+        print("ViewDidload \(view?.test)")
         Task {
             @MainActor in
             await fetchCategorie()
             await fetchAdoptingAdverts()
+           
         }
         
         view?.prepareCollectionView()
@@ -176,9 +179,11 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
     }
     
     func viewWillAppear() {
-        view?.tabbarisHidden(isHidden: false)
-        view?.setNavigationBarHidden(isHidden: true, animated: true)
-    }
+        print("ViewDidAppear \(view?.test)")
+            view?.tabbarisHidden(isHidden: false)
+            view?.setNavigationBarHidden(isHidden: true, animated: true)
+        }
+    
     
     private func advertsFilterAndSearchText(categoryId:Int,searchText:String) async{
         if categoryId == 0{
@@ -275,6 +280,7 @@ extension AdoptinHomePresenter {
             await advertsFilterAndSearchText(categoryId:selectedCategory,searchText:enterSearhText)
         }
     }
+    
 }
 
 

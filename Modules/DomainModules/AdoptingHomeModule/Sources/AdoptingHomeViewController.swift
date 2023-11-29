@@ -2,11 +2,14 @@
 import UIKit
 import CommonKit
 import SnapKit
+import AdvertFilterModuleInterface
+import AdoptingHomeModuleInterface
 typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble
 
 
 protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
     var presenter : AdoptinHomePresenterInterface {get}
+    var test : String {get set}
     func prepareCollectionView()
     func prepareTableView()
     func reloadCollectionView()
@@ -17,7 +20,8 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
    // func badgeLabelInHeaderView(isHidden:Bool,count:Int)
 }
 
-final class AdoptingHomeViewController: UIViewController{
+ final class AdoptingHomeViewController: UIViewController{
+    var test:String = ""
     
     lazy var presenter : AdoptinHomePresenterInterface = AdoptinHomePresenter(view: self)
     private lazy var  adoptingHeaderView = AdoptingHeaderView(
@@ -63,17 +67,21 @@ final class AdoptingHomeViewController: UIViewController{
         return label
     }()
     
-    
     override func viewWillAppear(_ animated: Bool) {
         presenter.viewWillAppear()
+        print("Datalık \(test)")
     }
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidload()
+       
         navigationController?.navigationBar.isHidden = true
         adoptingHeaderView.delegate = self
         configureData()
+        print("Datacık \(test)")
     }
     
     // MARK: - ConfigureData
@@ -142,7 +150,7 @@ extension AdoptingHomeViewController : UICollectionViewDelegate,UICollectionView
 
 
 extension AdoptingHomeViewController : UITableViewDelegate,UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.numberOfRowsInSection()
     }
     
@@ -226,14 +234,19 @@ extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
             
         }
     }
-    
-    /*func badgeLabelInHeaderView(isHidden:Bool,count:Int) {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            self.adoptingHeaderView.badgeStatus(isHidden: isHidden, count: count)
-        }
-    }*/
 }
+/*extension AdoptingHomeViewController : AdoptingHomeViewControllerDelegate {
+    func fromAdvertFilterToAdoptingHome(test: String) {
+        print("test")
+    }
+}*/
+
+
+
+
+
+
+
 
 
 
