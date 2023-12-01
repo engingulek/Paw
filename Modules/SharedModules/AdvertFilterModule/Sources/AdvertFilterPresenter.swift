@@ -1,28 +1,29 @@
 
 import Foundation
-
+import ModelKit
+import Combine
 private struct FilterData{
     let title:String
     let filters : [String]
     
     static let filterDatas : [FilterData] = [
         .init(title: "Gender", filters: ["Male","Female"]),
-        .init(title: "City", filters: ["Ankara","İstabul","İzmir"])
+        .init(title: "City", filters: ["Ankara","Istanbul","Izmir"])
     ]
 }
 
 protocol AdvertFilterPresenterInterface {
     var view : AdvertFilterControllerInterface? {get set}
     var router : AdvertFilterRouterInterface? {get set}
-    func viewDidLoad()
+    func viewDidLoad(adoptingAdverts:[AdoptingAdvert])
     func numberOfSections() -> Int
     func numberOfRowsInSection(at section:Int) -> Int
-   func forHeaderInSection(at section:Int) -> String
+    func forHeaderInSection(at section:Int) -> String
     func heightForHeaderInSection() -> CGFloat
     func  heightForRowAt() -> CGFloat
     func cellForRowAt(
         at indexPath: IndexPath
-        ) -> String
+    ) -> String
     
     func didSelectRow(at indexPath:IndexPath)
     func deSelectRow(at indexPath:IndexPath)
@@ -36,24 +37,46 @@ final class AdvertFilterPresenter  {
     
     private var genderList : [String] = []
     private var cityList : [String] = []
+    private var listAdverts: [AdoptingAdvert] = []
+    private var filterAdversList : [AdoptingAdvert] = []
     
     init(view: AdvertFilterControllerInterface?, router: AdvertFilterRouterInterface? = nil) {
         self.view = view
         self.router = router
     }
     
-    func viewDidLoad() {
+    func viewDidLoad(adoptingAdverts:[AdoptingAdvert]) {
         view?.setBackColorAble(color: .white)
         view?.setNavigationBarHidden(isHidden: false, animated: true)
         view?.tabbarisHidden(isHidden: true)
-    
+        view?.applyButton(opacity: 0.6, isEnabled: false,title: "Apply")
+        listAdverts = adoptingAdverts
         view?.prepareTableView()
         view?.reloadTableView()
+    }
+    
+    private func filterBygenderListAndCityList(){
+        if genderList.isEmpty && cityList.isEmpty {
+            view?.applyButton(opacity: 0.6, isEnabled: false,title: "Apply")
+        }else{
+            let list = listAdverts.filter { advert in
+               (genderList.isEmpty ? true : genderList.description.lowercased().contains(advert.gender.lowercased()))
+                &&
+                (cityList.isEmpty ? true : cityList.description.lowercased().contains(advert.city.lowercased()))
+            }
+            filterAdversList =  list
+            view?.applyButton(opacity: 1.0, isEnabled:true,title: "\(list.count) Apply")
+        }
     }
 }
 
 
+
+
 extension AdvertFilterPresenter  : AdvertFilterPresenterInterface {
+    
+    
+  
     
     func numberOfSections() -> Int {
         return FilterData.filterDatas.count
@@ -69,7 +92,7 @@ extension AdvertFilterPresenter  : AdvertFilterPresenterInterface {
             let filters = FilterData.filterDatas[indexPath.section].filters
             text =  filters[indexPath.item]
             return text
-    }
+        }
     
     func forHeaderInSection(at section:Int) -> String {
         return FilterData.filterDatas[section].title
@@ -92,6 +115,7 @@ extension AdvertFilterPresenter  : AdvertFilterPresenterInterface {
         }else{
             return
         }
+        filterBygenderListAndCityList()
     }
     func deSelectRow(at indexPath:IndexPath)  {
         let selected = FilterData.filterDatas[indexPath.section].filters[indexPath.row]
@@ -104,15 +128,14 @@ extension AdvertFilterPresenter  : AdvertFilterPresenterInterface {
         }else{
             return
         }
+        filterBygenderListAndCityList()
     }
-    
     func toAdoptingHomeViewController() {
-       // router?.toAdvertHomeWithPopViewController(view: view, test: "FADSKF")
-        //router?.popViewControllerSendData(view:view,test: "cancazım")
-       // router?.toAdoptingHomeViewController(view: view)
-       // router?.sendFilterDatasToAdoptingViewController(view:view,test: "Daaaaa")
+        router?.toAdoptinHomeViewControllerWithPopViewController(
+            view: view,
+            adoptingAdverts: filterAdversList)
     }
     
-   
+    
 }
 

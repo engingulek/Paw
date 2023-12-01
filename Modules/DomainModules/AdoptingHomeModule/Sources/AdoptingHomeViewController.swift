@@ -4,12 +4,12 @@ import CommonKit
 import SnapKit
 import AdvertFilterModuleInterface
 import AdoptingHomeModuleInterface
+import ModelKit
 typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble
 
 
 protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
     var presenter : AdoptinHomePresenterInterface {get}
-    var test : String {get set}
     func prepareCollectionView()
     func prepareTableView()
     func reloadCollectionView()
@@ -21,8 +21,7 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
 }
 
  final class AdoptingHomeViewController: UIViewController{
-    var test:String = ""
-    
+     private var filterList : [AdoptingAdvert] = []
     lazy var presenter : AdoptinHomePresenterInterface = AdoptinHomePresenter(view: self)
     private lazy var  adoptingHeaderView = AdoptingHeaderView(
         frame:CGRect(
@@ -66,24 +65,20 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
         label.isHidden = true
         return label
     }()
-    
-    override func viewWillAppear(_ animated: Bool) {
-        presenter.viewWillAppear()
-        print("Datalık \(test)")
-    }
-    
-
-    
+     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidload()
-       
         navigationController?.navigationBar.isHidden = true
         adoptingHeaderView.delegate = self
         configureData()
-        print("Datacık \(test)")
     }
-    
+     
+     override func viewWillAppear(_ animated: Bool) {
+         presenter.viewWillAppear()
+     }
+     
+     
     // MARK: - ConfigureData
     private func configureData(){
         view.addSubview(adoptingHeaderView)
@@ -235,11 +230,15 @@ extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
         }
     }
 }
-/*extension AdoptingHomeViewController : AdoptingHomeViewControllerDelegate {
-    func fromAdvertFilterToAdoptingHome(test: String) {
-        print("test")
+extension AdoptingHomeViewController : AdvertFilterControllerDelegate {
+    func toAdoptingHomeViewControllerWithPopViewController(adoptingAdverts: [AdoptingAdvert]) {
+       
     }
-}*/
+    
+    
+    
+    
+}
 
 
 

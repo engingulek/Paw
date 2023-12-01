@@ -1,7 +1,7 @@
 
 import Foundation
 import NetworkKit
-
+import ModelKit
 protocol AdoptingHomeServiceProtocol {
     func fetchCategories() async throws -> [CategoryResult]
     func fetchAdoptinAdvert() async throws -> [AdoptingAdvert]

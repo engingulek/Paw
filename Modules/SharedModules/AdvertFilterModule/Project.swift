@@ -22,7 +22,9 @@ let dependensies : [TargetDependency] = [
     .project(target: "AdoptingHomeModuleInterface",
              path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule")),
     .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),
-    snapKit
+    snapKit,
+    .project(target: "ModelKit", path: .relativeToRoot("Kits/SharedKits/ModelKit"))
+
 ]
 
 let framworkTarget =  Target(

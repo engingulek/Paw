@@ -154,6 +154,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "28A1A30D7349A4DCC4A96D79"
+               BuildableName = "ModelKit.framework"
+               BlueprintName = "ModelKit"
+               ReferencedContainer = "container:Kits/SharedKits/ModelKit/ModelKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC93B437E5CFD867C043748F"
                BuildableName = "NetworkKit.framework"
                BlueprintName = "NetworkKit"

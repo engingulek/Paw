@@ -27,6 +27,9 @@
          <FileRef
             location = "group:CommonKit/CommonKit.xcodeproj">
          </FileRef>
+         <FileRef
+            location = "group:ModelKit/ModelKit.xcodeproj">
+         </FileRef>
       </Group>
    </Group>
    <Group

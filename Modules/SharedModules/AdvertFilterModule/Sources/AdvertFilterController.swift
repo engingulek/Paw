@@ -4,6 +4,7 @@
 import UIKit
 import SnapKit
 import CommonKit
+import ModelKit
 
 
 
@@ -13,12 +14,14 @@ protocol AdvertFilterControllerInterface : AnyObject,Ables {
     var presenter : AdvertFilterPresenterInterface {get}
     func prepareTableView()
     func reloadTableView()
+    func applyButton(opacity:Float,isEnabled:Bool,title:String)
 }
 
 
 
 final class AdvertFilterController: UIViewController {
     lazy var presenter : AdvertFilterPresenterInterface = AdvertFilterPresenter(view: self)
+    var adoptingAdverts: [AdoptingAdvert]?
     private lazy var filterTableView : UITableView = {
         let tableView = UITableView()
         tableView.register(FilterTableViewCell.self, forCellReuseIdentifier: FilterTableViewCell.identifier)
@@ -47,13 +50,16 @@ final class AdvertFilterController: UIViewController {
         self.presenter.toAdoptingHomeViewController()
         
     }
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.viewDidLoad()
+        let list = adoptingAdverts ?? []
+        presenter.viewDidLoad(adoptingAdverts: list)
+        configureUI()
+        
+    }
+    
+    private func configureUI() {
         view.addSubview(filterTableView)
         filterTableView.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -69,7 +75,6 @@ final class AdvertFilterController: UIViewController {
             make.height.equalTo(50)
             make.width.equalTo(150)
         }
-        
     }
 }
 
@@ -122,6 +127,7 @@ extension AdvertFilterController :UITableViewDelegate,UITableViewDataSource {
 
 
 extension AdvertFilterController : AdvertFilterControllerInterface {
+    
     func prepareTableView() {
         filterTableView.delegate = self
         filterTableView.dataSource = self
@@ -130,5 +136,16 @@ extension AdvertFilterController : AdvertFilterControllerInterface {
     func reloadTableView() {
         filterTableView.reloadData()
     }
+    
+    func applyButton(
+        opacity: Float,
+        isEnabled: Bool,
+        title:String) {
+            applyButton.layer.opacity = opacity
+            applyButton.isEnabled = isEnabled
+            applyButton.setTitle(title, for: .normal)
+        
+    }
 }
+
 

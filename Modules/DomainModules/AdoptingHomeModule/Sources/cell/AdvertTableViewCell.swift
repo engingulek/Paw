@@ -2,7 +2,7 @@
 import UIKit
 import SnapKit
 import Kingfisher
-
+import ModelKit
 
 final class AdvertTableViewCell : UITableViewCell {
     static let identifier = "AdvertTableViewCell"

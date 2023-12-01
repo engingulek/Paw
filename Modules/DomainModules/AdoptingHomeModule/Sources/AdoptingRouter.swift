@@ -5,10 +5,10 @@ import AdoptingHomeModuleInterface
 import AdvertDetailModuleInterface
 import AdvertFilterModuleInterface
 import DependencyKit
-
+import ModelKit
 protocol AdoptingRouterInterface {
     func toAdvertDetail(view: AdoptingHomeViewControllerInterfaca?,id:Int)
-    func toAdvertFilter(view:AdoptingHomeViewControllerInterfaca?)
+    func toAdvertFilter(view:AdoptingHomeViewControllerInterfaca?,adoptingAdverts:[AdoptingAdvert])
 }
 
 public final class AdoptingRouter : AdoptingHomeModuleInterface {
@@ -24,6 +24,8 @@ public final class AdoptingRouter : AdoptingHomeModuleInterface {
 }
 
 extension AdoptingRouter : AdoptingRouterInterface {
+    
+    
  
     func toAdvertDetail(view : AdoptingHomeViewControllerInterfaca?,id:Int) {
         @Dependency var advertDetailHomeModuleInterface : AdvertDetailModuleInterface
@@ -31,14 +33,16 @@ extension AdoptingRouter : AdoptingRouterInterface {
         view?.pushViewControllerAble(viewController, animated: true)
     }
     
-    func toAdvertFilter(
-        view: AdoptingHomeViewControllerInterfaca?) {
-            @Dependency var advertFilterModuleInterface : AdvertFilterModuleInterface
-            let viewController = advertFilterModuleInterface
-                .advertFilterController()
-            view?.pushViewControllerAble(viewController, animated: true)
+    func toAdvertFilter(view: AdoptingHomeViewControllerInterfaca?,adoptingAdverts:[AdoptingAdvert]) {
+        @Dependency var advertFilterModuleInterface : AdvertFilterModuleInterface
+        let viewController = advertFilterModuleInterface
+            .advertFilterController(adoptingAdverts: adoptingAdverts)
+        view?.pushViewControllerAble(viewController, animated: true)
     }
+    
+   
 }
+
 
 
 

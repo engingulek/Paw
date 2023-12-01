@@ -1,7 +1,7 @@
 
 import Foundation
 import UIKit
-
+import ModelKit
 protocol AdoptinHomePresenterInterface {
     var router : AdoptingRouterInterface? {get}
     var view : AdoptingHomeViewControllerInterfaca? {get}
@@ -27,6 +27,8 @@ protocol AdoptinHomePresenterInterface {
     func searchTextFieldDidChange(searchText : String)
     func toAdvertFilterController()
     
+   
+    
     
     
     
@@ -42,8 +44,9 @@ final class AdoptinHomePresenter  {
     private var adoptingAdverts : [AdoptingAdvert] = []
     private var selectedCategory : Int  = 0
     private var enterSearhText : String = ""
-   
-
+    private var filteradoptingAdverts : [AdoptingAdvert] = []
+    
+    
     init(router: AdoptingRouterInterface? = nil,
          view: AdoptingHomeViewControllerInterfaca?,
          interactor : AdoptingHomeServiceProtocol = AdoptingHomeService.shared) {
@@ -67,6 +70,7 @@ final class AdoptinHomePresenter  {
     
     // MARK: - FethAdoptingAdverts
     private func fetchAdoptingAdverts() async {
+        print("aliiiii")
         view?.startTableViewLoding()
         do {
             let result = try await interactor.fetchAdoptinAdvert()
@@ -160,29 +164,34 @@ final class AdoptinHomePresenter  {
 
 //MARK: - AdoptinHomePresenterInterface
 extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
-  
     
+    // MARK: ViewDidLoad
     func viewDidload() {
         view?.setBackColorAble(color: .white)
         view?.navigationBackButtonHiddenAble(isHidden:true)
-        print("ViewDidload \(view?.test)")
         Task {
             @MainActor in
             await fetchCategorie()
             await fetchAdoptingAdverts()
-           
+            
         }
         
         view?.prepareCollectionView()
         view?.prepareTableView()
-       // view?.badgeLabelInHeaderView(isHidden: true, count: 0)
+        
+        
+        // view?.badgeLabelInHeaderView(isHidden: true, count: 0)
     }
     
+    //MARK: - viewWillAppear
     func viewWillAppear() {
-        print("ViewDidAppear \(view?.test)")
-            view?.tabbarisHidden(isHidden: false)
-            view?.setNavigationBarHidden(isHidden: true, animated: true)
-        }
+
+        view?.tabbarisHidden(isHidden: false)
+        view?.setNavigationBarHidden(isHidden: true, animated: true)
+        
+    }
+    
+    
     
     
     private func advertsFilterAndSearchText(categoryId:Int,searchText:String) async{
@@ -203,10 +212,9 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
     
     // MARK: - ToAdvertFilterController
     func toAdvertFilterController() {
-        router?.toAdvertFilter(view: view)
+        router?.toAdvertFilter(view: view,adoptingAdverts: adoptingAdverts)
     }
-    
-    
+ 
 }
 // MARK : - SearchTextFieldDidChange
 extension AdoptinHomePresenter {

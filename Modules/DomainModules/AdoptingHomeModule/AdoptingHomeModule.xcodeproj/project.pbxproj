@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		63C2F4D9D4B537D88AB9FE4D /* AdvertFilterModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 09C7C6D2AB6A7071BFDE9121 /* AdvertFilterModuleInterface.framework */; };
 		69EBC4C6923F958E39F33102 /* AdoptingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24403685C36FFC4747C9AE12 /* AdoptingHomeViewController.swift */; };
 		6A66DDB0566FA96CFC09259E /* NetworkKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = E241539E38D68026B3905BB0 /* NetworkKit.framework */; };
+		6F0E49CADF6573F730DC2FB4 /* ModelKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = A93F53277497D1D2D3705F70 /* ModelKit.framework */; };
 		711B46F108356117B831AF30 /* CommonKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 81C90816647AB47395E4CD61 /* CommonKit.framework */; };
 		7140D3FE18DBDB824D5918FC /* TuistBundle+AdoptingHomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A321EDCDDFD38ACB98C9B6D /* TuistBundle+AdoptingHomeModule.swift */; };
 		8FB543E0F784707D794FF8FF /* AdoptingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C5A464420F9144C3389A0 /* AdoptingHeaderView.swift */; };
@@ -24,7 +25,6 @@
 		A8DC5A94BF053A4E1AE31468 /* AdoptingHomeModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A588D78800B284F365072 /* AdoptingHomeModuleInterface.swift */; };
 		B904353EC64D14649D2E62FA /* AdoptingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */; };
 		D3693F874567C0417DF7F408 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F125C79E9E48AABBCD3B5EB7 /* Kingfisher */; };
-		D5E2274BFA53F59B36BC683C /* AdoptingAdvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D2F01ECF4DA0DDFAF47E5 /* AdoptingAdvert.swift */; };
 		D64A492C67F41529A7E887E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D9D4185A599211379B19A /* Assets.xcassets */; };
 		DB1000F271CE7A6433BFCF45 /* AdoptinHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */; };
 		E4180A093827E6DC20EC2BB7 /* AdvertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AED772C9BB786D519313222 /* AdvertTableViewCell.swift */; };
@@ -68,6 +68,7 @@
 				63C2F4D9D4B537D88AB9FE4D /* AdvertFilterModuleInterface.framework in Dependencies */,
 				711B46F108356117B831AF30 /* CommonKit.framework in Dependencies */,
 				0FA03CAD1A8224DBC63E2EE1 /* DependencyKit.framework in Dependencies */,
+				6F0E49CADF6573F730DC2FB4 /* ModelKit.framework in Dependencies */,
 				6A66DDB0566FA96CFC09259E /* NetworkKit.framework in Dependencies */,
 			);
 			name = Dependencies;
@@ -112,13 +113,13 @@
 		948C5A464420F9144C3389A0 /* AdoptingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingHeaderView.swift; sourceTree = "<group>"; };
 		9A321EDCDDFD38ACB98C9B6D /* TuistBundle+AdoptingHomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+AdoptingHomeModule.swift"; sourceTree = "<group>"; };
 		A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A93F53277497D1D2D3705F70 /* ModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B166C8DD2DD3982E988BBF68 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		C6F284C31292C72BDC1FE97B /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		D053F1E43EE3E9515DA00734 /* AdoptingHomeModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		D3475F2A68D9E3C2E3D46A8D /* AdvertDetailModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D63CBDFF26236F01635E8227 /* AdoptinHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptinHomePresenter.swift; sourceTree = "<group>"; };
 		E241539E38D68026B3905BB0 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E88D2F01ECF4DA0DDFAF47E5 /* AdoptingAdvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingAdvert.swift; sourceTree = "<group>"; };
 		E8F7811CA223222658D5BDEA /* AdoptingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,7 +194,6 @@
 		8E1540A0BA827A25D2EA55C5 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				E88D2F01ECF4DA0DDFAF47E5 /* AdoptingAdvert.swift */,
 				B166C8DD2DD3982E988BBF68 /* Category.swift */,
 			);
 			path = model;
@@ -253,6 +253,7 @@
 				09C7C6D2AB6A7071BFDE9121 /* AdvertFilterModuleInterface.framework */,
 				81C90816647AB47395E4CD61 /* CommonKit.framework */,
 				0CFC9AAF62998923D0D3002C /* DependencyKit.framework */,
+				A93F53277497D1D2D3705F70 /* ModelKit.framework */,
 				E241539E38D68026B3905BB0 /* NetworkKit.framework */,
 			);
 			name = Products;
@@ -337,6 +338,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 77D98B1AF4882E4754013F59 /* Build configuration list for PBXProject "AdoptingHomeModule" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -409,7 +412,6 @@
 				B904353EC64D14649D2E62FA /* AdoptingRouter.swift in Sources */,
 				E4180A093827E6DC20EC2BB7 /* AdvertTableViewCell.swift in Sources */,
 				067CBBF45D04083A81E0A018 /* CategoryCollectionViewCell.swift in Sources */,
-				D5E2274BFA53F59B36BC683C /* AdoptingAdvert.swift in Sources */,
 				1DEC4D7B21AC399DEF6CF2F7 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

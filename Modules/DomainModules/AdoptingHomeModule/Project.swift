@@ -28,7 +28,9 @@ let dependensies : [TargetDependency] = [
     .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),
     snapKit,
     .project(target: "NetworkKit", path: .relativeToRoot("Kits/DomainKits/NetworkKit")),
-    kingfisher
+    kingfisher,
+    .project(target: "ModelKit", path: .relativeToRoot("Kits/SharedKits/ModelKit"))
+    
     
 ]
 
