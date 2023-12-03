@@ -29,11 +29,6 @@ final class DependencyRegister {
         dependecyEngine.register(value: TabbarRouter(), for: TabbarModuleInterface.self)
         dependecyEngine.register(value: AdvertDetailRouter(), for: AdvertDetailModuleInterface.self)
         dependecyEngine.register(value: AdvertFilterRouter(), for: AdvertFilterModuleInterface.self)
-        // eğer olmazasa uıviewcontroller olarak gelen fonksiyonu direk AdoptingHomeView controller yada
-        // router içerisinde bilr başka bir fomksiyon ile yollmayo denen
-        dependecyEngine.register(value: AdoptingRouter().adoptingHomeViewController(), for: AdvertFilterControllerDelegate.self)
-        //
-       /* dependecyEngine.register(value: AdoptingRouter().adoptingHomeViewController(), for: AdvertFilterControllerDelegate.self)*/
-
+        dependecyEngine.register(value: AdoptingRouter().adoptingHomeViewController().self, for: AdvertFilterControllerDelegate.self)
     }
 }

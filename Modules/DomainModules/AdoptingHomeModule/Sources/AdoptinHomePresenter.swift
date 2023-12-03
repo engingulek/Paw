@@ -27,6 +27,8 @@ protocol AdoptinHomePresenterInterface {
     func searchTextFieldDidChange(searchText : String)
     func toAdvertFilterController()
     
+    
+    func getFilterList(listFilter:[AdoptingAdvert])
    
     
     
@@ -70,7 +72,6 @@ final class AdoptinHomePresenter  {
     
     // MARK: - FethAdoptingAdverts
     private func fetchAdoptingAdverts() async {
-        print("aliiiii")
         view?.startTableViewLoding()
         do {
             let result = try await interactor.fetchAdoptinAdvert()
@@ -164,6 +165,11 @@ final class AdoptinHomePresenter  {
 
 //MARK: - AdoptinHomePresenterInterface
 extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
+    func getFilterList(listFilter:[AdoptingAdvert]) {
+        adoptingAdverts = listFilter
+        view?.filterReloadTableView()
+    }
+    
     
     // MARK: ViewDidLoad
     func viewDidload() {
@@ -185,7 +191,6 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
     
     //MARK: - viewWillAppear
     func viewWillAppear() {
-
         view?.tabbarisHidden(isHidden: false)
         view?.setNavigationBarHidden(isHidden: true, animated: true)
         

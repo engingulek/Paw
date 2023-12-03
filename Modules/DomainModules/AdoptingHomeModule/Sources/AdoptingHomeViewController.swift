@@ -14,6 +14,7 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
     func prepareTableView()
     func reloadCollectionView()
     func reloadTableView()
+    func filterReloadTableView()
     func startTableViewLoding()
     func finishTableViewLoading()
     func advertListMessage(isHidden:Bool,message:String)
@@ -74,8 +75,13 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
         configureData()
     }
      
+     
      override func viewWillAppear(_ animated: Bool) {
          presenter.viewWillAppear()
+     }
+     
+     override func viewDidAppear(_ animated: Bool) {
+         advertTableView.reloadData()
      }
      
      
@@ -179,8 +185,7 @@ extension AdoptingHomeViewController : AdoptingHeaderViewDelegate {
 }
 
 extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
-  
-    
+   
     func prepareCollectionView() {
         collectionview.dataSource = self
         collectionview.delegate = self
@@ -201,6 +206,7 @@ extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
     func reloadTableView(){
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
+            print("reloadTableView")
             self.advertTableView.reloadData()
         }
     }
@@ -229,16 +235,24 @@ extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
             
         }
     }
+    
+    func filterReloadTableView() {
+        DispatchQueue.main.async {
+         self.advertTableView.reloadData()
+        }
+        
+    }
+    
+  
+    
 }
 extension AdoptingHomeViewController : AdvertFilterControllerDelegate {
     func toAdoptingHomeViewControllerWithPopViewController(adoptingAdverts: [AdoptingAdvert]) {
-       
+        presenter.getFilterList(listFilter: adoptingAdverts)
+
     }
-    
-    
-    
-    
 }
+
 
 
 

@@ -19,10 +19,7 @@ extension UIViewControllerAble where Self : UIViewController {
     }
 }
 
-
-
-
-// MARK : - NavConAble
+//MARK: - NavConAble
 public protocol NavConAble {
     func presentViewControllerAble(_ vc:UIViewController,animated:Bool)
     func pushViewControllerAble (_ vc:UIViewController,animated:Bool)
@@ -55,7 +52,7 @@ extension NavConAble  where Self : UIViewController{
     }
 }
 
-// MARK : - TabbarConAble
+// MARK: - TabbarConAble
 
 public protocol TabbarConAble {
   func tabbarisHidden(isHidden : Bool)
@@ -65,6 +62,10 @@ extension TabbarConAble  where Self : UIViewController  {
     public func tabbarisHidden(isHidden : Bool) {
         tabBarController?.tabBar.isHidden =  isHidden
     }
+}
+
+extension Notification.Name {
+   public static let notA = Notification.Name(rawValue: "NotA")
 }
 
 

@@ -48,7 +48,6 @@ final class AdvertFilterController: UIViewController {
     
     private lazy var applyButtonAction : UIAction =  UIAction { _ in
         self.presenter.toAdoptingHomeViewController()
-        
     }
 
     override func viewDidLoad() {

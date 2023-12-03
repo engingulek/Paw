@@ -4,6 +4,7 @@ import AdvertFilterModuleInterface
 import DependencyKit
 import Foundation
 import ModelKit
+import CommonKit
 
 protocol AdvertFilterRouterInterface {
     func toAdoptinHomeViewControllerWithPopViewController(
@@ -27,10 +28,11 @@ extension AdvertFilterRouter : AdvertFilterRouterInterface {
     func toAdoptinHomeViewControllerWithPopViewController(
         view: AdvertFilterControllerInterface?,
         adoptingAdverts: [AdoptingAdvert]) {
-        @Dependency var delegate : AdvertFilterControllerDelegate
-        delegate.toAdoptingHomeViewControllerWithPopViewController(adoptingAdverts: adoptingAdverts)
-        view?.popViewControllerAble()
-    }
+            @Dependency var delegate : AdvertFilterControllerDelegate
+            delegate.toAdoptingHomeViewControllerWithPopViewController(adoptingAdverts: adoptingAdverts)
+            
+            view?.popViewControllerAble()
+        }
 }
 
 
