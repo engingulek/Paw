@@ -65,7 +65,13 @@ final class AdvertFilterPresenter  {
                 (cityList.isEmpty ? true : cityList.description.lowercased().contains(advert.city.lowercased()))
             }
             filterAdversList =  list
-            view?.applyButton(opacity: 1.0, isEnabled:true,title: "\(list.count) Apply")
+            if list.isEmpty {
+                view?.applyButton(opacity: 0.6, isEnabled: false,title: "Apply")
+            }else{
+                view?.applyButton(opacity: 1.0, isEnabled:true,title: "\(list.count) Apply")
+                
+            }
+           
         }
     }
 }
@@ -74,10 +80,6 @@ final class AdvertFilterPresenter  {
 
 
 extension AdvertFilterPresenter  : AdvertFilterPresenterInterface {
-    
-    
-  
-    
     func numberOfSections() -> Int {
         return FilterData.filterDatas.count
     }

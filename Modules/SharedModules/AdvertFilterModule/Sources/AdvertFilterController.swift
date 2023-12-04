@@ -5,6 +5,7 @@ import UIKit
 import SnapKit
 import CommonKit
 import ModelKit
+import AdvertFilterModuleInterface
 
 
 
@@ -15,6 +16,7 @@ protocol AdvertFilterControllerInterface : AnyObject,Ables {
     func prepareTableView()
     func reloadTableView()
     func applyButton(opacity:Float,isEnabled:Bool,title:String)
+    var delgate : AdvertFilterControllerDelegate? {get set}
 }
 
 
@@ -22,6 +24,7 @@ protocol AdvertFilterControllerInterface : AnyObject,Ables {
 final class AdvertFilterController: UIViewController {
     lazy var presenter : AdvertFilterPresenterInterface = AdvertFilterPresenter(view: self)
     var adoptingAdverts: [AdoptingAdvert]?
+    var delgate : AdvertFilterControllerDelegate?
     private lazy var filterTableView : UITableView = {
         let tableView = UITableView()
         tableView.register(FilterTableViewCell.self, forCellReuseIdentifier: FilterTableViewCell.identifier)

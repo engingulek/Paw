@@ -8,7 +8,10 @@ import DependencyKit
 import ModelKit
 protocol AdoptingRouterInterface {
     func toAdvertDetail(view: AdoptingHomeViewControllerInterfaca?,id:Int)
-    func toAdvertFilter(view:AdoptingHomeViewControllerInterfaca?,adoptingAdverts:[AdoptingAdvert])
+    func toAdvertFilter(
+        view:AdoptingHomeViewControllerInterfaca?,
+        adoptingAdverts:[AdoptingAdvert],
+        delefate:AdvertFilterControllerDelegate?)
 }
 
 public final class AdoptingRouter : AdoptingHomeModuleInterface {
@@ -24,6 +27,25 @@ public final class AdoptingRouter : AdoptingHomeModuleInterface {
 }
 
 extension AdoptingRouter : AdoptingRouterInterface {
+    func toAdvertFilter(
+        view: AdoptingHomeViewControllerInterfaca?,
+        adoptingAdverts: [ModelKit.AdoptingAdvert],
+        delefate delegate: AdvertFilterControllerDelegate?) {
+            @Dependency var advertFilterModuleInterface : AdvertFilterModuleInterface
+            let viewController = advertFilterModuleInterface
+                .advertFilterController(adoptingAdverts: adoptingAdverts, delegate: delegate)
+            view?.pushViewControllerAble(viewController, animated: true)
+    }
+    
+    /*func toAdvertFilter(view: AdoptingHomeViewControllerInterfaca?, adoptingAdverts: [ModelKit.AdoptingAdvert], delegate: UIViewController) {
+        @Dependency var advertFilterModuleInterface : AdvertFilterModuleInterface
+        let viewController = advertFilterModuleInterface
+            .advertFilterController(adoptingAdverts: adoptingAdverts)
+        
+        view?.pushViewControllerAble(viewController, animated: true)
+        
+    }*/
+    
     
     
  
@@ -33,12 +55,13 @@ extension AdoptingRouter : AdoptingRouterInterface {
         view?.pushViewControllerAble(viewController, animated: true)
     }
     
-    func toAdvertFilter(view: AdoptingHomeViewControllerInterfaca?,adoptingAdverts:[AdoptingAdvert]) {
+    /*func toAdvertFilter(view: AdoptingHomeViewControllerInterfaca?,adoptingAdverts:[AdoptingAdvert]) {
         @Dependency var advertFilterModuleInterface : AdvertFilterModuleInterface
         let viewController = advertFilterModuleInterface
             .advertFilterController(adoptingAdverts: adoptingAdverts)
+        
         view?.pushViewControllerAble(viewController, animated: true)
-    }
+    }*/
     
    
 }

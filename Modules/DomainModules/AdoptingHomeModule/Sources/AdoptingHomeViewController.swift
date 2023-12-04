@@ -2,11 +2,9 @@
 import UIKit
 import CommonKit
 import SnapKit
-import AdvertFilterModuleInterface
 import AdoptingHomeModuleInterface
 import ModelKit
 typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble
-
 
 protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
     var presenter : AdoptinHomePresenterInterface {get}
@@ -18,7 +16,7 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
     func startTableViewLoding()
     func finishTableViewLoading()
     func advertListMessage(isHidden:Bool,message:String)
-   // func badgeLabelInHeaderView(isHidden:Bool,count:Int)
+   
 }
 
  final class AdoptingHomeViewController: UIViewController{
@@ -79,11 +77,6 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
      override func viewWillAppear(_ animated: Bool) {
          presenter.viewWillAppear()
      }
-     
-     override func viewDidAppear(_ animated: Bool) {
-         advertTableView.reloadData()
-     }
-     
      
     // MARK: - ConfigureData
     private func configureData(){
@@ -206,7 +199,6 @@ extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
     func reloadTableView(){
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            print("reloadTableView")
             self.advertTableView.reloadData()
         }
     }
@@ -240,19 +232,8 @@ extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
         DispatchQueue.main.async {
          self.advertTableView.reloadData()
         }
-        
-    }
-    
-  
-    
-}
-extension AdoptingHomeViewController : AdvertFilterControllerDelegate {
-    func toAdoptingHomeViewControllerWithPopViewController(adoptingAdverts: [AdoptingAdvert]) {
-        presenter.getFilterList(listFilter: adoptingAdverts)
-
     }
 }
-
 
 
 

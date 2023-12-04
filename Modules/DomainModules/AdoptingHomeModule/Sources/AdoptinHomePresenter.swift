@@ -2,6 +2,7 @@
 import Foundation
 import UIKit
 import ModelKit
+import AdvertFilterModuleInterface
 protocol AdoptinHomePresenterInterface {
     var router : AdoptingRouterInterface? {get}
     var view : AdoptingHomeViewControllerInterfaca? {get}
@@ -26,14 +27,8 @@ protocol AdoptinHomePresenterInterface {
     
     func searchTextFieldDidChange(searchText : String)
     func toAdvertFilterController()
-    
-    
     func getFilterList(listFilter:[AdoptingAdvert])
-   
-    
-    
-    
-    
+
 }
 
 final class AdoptinHomePresenter  {
@@ -217,7 +212,7 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
     
     // MARK: - ToAdvertFilterController
     func toAdvertFilterController() {
-        router?.toAdvertFilter(view: view,adoptingAdverts: adoptingAdverts)
+        router?.toAdvertFilter(view: view,adoptingAdverts: adoptingAdverts, delefate: self)
     }
  
 }
@@ -296,7 +291,6 @@ extension AdoptinHomePresenter {
     
 }
 
-
 // MARK: - For TableView
 extension AdoptinHomePresenter {
     
@@ -314,4 +308,14 @@ extension AdoptinHomePresenter {
         router?.toAdvertDetail(view: view,id: id)
         
     }
+}
+
+
+extension AdoptinHomePresenter : AdvertFilterControllerDelegate {
+    func toAdoptingHomeViewControllerWithPopViewController(filterAdoptingAdverts: [ModelKit.AdoptingAdvert]) {
+        adoptingAdverts = filterAdoptingAdverts
+        view?.reloadTableView()
+    }
+    
+    
 }
