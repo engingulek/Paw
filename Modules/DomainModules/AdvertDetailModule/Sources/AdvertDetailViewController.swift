@@ -21,8 +21,8 @@ final class AdvertDetailViewController: UIViewController,AdvertDetailViewControl
         super.viewDidLoad()
         detailImageView.delegate = self
         
-        guard let id = advertId else {return}
-        presenter.viewDidLoad(id: id)
+        guard let advertId = advertId else {return}
+        presenter.viewDidLoad(advertId: advertId, userId: 1)
         configureView()
     }
     

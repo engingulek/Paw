@@ -5,7 +5,7 @@ protocol AdvertDetailPresenterInterface {
     var router : AdvertDetailRouterInterface? {get}
     var view : AdvertDetailViewControllerInterface? {get}
     
-    func viewDidLoad(id:Int)
+    func viewDidLoad(advertId:Int,userId:Int)
     func sendAdvertDetail() -> AdvertDetail
     
     // MARK : AdvertDetailImages Selecet Action
@@ -39,9 +39,11 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
     }
     
     
-    private func fetchAdvertDetail(id:Int) async {
+    private func fetchAdvertDetail(advertId:Int,userId:Int) async {
         do{
-            let result = try await interactor.fetchAdvertDetail(id: id)
+            let result = try await interactor.fetchAdvertDetail(
+                advertId: advertId,
+                userId: userId)
             advertDetail = result
             view?.configureData(advertDetail: advertDetail!)
         }catch{
@@ -51,19 +53,19 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
       
     }
     
-    func viewDidLoad(id:Int) {
+    func viewDidLoad(advertId:Int,userId:Int) {
         view?.setBackColorAble(color: .white)
         view?.navigationBackButtonHiddenAble(isHidden: false)
         view?.tabbarisHidden(isHidden: true)
         view?.setNavigationBarHidden(isHidden: false, animated: true)
         Task {
             @MainActor in
-            await fetchAdvertDetail(id:id)
+            await fetchAdvertDetail(advertId:advertId,userId:userId)
         }
     }
     
     func sendAdvertDetail() -> AdvertDetail {
-        return advertDetail ?? AdvertDetail(id: 0, images: [""], name: "", gender: "", genus: "", category: "", age: 0, city: "", district: "", about: "", userId: 0, userImage: "", userName: "", userSurname: "")
+        return advertDetail ?? AdvertDetail(id: 0, images: [""], name: "", gender: "", genus: "", category: "", age: 0, city: "", district: "", about: "", userId: 0, userImage: "", userName: "", userSurname: "",favStatus: false)
     }
     
     func selectedADIOne() {

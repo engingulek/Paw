@@ -5,7 +5,7 @@ import Foundation
 public enum NetworkPath {
     case categories
     case adoptingAdvert
-    case advertDetail(Int)
+    case advertDetail(Int,Int)
     case getAdvertFilterByCategory(Int)
     case getAdvertFilterBySearchText(String)
     case getAdvertFilterByCategoryAndSearchText(String,Int)
@@ -23,8 +23,8 @@ extension NetworkPath : TargetType {
             return "categories/getCategories"
         case .adoptingAdvert:
             return "adverts/getAdverts"
-        case .advertDetail(let id):
-            return "adverts/getAdvertDetail?id=\(id)"
+        case .advertDetail(let advertId,let userId):
+            return "adverts/getAdvertDetail?advertId=\(advertId)&userId=\(userId)"
         case .getAdvertFilterByCategory(let categoryId):
             return "adverts/getAdvertFilterByCategory?categoryId=\(categoryId)"
         case .getAdvertFilterBySearchText(let searchText):

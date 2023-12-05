@@ -15,7 +15,6 @@ final class AdvertDetailInfoView : UIView {
     
     private lazy var favIcon : UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "heart")
         imageView.tintColor = .red
         return imageView
     }()
@@ -179,6 +178,7 @@ final class AdvertDetailInfoView : UIView {
             .transition(.fade(1))
         ]
             )
+        favIcon.image = UIImage(systemName: advertDetail.favStatus ? "heart.fill" : "heart")
 
        
     }

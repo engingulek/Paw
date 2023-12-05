@@ -11,4 +11,5 @@ struct AdvertDetail: Codable {
     let city, district, about: String
     let userId: Int
     let userImage,userName, userSurname: String
+    let favStatus:Bool
 }
