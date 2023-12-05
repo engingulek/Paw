@@ -42,7 +42,7 @@
             location = "group:AdoptingHomeModule/AdoptingHomeModule.xcodeproj">
          </FileRef>
          <FileRef
-            location = "group:AdvertDetailModule/AdvertDetailModule.xcodeproj">
+            location = "group:FavListModule/FavListModule.xcodeproj">
          </FileRef>
          <FileRef
             location = "group:OnboardingModule/OnboardingModule.xcodeproj">
@@ -54,6 +54,9 @@
       <Group
          location = "group:SharedModules"
          name = "SharedModules">
+         <FileRef
+            location = "group:AdvertDetailModule/AdvertDetailModule.xcodeproj">
+         </FileRef>
          <FileRef
             location = "group:AdvertFilterModule/AdvertFilterModule.xcodeproj">
          </FileRef>

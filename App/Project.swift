@@ -22,9 +22,11 @@ let appTarget = Target(
         .project(
             target: "AdoptingHomeModule",
             path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule")),
+        .project(target: "FavListModule", path: .relativeToRoot("Modules/DomainModules/FavListModule")),
+        
         .project(
             target: "AdvertDetailModule",
-            path: .relativeToRoot("Modules/DomainModules/AdvertDetailModule")),
+            path: .relativeToRoot("Modules/SharedModules/AdvertDetailModule")),
         .project(
             target: "AdvertFilterModule",
             path:.relativeToRoot("Modules/SharedModules/AdvertFilterModule"))

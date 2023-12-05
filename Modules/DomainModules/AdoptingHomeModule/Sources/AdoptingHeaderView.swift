@@ -188,20 +188,6 @@ final class AdoptingHeaderView : UIView {
             make.trailing.equalToSuperview().offset(-10)
             make.top.equalTo(searchUIView.snp.bottom).offset(10)
         }
-        
-       /* filterButton.snp.makeConstraints { make in
-            make.centerY.equalTo(searchUIView.snp.centerY)
-            make.height.equalTo(40)
-            make.width.equalTo(40)
-            make.trailing.equalToSuperview().offset(-10)
-        }*/
-        
-       /* badgeLabel.snp.makeConstraints { make in
-            make.trailing.equalToSuperview().offset(-4)
-            make.top.equalToSuperview()
-            make.width.equalTo(20)
-            make.height.equalTo(20)
-        }*/
     }
     
     

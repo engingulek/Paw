@@ -1,44 +1,32 @@
-
-
 import ProjectDescription
 import ProjectDescriptionHelpers
-
-
-
 let interfaceTarget  = Target(
-    name: "AdoptingHomeModuleInterface",
+    name: "AdvertDetailModuleInterface",
     platform: .iOS,
     product: .staticFramework,
-    bundleId: "com.ios.AdoptingHomeModuleInterface",
+    bundleId: "com.ios.AdvertDetailModuleInterface",
     deploymentTarget: .iOS(targetVersion: "16.0", devices: .iphone),
     infoPlist: .default,
     sources: "InterfaceSource/**",
     dependencies: []
+
 )
 
 let dependensies : [TargetDependency] = [
-    .project(target: "DependencyKit", path: .relativeToRoot("Kits/CoreKits/DependencyKit")),
-    .project(target: "AdoptingHomeModuleInterface",
-             path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule")),
-    .project(
-        target: "AdvertFilterModuleInterface",
-        path: .relativeToRoot("Modules/SharedModules/AdvertFilterModule")),
     .project(target: "AdvertDetailModuleInterface",
              path: .relativeToRoot("Modules/SharedModules/AdvertDetailModule")),
     .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),
     snapKit,
-    .project(target: "NetworkKit", path: .relativeToRoot("Kits/DomainKits/NetworkKit")),
     kingfisher,
-    .project(target: "ModelKit", path: .relativeToRoot("Kits/SharedKits/ModelKit"))
-    
-    
+    .project(target: "NetworkKit", path: .relativeToRoot("Kits/DomainKits/NetworkKit"))
 ]
 
+
 let framworkTarget =  Target(
-    name: "AdoptingHomeModule",
+    name: "AdvertDetailModule",
     platform: .iOS,
     product: .staticFramework,
-    bundleId: "com.ios.AdoptingHomeModule",
+    bundleId: "com.ios.AdvertDetailModule",
     deploymentTarget: .iOS(targetVersion: "16.0", devices: .iphone),
     infoPlist: .default,
     sources: "Sources/**",
@@ -50,4 +38,4 @@ let framworkTarget =  Target(
 
 
 
-let project = Project(name: "AdoptingHomeModule",packages: [.snapKit,.kingfisher],targets:[framworkTarget,interfaceTarget])
+let project = Project(name: "AdvertDetailModule",packages: [.snapKit,.kingfisher],targets:[framworkTarget,interfaceTarget])

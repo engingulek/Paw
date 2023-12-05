@@ -1,41 +1,39 @@
 import ProjectDescription
 import ProjectDescriptionHelpers
+
+
 let interfaceTarget  = Target(
-    name: "AdvertDetailModuleInterface",
+    name: "FavListModuleInterface",
     platform: .iOS,
     product: .staticFramework,
-    bundleId: "com.ios.AdvertDetailModuleInterface",
+    bundleId: "com.ios.FavListModuleInterface",
     deploymentTarget: .iOS(targetVersion: "16.0", devices: .iphone),
     infoPlist: .default,
     sources: "InterfaceSource/**",
     dependencies: []
-
 )
 
 let dependensies : [TargetDependency] = [
+    .project(target: "DependencyKit", path: .relativeToRoot("Kits/CoreKits/DependencyKit")),
+    .project(target: "FavListModuleInterface", path: .relativeToRoot("Modules/DomainModules/FavListModule")),
     .project(target: "AdvertDetailModuleInterface",
-             path: .relativeToRoot("Modules/DomainModules/AdvertDetailModule")),
+             path: .relativeToRoot("Modules/SharedModules/AdvertDetailModule")),
     .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),
     snapKit,
-    kingfisher,
-    .project(target: "NetworkKit", path: .relativeToRoot("Kits/DomainKits/NetworkKit"))
+    kingfisher
 ]
 
-
 let framworkTarget =  Target(
-    name: "AdvertDetailModule",
+    name: "FavListModule",
     platform: .iOS,
     product: .staticFramework,
-    bundleId: "com.ios.AdvertDetailModule",
+    bundleId: "com.ios.FavListModule",
     deploymentTarget: .iOS(targetVersion: "16.0", devices: .iphone),
     infoPlist: .default,
     sources: "Sources/**",
-    resources: ["Resources/Assets.xcassets/**"],
+    resources: ["Resources"],
     dependencies: dependensies
 )
 
+let project = Project(name: "FavListModule",packages: [.snapKit,.kingfisher],targets:[framworkTarget,interfaceTarget])
 
-
-
-
-let project = Project(name: "AdvertDetailModule",packages: [.snapKit,.kingfisher],targets:[framworkTarget,interfaceTarget])

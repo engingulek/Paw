@@ -36,34 +36,11 @@ extension AdoptingRouter : AdoptingRouterInterface {
                 .advertFilterController(adoptingAdverts: adoptingAdverts, delegate: delegate)
             view?.pushViewControllerAble(viewController, animated: true)
     }
-    
-    /*func toAdvertFilter(view: AdoptingHomeViewControllerInterfaca?, adoptingAdverts: [ModelKit.AdoptingAdvert], delegate: UIViewController) {
-        @Dependency var advertFilterModuleInterface : AdvertFilterModuleInterface
-        let viewController = advertFilterModuleInterface
-            .advertFilterController(adoptingAdverts: adoptingAdverts)
-        
-        view?.pushViewControllerAble(viewController, animated: true)
-        
-    }*/
-    
-    
-    
- 
     func toAdvertDetail(view : AdoptingHomeViewControllerInterfaca?,id:Int) {
         @Dependency var advertDetailHomeModuleInterface : AdvertDetailModuleInterface
         let viewController = advertDetailHomeModuleInterface.advertDetailViewController(id:id)
         view?.pushViewControllerAble(viewController, animated: true)
     }
-    
-    /*func toAdvertFilter(view: AdoptingHomeViewControllerInterfaca?,adoptingAdverts:[AdoptingAdvert]) {
-        @Dependency var advertFilterModuleInterface : AdvertFilterModuleInterface
-        let viewController = advertFilterModuleInterface
-            .advertFilterController(adoptingAdverts: adoptingAdverts)
-        
-        view?.pushViewControllerAble(viewController, animated: true)
-    }*/
-    
-   
 }
 
 

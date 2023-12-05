@@ -178,9 +178,7 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
         
         view?.prepareCollectionView()
         view?.prepareTableView()
-        
-        
-        // view?.badgeLabelInHeaderView(isHidden: true, count: 0)
+
     }
     
     //MARK: - viewWillAppear

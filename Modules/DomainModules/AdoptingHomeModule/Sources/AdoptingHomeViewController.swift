@@ -69,7 +69,7 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
         presenter.viewDidload()
         navigationController?.navigationBar.isHidden = true
         adoptingHeaderView.delegate = self
-        configureData()
+        configureUI()
     }
      
      
@@ -78,7 +78,7 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
      }
      
     // MARK: - ConfigureData
-    private func configureData(){
+    private func configureUI(){
         view.addSubview(adoptingHeaderView)
         view.addSubview(collectionview)
         collectionview.snp.makeConstraints { make in
@@ -151,6 +151,7 @@ extension AdoptingHomeViewController : UITableViewDelegate,UITableViewDataSource
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AdvertTableViewCell.identifier, for: indexPath) as? AdvertTableViewCell else {return UITableViewCell()}
         let advert = presenter.cellForRowAt(at: indexPath)
         cell.configureData(advert: advert)
+        cell.selectionStyle = .none
         return cell
     }
     

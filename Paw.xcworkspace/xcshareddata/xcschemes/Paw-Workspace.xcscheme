@@ -59,7 +59,7 @@
                BlueprintIdentifier = "5D69A159F32406F462F6DE91"
                BuildableName = "AdvertDetailModule.framework"
                BlueprintName = "AdvertDetailModule"
-               ReferencedContainer = "container:Modules/DomainModules/AdvertDetailModule/AdvertDetailModule.xcodeproj">
+               ReferencedContainer = "container:Modules/SharedModules/AdvertDetailModule/AdvertDetailModule.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -73,7 +73,7 @@
                BlueprintIdentifier = "8A624C823BC02129830E58FF"
                BuildableName = "AdvertDetailModuleInterface.framework"
                BlueprintName = "AdvertDetailModuleInterface"
-               ReferencedContainer = "container:Modules/DomainModules/AdvertDetailModule/AdvertDetailModule.xcodeproj">
+               ReferencedContainer = "container:Modules/SharedModules/AdvertDetailModule/AdvertDetailModule.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -87,7 +87,7 @@
                BlueprintIdentifier = "04AA7E661C36968731E69A47"
                BuildableName = "AdvertDetailModule_AdvertDetailModule.bundle"
                BlueprintName = "AdvertDetailModule_AdvertDetailModule"
-               ReferencedContainer = "container:Modules/DomainModules/AdvertDetailModule/AdvertDetailModule.xcodeproj">
+               ReferencedContainer = "container:Modules/SharedModules/AdvertDetailModule/AdvertDetailModule.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -144,6 +144,34 @@
                BuildableName = "DependencyKit.framework"
                BlueprintName = "DependencyKit"
                ReferencedContainer = "container:Kits/CoreKits/DependencyKit/DependencyKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5E36DB04F3E7F697678AC2BB"
+               BuildableName = "FavListModule.framework"
+               BlueprintName = "FavListModule"
+               ReferencedContainer = "container:Modules/DomainModules/FavListModule/FavListModule.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F53D2123458CBCCBF31DBE68"
+               BuildableName = "FavListModuleInterface.framework"
+               BlueprintName = "FavListModuleInterface"
+               ReferencedContainer = "container:Modules/DomainModules/FavListModule/FavListModule.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
