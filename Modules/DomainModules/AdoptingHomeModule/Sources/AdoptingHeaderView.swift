@@ -7,6 +7,9 @@ import UIKit
 protocol AdoptingHeaderViewDelegate {
     func searchTextFieldDidChange(text:String)
     func selectedFilterButton()
+    func selectedDecreasingButton()
+    func selectedGrowingButton()
+    
 }
 
 final class AdoptingHeaderView : UIView {
@@ -67,6 +70,20 @@ final class AdoptingHeaderView : UIView {
         
     }
     
+    private lazy var decreasingMenuButton : UIAction = UIAction(title: "Decreasing") { _ in
+        self.delegate?.selectedDecreasingButton()
+    }
+    
+    private lazy var growingMenuButton : UIAction = UIAction(title: "Growing") { _ in
+        self.delegate?.selectedGrowingButton()
+    }
+    
+    private lazy var sortMenu = UIMenu(
+        title: "Age Sort",
+        options: .displayInline,
+        children: [decreasingMenuButton,growingMenuButton])
+    
+    
     private lazy var sortButton : UIButton = {
         let button = UIButton()
         button.setTitle("Sort", for: .normal)
@@ -75,14 +92,13 @@ final class AdoptingHeaderView : UIView {
         button.layer.borderColor = UIColor.red.cgColor
         button.layer.borderWidth = 1
         button.layer.cornerRadius = 10
-        button.addAction(sortButtonAction, for: .touchUpInside)
+        button.menu = sortMenu
+        button.showsMenuAsPrimaryAction = true
         return button
     }()
     
     
-    private lazy var sortButtonAction : UIAction =  UIAction { _ in
-        
-    }
+  
     
     private lazy var actionButttonStackViews : UIStackView = {
         let stackView = UIStackView(

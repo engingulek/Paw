@@ -12,7 +12,6 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
     func prepareTableView()
     func reloadCollectionView()
     func reloadTableView()
-    func filterReloadTableView()
     func startTableViewLoding()
     func finishTableViewLoading()
     func advertListMessage(isHidden:Bool,message:String)
@@ -142,7 +141,7 @@ extension AdoptingHomeViewController : UICollectionViewDelegate,UICollectionView
     }
 }
 
-
+//MARK: UITableViewDelegate,UITableViewDataSource
 extension AdoptingHomeViewController : UITableViewDelegate,UITableViewDataSource {
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.numberOfRowsInSection()
@@ -168,6 +167,7 @@ extension AdoptingHomeViewController : UITableViewDelegate,UITableViewDataSource
 
 // MARK: - AdoptingHeaderViewDelegate
 extension AdoptingHomeViewController : AdoptingHeaderViewDelegate {
+    
     func selectedFilterButton() {
         presenter.toAdvertFilterController()
     }
@@ -175,8 +175,18 @@ extension AdoptingHomeViewController : AdoptingHeaderViewDelegate {
     func searchTextFieldDidChange(text: String) {
         presenter.searchTextFieldDidChange(searchText: text)
     }
+    
+    func selectedDecreasingButton() {
+        presenter.sortAdvertByDecrasing()
+    }
+    
+    func selectedGrowingButton() {
+        presenter.sortAdvertByGrowing()
+    }
+    
 }
 
+//MARK: - AdoptingHomeViewControllerInterfaca
 extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
    
     func prepareCollectionView() {
@@ -228,11 +238,7 @@ extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
         }
     }
     
-    func filterReloadTableView() {
-        DispatchQueue.main.async {
-         self.advertTableView.reloadData()
-        }
-    }
+  
 }
 
 

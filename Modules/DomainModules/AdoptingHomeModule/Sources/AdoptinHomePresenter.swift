@@ -10,6 +10,7 @@ protocol AdoptinHomePresenterInterface {
     
     func viewDidload()
     func viewWillAppear()
+    
     func categorNumberOfItems() -> Int
     func categoryCellForItem(at indexPath :IndexPath) -> (
         category:CategoryResult,
@@ -27,7 +28,10 @@ protocol AdoptinHomePresenterInterface {
     
     func searchTextFieldDidChange(searchText : String)
     func toAdvertFilterController()
-    func getFilterList(listFilter:[AdoptingAdvert])
+    
+    func sortAdvertByDecrasing()
+    func sortAdvertByGrowing()
+  
 
 }
 
@@ -160,11 +164,6 @@ final class AdoptinHomePresenter  {
 
 //MARK: - AdoptinHomePresenterInterface
 extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
-    func getFilterList(listFilter:[AdoptingAdvert]) {
-        adoptingAdverts = listFilter
-        view?.filterReloadTableView()
-    }
-    
     
     // MARK: ViewDidLoad
     func viewDidload() {
@@ -214,6 +213,20 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
     func toAdvertFilterController() {
         router?.toAdvertFilter(view: view,adoptingAdverts: adoptingAdverts, delefate: self)
     }
+    
+    //MARK: - Sort Funcitons of Advert
+    func sortAdvertByDecrasing() {
+        let sortAdverts = adoptingAdverts.sorted { $0.age > $1.age}
+        adoptingAdverts = sortAdverts
+        view?.reloadTableView()
+    }
+    
+    func sortAdvertByGrowing() {
+        let sortAdverts = adoptingAdverts.sorted { $0.age < $1.age}
+        adoptingAdverts = sortAdverts
+        view?.reloadTableView()
+    }
+    
  
 }
 // MARK : - SearchTextFieldDidChange
