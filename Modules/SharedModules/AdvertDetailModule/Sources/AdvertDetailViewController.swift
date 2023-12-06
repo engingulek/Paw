@@ -4,15 +4,13 @@ import SnapKit
 typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble
 
 protocol AdvertDetailViewControllerInterface: AnyObject ,Ables {
-    
-    
     func configureData(advertDetail: AdvertDetail)
+    func alertMessage(title:String,message:String)
 }
 
-final class AdvertDetailViewController: UIViewController,AdvertDetailViewControllerInterface {
+final class AdvertDetailViewController: UIViewController{
     
     var advertId : Int?
-    
     lazy var presenter: AdvertDetailPresenterInterface = AdvertDetailPresenter(view: self,advertDetailImageView: detailImageView)
     private lazy var detailImageView = AdvertDetailImagesImages()
     private lazy var detailInfoView = AdvertDetailInfoView()
@@ -20,7 +18,7 @@ final class AdvertDetailViewController: UIViewController,AdvertDetailViewControl
     public override func viewDidLoad() {
         super.viewDidLoad()
         detailImageView.delegate = self
-        
+        detailInfoView.delegate = self
         guard let advertId = advertId else {return}
         presenter.viewDidLoad(advertId: advertId, userId: 1)
         configureView()
@@ -44,8 +42,12 @@ final class AdvertDetailViewController: UIViewController,AdvertDetailViewControl
         }
     }
     
+    
+}
+
+extension AdvertDetailViewController : AdvertDetailViewControllerInterface  {
     func configureData(advertDetail:AdvertDetail){
-        print("Detail \(advertDetail.name)")
+       
         DispatchQueue.main.async {[weak self] in
             guard let self = self else { return }
             self.detailInfoView.configureData(advertDetail: advertDetail)
@@ -53,11 +55,21 @@ final class AdvertDetailViewController: UIViewController,AdvertDetailViewControl
         }
        
     }
+    
+    
+    func alertMessage(title:String,message:String) {
+        DispatchQueue.main.async {[weak self] in
+            guard let self = self else { return }
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Okey", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
 }
 
+//MARK: - AdvertDetailImagesImagesDelegate
 extension AdvertDetailViewController : AdvertDetailImagesImagesDelegate {
    
-    
     func selectedImageOne() {
         presenter.selectedADIOne()
     }
@@ -69,7 +81,13 @@ extension AdvertDetailViewController : AdvertDetailImagesImagesDelegate {
     func selectedImageThree() {
         presenter.selectedADIThree()
     }
-    
+}
+
+extension AdvertDetailViewController: AdvertDetailInfoViewDelegate {
+    func selectedFavIcon() {
+        guard let advertId = advertId else {return}
+        presenter.favIconAction(advertId: advertId, userId: 1)
+    }
     
 }
 

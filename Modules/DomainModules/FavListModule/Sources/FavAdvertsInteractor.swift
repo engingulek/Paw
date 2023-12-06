@@ -23,7 +23,7 @@ final class FavAdvertsInteractor : FavAdvertsInteractorInterface {
     
     func deleteFavAdvert(id: Int) async throws  {
         do {
-            let response = try await NetworkManager.shared.fetch(
+            _ = try await NetworkManager.shared.fetch(
                 target: .deleteFavAdvertFromFavAdvertList(id),
                 responseClass: DeleteResult.self)
         }catch{

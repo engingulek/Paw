@@ -13,11 +13,12 @@ protocol AdvertDetailPresenterInterface {
     func selectedADITwo()
     func selectedADIThree()
     
+    func favIconAction(advertId: Int, userId: Int)
+    
 }
 
 
 final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
-  
     
     var router: AdvertDetailRouterInterface?
     weak var view : AdvertDetailViewControllerInterface?
@@ -30,7 +31,7 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
          view: AdvertDetailViewControllerInterface?,
          advertDetailImageView : AdvertDetailImagesImagesInterface?,
          interactor : AdvertDetailServiceProtocol = AdvertDetailService.shared
-    
+         
     ) {
         self.router = router
         self.view = view
@@ -50,7 +51,30 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
             print("Detail Error \(error.localizedDescription)")
             advertDetail = nil
         }
-      
+        
+    }
+    
+    //MARK: - Delete FavAdvert
+    private func deleteFavAdvert(advertId: Int, userId: Int) async {
+        do{
+            try await interactor.deleteFavAdvertFromFavList(
+                advertId: advertId,
+                userId: userId)
+        }catch{
+            // TODO: Alert Message will add
+            view?.alertMessage(title: "Error", message: "Something went wrong")
+        }
+    }
+    
+    private func addFavAdvert(advertId: Int, userId: Int) async {
+        do{
+            try await interactor.addAdvertToFromFavList(
+                advertId: advertId,
+                userId: userId)
+        }catch{
+            // TODO: Alert Message will add
+            view?.alertMessage(title: "Error", message: "Something went wrong")
+        }
     }
     
     func viewDidLoad(advertId:Int,userId:Int) {
@@ -78,5 +102,26 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
     
     func selectedADIThree() {
         advertDetailImageView?.changeOpacityWhenSelectedImageThree(opacity:0.50,defaultOpacity: 1)
+    }
+    
+    func favIconAction(advertId: Int, userId: Int) {
+        guard let favStatus = advertDetail?.favStatus else {return}
+        
+        if favStatus{
+            print("delete")
+            Task {
+                @MainActor in
+                await deleteFavAdvert(advertId: advertId, userId: userId)
+                await fetchAdvertDetail(advertId: advertId, userId: userId)
+            }
+        }else if !favStatus{
+            Task {
+                @MainActor in
+                await addFavAdvert(advertId: advertId, userId: userId)
+                await fetchAdvertDetail(advertId: advertId, userId: userId)
+            }
+        }else{
+            view?.alertMessage(title: "Error", message: "Something went wrong")
+        }
     }
 }

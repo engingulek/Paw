@@ -27,12 +27,17 @@ public final class NetworkManager : NetworkManagerProtocol  {
             
             let method = Alamofire.HTTPMethod(rawValue: target.method.rawValue)
             let fetchUrl = target.baseURL + target.path
-            
+            let parameters = buildParams(requestType: target.requestType)
             let request = AF.request(
                 fetchUrl,
-                method: method)
+                method: method,
+                parameters: parameters.0,
+                encoding: parameters.1
+            )
                 .validate()
                 .serializingDecodable(T.self)
+                
+                
             
             let result = await request.response
             
@@ -55,6 +60,18 @@ public final class NetworkManager : NetworkManagerProtocol  {
                 throw NetworkError.defaultStatusCode
             }
         }
+    
+    
+      private func buildParams(requestType: RequestType) -> ([String: Any], ParameterEncoding) {
+           
+           switch requestType {
+               
+           case .requestPlain:
+               return ([:], URLEncoding.default)
+           case .requestParameters(parameters: let parameters, encoding: let encoding):
+               return (parameters, encoding)
+           }
+       }
 }
 
 

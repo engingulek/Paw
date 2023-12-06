@@ -1,7 +1,7 @@
 
 
 import Foundation
-
+import Alamofire
 public enum NetworkPath {
     case categories
     case adoptingAdvert
@@ -11,6 +11,8 @@ public enum NetworkPath {
     case getAdvertFilterByCategoryAndSearchText(String,Int)
     case getFavList(Int)
     case deleteFavAdvertFromFavAdvertList(Int)
+    case deletteFavAdvertByAdvertIdAndUserId(Int,Int)
+    case addAdvertToFavList(Parameters)
     
 }
 
@@ -38,20 +40,31 @@ extension NetworkPath : TargetType {
             return "favorites/getFavorites?userid=\(userId)"
         case .deleteFavAdvertFromFavAdvertList(let id):
             return "favorites/deleteFavAdvert?id=\(id)"
+        case .deletteFavAdvertByAdvertIdAndUserId(let advertId, let userId):
+            return "favorites/deleteFavAdvertByAdvertIdAndUserId?advertid=\(advertId)&userid=\(userId)"
+        case .addAdvertToFavList:
+            return "favorites/add"
         }
     }
     
     var method: AlamofireMethod {
         switch self {
-        case .deleteFavAdvertFromFavAdvertList:
+        case .deleteFavAdvertFromFavAdvertList,.deletteFavAdvertByAdvertIdAndUserId:
             return .DELETE
+        case .addAdvertToFavList:
+            return .POST
         default:
             return .GET
         }
     }
     
     var requestType: RequestType {
-        return .requestPlain
+        switch self {
+        case .addAdvertToFavList(let parameters):
+            return .requestParameters(parameters: parameters, encoding: JSONEncoding.init())
+        default:
+            return .requestPlain
+        }
     }
     
     var headers: [String : String]? {
@@ -60,6 +73,4 @@ extension NetworkPath : TargetType {
             return [:]
         }
     }
-    
-    
 }

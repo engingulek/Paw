@@ -4,8 +4,14 @@ import CommonKit
 import SnapKit
 import Kingfisher
 
+protocol AdvertDetailInfoViewDelegate {
+    func selectedFavIcon()
+}
+
+
 final class AdvertDetailInfoView : UIView {
     
+    var delegate : AdvertDetailInfoViewDelegate?
     private lazy var animalName : UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 30, weight: .semibold)
@@ -13,12 +19,22 @@ final class AdvertDetailInfoView : UIView {
         return label
     }()
     
-    private lazy var favIcon : UIImageView = {
-        let imageView = UIImageView()
-        imageView.tintColor = .red
-        return imageView
+    private lazy var favIcon : UIButton = {
+        let button = UIButton ()
+      
+        button.tintColor = .red
+        button.setTitleColor(.red, for: .normal)
+        button.addAction(favIconAction, for: .touchUpInside)
+        return button
     }()
     
+    private lazy var favIconAction: UIAction = UIAction { _ in
+        //guard let item = self.indexPathItem else {return}
+        self.delegate?.selectedFavIcon()
+    }
+    
+    
+
     
     private lazy var userImage : UIImageView = {
         let imageView = UIImageView()
@@ -178,7 +194,8 @@ final class AdvertDetailInfoView : UIView {
             .transition(.fade(1))
         ]
             )
-        favIcon.image = UIImage(systemName: advertDetail.favStatus ? "heart.fill" : "heart")
+        
+        favIcon.setImage(UIImage(systemName: advertDetail.favStatus ? "heart.fill" : "heart"), for: .normal)
 
        
     }
