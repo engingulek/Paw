@@ -9,6 +9,7 @@ protocol FavListViewControllerInterface : AnyObject,Ables {
     var presenter : FavListPresenterInterface {get}
     func prepareCollectionView()
     func reloadCollectionView()
+    func favListMessage(isHidden:Bool,message:String)
 }
 
 
@@ -26,6 +27,14 @@ final class FavListViewController: UIViewController {
         collectionview.showsHorizontalScrollIndicator = false
         collectionview.backgroundColor = UIColor.white
         return collectionview
+    }()
+    
+    private lazy var messageLabel : UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.font = .systemFont(ofSize: 20,weight: .semibold)
+        label.isHidden = true
+        return label
     }()
     
     override func viewDidLoad() {
@@ -46,6 +55,12 @@ final class FavListViewController: UIViewController {
             make.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
         }
+        
+        view.addSubview(messageLabel)
+        messageLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+        }
     }
 }
 
@@ -62,11 +77,21 @@ extension FavListViewController : UICollectionViewDelegate,UICollectionViewDataS
             for: indexPath) as? FavAdvertCollectionViewCell else {return UICollectionViewCell()}
         let favAdvert = presenter.cellForItem(at: indexPath)
         cell.configureData(favAdvert: favAdvert)
+        cell.delegate = self
+        cell.indexPathItem = indexPath.item
         return cell
     }
 }
 
+
+extension FavListViewController: FavAdvertCollectionViewCellDelegate {
+    func selectedFavIcon(index: Int) {
+        presenter.deleteFavAdvertAction(index: index)
+    }
+}
+
 extension FavListViewController : FavListViewControllerInterface {
+   
     func prepareCollectionView() {
         favAdvertcollectionview.delegate = self
         favAdvertcollectionview.dataSource = self
@@ -77,7 +102,15 @@ extension FavListViewController : FavListViewControllerInterface {
             guard let self = self else { return }
             favAdvertcollectionview.reloadData()
         }
-        
+    }
+    
+    func favListMessage(isHidden: Bool, message: String) {
+        DispatchQueue.main.async {[weak self] in
+            guard let self = self else { return }
+            self.favAdvertcollectionview.isHidden = !isHidden
+            self.messageLabel.isHidden = isHidden
+            self.messageLabel.text = message
+        }
     }
 }
 

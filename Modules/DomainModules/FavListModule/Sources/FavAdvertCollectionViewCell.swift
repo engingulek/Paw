@@ -1,9 +1,17 @@
 import UIKit
 import SnapKit
 import Kingfisher
+
+
+protocol FavAdvertCollectionViewCellDelegate {
+    func selectedFavIcon(index:Int)
+}
+
+
 final class FavAdvertCollectionViewCell : UICollectionViewCell {
     static let identifier : String = "favAdvertCollectionViewCell"
-    
+    var delegate : FavAdvertCollectionViewCellDelegate?
+    var indexPathItem : Int?
     private lazy var advertImageView : UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
@@ -12,12 +20,19 @@ final class FavAdvertCollectionViewCell : UICollectionViewCell {
         return imageView
     }()
     
-    private lazy var favIcon : UIImageView = {
-        let imageView = UIImageView()
-        imageView.tintColor = .red
-        imageView.image = UIImage(systemName: "heart.fill")
-        return imageView
+    private lazy var favIcon : UIButton = {
+        let button = UIButton ()
+        button.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        button.tintColor = .red
+        button.setTitleColor(.red, for: .normal)
+        button.addAction(favIconAction, for: .touchUpInside)
+        return button
     }()
+    
+    private lazy var favIconAction: UIAction = UIAction { _ in
+        guard let item = self.indexPathItem else {return}
+        self.delegate?.selectedFavIcon(index: item)
+    }
     
     private lazy var animalName : UILabel = {
         let label = UILabel()
@@ -64,7 +79,7 @@ final class FavAdvertCollectionViewCell : UICollectionViewCell {
             make.bottom.equalToSuperview()
         }
         
-        addSubview(favIcon)
+        contentView.addSubview(favIcon)
         favIcon.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(10)
             make.trailing.equalToSuperview().offset(-10)

@@ -15,9 +15,8 @@ final class AdvertDetailService : AdvertDetailServiceProtocol {
                 target: .advertDetail(
                     advertId,
                     userId),
-                responseClass: AdvertDetail.self)
-            print(response.name)
-            return response
+                responseClass: DataResult<AdvertDetail>.self)
+            return response.data
         }catch {
             throw error
         }

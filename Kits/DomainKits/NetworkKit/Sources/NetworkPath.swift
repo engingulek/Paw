@@ -10,6 +10,7 @@ public enum NetworkPath {
     case getAdvertFilterBySearchText(String)
     case getAdvertFilterByCategoryAndSearchText(String,Int)
     case getFavList(Int)
+    case deleteFavAdvertFromFavAdvertList(Int)
     
 }
 
@@ -35,11 +36,15 @@ extension NetworkPath : TargetType {
             
         case .getFavList(let userId):
             return "favorites/getFavorites?userid=\(userId)"
+        case .deleteFavAdvertFromFavAdvertList(let id):
+            return "favorites/deleteFavAdvert?id=\(id)"
         }
     }
     
     var method: AlamofireMethod {
         switch self {
+        case .deleteFavAdvertFromFavAdvertList:
+            return .DELETE
         default:
             return .GET
         }

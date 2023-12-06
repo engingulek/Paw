@@ -110,22 +110,7 @@ final class AdoptingHeaderView : UIView {
         return stackView
         
     }()
-    
-    
-    
-    /*private lazy var badgeLabel : UILabel = {
-        let label = UILabel()
-        label.backgroundColor = UIColor(red: 235/255, green: 68/255, blue: 90/255, alpha: 1)
-        label.layer.masksToBounds = true
-        label.text = "1"
-        label.textAlignment = .center
-        label.textColor = .white
-        label.font = .systemFont(ofSize: 15)
-        label.layer.cornerRadius = 10
-        return label
-    }()*/
-    
- 
+
     
     @objc func searchTextFieldDidChange(_ textField: UITextField) {
         guard let searchText = textField.text else {

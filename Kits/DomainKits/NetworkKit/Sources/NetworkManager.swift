@@ -32,7 +32,7 @@ public final class NetworkManager : NetworkManagerProtocol  {
                 fetchUrl,
                 method: method)
                 .validate()
-                .serializingDecodable(DataResult<T>.self)
+                .serializingDecodable(T.self)
             
             let result = await request.response
             
@@ -47,7 +47,7 @@ public final class NetworkManager : NetworkManagerProtocol  {
                     print("valueError")
                     throw NetworkError.valueError
                 }
-                return value.data
+                return value
             case 404:
                 throw NetworkError.noRequestResource
             default:

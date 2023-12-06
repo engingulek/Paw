@@ -21,8 +21,8 @@ final class AdoptingHomeService : AdoptingHomeServiceProtocol {
         do {
             let response = try await NetworkManager.shared.fetch(
                 target: .categories,
-                responseClass: [CategoryResult].self)
-            return response
+                responseClass: DataResult<[CategoryResult]>.self)
+            return response.data
         }catch{
             throw error
         }
@@ -33,8 +33,8 @@ final class AdoptingHomeService : AdoptingHomeServiceProtocol {
         do {
             let response = try await NetworkManager.shared.fetch(
                 target: .adoptingAdvert,
-                responseClass: [AdoptingAdvert].self)
-            return response
+                responseClass: DataResult<[AdoptingAdvert]>.self)
+            return response.data
         }catch{
             throw error
         }
@@ -44,8 +44,8 @@ final class AdoptingHomeService : AdoptingHomeServiceProtocol {
         do{
             let response = try await NetworkManager.shared.fetch(
                 target: .getAdvertFilterByCategory(categoryId),
-                responseClass: [AdoptingAdvert].self)
-            return response
+                responseClass: DataResult<[AdoptingAdvert]>.self)
+            return response.data
         }catch{
             throw error
         }
@@ -55,8 +55,8 @@ final class AdoptingHomeService : AdoptingHomeServiceProtocol {
         do {
             let response = try await NetworkManager.shared.fetch(
                 target: .getAdvertFilterBySearchText(searchText),
-                responseClass: [AdoptingAdvert].self)
-            return response
+                responseClass: DataResult<[AdoptingAdvert]>.self)
+            return response.data
         }catch{
             throw error
         }
@@ -68,8 +68,8 @@ final class AdoptingHomeService : AdoptingHomeServiceProtocol {
             do {
                 let response = try await NetworkManager.shared.fetch(
                     target: .getAdvertFilterByCategoryAndSearchText(searchText, categoryId),
-                    responseClass: [AdoptingAdvert].self)
-                return response
+                    responseClass: DataResult<[AdoptingAdvert]>.self)
+                return response.data
             }catch{
                 throw error
             }

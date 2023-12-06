@@ -13,6 +13,7 @@ protocol TargetType {
 
 enum AlamofireMethod: String {
     case GET
+    case DELETE
 }
 
 enum RequestType {
