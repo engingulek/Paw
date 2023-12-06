@@ -9,6 +9,7 @@ public enum NetworkPath {
     case getAdvertFilterByCategory(Int)
     case getAdvertFilterBySearchText(String)
     case getAdvertFilterByCategoryAndSearchText(String,Int)
+    case getFavList(Int)
     
 }
 
@@ -32,6 +33,8 @@ extension NetworkPath : TargetType {
         case .getAdvertFilterByCategoryAndSearchText(let searchText, let categoryId):
             return  "adverts/getAdvertFilterByCategoryIdAndSearchText?categoryId=\(categoryId)&searchText=\(searchText)"
             
+        case .getFavList(let userId):
+            return "favorites/getFavorites?userid=\(userId)"
         }
     }
     

@@ -30,7 +30,7 @@ final class FavListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.viewDidload()
+        presenter.viewDidload(userId: 1)
         configureUI()
     }
     
@@ -52,17 +52,18 @@ final class FavListViewController: UIViewController {
 
 extension FavListViewController : UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        print(presenter.numberOfItems())
+        return presenter.numberOfItems()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
          guard let cell = favAdvertcollectionview.dequeueReusableCell(
             withReuseIdentifier: FavAdvertCollectionViewCell.identifier,
             for: indexPath) as? FavAdvertCollectionViewCell else {return UICollectionViewCell()}
+        let favAdvert = presenter.cellForItem(at: indexPath)
+        cell.configureData(favAdvert: favAdvert)
         return cell
     }
-    
-    
 }
 
 extension FavListViewController : FavListViewControllerInterface {
@@ -72,10 +73,12 @@ extension FavListViewController : FavListViewControllerInterface {
     }
     
     func reloadCollectionView() {
-        favAdvertcollectionview.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            favAdvertcollectionview.reloadData()
+        }
+        
     }
-    
-    
 }
 
 

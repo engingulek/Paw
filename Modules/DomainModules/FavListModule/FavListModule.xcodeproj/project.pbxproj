@@ -3,14 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		138AEF711E11A583A2838B55 /* FavModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62359A9718CA1DC29A707DF /* FavModel.swift */; };
+		23DB958F633F9A9EDB3AFA1A /* FavAdvertsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CA21C91D113F5240178683 /* FavAdvertsInteractor.swift */; };
+		4B7A688B21474BA3B307EC40 /* FavListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE725A5D58F512BF0094936 /* FavListPresenter.swift */; };
 		65B9B32217D916381FF71FC3 /* DependencyKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 765BA9063D322D1BBC30796D /* DependencyKit.framework */; };
 		7D7740A4BB853B509849FA00 /* FavListModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = A42F7F51412E5785BF263D57 /* FavListModuleInterface.framework */; };
-		7D96957D2B1F9F1D0054E902 /* FavListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D96957C2B1F9F1D0054E902 /* FavListPresenter.swift */; };
-		7D96957F2B1FA3FD0054E902 /* FavAdvertCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D96957E2B1FA3FD0054E902 /* FavAdvertCollectionViewCell.swift */; };
+		8108D722A2726C51325F5873 /* FavAdvertCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804A7E18C32125D53444C823 /* FavAdvertCollectionViewCell.swift */; };
 		B10437F0F93DF98A928CF39E /* CommonKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 9710B3AE943B1782B94704EF /* CommonKit.framework */; };
 		B558BEBB5A213D82858CEA31 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 918F3C894F4A09FDA9891ECB /* Kingfisher */; };
 		BAFB565FE9E2B7911772774F /* FavListModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025D0EE85BFFFC3BA750C0C0 /* FavListModuleInterface.swift */; };
@@ -68,15 +70,17 @@
 
 /* Begin PBXFileReference section */
 		025D0EE85BFFFC3BA750C0C0 /* FavListModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavListModuleInterface.swift; sourceTree = "<group>"; };
+		0CE725A5D58F512BF0094936 /* FavListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavListPresenter.swift; sourceTree = "<group>"; };
 		314054F9EFEB84F85B4A19D8 /* FavListModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "FavListModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		470399F3AD8CC7EE754AEAE8 /* AdvertDetailModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5669635105CF43AE68DF8F61 /* FavListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavListRouter.swift; sourceTree = "<group>"; };
 		765BA9063D322D1BBC30796D /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D96957C2B1F9F1D0054E902 /* FavListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavListPresenter.swift; sourceTree = "<group>"; };
-		7D96957E2B1FA3FD0054E902 /* FavAdvertCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavAdvertCollectionViewCell.swift; sourceTree = "<group>"; };
+		804A7E18C32125D53444C823 /* FavAdvertCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavAdvertCollectionViewCell.swift; sourceTree = "<group>"; };
+		88CA21C91D113F5240178683 /* FavAdvertsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavAdvertsInteractor.swift; sourceTree = "<group>"; };
 		9710B3AE943B1782B94704EF /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC845584DE803D2FADAE8C4 /* FavListModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FavListModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A42F7F51412E5785BF263D57 /* FavListModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FavListModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D62359A9718CA1DC29A707DF /* FavModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavModel.swift; sourceTree = "<group>"; };
 		EA09D86E0DA809C6CA21C5B4 /* FavListModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "FavListModule-Info.plist"; sourceTree = "<group>"; };
 		F0EBECDD696135E484B6E749 /* FavListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,10 +130,12 @@
 		3C1503F252C9D9B3CE97B4A5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				804A7E18C32125D53444C823 /* FavAdvertCollectionViewCell.swift */,
+				88CA21C91D113F5240178683 /* FavAdvertsInteractor.swift */,
+				0CE725A5D58F512BF0094936 /* FavListPresenter.swift */,
 				5669635105CF43AE68DF8F61 /* FavListRouter.swift */,
 				F0EBECDD696135E484B6E749 /* FavListViewController.swift */,
-				7D96957C2B1F9F1D0054E902 /* FavListPresenter.swift */,
-				7D96957E2B1FA3FD0054E902 /* FavAdvertCollectionViewCell.swift */,
+				D62359A9718CA1DC29A707DF /* FavModel.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -227,6 +233,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = FAB7F898CF0904BE8B76BA6F /* Build configuration list for PBXProject "FavListModule" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -281,10 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8108D722A2726C51325F5873 /* FavAdvertCollectionViewCell.swift in Sources */,
+				23DB958F633F9A9EDB3AFA1A /* FavAdvertsInteractor.swift in Sources */,
+				4B7A688B21474BA3B307EC40 /* FavListPresenter.swift in Sources */,
 				D9B7902BE4168C0D1CE5E7AB /* FavListRouter.swift in Sources */,
 				BD5D2C01D491A28B1ADA16A8 /* FavListViewController.swift in Sources */,
-				7D96957F2B1FA3FD0054E902 /* FavAdvertCollectionViewCell.swift in Sources */,
-				7D96957D2B1F9F1D0054E902 /* FavListPresenter.swift in Sources */,
+				138AEF711E11A583A2838B55 /* FavModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

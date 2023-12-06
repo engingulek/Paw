@@ -52,7 +52,7 @@ final class FavAdvertCollectionViewCell : UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
-        configureData()
+       
     }
     
     private func configureUI(){
@@ -95,8 +95,8 @@ final class FavAdvertCollectionViewCell : UICollectionViewCell {
     }
     
     
-    func configureData(){
-        let urlImage = URL(string: "https://upload.wikimedia.org/wikipedia/commons/1/18/Dog_Breeds.jpg" )
+    func configureData(favAdvert:FavAdvert){
+        let urlImage = URL(string: favAdvert.images.first ?? "" )
         
         advertImageView.kf.setImage(
             with: urlImage,
@@ -105,6 +105,9 @@ final class FavAdvertCollectionViewCell : UICollectionViewCell {
             .transition(.fade(1))
         ]
         )
+        
+        animalName.text = favAdvert.name
+        genusLabel.text = "\(favAdvert.genus)/\(favAdvert.category)"
     }
     
     required init?(coder: NSCoder) {
