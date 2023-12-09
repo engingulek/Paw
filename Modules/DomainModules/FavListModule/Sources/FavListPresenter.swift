@@ -65,7 +65,7 @@ final class FavListPresenter : FavListPresenterInterface {
         
         Task{
             @MainActor in
-            await fetchFavAdverts(userId:userId)
+            await fetchFavAdverts(userId:1)
         }
         
         view?.prepareCollectionView()

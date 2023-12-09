@@ -44,6 +44,7 @@ final class FavListViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        presenter.viewDidload(userId: 1)
         presenter.viewWillAppear()
     }
     
