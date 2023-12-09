@@ -60,6 +60,9 @@
          <FileRef
             location = "group:AdvertFilterModule/AdvertFilterModule.xcodeproj">
          </FileRef>
+         <FileRef
+            location = "group:MessageUserListModule/MessageUserListModule.xcodeproj">
+         </FileRef>
       </Group>
    </Group>
 </Workspace>

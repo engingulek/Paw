@@ -182,6 +182,34 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7FA406AE18D48FEE445AA66E"
+               BuildableName = "MessageUserListModule.framework"
+               BlueprintName = "MessageUserListModule"
+               ReferencedContainer = "container:Modules/SharedModules/MessageUserListModule/MessageUserListModule.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C8D3EEF6B3867B54104456CB"
+               BuildableName = "MessageUserListModuleInterface.framework"
+               BlueprintName = "MessageUserListModuleInterface"
+               ReferencedContainer = "container:Modules/SharedModules/MessageUserListModule/MessageUserListModule.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "28A1A30D7349A4DCC4A96D79"
                BuildableName = "ModelKit.framework"
                BlueprintName = "ModelKit"

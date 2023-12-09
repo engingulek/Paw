@@ -3,6 +3,7 @@ import UIKit
 import AdoptingHomeModuleInterface
 import DependencyKit
 import FavListModuleInterface
+import MessageUserListModuleInterface
 final class TabbarController : UITabBarController {
     
     override func viewDidLoad() {
@@ -19,7 +20,14 @@ final class TabbarController : UITabBarController {
         fvc.tabBarItem.image = UIImage(systemName: "heart")
         fvc.tabBarItem.selectedImage = UIImage(systemName: "heart.fill")
         
-        setViewControllers([hvc,fvc], animated: true)
+        //MARK: - MessageUserListContrller
+        @Dependency var messageUserLisrModuleInterface : MessageUserListInterfaceModule
+        let mulVC = messageUserLisrModuleInterface.messageUserListController()
+        mulVC.tabBarItem.image = UIImage(systemName: "message")
+        mulVC.tabBarItem.selectedImage = UIImage(systemName: "message.fill")
+        
+        
+        setViewControllers([hvc,fvc,mulVC], animated: true)
     }
 }
 

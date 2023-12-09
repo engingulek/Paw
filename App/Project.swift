@@ -19,17 +19,20 @@ let appTarget = Target(
         .project(
             target: "TabbarModule",
             path: .relativeToRoot("Modules/DomainModules/TabbarModule")),
-        .project(
+      .project(
             target: "AdoptingHomeModule",
             path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule")),
-        .project(target: "FavListModule", path: .relativeToRoot("Modules/DomainModules/FavListModule")),
+        /* .project(target: "FavListModule", path: .relativeToRoot("Modules/DomainModules/FavListModule")),
         
         .project(
             target: "AdvertDetailModule",
             path: .relativeToRoot("Modules/SharedModules/AdvertDetailModule")),
         .project(
             target: "AdvertFilterModule",
-            path:.relativeToRoot("Modules/SharedModules/AdvertFilterModule"))
+            path:.relativeToRoot("Modules/SharedModules/AdvertFilterModule")),
+        .project(
+            target: "MessageUserListModule",
+            path:.relativeToRoot("Modules/SharedModules/MessageUserListModule"))*/
         
     ]
 )

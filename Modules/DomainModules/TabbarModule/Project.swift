@@ -16,7 +16,10 @@ let dependensies : [TargetDependency] = [
     .project(target: "TabbarModuleInterface",
              path: .relativeToRoot("Modules/DomainModules/TabbarModule")),
     .project(target: "AdoptingHomeModuleInterface", path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule")),
-    .project(target: "FavListModuleInterface", path: .relativeToRoot("Modules/DomainModules/FavListModule"))
+    .project(target: "FavListModuleInterface", path: .relativeToRoot("Modules/DomainModules/FavListModule")),
+    .project(
+        target: "MessageUserListModule",
+        path:.relativeToRoot("Modules/SharedModules/MessageUserListModule"))
 ]
 
 let framworkTarget =  Target(
