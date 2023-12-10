@@ -22,7 +22,7 @@ final class TabbarController : UITabBarController {
         
         //MARK: - MessageUserListContrller
         @Dependency var messageUserLisrModuleInterface : MessageUserListInterfaceModule
-        let mulVC = messageUserLisrModuleInterface.messageUserListController()
+        let mulVC = UINavigationController(rootViewController: messageUserLisrModuleInterface.messageUserListController())
         mulVC.tabBarItem.image = UIImage(systemName: "message")
         mulVC.tabBarItem.selectedImage = UIImage(systemName: "message.fill")
         

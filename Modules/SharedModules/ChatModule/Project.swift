@@ -18,6 +18,7 @@ let dependecies : [TargetDependency] = [
         target: "ChatModuleInterface",
         path: .relativeToRoot("Modules/SharedModules/ChatModule")),
     .project(target: "NetworkKit", path: .relativeToRoot("Kits/DomainKits/NetworkKit")),
+    .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),
     messageKit
 ]
 

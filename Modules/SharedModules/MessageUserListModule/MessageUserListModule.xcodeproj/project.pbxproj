@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0761CEEE729ECEE9F0E5F717 /* MessageUserListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD94043EC328E814DD4EF7 /* MessageUserListModule.swift */; };
 		3D0CE08F956D0AAAC0CD11B2 /* NetworkKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = A44CFDE025050A70DF2A403C /* NetworkKit.framework */; };
+		5B68E5EA87043D3376A86A87 /* CommonKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = F76BCE4EC191BC9BD57B72F8 /* CommonKit.framework */; };
 		6AB6DC1D9863E150027D4FB9 /* MessageUserListControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC18F72E3D84AF74F6D92FD5 /* MessageUserListControlller.swift */; };
 		726BDF7DA41269DE78184577 /* ChatModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 30EAE0CDDE7734F1C95E198A /* ChatModuleInterface.framework */; };
 		9357F9817123BFB392A4A654 /* MessageUserListModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = B92292797D471BEFF3BFE4FC /* MessageUserListModuleInterface.framework */; };
@@ -46,6 +47,7 @@
 			dstSubfolderSpec = 16;
 			files = (
 				726BDF7DA41269DE78184577 /* ChatModuleInterface.framework in Dependencies */,
+				5B68E5EA87043D3376A86A87 /* CommonKit.framework in Dependencies */,
 				9357F9817123BFB392A4A654 /* MessageUserListModuleInterface.framework in Dependencies */,
 				3D0CE08F956D0AAAC0CD11B2 /* NetworkKit.framework in Dependencies */,
 			);
@@ -76,6 +78,7 @@
 		C2BBEB72DF66F9DC0D9EBB1E /* MessageUserListModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MessageUserListModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		DC18F72E3D84AF74F6D92FD5 /* MessageUserListControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageUserListControlller.swift; sourceTree = "<group>"; };
 		F0CD94043EC328E814DD4EF7 /* MessageUserListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageUserListModule.swift; sourceTree = "<group>"; };
+		F76BCE4EC191BC9BD57B72F8 /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				30EAE0CDDE7734F1C95E198A /* ChatModuleInterface.framework */,
+				F76BCE4EC191BC9BD57B72F8 /* CommonKit.framework */,
 				78EEB63BD0ADE6599DF2058D /* MessageUserListModule.framework */,
 				B92292797D471BEFF3BFE4FC /* MessageUserListModuleInterface.framework */,
 				A44CFDE025050A70DF2A403C /* NetworkKit.framework */,

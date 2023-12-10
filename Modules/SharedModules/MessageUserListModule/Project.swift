@@ -22,6 +22,7 @@ let dependensies :  [TargetDependency] = [
     .project(
         target: "ChatModuleInterface",
         path: .relativeToRoot("Modules/SharedModules/ChatModule")),
+    .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),
     snapKit,
     kingfisher,
     .project(target: "NetworkKit", path: .relativeToRoot("Kits/DomainKits/NetworkKit"))

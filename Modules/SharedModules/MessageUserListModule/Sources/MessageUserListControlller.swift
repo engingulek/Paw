@@ -9,8 +9,8 @@ typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble
 protocol MessageUserListControlllerInterface : AnyObject,Ables{
     var presenter : MessageUserListPresenterInterface {get}
     
-    func prepareTableView()
-    func reloadTableView()
+     func prepareTableView()
+     func reloadTableView()
 }
 
 final class MessageUserListControlller : UIViewController {
@@ -68,8 +68,7 @@ extension MessageUserListControlller : UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-       
+        presenter.didSelect()
     }
     
     

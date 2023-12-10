@@ -2,7 +2,6 @@
 import UIKit
 import CommonKit
 import SnapKit
-import AdoptingHomeModuleInterface
 import ModelKit
 typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble
 

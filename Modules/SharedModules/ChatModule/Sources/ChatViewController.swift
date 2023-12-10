@@ -2,7 +2,9 @@
 import Foundation
 import UIKit
 import MessageKit
+import CommonKit
 
+typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble
 
 struct Sender:SenderType {
     let senderId : String
@@ -16,8 +18,14 @@ struct Message : MessageType {
     var kind:MessageKind
 }
 
+protocol  ChatViewControllerInterface : AnyObject,Ables {
+    
+}
+
 
 final class ChatViewController : MessagesViewController,MessagesDataSource,MessagesLayoutDelegate,MessagesDisplayDelegate {
+    
+    lazy var presenter : ChatPresenterInterface = CharPresenter(view: self)
  
 
     let currentSender: SenderType = Sender(senderId: "1", displayName: "Adam Da")
@@ -27,6 +35,8 @@ final class ChatViewController : MessagesViewController,MessagesDataSource,Messa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter.viewDidLoad()
       
         messages.append(Message(
             sender: currentSender,
@@ -61,6 +71,11 @@ final class ChatViewController : MessagesViewController,MessagesDataSource,Messa
     func numberOfSections(in messagesCollectionView: MessageKit.MessagesCollectionView) -> Int {
         return messages.count
     }
+}
+
+
+extension ChatViewController :  ChatViewControllerInterface {
+    
 }
 
 

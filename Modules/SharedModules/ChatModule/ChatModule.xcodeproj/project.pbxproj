@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BE835D8EFAD3DFF31B01EC5 /* CharPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B74FCD8AF28076FF05DF38D /* CharPresenter.swift */; };
 		462DCEBB200A6A015590F66D /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = DB481A7913817BDFFC302F68 /* MessageKit */; };
 		8076A393BC828BBFFAF906B1 /* ChatModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 02EAD3F8106A1E34CD37BBB9 /* ChatModuleInterface.framework */; };
+		811E7A1B64E53D40E476910C /* CommonKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 44A147842AE9088D8642B1F3 /* CommonKit.framework */; };
 		8535CEA2C688C26537A7D2D9 /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4BBF1E00270F46537455A /* ChatRouter.swift */; };
 		897B73093AA3C842DED94623 /* NetworkKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = D1DFE00597D9E3BB24A9EADE /* NetworkKit.framework */; };
 		DD83928B30A0B049FF74C3C3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F2D3520BAE64DE48B3736 /* ChatViewController.swift */; };
@@ -52,6 +54,7 @@
 			dstSubfolderSpec = 16;
 			files = (
 				8076A393BC828BBFFAF906B1 /* ChatModuleInterface.framework in Dependencies */,
+				811E7A1B64E53D40E476910C /* CommonKit.framework in Dependencies */,
 				897B73093AA3C842DED94623 /* NetworkKit.framework in Dependencies */,
 			);
 			name = Dependencies;
@@ -62,11 +65,13 @@
 /* Begin PBXFileReference section */
 		02EAD3F8106A1E34CD37BBB9 /* ChatModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChatModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17363E684D27B7CB5669068F /* ChatModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ChatModule-Info.plist"; sourceTree = "<group>"; };
+		44A147842AE9088D8642B1F3 /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6104D66D5C2B1D1C7394CEE2 /* ChatModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModuleInterface.swift; sourceTree = "<group>"; };
 		747331A946CB7520CB8CD22D /* ChatModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ChatModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		76A4BBF1E00270F46537455A /* ChatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
 		855F2D3520BAE64DE48B3736 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		89918D01CC9BEC68F30452A8 /* ChatModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChatModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B74FCD8AF28076FF05DF38D /* CharPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharPresenter.swift; sourceTree = "<group>"; };
 		D1DFE00597D9E3BB24A9EADE /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +117,7 @@
 			children = (
 				89918D01CC9BEC68F30452A8 /* ChatModule.framework */,
 				02EAD3F8106A1E34CD37BBB9 /* ChatModuleInterface.framework */,
+				44A147842AE9088D8642B1F3 /* CommonKit.framework */,
 				D1DFE00597D9E3BB24A9EADE /* NetworkKit.framework */,
 			);
 			name = Products;
@@ -145,6 +151,7 @@
 		C4CE154A9CA802B6F4F39945 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8B74FCD8AF28076FF05DF38D /* CharPresenter.swift */,
 				76A4BBF1E00270F46537455A /* ChatRouter.swift */,
 				855F2D3520BAE64DE48B3736 /* ChatViewController.swift */,
 			);
@@ -265,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE835D8EFAD3DFF31B01EC5 /* CharPresenter.swift in Sources */,
 				8535CEA2C688C26537A7D2D9 /* ChatRouter.swift in Sources */,
 				DD83928B30A0B049FF74C3C3 /* ChatViewController.swift in Sources */,
 			);

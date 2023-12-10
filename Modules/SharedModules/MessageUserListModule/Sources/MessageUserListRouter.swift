@@ -14,18 +14,16 @@ public final class MessageUserListRouter : MessageUserListInterfaceModule {
     public func messageUserListController() -> UIViewController {
         let view = MessageUserListControlller()
         let router = MessageUserListRouter()
-        let presenter = MessageUserListPresenter(view: view, router: router)
-        view.presenter = presenter
+    let presenter = MessageUserListPresenter(view: view, router: router)
+       view.presenter = presenter
         return view
     }
 }
 
 extension MessageUserListRouter : MessageUserListRouterInterface  {
     func toChat(view:MessageUserListControlllerInterface?) {
-        print("Interface aaaa")
-       @Dependency var chatModule : ChatModuleInterface
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .red
+        @Dependency var chatModuleInterface : ChatModuleInterface
+        let viewController = chatModuleInterface.chatViewController()
         view?.pushViewControllerAble(viewController, animated: true)
     }
     
