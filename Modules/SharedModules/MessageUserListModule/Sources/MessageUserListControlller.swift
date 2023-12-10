@@ -67,6 +67,11 @@ extension MessageUserListControlller : UITableViewDelegate,UITableViewDataSource
         return UIScreen.main.bounds.height / 10
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+       
+    }
+    
     
 }
 

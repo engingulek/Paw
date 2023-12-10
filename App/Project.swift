@@ -22,7 +22,7 @@ let appTarget = Target(
       .project(
             target: "AdoptingHomeModule",
             path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule")),
-        /* .project(target: "FavListModule", path: .relativeToRoot("Modules/DomainModules/FavListModule")),
+         .project(target: "FavListModule", path: .relativeToRoot("Modules/DomainModules/FavListModule")),
         
         .project(
             target: "AdvertDetailModule",
@@ -32,7 +32,10 @@ let appTarget = Target(
             path:.relativeToRoot("Modules/SharedModules/AdvertFilterModule")),
         .project(
             target: "MessageUserListModule",
-            path:.relativeToRoot("Modules/SharedModules/MessageUserListModule"))*/
+            path:.relativeToRoot("Modules/SharedModules/MessageUserListModule")),
+        .project(
+            target: "ChatModule",
+            path:.relativeToRoot("Modules/SharedModules/ChatModule"))
         
     ]
 )

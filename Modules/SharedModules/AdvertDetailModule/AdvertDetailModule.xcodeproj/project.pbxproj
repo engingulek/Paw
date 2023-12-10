@@ -14,6 +14,7 @@
 		406A3A28312FF91A67E07947 /* AdvertDetailModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 81B0DBC68EF58408B5E9A265 /* AdvertDetailModuleInterface.framework */; };
 		72264E4FB6A9C41B6CBF9560 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C162CDF8101B78C5CDA06432 /* SnapKit */; };
 		77DED97678EFC0E4C7AC4762 /* AdvertDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E67BE050AB39E34BB644E3 /* AdvertDetail.swift */; };
+		780CDFDEB8D43C022F8023F6 /* ChatModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 812D93B654995D06C0B762D2 /* ChatModuleInterface.framework */; };
 		79DD8AA8A1B41247FAAD2E43 /* AdvertDetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BF9306776D197A91819534 /* AdvertDetailInfoView.swift */; };
 		9DB1D58273CEA988050AAD63 /* TuistAssets+AdvertDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7265EAC3F80ADF44A78551C /* TuistAssets+AdvertDetailModule.swift */; };
 		AFC4A94FBF9514735D23A870 /* TuistBundle+AdvertDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A73B895A012C83C926DD623 /* TuistBundle+AdvertDetailModule.swift */; };
@@ -59,6 +60,7 @@
 			dstSubfolderSpec = 16;
 			files = (
 				406A3A28312FF91A67E07947 /* AdvertDetailModuleInterface.framework in Dependencies */,
+				780CDFDEB8D43C022F8023F6 /* ChatModuleInterface.framework in Dependencies */,
 				CE7D287E9AA2BA7FE7027BFD /* CommonKit.framework in Dependencies */,
 				BB9CB58F42B994CD8064EC25 /* NetworkKit.framework in Dependencies */,
 			);
@@ -97,6 +99,7 @@
 		4A73B895A012C83C926DD623 /* TuistBundle+AdvertDetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+AdvertDetailModule.swift"; sourceTree = "<group>"; };
 		63BF9306776D197A91819534 /* AdvertDetailInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetailInfoView.swift; sourceTree = "<group>"; };
 		7B6D0B8C69409A96DA14CAF4 /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		812D93B654995D06C0B762D2 /* ChatModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChatModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B0DBC68EF58408B5E9A265 /* AdvertDetailModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		847FF1E0CDEEB13A0DEFE940 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E67BE050AB39E34BB644E3 /* AdvertDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertDetail.swift; sourceTree = "<group>"; };
@@ -186,6 +189,7 @@
 				AA72C3F699587393B9416713 /* AdvertDetailModule_AdvertDetailModule.bundle */,
 				48B39F8836CC4D5B9EEA5EC2 /* AdvertDetailModule.framework */,
 				81B0DBC68EF58408B5E9A265 /* AdvertDetailModuleInterface.framework */,
+				812D93B654995D06C0B762D2 /* ChatModuleInterface.framework */,
 				7B6D0B8C69409A96DA14CAF4 /* CommonKit.framework */,
 				847FF1E0CDEEB13A0DEFE940 /* NetworkKit.framework */,
 			);

@@ -22,6 +22,8 @@ import FavListModuleInterface
 import DependencyKit
 import MessageUserListModule
 import MessageUserListModuleInterface
+import ChatModuleInterface
+import ChatModule
 
 
 
@@ -36,5 +38,6 @@ final class DependencyRegister {
         dependecyEngine.register(value: AdvertFilterRouter(), for: AdvertFilterModuleInterface.self)
         dependecyEngine.register(value: FavListRouter(), for: FavListModuleInterface.self)
         dependecyEngine.register(value: MessageUserListRouter(), for: MessageUserListInterfaceModule.self)
+        dependecyEngine.register(value: ChatRouter(), for: ChatModuleInterface.self)
     }
 }

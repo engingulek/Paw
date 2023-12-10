@@ -2,45 +2,39 @@
 import Foundation
 import ProjectDescription
 import ProjectDescriptionHelpers
-
 let interfaceTarget  = Target(
-    name: "MessageUserListModuleInterface",
+    name: "ChatModuleInterface",
     platform: .iOS,
     product: .staticFramework,
-    bundleId: "com.ios.MessageUserListModuleInterface",
+    bundleId: "com.ios.ChatModuleInterface",
     deploymentTarget: .iOS(targetVersion: "16.0", devices: .iphone),
     infoPlist: .default,
     sources: "InterfaceSource/**",
     dependencies: []
-
 )
 
-let dependensies :  [TargetDependency] = [
-    .project(
-        target: "MessageUserListModuleInterface",
-        path: .relativeToRoot("Modules/SharedModules/MessageUserListModule")),
+let dependecies : [TargetDependency] = [
     .project(
         target: "ChatModuleInterface",
         path: .relativeToRoot("Modules/SharedModules/ChatModule")),
-    snapKit,
-    kingfisher,
-    .project(target: "NetworkKit", path: .relativeToRoot("Kits/DomainKits/NetworkKit"))
+    .project(target: "NetworkKit", path: .relativeToRoot("Kits/DomainKits/NetworkKit")),
+    messageKit
 ]
 
 let framworkTarget =  Target(
-    name: "MessageUserListModule",
+    name: "ChatModule",
     platform: .iOS,
     product: .staticFramework,
-    bundleId: "com.ios.MessageUserListModule",
+    bundleId: "com.ios.ChatModule",
     deploymentTarget: .iOS(targetVersion: "16.0", devices: .iphone),
     infoPlist: .default,
     sources: "Sources/**",
     resources: [],
-    dependencies: dependensies
+    dependencies: dependecies
 )
 
 let project = Project(
-    name: "MessageUserListModule",
-    packages: [.snapKit,.kingfisher],
+    name: "ChatModule",
+    packages: [.messageKit],
 targets: [framworkTarget,interfaceTarget])
 

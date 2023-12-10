@@ -6,6 +6,7 @@ import Kingfisher
 
 protocol AdvertDetailInfoViewDelegate {
     func selectedFavIcon()
+    func sendMessageButton()
 }
 
 
@@ -33,8 +34,6 @@ final class AdvertDetailInfoView : UIView {
         self.delegate?.selectedFavIcon()
     }
     
-    
-
     
     private lazy var userImage : UIImageView = {
         let imageView = UIImageView()
@@ -99,8 +98,14 @@ final class AdvertDetailInfoView : UIView {
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .red
         button.layer.cornerRadius = 15
+        button.addAction(sendMessageButtonAction, for: .touchUpInside)
         return button
     }()
+    
+    private lazy var sendMessageButtonAction: UIAction = UIAction { _ in
+        //guard let item = self.indexPathItem else {return}
+        self.delegate?.sendMessageButton()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: .zero)

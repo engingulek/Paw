@@ -14,6 +14,7 @@ protocol AdvertDetailPresenterInterface {
     func selectedADIThree()
     
     func favIconAction(advertId: Int, userId: Int)
+    func clickedSendMessageButton()
     
 }
 
@@ -123,5 +124,9 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
         }else{
             view?.alertMessage(title: "Error", message: "Something went wrong")
         }
+    }
+    
+    func clickedSendMessageButton(){
+        router?.toChatVC(view: view)
     }
 }

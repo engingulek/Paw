@@ -15,6 +15,9 @@ let interfaceTarget  = Target(
 let dependensies : [TargetDependency] = [
     .project(target: "AdvertDetailModuleInterface",
              path: .relativeToRoot("Modules/SharedModules/AdvertDetailModule")),
+    .project(
+        target: "ChatModuleInterface",
+        path: .relativeToRoot("Modules/SharedModules/ChatModule")),
     .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),
     snapKit,
     kingfisher,

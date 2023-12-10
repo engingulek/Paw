@@ -3,19 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0761CEEE729ECEE9F0E5F717 /* MessageUserListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD94043EC328E814DD4EF7 /* MessageUserListModule.swift */; };
 		3D0CE08F956D0AAAC0CD11B2 /* NetworkKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = A44CFDE025050A70DF2A403C /* NetworkKit.framework */; };
 		6AB6DC1D9863E150027D4FB9 /* MessageUserListControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC18F72E3D84AF74F6D92FD5 /* MessageUserListControlller.swift */; };
-		7D097CBE2B24D29500CCC357 /* MessageUserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D097CBD2B24D29500CCC357 /* MessageUserListPresenter.swift */; };
-		7D097CC12B24D5E900CCC357 /* MessageUserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D097CC02B24D5E900CCC357 /* MessageUserListTableViewCell.swift */; };
+		726BDF7DA41269DE78184577 /* ChatModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 30EAE0CDDE7734F1C95E198A /* ChatModuleInterface.framework */; };
 		9357F9817123BFB392A4A654 /* MessageUserListModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = B92292797D471BEFF3BFE4FC /* MessageUserListModuleInterface.framework */; };
 		A6D597692DBD0FD2C79F2AE9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 70EE35F78C2BA552549F3896 /* SnapKit */; };
 		B7E3B5FDFCEA1364F41D0306 /* MessageUserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2270375D6271F933EA6564AD /* MessageUserListRouter.swift */; };
 		BB60639A95B4A5A67E9F65C9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1CE7578A454DAD20208E82C2 /* Kingfisher */; };
+		E74A61D4E39CA36AB985D8A2 /* MessageUserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EBBA4F9148EBEB1C824398 /* MessageUserListPresenter.swift */; };
+		FB761624D654338B639D548E /* MessageUserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282F29DA6D03ADB277C2C963 /* MessageUserListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 			buildActionMask = 8;
 			dstSubfolderSpec = 16;
 			files = (
+				726BDF7DA41269DE78184577 /* ChatModuleInterface.framework in Dependencies */,
 				9357F9817123BFB392A4A654 /* MessageUserListModuleInterface.framework in Dependencies */,
 				3D0CE08F956D0AAAC0CD11B2 /* NetworkKit.framework in Dependencies */,
 			);
@@ -63,10 +65,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02EBBA4F9148EBEB1C824398 /* MessageUserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageUserListPresenter.swift; sourceTree = "<group>"; };
 		2270375D6271F933EA6564AD /* MessageUserListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageUserListRouter.swift; sourceTree = "<group>"; };
+		282F29DA6D03ADB277C2C963 /* MessageUserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageUserListTableViewCell.swift; sourceTree = "<group>"; };
+		30EAE0CDDE7734F1C95E198A /* ChatModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChatModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EEB63BD0ADE6599DF2058D /* MessageUserListModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MessageUserListModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D097CBD2B24D29500CCC357 /* MessageUserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageUserListPresenter.swift; sourceTree = "<group>"; };
-		7D097CC02B24D5E900CCC357 /* MessageUserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageUserListTableViewCell.swift; sourceTree = "<group>"; };
 		A40C7F71940FC1AEFE54115F /* MessageUserListModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MessageUserListModule-Info.plist"; sourceTree = "<group>"; };
 		A44CFDE025050A70DF2A403C /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92292797D471BEFF3BFE4FC /* MessageUserListModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MessageUserListModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,10 +116,10 @@
 		255521C3279BCD1F5833C18C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				7D097CBF2B24D5D100CCC357 /* cell */,
+				A6DAEC913C885898A3785ADE /* cell */,
 				DC18F72E3D84AF74F6D92FD5 /* MessageUserListControlller.swift */,
+				02EBBA4F9148EBEB1C824398 /* MessageUserListPresenter.swift */,
 				2270375D6271F933EA6564AD /* MessageUserListRouter.swift */,
-				7D097CBD2B24D29500CCC357 /* MessageUserListPresenter.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -130,22 +133,23 @@
 			path = InfoPlists;
 			sourceTree = "<group>";
 		};
-		7D097CBF2B24D5D100CCC357 /* cell */ = {
-			isa = PBXGroup;
-			children = (
-				7D097CC02B24D5E900CCC357 /* MessageUserListTableViewCell.swift */,
-			);
-			path = cell;
-			sourceTree = "<group>";
-		};
 		90197804C274283D00499384 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				30EAE0CDDE7734F1C95E198A /* ChatModuleInterface.framework */,
 				78EEB63BD0ADE6599DF2058D /* MessageUserListModule.framework */,
 				B92292797D471BEFF3BFE4FC /* MessageUserListModuleInterface.framework */,
 				A44CFDE025050A70DF2A403C /* NetworkKit.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A6DAEC913C885898A3785ADE /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				282F29DA6D03ADB277C2C963 /* MessageUserListTableViewCell.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		B3CF41AD075C79E19AE92164 = {
@@ -227,6 +231,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 07622C250776C731536EF4E0 /* Build configuration list for PBXProject "MessageUserListModule" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -273,10 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D097CC12B24D5E900CCC357 /* MessageUserListTableViewCell.swift in Sources */,
 				6AB6DC1D9863E150027D4FB9 /* MessageUserListControlller.swift in Sources */,
+				E74A61D4E39CA36AB985D8A2 /* MessageUserListPresenter.swift in Sources */,
 				B7E3B5FDFCEA1364F41D0306 /* MessageUserListRouter.swift in Sources */,
-				7D097CBE2B24D29500CCC357 /* MessageUserListPresenter.swift in Sources */,
+				FB761624D654338B639D548E /* MessageUserListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

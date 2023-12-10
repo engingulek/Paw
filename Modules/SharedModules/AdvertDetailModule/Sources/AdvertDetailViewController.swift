@@ -84,9 +84,14 @@ extension AdvertDetailViewController : AdvertDetailImagesImagesDelegate {
 }
 
 extension AdvertDetailViewController: AdvertDetailInfoViewDelegate {
+   
     func selectedFavIcon() {
         guard let advertId = advertId else {return}
         presenter.favIconAction(advertId: advertId, userId: 1)
+    }
+    
+    func sendMessageButton() {
+        presenter.clickedSendMessageButton()
     }
     
 }

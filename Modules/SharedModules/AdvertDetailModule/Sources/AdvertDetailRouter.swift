@@ -1,9 +1,10 @@
 import Foundation
+import ChatModuleInterface
 import UIKit
 import AdvertDetailModuleInterface
-
+import DependencyKit
 protocol AdvertDetailRouterInterface {
-    
+    func toChatVC(view:AdvertDetailViewControllerInterface?)
 }
 
 public final class AdvertDetailRouter : AdvertDetailModuleInterface {
@@ -28,6 +29,13 @@ public final class AdvertDetailRouter : AdvertDetailModuleInterface {
 }
 
 extension AdvertDetailRouter : AdvertDetailRouterInterface {
+    func toChatVC(view:AdvertDetailViewControllerInterface?) {
+        
+        @Dependency var chatModuleInterface : ChatModuleInterface
+        let viewController = chatModuleInterface.chatViewController()
+        view?.pushViewControllerAble(viewController, animated: true)
+    }
+    
     
 }
     
