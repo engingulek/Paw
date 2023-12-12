@@ -29,13 +29,7 @@ let appTarget = Target(
             path: .relativeToRoot("Modules/SharedModules/AdvertDetailModule")),
         .project(
             target: "AdvertFilterModule",
-            path:.relativeToRoot("Modules/SharedModules/AdvertFilterModule")),
-        .project(
-            target: "MessageUserListModule",
-            path:.relativeToRoot("Modules/SharedModules/MessageUserListModule")),
-        .project(
-            target: "ChatModule",
-            path:.relativeToRoot("Modules/SharedModules/ChatModule"))
+            path:.relativeToRoot("Modules/SharedModules/AdvertFilterModule"))
         
     ]
 )

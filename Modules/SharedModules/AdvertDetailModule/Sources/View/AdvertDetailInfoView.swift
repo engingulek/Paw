@@ -6,7 +6,7 @@ import Kingfisher
 
 protocol AdvertDetailInfoViewDelegate {
     func selectedFavIcon()
-    func sendMessageButton()
+  
 }
 
 
@@ -91,21 +91,9 @@ final class AdvertDetailInfoView : UIView {
         return textView
     }()
     
-    private lazy var sendMessageButton : UIButton = {
-        let button = UIButton()
-        button.setTitle("Send Message", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .red
-        button.layer.cornerRadius = 15
-        button.addAction(sendMessageButtonAction, for: .touchUpInside)
-        return button
-    }()
+   
     
-    private lazy var sendMessageButtonAction: UIAction = UIAction { _ in
-        //guard let item = self.indexPathItem else {return}
-        self.delegate?.sendMessageButton()
-    }
+  
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -119,7 +107,7 @@ final class AdvertDetailInfoView : UIView {
         addSubview(locationInfo)
         addSubview(infoTitle)
        addSubview(animalInfo)
-        addSubview(sendMessageButton)
+        
         
         animalName.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(20)
@@ -171,15 +159,9 @@ final class AdvertDetailInfoView : UIView {
             make.top.equalTo(infoTitle.snp.bottom)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
-            make.bottom.equalTo(sendMessageButton.snp.top)
+            make.bottom.equalToSuperview().offset(-30)
         }
         
-        sendMessageButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-30)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
-            make.height.equalTo(50)
-        }
     }
     func configureData(advertDetail:AdvertDetail){
         animalName.text = advertDetail.name

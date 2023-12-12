@@ -90,9 +90,7 @@ extension AdvertDetailViewController: AdvertDetailInfoViewDelegate {
         presenter.favIconAction(advertId: advertId, userId: 1)
     }
     
-    func sendMessageButton() {
-        presenter.clickedSendMessageButton()
-    }
+   
     
 }
 

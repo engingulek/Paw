@@ -12,6 +12,7 @@
 		5B68E5EA87043D3376A86A87 /* CommonKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = F76BCE4EC191BC9BD57B72F8 /* CommonKit.framework */; };
 		6AB6DC1D9863E150027D4FB9 /* MessageUserListControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC18F72E3D84AF74F6D92FD5 /* MessageUserListControlller.swift */; };
 		726BDF7DA41269DE78184577 /* ChatModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 30EAE0CDDE7734F1C95E198A /* ChatModuleInterface.framework */; };
+		76A4681F46F0CCB3E6E679C8 /* Firebase in Frameworks */ = {isa = PBXBuildFile; productRef = 370BC796D2983A1A22307DCC /* Firebase */; };
 		9357F9817123BFB392A4A654 /* MessageUserListModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = B92292797D471BEFF3BFE4FC /* MessageUserListModuleInterface.framework */; };
 		A6D597692DBD0FD2C79F2AE9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 70EE35F78C2BA552549F3896 /* SnapKit */; };
 		B7E3B5FDFCEA1364F41D0306 /* MessageUserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2270375D6271F933EA6564AD /* MessageUserListRouter.swift */; };
@@ -88,6 +89,7 @@
 			files = (
 				A6D597692DBD0FD2C79F2AE9 /* SnapKit in Frameworks */,
 				BB60639A95B4A5A67E9F65C9 /* Kingfisher in Frameworks */,
+				76A4681F46F0CCB3E6E679C8 /* Firebase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +207,7 @@
 			packageProductDependencies = (
 				70EE35F78C2BA552549F3896 /* SnapKit */,
 				1CE7578A454DAD20208E82C2 /* Kingfisher */,
+				370BC796D2983A1A22307DCC /* Firebase */,
 			);
 			productName = MessageUserListModule;
 			productReference = 78EEB63BD0ADE6599DF2058D /* MessageUserListModule.framework */;
@@ -249,6 +252,7 @@
 			mainGroup = B3CF41AD075C79E19AE92164;
 			packageReferences = (
 				A860E39B892EB2E802F778C1 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				271773DE2F8123C59A41DE7F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				1FFFE64352208126433C3BFB /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 90197804C274283D00499384 /* Products */;
@@ -601,6 +605,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		271773DE2F8123C59A41DE7F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.0;
+			};
+		};
 		A860E39B892EB2E802F778C1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -615,6 +627,10 @@
 		1CE7578A454DAD20208E82C2 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Kingfisher;
+		};
+		370BC796D2983A1A22307DCC /* Firebase */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Firebase;
 		};
 		70EE35F78C2BA552549F3896 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

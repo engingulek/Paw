@@ -126,34 +126,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DF79A321D72F9F6CA68C4D8A"
-               BuildableName = "ChatModule.framework"
-               BlueprintName = "ChatModule"
-               ReferencedContainer = "container:Modules/SharedModules/ChatModule/ChatModule.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09131C9CEDEA3BC56AD69EE5"
-               BuildableName = "ChatModuleInterface.framework"
-               BlueprintName = "ChatModuleInterface"
-               ReferencedContainer = "container:Modules/SharedModules/ChatModule/ChatModule.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "77A705E112BA78834D2901D0"
                BuildableName = "CommonKit.framework"
                BlueprintName = "CommonKit"
@@ -200,34 +172,6 @@
                BuildableName = "FavListModuleInterface.framework"
                BlueprintName = "FavListModuleInterface"
                ReferencedContainer = "container:Modules/DomainModules/FavListModule/FavListModule.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7FA406AE18D48FEE445AA66E"
-               BuildableName = "MessageUserListModule.framework"
-               BlueprintName = "MessageUserListModule"
-               ReferencedContainer = "container:Modules/SharedModules/MessageUserListModule/MessageUserListModule.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C8D3EEF6B3867B54104456CB"
-               BuildableName = "MessageUserListModuleInterface.framework"
-               BlueprintName = "MessageUserListModuleInterface"
-               ReferencedContainer = "container:Modules/SharedModules/MessageUserListModule/MessageUserListModule.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry

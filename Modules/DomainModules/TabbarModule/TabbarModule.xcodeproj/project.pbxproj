@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8CDA2D2A77027E55AB2428A9 /* TabbarModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 64701FAA0C964B0807461624 /* TabbarModuleInterface.framework */; };
-		8E6529F668906613116E32DD /* MessageUserListModule.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 5C51B0F421085ECEBCCA2B92 /* MessageUserListModule.framework */; };
 		B64C62F8034DEE254AA2C811 /* FavListModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = D931AF0B938BC468DC941882 /* FavListModuleInterface.framework */; };
 		BBFD85DEEF522A041660A89A /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A818D2B0940C84A74A92986 /* TabbarController.swift */; };
 		BBFE797203ADC463DD0C272D /* TabbarModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698710A264EC64FA3C94B83 /* TabbarModuleInterface.swift */; };
@@ -54,7 +53,6 @@
 			files = (
 				C8EDBA14EE8A70C083A3DBCE /* AdoptingHomeModuleInterface.framework in Dependencies */,
 				B64C62F8034DEE254AA2C811 /* FavListModuleInterface.framework in Dependencies */,
-				8E6529F668906613116E32DD /* MessageUserListModule.framework in Dependencies */,
 				8CDA2D2A77027E55AB2428A9 /* TabbarModuleInterface.framework in Dependencies */,
 			);
 			name = Dependencies;
@@ -65,7 +63,6 @@
 /* Begin PBXFileReference section */
 		16565B6A43D5BB968F6D0D30 /* TabbarModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TabbarModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1718CB13144A2BEC0EA9ABB7 /* TabbarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarRouter.swift; sourceTree = "<group>"; };
-		5C51B0F421085ECEBCCA2B92 /* MessageUserListModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MessageUserListModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64701FAA0C964B0807461624 /* TabbarModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TabbarModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7698710A264EC64FA3C94B83 /* TabbarModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarModuleInterface.swift; sourceTree = "<group>"; };
 		8DCD9E04DBA4AD798E29FCCB /* TabbarModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TabbarModuleInterface-Info.plist"; sourceTree = "<group>"; };
@@ -133,7 +130,6 @@
 			children = (
 				EC6F08FE73801117E74D7F4A /* AdoptingHomeModuleInterface.framework */,
 				D931AF0B938BC468DC941882 /* FavListModuleInterface.framework */,
-				5C51B0F421085ECEBCCA2B92 /* MessageUserListModule.framework */,
 				16565B6A43D5BB968F6D0D30 /* TabbarModule.framework */,
 				64701FAA0C964B0807461624 /* TabbarModuleInterface.framework */,
 			);
