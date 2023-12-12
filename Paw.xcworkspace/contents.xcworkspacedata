@@ -42,6 +42,9 @@
             location = "group:AdoptingHomeModule/AdoptingHomeModule.xcodeproj">
          </FileRef>
          <FileRef
+            location = "group:CreateAdvertModule/CreateAdvertModule.xcodeproj">
+         </FileRef>
+         <FileRef
             location = "group:FavListModule/FavListModule.xcodeproj">
          </FileRef>
          <FileRef

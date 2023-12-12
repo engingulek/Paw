@@ -1,5 +1,4 @@
 import Foundation
-import ChatModuleInterface
 import UIKit
 import AdvertDetailModuleInterface
 import DependencyKit

@@ -3,6 +3,8 @@ import UIKit
 import AdoptingHomeModuleInterface
 import DependencyKit
 import FavListModuleInterface
+import CreateAdvertModuleInterface
+
 
 final class TabbarController : UITabBarController {
     
@@ -19,9 +21,15 @@ final class TabbarController : UITabBarController {
         let fvc = UINavigationController(rootViewController: favListModuleInterface.favListViewController())
         fvc.tabBarItem.image = UIImage(systemName: "heart")
         fvc.tabBarItem.selectedImage = UIImage(systemName: "heart.fill")
+        
+        //MARK: CreateAdvertViewController
+        @Dependency var createAdvertViewController : CreateAdvertModuleInterface
+        let cavc = UINavigationController(rootViewController: createAdvertViewController.createAdvertViewController())
+        cavc.tabBarItem.image = UIImage(systemName: "plus")
+        cavc.tabBarItem.selectedImage = UIImage(systemName: "plus")
 
             
-        setViewControllers([hvc,fvc], animated: true)
+        setViewControllers([hvc,cavc,fvc], animated: true)
     }
 }
 
