@@ -4,13 +4,13 @@ import NetworkKit
 
 
 protocol CreateAdvertInteractorInterface {
-    func addAdvertToAdvertList(imagesData:[String]) async throws
+    func addAdvertToAdvertList(parameters : [String:Any]) async throws
 }
 
 final class CreateAdvertInteractor : CreateAdvertInteractorInterface {
     static let shared = CreateAdvertInteractor()
-    func addAdvertToAdvertList(imagesData:[String]) async throws {
-        print("images data \(imagesData)")
+    func addAdvertToAdvertList(parameters : [String:Any]) async throws {
+        /*print("images data \(imagesData)")
         let testData : [Data] = []
         let parameters : [String:Any] = [
             "images":imagesData,
@@ -24,7 +24,7 @@ final class CreateAdvertInteractor : CreateAdvertInteractorInterface {
             "about":"Test",
             "userid":1,
            
-        ]
+        ]*/
         
         do{
             _ = try await NetworkManager.shared.fetch(

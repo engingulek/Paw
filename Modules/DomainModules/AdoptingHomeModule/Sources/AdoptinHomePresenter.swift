@@ -185,10 +185,12 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
     func viewWillAppear() {
         view?.tabbarisHidden(isHidden: false)
         view?.setNavigationBarHidden(isHidden: true, animated: true)
+        Task {
+            @MainActor in
+            await fetchAdoptingAdverts()
+        }
         
     }
-    
-    
     
     
     private func advertsFilterAndSearchText(categoryId:Int,searchText:String) async{

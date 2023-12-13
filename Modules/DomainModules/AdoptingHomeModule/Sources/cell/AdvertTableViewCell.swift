@@ -109,17 +109,17 @@ final class AdvertTableViewCell : UITableViewCell {
         let gender = advert.gender == 
         "male" ? "♂" :"♀"
         genderLabel.text = gender
-        locationInfo.text = "\(advert.city)/\(advert.district)"
+        locationInfo.text = "\(advert.city)"
         
-       // let urlImage = URL(string: advert.images.first ?? "")
+        let urlImage = URL(string: advert.images.first ?? "")
         
-        /*advertImageView.kf.setImage(
+        advertImageView.kf.setImage(
             with: urlImage,
         placeholder: UIImage(systemName: "pawprint.fill"),
         options: [
             .transition(.fade(1))
         ]
-        )*/
+        )
     }
     
     override func layoutSubviews() {
