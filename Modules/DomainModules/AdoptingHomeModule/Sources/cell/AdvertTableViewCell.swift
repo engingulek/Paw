@@ -9,7 +9,6 @@ final class AdvertTableViewCell : UITableViewCell {
     
     private lazy var advertImageView : UIImageView = {
         let imageView = UIImageView()
-        imageView.image = AdoptingHomeModuleAsset.dog.image
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleToFill
         imageView.layer.cornerRadius = 10
@@ -112,15 +111,15 @@ final class AdvertTableViewCell : UITableViewCell {
         genderLabel.text = gender
         locationInfo.text = "\(advert.city)/\(advert.district)"
         
-        let urlImage = URL(string: advert.images.first ?? "")
+       // let urlImage = URL(string: advert.images.first ?? "")
         
-        advertImageView.kf.setImage(
+        /*advertImageView.kf.setImage(
             with: urlImage,
         placeholder: UIImage(systemName: "pawprint.fill"),
         options: [
             .transition(.fade(1))
         ]
-        )
+        )*/
     }
     
     override func layoutSubviews() {

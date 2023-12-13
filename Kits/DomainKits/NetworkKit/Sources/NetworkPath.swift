@@ -13,6 +13,7 @@ public enum NetworkPath {
     case deleteFavAdvertFromFavAdvertList(Int)
     case deletteFavAdvertByAdvertIdAndUserId(Int,Int)
     case addAdvertToFavList(Parameters)
+    case addAdvertToAdvertList(Parameters)
     
 }
 
@@ -44,6 +45,8 @@ extension NetworkPath : TargetType {
             return "favorites/deleteFavAdvertByAdvertIdAndUserId?advertid=\(advertId)&userid=\(userId)"
         case .addAdvertToFavList:
             return "favorites/add"
+        case .addAdvertToAdvertList:
+            return "adverts/add"
         }
     }
     
@@ -51,7 +54,7 @@ extension NetworkPath : TargetType {
         switch self {
         case .deleteFavAdvertFromFavAdvertList,.deletteFavAdvertByAdvertIdAndUserId:
             return .DELETE
-        case .addAdvertToFavList:
+        case .addAdvertToFavList,.addAdvertToAdvertList:
             return .POST
         default:
             return .GET
@@ -61,6 +64,8 @@ extension NetworkPath : TargetType {
     var requestType: RequestType {
         switch self {
         case .addAdvertToFavList(let parameters):
+            return .requestParameters(parameters: parameters, encoding: JSONEncoding.init())
+        case .addAdvertToAdvertList(let parameters):
             return .requestParameters(parameters: parameters, encoding: JSONEncoding.init())
         default:
             return .requestPlain

@@ -22,11 +22,11 @@ let dependensies : [TargetDependency] = [
     .project(target: "CreateAdvertModuleInterface",
              path: .relativeToRoot("Modules/DomainModules/CreateAdvertModule")),
     .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),
-    snapKit,
     .project(target: "NetworkKit", path: .relativeToRoot("Kits/DomainKits/NetworkKit")),
+    snapKit,
     kingfisher,
-    .project(target: "ModelKit", path: .relativeToRoot("Kits/SharedKits/ModelKit"))
-    
+    .external(name: "FirebaseStorage"),
+    .project(target: "ModelKit", path: .relativeToRoot("Kits/SharedKits/ModelKit")),
     
 ]
 

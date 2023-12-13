@@ -3,6 +3,7 @@ import UIKit
 import CommonKit
 import SnapKit
 import ModelKit
+
 typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble
 
 protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {

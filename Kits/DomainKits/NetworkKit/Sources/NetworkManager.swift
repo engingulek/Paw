@@ -57,6 +57,7 @@ public final class NetworkManager : NetworkManagerProtocol  {
                 throw NetworkError.noRequestResource
             default:
                 print("defaultStatusCode")
+                print(response.statusCode)
                 throw NetworkError.defaultStatusCode
             }
         }
