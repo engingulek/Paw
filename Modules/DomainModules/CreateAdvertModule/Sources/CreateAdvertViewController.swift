@@ -3,71 +3,30 @@ import Foundation
 import UIKit
 import SnapKit
 import PhotosUI
+import CommonKit
 
 
-protocol CreateAdvertViewControllerInterface : AnyObject {
+typealias Ables = UIViewControllerAble & NavConAble
+
+protocol CreateAdvertViewControllerInterface : AnyObject,Ables {
     
 }
 
 
-
 final class CreateAdvertViewController : UIViewController, PHPickerViewControllerDelegate {
-    lazy var imagePicker = UIImagePickerController()
     
-    
-    private lazy var filterButton : UIButton = {
-        let button = UIButton()
-        button.setTitle("Filter", for: .normal)
-        button.backgroundColor = .white
-        button.setTitleColor(.red, for: .normal)
-        button.layer.borderColor = UIColor.red.cgColor
-        button.layer.borderWidth = 1
-        button.layer.cornerRadius = 10
-        button.addAction(filterButtonAction, for: .touchUpInside)
-        return button
-    }()
-    private lazy var filterButtonAction : UIAction =  UIAction { _ in
-        
-        self.selectImageFromGallry()
-    }
-    
-    private lazy var createAdvertButton : UIButton = {
-        let button = UIButton()
-        button.setTitle("Create", for: .normal)
-        button.backgroundColor = .white
-        button.setTitleColor(.red, for: .normal)
-        button.layer.borderColor = UIColor.red.cgColor
-        button.layer.borderWidth = 1
-        button.layer.cornerRadius = 10
-        button.addAction(createButtonAction, for: .touchUpInside)
-        return button
-    }()
-    
-    private lazy var createButtonAction : UIAction =  UIAction { _ in
-        self.presenter.createAdvert(images: self.imageData)
-    }
-    
-    
-    
+    private lazy var createAdvertView = CreateAdvertView()
  
     
+    override func loadView() {
+        view = createAdvertView
+    }
     
-   
     private var imageData : [Data] = []
     lazy var presenter : CreateAdvertPresenterInterface = CreateAdvertPresenter(view: self)
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        view.addSubview(filterButton)
-        filterButton.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
-        }
-        view.addSubview(createAdvertButton)
-        createAdvertButton.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(filterButton.snp.bottom).offset(10)
-        }
+        presenter.viewDidLoad()
     }
     
     private func selectImageFromGallry(){

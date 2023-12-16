@@ -6,7 +6,11 @@ import FirebaseStorage
 protocol CreateAdvertPresenterInterface {
     var view : CreateAdvertViewControllerInterface? {get}
     var interactor : CreateAdvertInteractorInterface {get}
+    
+    func viewDidLoad()
+    
     func createAdvert(images:[Data])
+    
 }
 
 final class CreateAdvertPresenter : CreateAdvertPresenterInterface {
@@ -18,6 +22,12 @@ final class CreateAdvertPresenter : CreateAdvertPresenterInterface {
          interactor : CreateAdvertInteractorInterface = CreateAdvertInteractor.shared) {
         self.view = view
         self.interactor = interactor
+    }
+    
+    
+    func viewDidLoad() {
+        view?.setBackColorAble(color: .white)
+        view?.setNavigationBarHidden(isHidden: true, animated: true)
     }
     
     private func addAdvert(parameters:[String:Any]) async {
@@ -48,8 +58,7 @@ final class CreateAdvertPresenter : CreateAdvertPresenterInterface {
                 
             }
         }
-        return ["https://firebasestorage.googleapis.com/v0/b/pawapp-80bb6.appspot.com/o/dog.jpg?alt=media&token=b57b81e3-9092-43f7-a9d2-aa4bd91d0571",
-                "https://firebasestorage.googleapis.com/v0/b/pawapp-80bb6.appspot.com/o/dog.jpg?alt=media&token=b57b81e3-9092-43f7-a9d2-aa4bd91d0571","https://firebasestorage.googleapis.com/v0/b/pawapp-80bb6.appspot.com/o/dog.jpg?alt=media&token=b57b81e3-9092-43f7-a9d2-aa4bd91d0571"]
+        return imgUrls
     }
     
     func createAdvert(images:[Data]) {

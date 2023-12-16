@@ -170,7 +170,7 @@ final class AdvertDetailInfoView : UIView {
         let gender = advertDetail.gender ==
         "male" ? "♂" :"♀"
         genderLabel.text = gender
-        locationInfo.text = "\(advertDetail.city)/\(advertDetail.district)"
+        locationInfo.text = "\(advertDetail.city)"
         animalInfo.text =  advertDetail.about
         let urlImage = URL(string: advertDetail.userImage)
         
@@ -183,6 +183,7 @@ final class AdvertDetailInfoView : UIView {
             )
         
         favIcon.setImage(UIImage(systemName: advertDetail.favStatus ? "heart.fill" : "heart"), for: .normal)
+        favIcon.isHidden = advertDetail.userId == 1 ? true : false
 
        
     }

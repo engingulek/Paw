@@ -8,7 +8,7 @@ struct AdvertDetail: Codable {
     let images: [String]
     let name, gender, genus, category: String
     let age: Int
-    let city, district, about: String
+    let city, about: String
     let userId: Int
     let userImage,userName, userSurname: String
     let favStatus:Bool

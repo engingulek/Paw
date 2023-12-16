@@ -18,6 +18,7 @@
 		9B6468165945A1094FFB8828 /* CreateAdvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83E9A94B4872BB6991E5F48 /* CreateAdvertViewController.swift */; };
 		A7C5FE64BC45914F32614CFA /* DependencyKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = C8297476D26FC6AA802DFE18 /* DependencyKit.framework */; };
 		C119D0835FB297BC856B239A /* FirebaseStorage.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 70A3EB511EEDAE5C0F894A1E /* FirebaseStorage.framework */; };
+		C5B28C6235156952F309590C /* CreateAdvertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D51492B3B9BECABB552986 /* CreateAdvertView.swift */; };
 		E09627B0C55DBF102C841EF2 /* CreateAdvertModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 9EF0DD32694AD2B91AEAE5A8 /* CreateAdvertModuleInterface.framework */; };
 		F02F5A4A7C0B458AAF4AFEF2 /* CreateAdvertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6DCDE637D8C0377573CBF7 /* CreateAdvertPresenter.swift */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		9563190C13B4CD3EFBB737BD /* CreateAdvertModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CreateAdvertModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		9EF0DD32694AD2B91AEAE5A8 /* CreateAdvertModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CreateAdvertModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8297476D26FC6AA802DFE18 /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1D51492B3B9BECABB552986 /* CreateAdvertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertView.swift; sourceTree = "<group>"; };
 		D83E9A94B4872BB6991E5F48 /* CreateAdvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertViewController.swift; sourceTree = "<group>"; };
 		DDF34A564014DDD7DE4171D1 /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6DCDE637D8C0377573CBF7 /* CreateAdvertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertPresenter.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				358BACA54EB8661D49C3769A /* CreateAdvertInteractor.swift */,
 				EF6DCDE637D8C0377573CBF7 /* CreateAdvertPresenter.swift */,
 				16FD6FEA632A1A345F74A2EE /* CreateAdvertRouter.swift */,
+				D1D51492B3B9BECABB552986 /* CreateAdvertView.swift */,
 				D83E9A94B4872BB6991E5F48 /* CreateAdvertViewController.swift */,
 			);
 			path = Sources;
@@ -294,6 +297,7 @@
 				2B75BB886A559DA3C7F90DDB /* CreateAdvertInteractor.swift in Sources */,
 				F02F5A4A7C0B458AAF4AFEF2 /* CreateAdvertPresenter.swift in Sources */,
 				91D6BB5CFEEA982977C5A3AD /* CreateAdvertRouter.swift in Sources */,
+				C5B28C6235156952F309590C /* CreateAdvertView.swift in Sources */,
 				9B6468165945A1094FFB8828 /* CreateAdvertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
