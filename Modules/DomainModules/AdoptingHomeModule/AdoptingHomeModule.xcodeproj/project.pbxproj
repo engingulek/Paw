@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		067CBBF45D04083A81E0A018 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F284C31292C72BDC1FE97B /* CategoryCollectionViewCell.swift */; };
 		0FA03CAD1A8224DBC63E2EE1 /* DependencyKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 0CFC9AAF62998923D0D3002C /* DependencyKit.framework */; };
 		1A0AFF10B2F3D96AE75A3883 /* AdoptingHomeModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */; };
-		1DEC4D7B21AC399DEF6CF2F7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166C8DD2DD3982E988BBF68 /* Category.swift */; };
 		217D79C25DE3C29E0DA05722 /* AdoptingHomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC2AD0177ECA70DFE726F8 /* AdoptingHomeService.swift */; };
 		244E063E8798A52A5FB26B16 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 57F6BB2AF2A459228AF81A3E /* SnapKit */; };
 		4F3729A4BC6F7103724A281D /* AdvertDetailModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = D3475F2A68D9E3C2E3D46A8D /* AdvertDetailModuleInterface.framework */; };
@@ -114,7 +113,6 @@
 		9A321EDCDDFD38ACB98C9B6D /* TuistBundle+AdoptingHomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+AdoptingHomeModule.swift"; sourceTree = "<group>"; };
 		A66D7F576828368C24A2BC9A /* AdoptingHomeModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93F53277497D1D2D3705F70 /* ModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B166C8DD2DD3982E988BBF68 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		C6F284C31292C72BDC1FE97B /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		D053F1E43EE3E9515DA00734 /* AdoptingHomeModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AdoptingHomeModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		D3475F2A68D9E3C2E3D46A8D /* AdvertDetailModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				B9355C647457ED7AE5E68BDE /* cell */,
-				8E1540A0BA827A25D2EA55C5 /* model */,
 				948C5A464420F9144C3389A0 /* AdoptingHeaderView.swift */,
 				4EDC2AD0177ECA70DFE726F8 /* AdoptingHomeService.swift */,
 				24403685C36FFC4747C9AE12 /* AdoptingHomeViewController.swift */,
@@ -189,14 +186,6 @@
 				62B2AA6CFFA29B87690D6C3A /* Sources */,
 			);
 			name = Project;
-			sourceTree = "<group>";
-		};
-		8E1540A0BA827A25D2EA55C5 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				B166C8DD2DD3982E988BBF68 /* Category.swift */,
-			);
-			path = model;
 			sourceTree = "<group>";
 		};
 		A0C3190D42ECDA64808DA3B7 /* InfoPlists */ = {
@@ -338,8 +327,6 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 77D98B1AF4882E4754013F59 /* Build configuration list for PBXProject "AdoptingHomeModule" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -412,7 +399,6 @@
 				B904353EC64D14649D2E62FA /* AdoptingRouter.swift in Sources */,
 				E4180A093827E6DC20EC2BB7 /* AdvertTableViewCell.swift in Sources */,
 				067CBBF45D04083A81E0A018 /* CategoryCollectionViewCell.swift in Sources */,
-				1DEC4D7B21AC399DEF6CF2F7 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

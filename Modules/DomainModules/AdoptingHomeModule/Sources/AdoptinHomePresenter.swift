@@ -330,5 +330,4 @@ extension AdoptinHomePresenter : AdvertFilterControllerDelegate {
         view?.reloadTableView()
     }
     
-    
 }

@@ -10,3 +10,4 @@ public struct AdoptingAdvert: Codable {
     public let city: String
 }
 
+

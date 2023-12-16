@@ -2,16 +2,25 @@
 import Foundation
 import SnapKit
 import UIKit
+import ModelKit
+
+protocol CreateAdvertViewDelegate {
+    func selectImagesFromGallery()
+}
+
 
 
 
 final class CreateAdvertView : UIView {
     
+    var delegate : CreateAdvertViewDelegate? = nil
+    var presenter :CreateAdvertPresenterInterface? = nil
     
     private lazy var scrollView: UIScrollView = {
         let view = UIScrollView()
         return view
     }()
+    
     private lazy var  scrollStackViewContainer: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
@@ -25,18 +34,21 @@ final class CreateAdvertView : UIView {
     private lazy var firstImageView :  UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "pawprint.fill")
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
     private lazy var secondImageView :  UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "pawprint.fill")
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
     private lazy var thirdImageView :  UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "pawprint.fill")
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
@@ -60,12 +72,12 @@ final class CreateAdvertView : UIView {
         button.layer.borderColor = UIColor.red.cgColor
         button.layer.borderWidth = 1
         button.layer.cornerRadius = 10
-        button.addAction(selectImageButtonAction, for: .touchUpInside)
+        button.addAction(selectImagesButtonAction, for: .touchUpInside)
         return button
     }()
     
-    private lazy var selectImageButtonAction : UIAction =  UIAction { _ in
-        // self.presenter.createAdvert(images: self.imageData)
+    private lazy var selectImagesButtonAction : UIAction =  UIAction { _ in
+        self.delegate?.selectImagesFromGallery()
     }
     
     private lazy var animalNameTextField : UITextField = {
@@ -169,11 +181,16 @@ final class CreateAdvertView : UIView {
         override init(frame: CGRect) {
         super.init(frame: .zero)
         configureUI()
-        categoryPickerView.delegate = self
-        categoryPickerView.dataSource = self
+       
+    }
+    
+    func categoryPickerViewConfigure(view:CreateAdvertViewController) {
+        categoryPickerView.delegate = view
+        categoryPickerView.dataSource = view
+    }
+    
+    func reloadAllComponents(){
         categoryPickerView.reloadAllComponents()
-        
-        
     }
     
     private func configureUI(){
@@ -238,26 +255,17 @@ final class CreateAdvertView : UIView {
         }
     }
     
+    func configureData(images:[Data]){
+        print(images.count)
+        [firstImageView,secondImageView,thirdImageView].enumerated().forEach { index,imageView in
+            imageView.image = UIImage(data: images[index])
+        }
+        
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
 
-extension CreateAdvertView : UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 5
-    }
-}
-
-
-extension CreateAdvertView :  UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "Test"
-    }
-    
-}
