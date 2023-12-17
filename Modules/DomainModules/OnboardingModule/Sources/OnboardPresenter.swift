@@ -2,15 +2,12 @@
 import Foundation
 
 protocol OnboardPresenterInterface : AnyObject {
-   
-    
     func viewDidLoad()
     func selectedAdoptingView()
 }
 
 
 final class OnboardPresenter : OnboardPresenterInterface {
-   
     var router: OnboardiingRouterInterface?
     weak var view: OnboardiingViewControllerInterfaca?
     

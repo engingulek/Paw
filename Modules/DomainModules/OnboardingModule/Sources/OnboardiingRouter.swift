@@ -5,7 +5,7 @@ import OnboardingModuleInterface
 import TabbarModuleInterface
 import DependencyKit
 
-protocol OnboardiingRouterInterface  {
+protocol OnboardiingRouterInterface : AnyObject  {
     func toTabbarController(view : OnboardiingViewControllerInterfaca?)
 }
 public final class  OnboardingRouter : OnboardingModuleInterfac {

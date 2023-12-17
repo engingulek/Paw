@@ -5,7 +5,7 @@ import Foundation
 public protocol UIViewControllerAble {
     func setBackColorAble(color:UIColor)
     func dismessAble()
-   
+    
 }
 
 extension UIViewControllerAble where Self : UIViewController {
@@ -55,17 +55,23 @@ extension NavConAble  where Self : UIViewController{
 // MARK: - TabbarConAble
 
 public protocol TabbarConAble {
-  func tabbarisHidden(isHidden : Bool)
+    func tabbarisHidden(isHidden : Bool)
+    func tabbarToPageWithIndex(index:Int)
+    
 }
 
 extension TabbarConAble  where Self : UIViewController  {
     public func tabbarisHidden(isHidden : Bool) {
         tabBarController?.tabBar.isHidden =  isHidden
     }
+    
+    public func tabbarToPageWithIndex(index:Int) {
+        tabBarController?.selectedIndex = index
+    }
 }
 
 extension Notification.Name {
-   public static let notA = Notification.Name(rawValue: "NotA")
+    public static let notA = Notification.Name(rawValue: "NotA")
 }
 
 

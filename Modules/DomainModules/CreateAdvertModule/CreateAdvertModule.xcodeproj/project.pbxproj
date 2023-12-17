@@ -17,7 +17,6 @@
 		91D6BB5CFEEA982977C5A3AD /* CreateAdvertRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FD6FEA632A1A345F74A2EE /* CreateAdvertRouter.swift */; };
 		9B6468165945A1094FFB8828 /* CreateAdvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83E9A94B4872BB6991E5F48 /* CreateAdvertViewController.swift */; };
 		A7C5FE64BC45914F32614CFA /* DependencyKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = C8297476D26FC6AA802DFE18 /* DependencyKit.framework */; };
-		C119D0835FB297BC856B239A /* FirebaseStorage.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 70A3EB511EEDAE5C0F894A1E /* FirebaseStorage.framework */; };
 		C5B28C6235156952F309590C /* CreateAdvertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D51492B3B9BECABB552986 /* CreateAdvertView.swift */; };
 		E09627B0C55DBF102C841EF2 /* CreateAdvertModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 9EF0DD32694AD2B91AEAE5A8 /* CreateAdvertModuleInterface.framework */; };
 		F02F5A4A7C0B458AAF4AFEF2 /* CreateAdvertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6DCDE637D8C0377573CBF7 /* CreateAdvertPresenter.swift */; };
@@ -42,7 +41,6 @@
 				4A048FEDE2293C77A9B9EA3B /* CommonKit.framework in Dependencies */,
 				E09627B0C55DBF102C841EF2 /* CreateAdvertModuleInterface.framework in Dependencies */,
 				A7C5FE64BC45914F32614CFA /* DependencyKit.framework in Dependencies */,
-				C119D0835FB297BC856B239A /* FirebaseStorage.framework in Dependencies */,
 				6352D3F55A3B1736E6170837 /* ModelKit.framework in Dependencies */,
 				579BFB5325F7F1FD4BB6FD8C /* NetworkKit.framework in Dependencies */,
 			);
@@ -78,7 +76,6 @@
 		358BACA54EB8661D49C3769A /* CreateAdvertInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertInteractor.swift; sourceTree = "<group>"; };
 		41FA9286B485B5029EDFEE6E /* CreateAdvertModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CreateAdvertModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		530C186990B7D60429783F88 /* CreateAdvertModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CreateAdvertModule-Info.plist"; sourceTree = "<group>"; };
-		70A3EB511EEDAE5C0F894A1E /* FirebaseStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		876136BB7986CF36CABD58D1 /* CreateAdvertModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertModuleInterface.swift; sourceTree = "<group>"; };
 		9563190C13B4CD3EFBB737BD /* CreateAdvertModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CreateAdvertModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		9EF0DD32694AD2B91AEAE5A8 /* CreateAdvertModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CreateAdvertModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,7 +131,6 @@
 				41FA9286B485B5029EDFEE6E /* CreateAdvertModule.framework */,
 				9EF0DD32694AD2B91AEAE5A8 /* CreateAdvertModuleInterface.framework */,
 				C8297476D26FC6AA802DFE18 /* DependencyKit.framework */,
-				70A3EB511EEDAE5C0F894A1E /* FirebaseStorage.framework */,
 				21AE6C4883D4118881054988 /* ModelKit.framework */,
 				0AF38EEBD410D8BA365B3B17 /* NetworkKit.framework */,
 			);
@@ -332,36 +328,6 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities-Environment.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities/Logger/Public/GoogleUtilities-Logger.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/third_party/IsAppEncrypted/Public/third-party-IsAppEncrypted.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/CoreOnly/Sources/module.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/Firebase/CoreDiagnostics/FIRCDLibrary/FirebaseCoreDiagnostics.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/gtm-session-fetcher/Source/SwiftPackage/module.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/nanopb/spm_headers/nanopb.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/promises/Sources/FBLPromises/include/module.modulemap",
-				);
-				OTHER_SWIFT_FLAGS = (
-					"$(inherited)",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities-Environment.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities/Logger/Public/GoogleUtilities-Logger.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/third_party/IsAppEncrypted/Public/third-party-IsAppEncrypted.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/CoreOnly/Sources/module.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/Firebase/CoreDiagnostics/FIRCDLibrary/FirebaseCoreDiagnostics.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/gtm-session-fetcher/Source/SwiftPackage/module.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/nanopb/spm_headers/nanopb.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/promises/Sources/FBLPromises/include/module.modulemap",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ios.CreateAdvertModule;
 				PRODUCT_NAME = CreateAdvertModule;
 				SDKROOT = iphoneos;
@@ -519,36 +485,6 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities-Environment.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities/Logger/Public/GoogleUtilities-Logger.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/third_party/IsAppEncrypted/Public/third-party-IsAppEncrypted.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/CoreOnly/Sources/module.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/Firebase/CoreDiagnostics/FIRCDLibrary/FirebaseCoreDiagnostics.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/gtm-session-fetcher/Source/SwiftPackage/module.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/nanopb/spm_headers/nanopb.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/promises/Sources/FBLPromises/include/module.modulemap",
-				);
-				OTHER_SWIFT_FLAGS = (
-					"$(inherited)",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities-Environment.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities/Logger/Public/GoogleUtilities-Logger.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/third_party/IsAppEncrypted/Public/third-party-IsAppEncrypted.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/CoreOnly/Sources/module.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/Firebase/CoreDiagnostics/FIRCDLibrary/FirebaseCoreDiagnostics.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/gtm-session-fetcher/Source/SwiftPackage/module.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/nanopb/spm_headers/nanopb.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/promises/Sources/FBLPromises/include/module.modulemap",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ios.CreateAdvertModule;
 				PRODUCT_NAME = CreateAdvertModule;
 				SDKROOT = iphoneos;

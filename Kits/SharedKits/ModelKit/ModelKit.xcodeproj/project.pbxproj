@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D50DD7F2B2E15F80069DB0B /* CategoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50DD7E2B2E15F80069DB0B /* CategoryResult.swift */; };
 		A0E985F79B8451C9DEC2EC7B /* AdoptingAdvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACEB9A6B18DA892AEE15168 /* AdoptingAdvert.swift */; };
+		A6320195A977D025679A5EA7 /* CategoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732076F653C13C7F064265A2 /* CategoryResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,7 +28,7 @@
 		01C93BDDC239E337CCA36783 /* ModelKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ModelKit-Info.plist"; sourceTree = "<group>"; };
 		0F724D06F77CEACA26AC60D0 /* ModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ACEB9A6B18DA892AEE15168 /* AdoptingAdvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptingAdvert.swift; sourceTree = "<group>"; };
-		7D50DD7E2B2E15F80069DB0B /* CategoryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryResult.swift; sourceTree = "<group>"; };
+		732076F653C13C7F064265A2 /* CategoryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				1ACEB9A6B18DA892AEE15168 /* AdoptingAdvert.swift */,
-				7D50DD7E2B2E15F80069DB0B /* CategoryResult.swift */,
+				732076F653C13C7F064265A2 /* CategoryResult.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -128,6 +128,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 23A67F559758EC2BB341D25B /* Build configuration list for PBXProject "ModelKit" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -162,8 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D50DD7F2B2E15F80069DB0B /* CategoryResult.swift in Sources */,
 				A0E985F79B8451C9DEC2EC7B /* AdoptingAdvert.swift in Sources */,
+				A6320195A977D025679A5EA7 /* CategoryResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

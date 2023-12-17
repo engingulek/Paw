@@ -28,7 +28,6 @@ final class TabbarController : UITabBarController {
         cavc.tabBarItem.image = UIImage(systemName: "plus")
         cavc.tabBarItem.selectedImage = UIImage(systemName: "plus")
 
-            
         setViewControllers([hvc,cavc,fvc], animated: true)
     }
 }

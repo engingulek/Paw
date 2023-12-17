@@ -6,10 +6,23 @@ import ModelKit
 
 protocol CreateAdvertViewDelegate {
     func selectImagesFromGallery()
+    func createAdvert()
+    func selectedMaleGender()
+    func selectedFemaleGender()
 }
 
 
-
+protocol CreateAdvertViewInterface : AnyObject {
+    func inputsReturn()-> (
+        animalName:String,
+        animalAge:String,
+      
+        animalGenus:String,
+        animalInfo:String
+    )
+    
+  
+}
 
 final class CreateAdvertView : UIView {
     
@@ -96,31 +109,51 @@ final class CreateAdvertView : UIView {
     }()
     
     
-    private lazy var maleGenderLabel : UILabel = {
-        let label = UILabel()
-        label.text = "♂"
-        label.font = .systemFont(ofSize: 25,weight: .semibold)
-        label.layer.borderColor = UIColor.black.cgColor
-        label.layer.borderWidth = 2
-        label.textAlignment = .center
-        label.layer.cornerRadius = 10
-        return label
+    private lazy var maleGenderButton : UIButton = {
+        let button = UIButton()
+        button.setTitle("♂", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.layer.borderColor = UIColor.black.cgColor
+        button.layer.borderWidth = 2
+        button.layer.cornerRadius = 10
+        button.titleLabel?.font = .systemFont(ofSize: 20,weight: .semibold)
+        button.isUserInteractionEnabled = true
+        button.addAction(maleGenderButtonAction, for: .touchUpInside)
+        return button
     }()
     
-    private lazy var femaleGenderLabel : UILabel = {
-        let label = UILabel()
-        label.text = "♀"
-        label.font = .systemFont(ofSize: 25,weight: .semibold)
-        label.layer.borderColor = UIColor.black.cgColor
-        label.layer.borderWidth = 2
-        label.textAlignment = .center
-        label.layer.cornerRadius = 10
-        return label
+    private lazy var maleGenderButtonAction : UIAction = UIAction {_ in
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.delegate?.selectedMaleGender()
+        }
+      
+    }
+   
+    
+    private lazy var femaleGenderButton : UIButton = {
+        let button = UIButton()
+        button.setTitle("♀", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.layer.borderColor = UIColor.black.cgColor
+        button.layer.borderWidth = 2
+        button.layer.cornerRadius = 10
+        button.titleLabel?.font = .systemFont(ofSize: 20,weight: .semibold)
+        button.isUserInteractionEnabled = true
+        button.addAction(femaleGenderButtonAction, for: .touchUpInside)
+        return button
     }()
     
+    private lazy var femaleGenderButtonAction : UIAction = UIAction {_  in
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.delegate?.selectedFemaleGender()
+        }
+        
+    }
     private lazy var genderStackView : UIStackView = {
         let stackView = UIStackView(
-            arrangedSubviews: [maleGenderLabel,femaleGenderLabel])
+            arrangedSubviews: [maleGenderButton,femaleGenderButton])
         stackView.axis = .horizontal
         stackView.distribution  = .fillEqually
       
@@ -129,11 +162,12 @@ final class CreateAdvertView : UIView {
         return stackView
     }()
     
-    private lazy var categoryPickerView: UIPickerView = {
+   private lazy var categoryPickerView: UIPickerView = {
          let pv = UIPickerView()
         pv.backgroundColor = UIColor(named: "5a92af")
          return pv
      }()
+   
     
     private lazy var animalGenusTextField : UITextField = {
        let textField = UITextField()
@@ -142,6 +176,8 @@ final class CreateAdvertView : UIView {
         textField.keyboardType = .numberPad
        return textField
     }()
+    
+  
     
     private lazy var animalInfoTitle : UILabel = {
        let label = UILabel()
@@ -164,7 +200,7 @@ final class CreateAdvertView : UIView {
     
     private lazy var createAdvertButton : UIButton = {
         let button = UIButton()
-        button.setTitle("Filter", for: .normal)
+        button.setTitle("Create Advert", for: .normal)
         button.backgroundColor = .white
         button.setTitleColor(.red, for: .normal)
         button.layer.borderColor = UIColor.red.cgColor
@@ -174,24 +210,47 @@ final class CreateAdvertView : UIView {
         return button
     }()
     private lazy var createAdvertButtonAction : UIAction =  UIAction { _ in
-        
-        // self.selectImageFromGallry()
+        self.delegate?.createAdvert()
     }
     
         override init(frame: CGRect) {
         super.init(frame: .zero)
         configureUI()
-       
     }
+    
     
     func categoryPickerViewConfigure(view:CreateAdvertViewController) {
         categoryPickerView.delegate = view
         categoryPickerView.dataSource = view
     }
     
-    func reloadAllComponents(){
+    func categoryPickerViewAllComponents(){
         categoryPickerView.reloadAllComponents()
     }
+    
+ 
+    
+    
+    func maleGenderLabelChangeColor(
+        backColor:UIColor,
+        textColor:UIColor){
+            maleGenderButton.backgroundColor = backColor
+            maleGenderButton.layer.borderColor = textColor.cgColor
+            maleGenderButton.setTitleColor(textColor, for: .normal)
+        
+    }
+    
+    
+    func femaleGenderLabelChangeColor(
+        backColor:UIColor,
+        textColor:UIColor){
+            femaleGenderButton.backgroundColor = backColor
+            femaleGenderButton.layer.borderColor = textColor.cgColor
+            femaleGenderButton.setTitleColor(textColor, for: .normal)
+        
+    }
+    
+   
     
     private func configureUI(){
         addSubview(scrollView)
@@ -246,7 +305,7 @@ final class CreateAdvertView : UIView {
             }
         }
         
-        [maleGenderLabel,femaleGenderLabel].forEach { genderView in
+        [maleGenderButton,femaleGenderButton].forEach { genderView in
             genderStackView.addArrangedSubview(genderView)
             genderView.snp.makeConstraints { make in
                 make.height.equalTo(50)
@@ -263,8 +322,31 @@ final class CreateAdvertView : UIView {
         
     }
     
+   
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension CreateAdvertView : CreateAdvertViewInterface {
+    func inputsReturn()-> (
+        animalName:String,
+        animalAge:String,
+      
+        animalGenus:String,
+        animalInfo:String
+    ) {
+        let animalName:String = animalNameTextField.text ?? ""
+        let animalAge:String = animalAgeTextField.text ?? ""
+        let animalGenus:String = animalGenusTextField.text ?? ""
+        let animalInfo:String = animalInfoTextField.text ?? ""
+        return (
+            animalName,
+            animalAge,
+            animalGenus,
+            animalInfo)
+       
     }
 }
 

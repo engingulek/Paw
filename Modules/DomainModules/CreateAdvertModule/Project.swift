@@ -25,7 +25,7 @@ let dependensies : [TargetDependency] = [
     .project(target: "NetworkKit", path: .relativeToRoot("Kits/DomainKits/NetworkKit")),
     snapKit,
     kingfisher,
-    .external(name: "FirebaseStorage"),
+   // .external(name: "FirebaseStorage"),
     .project(target: "ModelKit", path: .relativeToRoot("Kits/SharedKits/ModelKit")),
     
 ]

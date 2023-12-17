@@ -7,13 +7,14 @@ import CommonKit
 import ModelKit
 
 
-typealias Ables = UIViewControllerAble & NavConAble
+typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble
 
 protocol CreateAdvertViewControllerInterface : AnyObject,Ables {
-   func reloadAllComponents()
+    func categoryPickerViewAllComponents()
+  
+    func changeFemaleButtonColors(backColor:UIColor,textColor:UIColor)
+    func changeMaleButtonColors(backColor:UIColor,textColor:UIColor)
 }
-
-
 
 final class CreateAdvertViewController : UIViewController {
     
@@ -29,11 +30,13 @@ final class CreateAdvertViewController : UIViewController {
     
     private var imageData : [Data] = []
     lazy var presenter : CreateAdvertPresenterInterface = CreateAdvertPresenter(
-        createAdverVC: self)
+        view: self,createAdvertView: createAdvertView)
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
         createAdvertView.categoryPickerViewConfigure(view: self)
+      
+       
     }
     
     private func openImagesGallery(){
@@ -57,35 +60,69 @@ extension CreateAdvertViewController  : PHPickerViewControllerDelegate {
                 if let image = object as? UIImage{
                     guard let data = image.jpegData(compressionQuality: 1.0) else {return}
                     self.imageData.append(data)
-                   
+                    
                 }
             }
         }
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
             self.createAdvertView.configureData(images: self.imageData)
+            self.presenter.getImageData(images: self.imageData)
         }
-       
+        
     }
 }
 
 extension CreateAdvertViewController :  CreateAdvertViewControllerInterface {
-    func reloadAllComponents() {
-        createAdvertView.reloadAllComponents()
+   
+    
+    
+    
+    func categoryPickerViewAllComponents() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.createAdvertView.categoryPickerViewAllComponents()
+        }
+    }
+   
+    
+    
+    func changeFemaleButtonColors(backColor: UIColor, textColor: UIColor) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.createAdvertView.femaleGenderLabelChangeColor(backColor: backColor, textColor: textColor)
+        }
+        
     }
     
-    
-    
-
+    func changeMaleButtonColors(backColor: UIColor, textColor: UIColor) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            self.createAdvertView.maleGenderLabelChangeColor(backColor: backColor, textColor: textColor)
+        }
+        
+    }
 }
 
 // MARK: - CreateAdvertViewDelegate
 extension CreateAdvertViewController :  CreateAdvertViewDelegate {
-    func selectCategoryFromPickerView(category: CategoryResult) {
-        print(category.category)
-    }
+   
+   
     
     func selectImagesFromGallery() {
         openImagesGallery()
+    }
+    
+    
+    func selectedMaleGender() {
+        presenter.selectedGender(gender: .male)
+    }
+    
+    func selectedFemaleGender() {
+        presenter.selectedGender(gender: .female)
+    }
+    func createAdvert() {
+        presenter.createAdvert()
     }
 }
 
@@ -108,8 +145,7 @@ extension CreateAdvertViewController :  UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let category = presenter.didSelectRow(row: row)
-        print(category)
+        presenter.didSelectRow(row: row)
     }
     
 }

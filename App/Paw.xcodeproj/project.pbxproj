@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		011F2C166437F97497E4FD2B /* GoogleDataTransport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5FF729EF116ADB7583ABC8 /* GoogleDataTransport.framework */; };
 		04497039A3B8528F819F0789 /* AdvertFilterModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9486B84DB1D1EEB0D90EA73 /* AdvertFilterModuleInterface.framework */; };
 		1D4466DACD4159DF907DA20A /* AdvertFilterModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1970530577B520C47B3FA6 /* AdvertFilterModule.framework */; };
 		1F51F6AB2D6D8F9D76986668 /* FavListModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBEABAAA9B3852EF3C45DB8 /* FavListModuleInterface.framework */; };
-		22ADEB18D31DC4BB4351A689 /* FirebaseStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 854F8A5F912BF7BDCD889514 /* FirebaseStorage.framework */; };
 		24FDA39EE873309DBD7E8813 /* OnboardingModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB464AE38F621748E4F61BF /* OnboardingModuleInterface.framework */; };
 		2C9E2A4EC38DB327977D6266 /* AdoptingHomeModule_AdoptingHomeModule.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E23C61CC8746D3FA65B22D48 /* AdoptingHomeModule_AdoptingHomeModule.bundle */; };
 		2E53B569F24FBC83A974CB42 /* TuistBundle+Paw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10348E04D5F333A54C38FDFB /* TuistBundle+Paw.swift */; };
@@ -20,38 +18,23 @@
 		3F6E95915180FDEE036B9E25 /* TabbarModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87DF3EDE84FAF15E98DAF49 /* TabbarModule.framework */; };
 		409A4827EAACA9109DCFFF6D /* DependencyRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC07A8937CC26D4CA47454 /* DependencyRegister.swift */; };
 		49E4C7B1D9E0E722B88356F4 /* CreateAdvertModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5A05B47321427DA88F81D1 /* CreateAdvertModuleInterface.framework */; };
-		51EAF4F55EC1301ABF08CB99 /* GTMSessionFetcherCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475E6F316A81C091787794F3 /* GTMSessionFetcherCore.framework */; };
 		570C1CB5BA50656C7AAE0CA5 /* OnboardingModule_OnboardingModule.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 9DE43C9C6BAE2591578EC6B0 /* OnboardingModule_OnboardingModule.bundle */; };
-		67CDAC555E36FDD68F0B020E /* TuistPlists+Paw.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C6C59494414BA4F76DC66A /* TuistPlists+Paw.swift */; };
-		68D52C5BDCE8CEF641F1278B /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C0047CBA6253FD02662D04 /* FirebaseCore.framework */; };
 		69FE997362E2833AFA4954CC /* AdvertDetailModule_AdvertDetailModule.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 355861AAD73B2F3794B225D0 /* AdvertDetailModule_AdvertDetailModule.bundle */; };
-		6B239C67BCFB4857443C44C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DB2A6F89C01B43E6C2E33F /* UIKit.framework */; };
-		70C0D5A204A7986ED840B409 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C818DAE4E6AD52A63EB37248 /* CoreTelephony.framework */; };
 		7A0044D57CD9CA6126BF042C /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEDDAC3A771DD98B35EE8780 /* NetworkKit.framework */; };
-		7F49B08A0D2E8B09F7446019 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AADFA8FB8662A7A95E0328B /* FirebaseCoreDiagnostics.framework */; };
 		81258CEC95FEFCFA6ACEB640 /* AdoptingHomeModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F703F19229EC05131B52073 /* AdoptingHomeModuleInterface.framework */; };
 		81BFEAB2DE7FA233F5CC89B1 /* OnboardingModule_OnboardingModule.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DE43C9C6BAE2591578EC6B0 /* OnboardingModule_OnboardingModule.bundle */; };
 		89B09AF790EDE85A6656F440 /* ModelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C0839E4A72A04A31343F0F /* ModelKit.framework */; };
 		953526606B257D91EDA97A29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FBF796437F4D7943A366A3 /* AppDelegate.swift */; };
 		97E32100E20A06B5E292BA43 /* AdvertDetailModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D28737DD9CE5CD960E51E74 /* AdvertDetailModule.framework */; };
-		A7BA0632FEC13D5E68246F1C /* GoogleUtilities_Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F47AC0B8A33784DEBF72DF /* GoogleUtilities_Logger.framework */; };
 		AF549071BDEF8D45BD1ED783 /* CreateAdvertModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB4E4F144B1897D12F088AB /* CreateAdvertModule.framework */; };
 		B3789AEF144397026AB3CBC8 /* AdoptingHomeModule_AdoptingHomeModule.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = E23C61CC8746D3FA65B22D48 /* AdoptingHomeModule_AdoptingHomeModule.bundle */; };
-		C0D226009F59410990E6D12B /* third_party_IsAppEncrypted.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A102ABD86A8450183968DB /* third_party_IsAppEncrypted.framework */; };
-		C6F5185D1ED84238B184611E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516D1036B467E35FE78265F3 /* SystemConfiguration.framework */; };
 		CD489541748176B9530562FF /* DependencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B46EAE9B881910DFED69AC /* DependencyKit.framework */; };
 		D11D2BAC145D539CF927950F /* AdvertDetailModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F24752CAC75C5524624AEE6 /* AdvertDetailModuleInterface.framework */; };
 		D31CA952D482AE8BF6FAE34A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F760D7C788EB003230DE08D5 /* LaunchScreen.storyboard */; };
 		D8DB805337450EF309DB7A0B /* AdoptingHomeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA24D5D262416DF4DBA0FCB /* AdoptingHomeModule.framework */; };
-		D9712CACECAF6D1610A89C6B /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A81DFA845E0A4D3B708A0D93 /* Firebase.framework */; };
 		DC37F4176E3FD8015547FAB4 /* OnboardingModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F509BB75EF7C7A9609A5DF43 /* OnboardingModule.framework */; };
-		DDF6E1FF338AEE40CE934F97 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52151B1C37143EDDACDCDAD5 /* nanopb.framework */; };
-		E0E140361DE9CC0361DC2F26 /* GoogleUtilities_Environment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE37202A60F667D9474D736F /* GoogleUtilities_Environment.framework */; };
-		E66090DF6BA5E791E0F1882E /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5A440BBEAF1234EF83E87C /* FBLPromises.framework */; };
-		E9691A4B4B7F18E0E8CAE53B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C14B1294B413F8F6ABFAC6D /* MobileCoreServices.framework */; };
 		F5E063B6DC5748EF7B8B983D /* AdvertDetailModule_AdvertDetailModule.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 355861AAD73B2F3794B225D0 /* AdvertDetailModule_AdvertDetailModule.bundle */; };
 		FE609550A47DEDD5BD77623B /* FavListModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000D35D5C14375A7EEA917D8 /* FavListModule.framework */; };
-		FF3BEC501031E493BF9E1B97 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 396F42E9CCD00C83898F2CDB /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -82,44 +65,27 @@
 /* Begin PBXFileReference section */
 		000D35D5C14375A7EEA917D8 /* FavListModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FavListModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10348E04D5F333A54C38FDFB /* TuistBundle+Paw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Paw.swift"; sourceTree = "<group>"; };
-		1C14B1294B413F8F6ABFAC6D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
-		21C0047CBA6253FD02662D04 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B46EAE9B881910DFED69AC /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F5A440BBEAF1234EF83E87C /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		355861AAD73B2F3794B225D0 /* AdvertDetailModule_AdvertDetailModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdvertDetailModule_AdvertDetailModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		396F42E9CCD00C83898F2CDB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3CBEABAAA9B3852EF3C45DB8 /* FavListModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FavListModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		475E6F316A81C091787794F3 /* GTMSessionFetcherCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTMSessionFetcherCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A5A05B47321427DA88F81D1 /* CreateAdvertModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CreateAdvertModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		516D1036B467E35FE78265F3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		52151B1C37143EDDACDCDAD5 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		58A102ABD86A8450183968DB /* third_party_IsAppEncrypted.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = third_party_IsAppEncrypted.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B5FF729EF116ADB7583ABC8 /* GoogleDataTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleDataTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D28737DD9CE5CD960E51E74 /* AdvertDetailModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F703F19229EC05131B52073 /* AdoptingHomeModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60FBF796437F4D7943A366A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7960F6481FA40E69436C4DF6 /* Paw-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Paw-Info.plist"; sourceTree = "<group>"; };
-		854F8A5F912BF7BDCD889514 /* FirebaseStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		85DB2A6F89C01B43E6C2E33F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		8AADFA8FB8662A7A95E0328B /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseCoreDiagnostics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F24752CAC75C5524624AEE6 /* AdvertDetailModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		996DF3855B80F01B4D7F0AF4 /* Paw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1970530577B520C47B3FA6 /* AdvertFilterModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertFilterModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE43C9C6BAE2591578EC6B0 /* OnboardingModule_OnboardingModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingModule_OnboardingModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA24D5D262416DF4DBA0FCB /* AdoptingHomeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A81DFA845E0A4D3B708A0D93 /* Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9486B84DB1D1EEB0D90EA73 /* AdvertFilterModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertFilterModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADC07A8937CC26D4CA47454 /* DependencyRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyRegister.swift; sourceTree = "<group>"; };
 		AEDDAC3A771DD98B35EE8780 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB4E4F144B1897D12F088AB /* CreateAdvertModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CreateAdvertModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE15F2428FB76894A071121 /* TabbarModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TabbarModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4F47AC0B8A33784DEBF72DF /* GoogleUtilities_Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities_Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C818DAE4E6AD52A63EB37248 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
 		C87DF3EDE84FAF15E98DAF49 /* TabbarModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TabbarModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE37202A60F667D9474D736F /* GoogleUtilities_Environment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities_Environment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB464AE38F621748E4F61BF /* OnboardingModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E23C61CC8746D3FA65B22D48 /* AdoptingHomeModule_AdoptingHomeModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdoptingHomeModule_AdoptingHomeModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5C6C59494414BA4F76DC66A /* TuistPlists+Paw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistPlists+Paw.swift"; sourceTree = "<group>"; };
 		E65F1E8D330DFCBD100AAF9C /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F509BB75EF7C7A9609A5DF43 /* OnboardingModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C0839E4A72A04A31343F0F /* ModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,10 +97,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70C0D5A204A7986ED840B409 /* CoreTelephony.framework in Frameworks */,
-				E9691A4B4B7F18E0E8CAE53B /* MobileCoreServices.framework in Frameworks */,
-				C6F5185D1ED84238B184611E /* SystemConfiguration.framework in Frameworks */,
-				6B239C67BCFB4857443C44C3 /* UIKit.framework in Frameworks */,
 				D8DB805337450EF309DB7A0B /* AdoptingHomeModule.framework in Frameworks */,
 				81258CEC95FEFCFA6ACEB640 /* AdoptingHomeModuleInterface.framework in Frameworks */,
 				97E32100E20A06B5E292BA43 /* AdvertDetailModule.framework in Frameworks */,
@@ -145,25 +107,14 @@
 				AF549071BDEF8D45BD1ED783 /* CreateAdvertModule.framework in Frameworks */,
 				49E4C7B1D9E0E722B88356F4 /* CreateAdvertModuleInterface.framework in Frameworks */,
 				CD489541748176B9530562FF /* DependencyKit.framework in Frameworks */,
-				E66090DF6BA5E791E0F1882E /* FBLPromises.framework in Frameworks */,
 				FE609550A47DEDD5BD77623B /* FavListModule.framework in Frameworks */,
 				1F51F6AB2D6D8F9D76986668 /* FavListModuleInterface.framework in Frameworks */,
-				D9712CACECAF6D1610A89C6B /* Firebase.framework in Frameworks */,
-				68D52C5BDCE8CEF641F1278B /* FirebaseCore.framework in Frameworks */,
-				7F49B08A0D2E8B09F7446019 /* FirebaseCoreDiagnostics.framework in Frameworks */,
-				22ADEB18D31DC4BB4351A689 /* FirebaseStorage.framework in Frameworks */,
-				51EAF4F55EC1301ABF08CB99 /* GTMSessionFetcherCore.framework in Frameworks */,
-				011F2C166437F97497E4FD2B /* GoogleDataTransport.framework in Frameworks */,
-				E0E140361DE9CC0361DC2F26 /* GoogleUtilities_Environment.framework in Frameworks */,
-				A7BA0632FEC13D5E68246F1C /* GoogleUtilities_Logger.framework in Frameworks */,
 				89B09AF790EDE85A6656F440 /* ModelKit.framework in Frameworks */,
 				7A0044D57CD9CA6126BF042C /* NetworkKit.framework in Frameworks */,
 				DC37F4176E3FD8015547FAB4 /* OnboardingModule.framework in Frameworks */,
 				24FDA39EE873309DBD7E8813 /* OnboardingModuleInterface.framework in Frameworks */,
 				3F6E95915180FDEE036B9E25 /* TabbarModule.framework in Frameworks */,
 				349EBB4E85D6F3EC32643E75 /* TabbarModuleInterface.framework in Frameworks */,
-				DDF6E1FF338AEE40CE934F97 /* nanopb.framework in Frameworks */,
-				C0D226009F59410990E6D12B /* third_party_IsAppEncrypted.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,17 +138,7 @@
 				23B46EAE9B881910DFED69AC /* DependencyKit.framework */,
 				000D35D5C14375A7EEA917D8 /* FavListModule.framework */,
 				3CBEABAAA9B3852EF3C45DB8 /* FavListModuleInterface.framework */,
-				2F5A440BBEAF1234EF83E87C /* FBLPromises.framework */,
-				A81DFA845E0A4D3B708A0D93 /* Firebase.framework */,
-				21C0047CBA6253FD02662D04 /* FirebaseCore.framework */,
-				8AADFA8FB8662A7A95E0328B /* FirebaseCoreDiagnostics.framework */,
-				854F8A5F912BF7BDCD889514 /* FirebaseStorage.framework */,
-				5B5FF729EF116ADB7583ABC8 /* GoogleDataTransport.framework */,
-				DE37202A60F667D9474D736F /* GoogleUtilities_Environment.framework */,
-				C4F47AC0B8A33784DEBF72DF /* GoogleUtilities_Logger.framework */,
-				475E6F316A81C091787794F3 /* GTMSessionFetcherCore.framework */,
 				F5C0839E4A72A04A31343F0F /* ModelKit.framework */,
-				52151B1C37143EDDACDCDAD5 /* nanopb.framework */,
 				AEDDAC3A771DD98B35EE8780 /* NetworkKit.framework */,
 				9DE43C9C6BAE2591578EC6B0 /* OnboardingModule_OnboardingModule.bundle */,
 				F509BB75EF7C7A9609A5DF43 /* OnboardingModule.framework */,
@@ -205,7 +146,6 @@
 				996DF3855B80F01B4D7F0AF4 /* Paw.app */,
 				C87DF3EDE84FAF15E98DAF49 /* TabbarModule.framework */,
 				BEE15F2428FB76894A071121 /* TabbarModuleInterface.framework */,
-				58A102ABD86A8450183968DB /* third_party_IsAppEncrypted.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,10 +162,6 @@
 		869CD3ABCFC192F3E0807574 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C818DAE4E6AD52A63EB37248 /* CoreTelephony.framework */,
-				1C14B1294B413F8F6ABFAC6D /* MobileCoreServices.framework */,
-				516D1036B467E35FE78265F3 /* SystemConfiguration.framework */,
-				85DB2A6F89C01B43E6C2E33F /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -251,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				10348E04D5F333A54C38FDFB /* TuistBundle+Paw.swift */,
-				E5C6C59494414BA4F76DC66A /* TuistPlists+Paw.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -259,7 +194,6 @@
 		CCB46E80478A09188A29DFB2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				396F42E9CCD00C83898F2CDB /* GoogleService-Info.plist */,
 				F760D7C788EB003230DE08D5 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -339,7 +273,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF3BEC501031E493BF9E1B97 /* GoogleService-Info.plist in Resources */,
 				D31CA952D482AE8BF6FAE34A /* LaunchScreen.storyboard in Resources */,
 				2C9E2A4EC38DB327977D6266 /* AdoptingHomeModule_AdoptingHomeModule.bundle in Resources */,
 				F5E063B6DC5748EF7B8B983D /* AdvertDetailModule_AdvertDetailModule.bundle in Resources */,
@@ -355,7 +288,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E53B569F24FBC83A974CB42 /* TuistBundle+Paw.swift in Sources */,
-				67CDAC555E36FDD68F0B020E /* TuistPlists+Paw.swift in Sources */,
 				953526606B257D91EDA97A29 /* AppDelegate.swift in Sources */,
 				409A4827EAACA9109DCFFF6D /* DependencyRegister.swift in Sources */,
 			);
@@ -375,36 +307,6 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-				);
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities-Environment.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities/Logger/Public/GoogleUtilities-Logger.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/third_party/IsAppEncrypted/Public/third-party-IsAppEncrypted.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/CoreOnly/Sources/module.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/Firebase/CoreDiagnostics/FIRCDLibrary/FirebaseCoreDiagnostics.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/gtm-session-fetcher/Source/SwiftPackage/module.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/nanopb/spm_headers/nanopb.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/promises/Sources/FBLPromises/include/module.modulemap",
-				);
-				OTHER_SWIFT_FLAGS = (
-					"$(inherited)",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities-Environment.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities/Logger/Public/GoogleUtilities-Logger.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/third_party/IsAppEncrypted/Public/third-party-IsAppEncrypted.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/CoreOnly/Sources/module.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/Firebase/CoreDiagnostics/FIRCDLibrary/FirebaseCoreDiagnostics.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/gtm-session-fetcher/Source/SwiftPackage/module.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/nanopb/spm_headers/nanopb.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/promises/Sources/FBLPromises/include/module.modulemap",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ios.app;
 				PRODUCT_NAME = Paw;
@@ -483,36 +385,6 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-				);
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities-Environment.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities/Logger/Public/GoogleUtilities-Logger.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/third_party/IsAppEncrypted/Public/third-party-IsAppEncrypted.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/CoreOnly/Sources/module.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/Firebase/CoreDiagnostics/FIRCDLibrary/FirebaseCoreDiagnostics.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/gtm-session-fetcher/Source/SwiftPackage/module.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/nanopb/spm_headers/nanopb.modulemap",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/promises/Sources/FBLPromises/include/module.modulemap",
-				);
-				OTHER_SWIFT_FLAGS = (
-					"$(inherited)",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities-Environment.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities/Logger/Public/GoogleUtilities-Logger.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/third_party/IsAppEncrypted/Public/third-party-IsAppEncrypted.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/CoreOnly/Sources/module.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/Firebase/CoreDiagnostics/FIRCDLibrary/FirebaseCoreDiagnostics.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/gtm-session-fetcher/Source/SwiftPackage/module.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/nanopb/spm_headers/nanopb.modulemap",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../Tuist/Dependencies/SwiftPackageManager/.build/checkouts/promises/Sources/FBLPromises/include/module.modulemap",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ios.app;
 				PRODUCT_NAME = Paw;

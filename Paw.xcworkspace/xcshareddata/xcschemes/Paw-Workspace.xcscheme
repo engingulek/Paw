@@ -182,20 +182,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "787785524E0E998535524C4F"
-               BuildableName = "FBLPromises.framework"
-               BlueprintName = "FBLPromises"
-               ReferencedContainer = "container:Tuist/Dependencies/SwiftPackageManager/.build/checkouts/promises/Promises.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "5E36DB04F3E7F697678AC2BB"
                BuildableName = "FavListModule.framework"
                BlueprintName = "FavListModule"
@@ -214,118 +200,6 @@
                BuildableName = "FavListModuleInterface.framework"
                BlueprintName = "FavListModuleInterface"
                ReferencedContainer = "container:Modules/DomainModules/FavListModule/FavListModule.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "769B28412864CE639D5C8BFF"
-               BuildableName = "Firebase.framework"
-               BlueprintName = "Firebase"
-               ReferencedContainer = "container:Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/Firebase.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "76913A6628DE3CA06F1E69AD"
-               BuildableName = "FirebaseCore.framework"
-               BlueprintName = "FirebaseCore"
-               ReferencedContainer = "container:Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/Firebase.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1688E5B40C8D8ED64293C659"
-               BuildableName = "FirebaseCoreDiagnostics.framework"
-               BlueprintName = "FirebaseCoreDiagnostics"
-               ReferencedContainer = "container:Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/Firebase.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "02EEA9B9E2D8F5158D2F7FDE"
-               BuildableName = "FirebaseStorage.framework"
-               BlueprintName = "FirebaseStorage"
-               ReferencedContainer = "container:Tuist/Dependencies/SwiftPackageManager/.build/checkouts/firebase-ios-sdk/Firebase.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C1FE7FF39814998C3D90D94E"
-               BuildableName = "GTMSessionFetcherCore.framework"
-               BlueprintName = "GTMSessionFetcherCore"
-               ReferencedContainer = "container:Tuist/Dependencies/SwiftPackageManager/.build/checkouts/gtm-session-fetcher/GTMSessionFetcher.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "08D12528663D0C8DD1A99BCB"
-               BuildableName = "GoogleDataTransport.framework"
-               BlueprintName = "GoogleDataTransport"
-               ReferencedContainer = "container:Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleDataTransport/GoogleDataTransport.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F20F5A508D0D18A6998274ED"
-               BuildableName = "GoogleUtilities_Environment.framework"
-               BlueprintName = "GoogleUtilities-Environment"
-               ReferencedContainer = "container:Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B8F4309DA609689A1E4C324E"
-               BuildableName = "GoogleUtilities_Logger.framework"
-               BlueprintName = "GoogleUtilities-Logger"
-               ReferencedContainer = "container:Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -438,34 +312,6 @@
                BuildableName = "TabbarModuleInterface.framework"
                BlueprintName = "TabbarModuleInterface"
                ReferencedContainer = "container:Modules/DomainModules/TabbarModule/TabbarModule.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "00CCAE173147AFA99AA51F0E"
-               BuildableName = "nanopb.framework"
-               BlueprintName = "nanopb"
-               ReferencedContainer = "container:Tuist/Dependencies/SwiftPackageManager/.build/checkouts/nanopb/nanopb.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "51D7B8F6AC67856BE18DC303"
-               BuildableName = "third_party_IsAppEncrypted.framework"
-               BlueprintName = "third-party-IsAppEncrypted"
-               ReferencedContainer = "container:Tuist/Dependencies/SwiftPackageManager/.build/checkouts/GoogleUtilities/GoogleUtilities.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

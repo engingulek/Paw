@@ -2,13 +2,13 @@ import Foundation
 import SnapKit
 import UIKit
 
-protocol OnboardingViewDelegate {
+protocol OnboardingViewDelegate : AnyObject {
     func selectedAdoptinView()
 }
 
 final class OnboardView : UIView {
     private let title:String = "Paw"
-    var delegate : OnboardingViewDelegate?
+    weak var delegate : OnboardingViewDelegate?
     
     private lazy var titleLabel : UILabel = {
         let label = UILabel()
@@ -49,7 +49,7 @@ final class OnboardView : UIView {
         return uiView
     }()
     
- 
+    
     
     private lazy var  dogWalkingLabel : UILabel = {
         let label = UILabel()
@@ -98,12 +98,8 @@ final class OnboardView : UIView {
         let actionTap = UITapGestureRecognizer(target: self, action: #selector(adoptinViewTap))
         adoptingView.addGestureRecognizer(actionTap)
         
-       // addSubview(userNameSurname)
-      //  addSubview(dogWalkView)
-       // addSubview(adoptingView)
-        
         onboardImageView.snp.makeConstraints { make in
-           
+            
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().offset(uiScreenHeight * 0.15)
             make.width.equalTo(snp.width).multipliedBy(0.5)
@@ -125,7 +121,7 @@ final class OnboardView : UIView {
             make.leading.equalToSuperview().offset(20)
             make.width.equalTo(snp.width).multipliedBy(0.4)
             make.height.equalTo(snp.height).multipliedBy(0.25)
-        
+            
         }
         
         adoptingView.snp.makeConstraints{ make in
@@ -133,11 +129,11 @@ final class OnboardView : UIView {
             make.trailing.equalToSuperview().offset(-20)
             make.width.equalTo(snp.width).multipliedBy(0.4)
             make.height.equalTo(snp.height).multipliedBy(0.25)
-        
+            
         }
         
         dogWalkingImageView.snp.makeConstraints { make in
-           
+            
             make.leading.equalToSuperview().offset(10)
             make.top.equalToSuperview().offset(5)
             make.width.equalTo(snp.width).multipliedBy(0.15)
@@ -168,7 +164,7 @@ final class OnboardView : UIView {
     @objc private func adoptinViewTap() {
         self.delegate?.selectedAdoptinView()
     }
-  
+    
     
     
     
