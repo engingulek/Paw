@@ -82,6 +82,10 @@ extension FavListViewController : UICollectionViewDelegate,UICollectionViewDataS
         cell.indexPathItem = indexPath.item
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.didSelectItemAt(at: indexPath)
+    }
 }
 
 

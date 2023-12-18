@@ -15,6 +15,7 @@ public enum NetworkPath {
     case addAdvertToFavList(Parameters)
     case addAdvertToAdvertList(Parameters)
     case getAdvertListByUserId(Int)
+    case deleteAdvertOfUser(Int,Int)
     
 }
 
@@ -50,12 +51,16 @@ extension NetworkPath : TargetType {
             return "adverts/add"
         case .getAdvertListByUserId(let userId):
             return "adverts/getAdvertListByUserId?userId=\(userId)"
+        case .deleteAdvertOfUser(let id, let userid):
+            return "adverts/deleteAdvert?id=\(id)&userid=\(userid)"
         }
     }
     
     var method: AlamofireMethod {
         switch self {
-        case .deleteFavAdvertFromFavAdvertList,.deletteFavAdvertByAdvertIdAndUserId:
+        case .deleteFavAdvertFromFavAdvertList,
+                .deletteFavAdvertByAdvertIdAndUserId,
+                .deleteAdvertOfUser:
             return .DELETE
         case .addAdvertToFavList,.addAdvertToAdvertList:
             return .POST

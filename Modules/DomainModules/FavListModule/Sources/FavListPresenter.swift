@@ -12,6 +12,7 @@ protocol FavListPresenterInterface : AnyObject {
     func numberOfItems() -> Int
     func cellForItem(at indexPath:IndexPath) -> FavAdvert
     func deleteFavAdvertAction(index:Int)
+    func didSelectItemAt(at indexPath : IndexPath)
 }
 
 
@@ -55,7 +56,7 @@ final class FavListPresenter : FavListPresenterInterface {
             try await interactor.deleteFavAdvert(id: id)
             view?.reloadCollectionView()
         }catch{
-            
+            //TODO: Alert message
         }
     }
     
@@ -86,6 +87,12 @@ final class FavListPresenter : FavListPresenterInterface {
             await fetchFavAdverts(userId: 1)
         }
         view?.reloadCollectionView()
+    }
+    
+    func didSelectItemAt(at indexPath : IndexPath) {
+        print(indexPath.item)
+        let favAdvertId = favAdverts[indexPath.item].advertId
+        router?.toAdvertDetail(view: view, id: favAdvertId)
     }
 }
 

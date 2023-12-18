@@ -43,6 +43,15 @@ final class CreateAdvertListPresenter : CreateAdvertListPresenterInterface {
             view?.reloadCollectionView()
         }
     }
+    
+    private func deleteAdvert(id:Int) async{
+        do{
+            try await interactor.deleteAdvertOfUser(id: id, userId: 1)
+            //view?.reloadCollectionView()
+        }catch{
+            //TODO: Alert message
+        }
+    }
 }
 
 
@@ -76,7 +85,12 @@ extension CreateAdvertListPresenter  {
     }
     
     func selectedTrashIcon(index: Int) {
-        print(createAdvertList[index].id)
+        let id = createAdvertList[index].id
+        Task {
+            @MainActor in
+            await deleteAdvert(id:id)
+            await fetchCreateAdvertList()
+        }
     }
 }
 

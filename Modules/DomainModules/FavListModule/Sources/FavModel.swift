@@ -6,5 +6,5 @@ struct FavAdvert: Codable {
     let images: [String]
     let name, gender, genus, category: String
     let age: Int
-    let city, district: String
+    let city: String
 }

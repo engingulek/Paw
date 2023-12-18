@@ -31,6 +31,14 @@ final class CreateAdvertListViewController : UIViewController{
         return collectionview
     }()
     
+    private lazy var messageLabel : UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.font = .systemFont(ofSize: 20,weight: .semibold)
+        label.isHidden = true
+        return label
+    }()
+    
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +57,12 @@ final class CreateAdvertListViewController : UIViewController{
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
+        }
+        
+        view.addSubview(messageLabel)
+        messageLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
         }
     }
     
@@ -69,7 +83,12 @@ extension CreateAdvertListViewController : CreateAdvertListViewControllerInterfa
     }
     
     func createMessage(isHidden: Bool, message: String) {
-        
+        DispatchQueue.main.async {[weak self] in
+            guard let self = self else { return }
+            self.createAdvertcollectionview.isHidden = !isHidden
+            self.messageLabel.isHidden = isHidden
+            self.messageLabel.text = message
+        }
     }
 }
 
@@ -94,6 +113,4 @@ extension CreateAdvertListViewController : CreateAdvertCollectionViewCellDelegat
     func selectedTrashIcon(index: Int) {
         presenter.selectedTrashIcon(index: index)
     }
-    
-    
 }
