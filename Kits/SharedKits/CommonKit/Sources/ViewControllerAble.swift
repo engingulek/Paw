@@ -4,7 +4,7 @@ import Foundation
 
 public protocol UIViewControllerAble {
     func setBackColorAble(color:UIColor)
-    func dismessAble()
+   
     
 }
 
@@ -13,10 +13,7 @@ extension UIViewControllerAble where Self : UIViewController {
         view.backgroundColor = color
     }
     
-    public func dismessAble(){
-        self.dismiss(animated: true)
-        
-    }
+   
 }
 
 //MARK: - NavConAble
@@ -70,9 +67,7 @@ extension TabbarConAble  where Self : UIViewController  {
     }
 }
 
-extension Notification.Name {
-    public static let notA = Notification.Name(rawValue: "NotA")
-}
+
 
 
 

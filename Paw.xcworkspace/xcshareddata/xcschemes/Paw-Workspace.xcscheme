@@ -140,6 +140,34 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7586EA62E36490DC21EE485A"
+               BuildableName = "CreateAdvertListModule.framework"
+               BlueprintName = "CreateAdvertListModule"
+               ReferencedContainer = "container:Modules/DomainModules/CreateAdvertListModule/CreateAdvertListModule.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "61F1C98E1D0B0B2B0CE6C63B"
+               BuildableName = "CreateAdvertListModuleInterface.framework"
+               BlueprintName = "CreateAdvertListModuleInterface"
+               ReferencedContainer = "container:Modules/DomainModules/CreateAdvertListModule/CreateAdvertListModule.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "F714091D6491E173A7EDF14C"
                BuildableName = "CreateAdvertModule.framework"
                BlueprintName = "CreateAdvertModule"

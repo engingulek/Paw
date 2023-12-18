@@ -15,6 +15,7 @@ protocol AdoptingRouterInterface {
 }
 
 public final class AdoptingRouter : AdoptingHomeModuleInterface {
+    
     public init() {}
     public func adoptingHomeViewController() -> UIViewController {
         let view = AdoptingHomeViewController()

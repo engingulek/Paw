@@ -31,7 +31,9 @@ let appTarget = Target(
             target: "AdvertFilterModule",
             path:.relativeToRoot("Modules/SharedModules/AdvertFilterModule")),
         .project(target: "CreateAdvertModule",
-                 path: .relativeToRoot("Modules/DomainModules/CreateAdvertModule"))
+                 path: .relativeToRoot("Modules/DomainModules/CreateAdvertModule")),
+        .project(target: "CreateAdvertListModule",
+                 path: .relativeToRoot("Modules/DomainModules/CreateAdvertListModule"))
         
     ]
 )

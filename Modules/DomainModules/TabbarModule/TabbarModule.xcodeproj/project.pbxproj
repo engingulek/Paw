@@ -14,6 +14,7 @@
 		BBFE797203ADC463DD0C272D /* TabbarModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698710A264EC64FA3C94B83 /* TabbarModuleInterface.swift */; };
 		C8EDBA14EE8A70C083A3DBCE /* AdoptingHomeModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = EC6F08FE73801117E74D7F4A /* AdoptingHomeModuleInterface.framework */; };
 		D04C73038019298511524634 /* TabbarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1718CB13144A2BEC0EA9ABB7 /* TabbarRouter.swift */; };
+		DD08E9688141DAA02716F837 /* CreateAdvertListModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = D5F87913AA2DBBF2211D9BC3 /* CreateAdvertListModuleInterface.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 			dstSubfolderSpec = 16;
 			files = (
 				C8EDBA14EE8A70C083A3DBCE /* AdoptingHomeModuleInterface.framework in Dependencies */,
+				DD08E9688141DAA02716F837 /* CreateAdvertListModuleInterface.framework in Dependencies */,
 				529B6689C0307B206A0D0F79 /* CreateAdvertModuleInterface.framework in Dependencies */,
 				B64C62F8034DEE254AA2C811 /* FavListModuleInterface.framework in Dependencies */,
 				8CDA2D2A77027E55AB2428A9 /* TabbarModuleInterface.framework in Dependencies */,
@@ -70,6 +72,7 @@
 		7698710A264EC64FA3C94B83 /* TabbarModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarModuleInterface.swift; sourceTree = "<group>"; };
 		8DCD9E04DBA4AD798E29FCCB /* TabbarModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TabbarModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		9A818D2B0940C84A74A92986 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		D5F87913AA2DBBF2211D9BC3 /* CreateAdvertListModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CreateAdvertListModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D931AF0B938BC468DC941882 /* FavListModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FavListModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7560FFEC8D5D709E5CF8AF9 /* TabbarModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TabbarModule-Info.plist"; sourceTree = "<group>"; };
 		EC6F08FE73801117E74D7F4A /* AdoptingHomeModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdoptingHomeModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				EC6F08FE73801117E74D7F4A /* AdoptingHomeModuleInterface.framework */,
+				D5F87913AA2DBBF2211D9BC3 /* CreateAdvertListModuleInterface.framework */,
 				2C527F5A9C8FAF9CC6D74DA3 /* CreateAdvertModuleInterface.framework */,
 				D931AF0B938BC468DC941882 /* FavListModuleInterface.framework */,
 				16565B6A43D5BB968F6D0D30 /* TabbarModule.framework */,

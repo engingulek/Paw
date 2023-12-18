@@ -3,7 +3,7 @@
 import Foundation
 
 
-protocol FavListPresenterInterface {
+protocol FavListPresenterInterface : AnyObject {
     var view : FavListViewControllerInterface? {get}
     var router : FavListRouterInterface? {get}
     var interactor : FavAdvertsInteractorInterface {get}

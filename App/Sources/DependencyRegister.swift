@@ -22,6 +22,9 @@ import FavListModuleInterface
 import DependencyKit
 import CreateAdvertModule
 import CreateAdvertModuleInterface
+import CreateAdvertListModuleInterface
+import CreateAdvertListModule
+
 
 
 
@@ -38,6 +41,7 @@ final class DependencyRegister {
         dependecyEngine.register(value: AdvertFilterRouter(), for: AdvertFilterModuleInterface.self)
         dependecyEngine.register(value: FavListRouter(), for: FavListModuleInterface.self)
         dependecyEngine.register(value: CreateAdvertRouter(), for: CreateAdvertModuleInterface.self)
+        dependecyEngine.register(value: CreateAdvertListRouter(), for: CreateAdvertListModuleInterface.self)
        
       
     }

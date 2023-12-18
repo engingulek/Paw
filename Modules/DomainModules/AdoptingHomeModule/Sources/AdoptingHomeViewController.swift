@@ -191,13 +191,22 @@ extension AdoptingHomeViewController : AdoptingHeaderViewDelegate {
 extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
    
     func prepareCollectionView() {
-        collectionview.dataSource = self
-        collectionview.delegate = self
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            collectionview.dataSource = self
+            collectionview.delegate = self
+        }
+        
     }
     
     func prepareTableView() {
-        advertTableView.delegate = self
-        advertTableView.dataSource = self
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            advertTableView.delegate = self
+            advertTableView.dataSource = self
+            
+        }
+        
     }
     
     func reloadCollectionView() {

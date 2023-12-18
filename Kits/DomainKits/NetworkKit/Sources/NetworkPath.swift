@@ -14,6 +14,7 @@ public enum NetworkPath {
     case deletteFavAdvertByAdvertIdAndUserId(Int,Int)
     case addAdvertToFavList(Parameters)
     case addAdvertToAdvertList(Parameters)
+    case getAdvertListByUserId(Int)
     
 }
 
@@ -47,6 +48,8 @@ extension NetworkPath : TargetType {
             return "favorites/add"
         case .addAdvertToAdvertList:
             return "adverts/add"
+        case .getAdvertListByUserId(let userId):
+            return "adverts/getAdvertListByUserId?userId=\(userId)"
         }
     }
     
