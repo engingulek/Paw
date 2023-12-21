@@ -3,11 +3,13 @@ import SnapKit
 import UIKit
 
 protocol OnboardingViewDelegate : AnyObject {
-    func selectedAdoptinView()
+    func toHomePage()
+    func createAccount()
 }
 
 final class OnboardView : UIView {
     private let title:String = "Paw"
+    private let banner:String = "Find Best Your Friend"
     weak var delegate : OnboardingViewDelegate?
     
     private lazy var titleLabel : UILabel = {
@@ -25,83 +27,57 @@ final class OnboardView : UIView {
         return image
     }()
     
-    private lazy var userNameSurname : UILabel = {
+    private lazy var banerLabel : UILabel = {
         let label = UILabel()
-        label.text = "Welcome Engin Gülek"
-        label.font = .systemFont(ofSize: 20, weight: .semibold)
-        return label
-    }()
-    
-    private lazy var dogWalkView : UIView = {
-        let uiView = UIView()
-        uiView.layer.cornerRadius = 10
-        uiView.layer.borderWidth = 1
-        uiView.layer.borderColor = UIColor.red.cgColor
-        return uiView
-    }()
-    
-    private lazy var adoptingView : UIView = {
-        let uiView = UIView()
-        uiView.layer.cornerRadius = 10
-        uiView.layer.borderWidth = 1
-        uiView.layer.borderColor = UIColor.red.cgColor
-        uiView.isUserInteractionEnabled = true
-        return uiView
-    }()
-    
-    
-    
-    private lazy var  dogWalkingLabel : UILabel = {
-        let label = UILabel()
-        label.text = "DogWalking"
-        label.font = .systemFont(ofSize: 20, weight: .semibold)
+        label.text = banner
+        label.font = .systemFont(ofSize: 35, weight: .semibold)
         label.textColor = .red
         return label
     }()
     
-    private lazy var dogWalkingImageView : UIImageView = {
-        let image = UIImageView()
-        image.image = OnboardingModuleAsset.dogWalking.image
-        image.contentMode = .scaleToFill
-        return image
+    private lazy var createAcoount : UIButton = {
+        let button = UIButton()
+        button.setTitle("Account Action", for: .normal)
+        button.backgroundColor = .red
+        button.setTitleColor(.white, for: .normal)
+        button.layer.borderColor = UIColor.red.cgColor
+        button.layer.borderWidth = 1
+        button.layer.cornerRadius = 10
+        button.addAction(createAccountButtonAction, for: .touchUpInside)
+        return button
     }()
     
-    private lazy var adoptingLabel : UILabel = {
-        let label = UILabel()
-        label.text = "Adopting"
-        label.font = .systemFont(ofSize: 20, weight: .semibold)
-        label.textColor = .red
-        return label
+    private lazy var createAccountButtonAction : UIAction =  UIAction { _ in
+        self.delegate?.createAccount()
+    }
+
+    private lazy var toHomePageButton : UIButton = {
+        let button = UIButton()
+        button.setTitle("Continue without Account Action", for: .normal)
+        button.backgroundColor = .white
+        button.setTitleColor(.red, for: .normal)
+        button.layer.borderColor = UIColor.red.cgColor
+        button.addAction(toHomePageButtonAction, for: .touchUpInside)
+        return button
     }()
     
-    private lazy var adoptingImageView : UIImageView = {
-        let image = UIImageView()
-        image.image = OnboardingModuleAsset.adopting.image
-        image.contentMode = .scaleToFill
-        return image
-    }()
-    
+    private lazy var toHomePageButtonAction : UIAction =  UIAction { _ in
+        self.delegate?.toHomePage()
+    }
+
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        let uiScreenHeight = UIScreen.main.bounds.height
-        backgroundColor = .white
+        
         addSubview(titleLabel)
         addSubview(onboardImageView)
-        addSubview(userNameSurname)
-        addSubview(dogWalkView)
-        addSubview(adoptingView)
-        dogWalkView.addSubview(dogWalkingLabel)
-        dogWalkView.addSubview(dogWalkingImageView)
-        adoptingView.addSubview(adoptingImageView)
-        adoptingView.addSubview(adoptingLabel)
-        
-        let actionTap = UITapGestureRecognizer(target: self, action: #selector(adoptinViewTap))
-        adoptingView.addGestureRecognizer(actionTap)
-        
+        addSubview(banerLabel)
+        addSubview(createAcoount)
+        addSubview(toHomePageButton)
+    
         onboardImageView.snp.makeConstraints { make in
             
             make.centerX.equalToSuperview()
-            make.top.equalToSuperview().offset(uiScreenHeight * 0.15)
+            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(10)
             make.width.equalTo(snp.width).multipliedBy(0.5)
             make.height.equalTo(snp.height).multipliedBy(0.2)
         }
@@ -111,49 +87,26 @@ final class OnboardView : UIView {
             make.top.equalTo(onboardImageView.snp.bottom).offset(20)
         }
         
-        userNameSurname.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(20)
-            make.leading.equalToSuperview().offset(20)
-        }
-        
-        dogWalkView.snp.makeConstraints { make in
-            make.top.equalTo(userNameSurname.snp.bottom).offset(20)
-            make.leading.equalToSuperview().offset(20)
-            make.width.equalTo(snp.width).multipliedBy(0.4)
-            make.height.equalTo(snp.height).multipliedBy(0.25)
-            
-        }
-        
-        adoptingView.snp.makeConstraints{ make in
-            make.top.equalTo(userNameSurname.snp.bottom).offset(20)
-            make.trailing.equalToSuperview().offset(-20)
-            make.width.equalTo(snp.width).multipliedBy(0.4)
-            make.height.equalTo(snp.height).multipliedBy(0.25)
-            
-        }
-        
-        dogWalkingImageView.snp.makeConstraints { make in
-            
-            make.leading.equalToSuperview().offset(10)
-            make.top.equalToSuperview().offset(5)
-            make.width.equalTo(snp.width).multipliedBy(0.15)
-            make.height.equalTo(snp.height).multipliedBy(0.15)
-        }
-        dogWalkingLabel.snp.makeConstraints { make in
+        banerLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-25)
+            make.centerY.equalToSuperview()
         }
         
-        adoptingImageView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(10)
-            make.top.equalToSuperview().offset(5)
-            make.width.equalTo(snp.width).multipliedBy(0.2)
-            make.height.equalTo(snp.height).multipliedBy(0.15)
-        }
-        
-        adoptingLabel.snp.makeConstraints { make in
+        createAcoount.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-25)
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-10)
+            make.leading.equalToSuperview().offset(10)
+            make.trailing.equalToSuperview().offset(-10)
+            make.height.equalTo(50)
+        }
+        
+        toHomePageButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.leading.equalToSuperview().offset(10)
+            make.trailing.equalToSuperview().offset(-10)
+            make.height.equalTo(50)
+            make.bottom.equalTo(createAcoount.snp.top).offset(-10)
+            
         }
     }
     
@@ -161,10 +114,7 @@ final class OnboardView : UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc private func adoptinViewTap() {
-        self.delegate?.selectedAdoptinView()
-    }
-    
+  
     
     
     

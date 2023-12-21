@@ -14,7 +14,7 @@ protocol AdoptingHeaderViewDelegate {
 
 final class AdoptingHeaderView : UIView {
     var delegate : AdoptingHeaderViewDelegate?
-    private lazy var userImageView : UIImageView = {
+    private lazy var appIcon : UIImageView = {
         let image = UIImageView()
         image.image = AdoptingHomeModuleAsset.paw.image
         image.layer.borderWidth = 1.0
@@ -25,13 +25,7 @@ final class AdoptingHeaderView : UIView {
         return image
     }()
     
-    private lazy var userNameSurname : UILabel = {
-        let label = UILabel()
-        label.text = "Engin Gülek"
-        label.font = .systemFont(ofSize: 18,weight: .semibold)
-        label.textColor = .black
-        return label
-    }()
+   
     
     private lazy var searchUIView : UIView = {
         let view = UIView()
@@ -121,40 +115,26 @@ final class AdoptingHeaderView : UIView {
     }
     
     override init(frame: CGRect) {
-        super.init(frame: frame)
+        super.init(frame: .zero)
         backgroundColor = .white
         confifureUI()
     }
     
-    
-   /* func badgeStatus(isHidden:Bool,count:Int){
-       // badgeLabel.isHidden = isHidden
-       // badgeLabel.text = "\(count)"
-    }*/
-    
     private func confifureUI(){
-        addSubview(userImageView)
-        addSubview(userNameSurname)
+        addSubview(appIcon)
         addSubview(searchUIView)
         searchUIView.addSubview(searchTextField)
         addSubview(actionButttonStackViews)
-       // addSubview(filterButton)
-       // filterButton.addSubview(badgeLabel)
         
-        userImageView.snp.makeConstraints { make in
-            make.trailing.equalToSuperview().offset(-20)
+        appIcon.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(10)
+            make.centerX.equalToSuperview()
             make.width.equalTo(50)
             make.height.equalTo(50)
         }
         
-        userNameSurname.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(20)
-            make.centerY.equalTo(userImageView.snp.centerY)
-        }
-        
         searchUIView.snp.makeConstraints { make in
-            make.top.equalTo(userNameSurname.snp.bottom).offset(30)
+            make.top.equalTo(appIcon.snp.bottom).offset(20)
             make.centerX.equalToSuperview()
             make.height.equalTo(50)
             make.leading.equalToSuperview().offset(25)
@@ -174,8 +154,6 @@ final class AdoptingHeaderView : UIView {
             make.top.equalTo(searchUIView.snp.bottom).offset(10)
         }
     }
-    
-    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -6,7 +6,6 @@ protocol OnboardPresenterInterface : AnyObject {
     func selectedAdoptingView()
 }
 
-
 final class OnboardPresenter : OnboardPresenterInterface {
     var router: OnboardiingRouterInterface?
     weak var view: OnboardiingViewControllerInterfaca?
@@ -25,5 +24,4 @@ extension OnboardPresenter {
     func selectedAdoptingView() {
         router?.toTabbarController(view: view)
     }
-    
 }

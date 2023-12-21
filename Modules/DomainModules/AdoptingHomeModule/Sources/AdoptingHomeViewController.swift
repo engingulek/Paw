@@ -80,6 +80,14 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
     // MARK: - ConfigureData
     private func configureUI(){
         view.addSubview(adoptingHeaderView)
+        
+        adoptingHeaderView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.height.equalTo(UIScreen.main.bounds.height / 4.5)
+        }
+        
         view.addSubview(collectionview)
         collectionview.snp.makeConstraints { make in
             make.top.equalTo(adoptingHeaderView.snp.bottom).offset(10)
