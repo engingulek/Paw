@@ -61,6 +61,9 @@
          location = "group:SharedModules"
          name = "SharedModules">
          <FileRef
+            location = "group:AccountActionModule/AccountActionModule.xcodeproj">
+         </FileRef>
+         <FileRef
             location = "group:AdvertDetailModule/AdvertDetailModule.xcodeproj">
          </FileRef>
          <FileRef

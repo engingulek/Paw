@@ -16,24 +16,38 @@ let appTarget = Target(
         .project(
             target: "OnboardingModule",
             path: .relativeToRoot("Modules/DomainModules/OnboardingModule")),
+        
         .project(
             target: "TabbarModule",
             path: .relativeToRoot("Modules/DomainModules/TabbarModule")),
+        
       .project(
             target: "AdoptingHomeModule",
             path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule")),
-         .project(target: "FavListModule", path: .relativeToRoot("Modules/DomainModules/FavListModule")),
+        
+         .project(
+            target: "FavListModule",
+            path: .relativeToRoot("Modules/DomainModules/FavListModule")),
         
         .project(
             target: "AdvertDetailModule",
             path: .relativeToRoot("Modules/SharedModules/AdvertDetailModule")),
+        
         .project(
             target: "AdvertFilterModule",
             path:.relativeToRoot("Modules/SharedModules/AdvertFilterModule")),
-        .project(target: "CreateAdvertModule",
-                 path: .relativeToRoot("Modules/DomainModules/CreateAdvertModule")),
-        .project(target: "CreateAdvertListModule",
-                 path: .relativeToRoot("Modules/DomainModules/CreateAdvertListModule"))
+        
+        .project(
+            target: "AccountActionModule",
+            path:.relativeToRoot("Modules/SharedModules/AccountActionModule")),
+        
+        .project(
+            target: "CreateAdvertModule",
+            path: .relativeToRoot("Modules/DomainModules/CreateAdvertModule")),
+        
+        .project(
+            target: "CreateAdvertListModule",
+            path: .relativeToRoot("Modules/DomainModules/CreateAdvertListModule"))
         
     ]
 )

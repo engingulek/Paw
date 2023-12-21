@@ -32,7 +32,7 @@ extension OnboardiingViewController : OnboardiingViewControllerInterfaca {
 
 extension OnboardiingViewController :  OnboardingViewDelegate  {
     func createAccount() {
-        print("Create Account")
+        presenter.createAccountSelected()
     }
     
     func toHomePage() {

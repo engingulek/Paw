@@ -20,6 +20,7 @@
 		B0C583814F4EFFF01EEBA053 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5862F88E0528EC32913F6 /* OnboardView.swift */; };
 		C107BD06ECD29834B71EAD0D /* OnboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5568FCDDF47C6311EED1DC /* OnboardPresenter.swift */; };
 		F3BD2AA655143415C1A448B3 /* OnboardiingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF263EA1036EAA7CBF08022 /* OnboardiingRouter.swift */; };
+		F4D4FE924436DB25B032B3C0 /* AccountActionModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 3993AC457E1444D99F4F3EC9 /* AccountActionModuleInterface.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 			buildActionMask = 8;
 			dstSubfolderSpec = 16;
 			files = (
+				F4D4FE924436DB25B032B3C0 /* AccountActionModuleInterface.framework in Dependencies */,
 				67276A869E008ABD8FBE42D2 /* CommonKit.framework in Dependencies */,
 				A7F3F3BDA5043F148F9F0895 /* DependencyKit.framework in Dependencies */,
 				22129BBCDC8C69B441A9514C /* OnboardingModuleInterface.framework in Dependencies */,
@@ -90,6 +92,7 @@
 		0A56FDDCFF56745A9107E53F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EBCABFABE4C1939EAF3C0B9 /* TabbarModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TabbarModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		231D6D41433FEEF74D0FCA44 /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3993AC457E1444D99F4F3EC9 /* AccountActionModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AccountActionModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D181EE3A6CDF26529E30209 /* OnboardingModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		566BD5A8A2AF50C374326034 /* TuistBundle+OnboardingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+OnboardingModule.swift"; sourceTree = "<group>"; };
 		6006C0517F34AF2F34B6511C /* OnboardingModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingModule-Info.plist"; sourceTree = "<group>"; };
@@ -216,6 +219,7 @@
 		EF72315DC57188DB40B41395 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				3993AC457E1444D99F4F3EC9 /* AccountActionModuleInterface.framework */,
 				231D6D41433FEEF74D0FCA44 /* CommonKit.framework */,
 				EB3A3E3C1659084A1AE6F0A2 /* DependencyKit.framework */,
 				B2F4AB108A12A8C311564E7C /* OnboardingModule_OnboardingModule.bundle */,

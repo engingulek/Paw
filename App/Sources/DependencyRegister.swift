@@ -24,6 +24,8 @@ import CreateAdvertModule
 import CreateAdvertModuleInterface
 import CreateAdvertListModuleInterface
 import CreateAdvertListModule
+import AccountActionModule
+import AccountActionModuleInterface
 
 
 
@@ -42,6 +44,7 @@ final class DependencyRegister {
         dependecyEngine.register(value: FavListRouter(), for: FavListModuleInterface.self)
         dependecyEngine.register(value: CreateAdvertRouter(), for: CreateAdvertModuleInterface.self)
         dependecyEngine.register(value: CreateAdvertListRouter(), for: CreateAdvertListModuleInterface.self)
+        dependecyEngine.register(value: AccountActionRouter(), for: AccountActionModuleInterface.self)
        
       
     }

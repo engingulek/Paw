@@ -35,7 +35,9 @@
 		D31CA952D482AE8BF6FAE34A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F760D7C788EB003230DE08D5 /* LaunchScreen.storyboard */; };
 		D8DB805337450EF309DB7A0B /* AdoptingHomeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA24D5D262416DF4DBA0FCB /* AdoptingHomeModule.framework */; };
 		DC37F4176E3FD8015547FAB4 /* OnboardingModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F509BB75EF7C7A9609A5DF43 /* OnboardingModule.framework */; };
+		DD2A78482D9A59471D3DB03B /* AccountActionModuleInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115AF52C267C4861D8D0FD65 /* AccountActionModuleInterface.framework */; };
 		F5E063B6DC5748EF7B8B983D /* AdvertDetailModule_AdvertDetailModule.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 355861AAD73B2F3794B225D0 /* AdvertDetailModule_AdvertDetailModule.bundle */; };
+		F7A19FDE5D227EDEF05BE2F1 /* AccountActionModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FACBE1492AE8DDEDA1D315 /* AccountActionModule.framework */; };
 		FE609550A47DEDD5BD77623B /* FavListModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000D35D5C14375A7EEA917D8 /* FavListModule.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,7 @@
 /* Begin PBXFileReference section */
 		000D35D5C14375A7EEA917D8 /* FavListModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FavListModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10348E04D5F333A54C38FDFB /* TuistBundle+Paw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Paw.swift"; sourceTree = "<group>"; };
+		115AF52C267C4861D8D0FD65 /* AccountActionModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AccountActionModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B46EAE9B881910DFED69AC /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		355861AAD73B2F3794B225D0 /* AdvertDetailModule_AdvertDetailModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdvertDetailModule_AdvertDetailModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CBEABAAA9B3852EF3C45DB8 /* FavListModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FavListModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +79,7 @@
 		60FBF796437F4D7943A366A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7960F6481FA40E69436C4DF6 /* Paw-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Paw-Info.plist"; sourceTree = "<group>"; };
 		8F24752CAC75C5524624AEE6 /* AdvertDetailModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertDetailModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95FACBE1492AE8DDEDA1D315 /* AccountActionModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AccountActionModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		996DF3855B80F01B4D7F0AF4 /* Paw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1970530577B520C47B3FA6 /* AdvertFilterModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvertFilterModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE43C9C6BAE2591578EC6B0 /* OnboardingModule_OnboardingModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingModule_OnboardingModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7A19FDE5D227EDEF05BE2F1 /* AccountActionModule.framework in Frameworks */,
+				DD2A78482D9A59471D3DB03B /* AccountActionModuleInterface.framework in Frameworks */,
 				D8DB805337450EF309DB7A0B /* AdoptingHomeModule.framework in Frameworks */,
 				81258CEC95FEFCFA6ACEB640 /* AdoptingHomeModuleInterface.framework in Frameworks */,
 				97E32100E20A06B5E292BA43 /* AdvertDetailModule.framework in Frameworks */,
@@ -130,6 +136,8 @@
 		42150FA3DD58CAF2A63483F5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				95FACBE1492AE8DDEDA1D315 /* AccountActionModule.framework */,
+				115AF52C267C4861D8D0FD65 /* AccountActionModuleInterface.framework */,
 				E23C61CC8746D3FA65B22D48 /* AdoptingHomeModule_AdoptingHomeModule.bundle */,
 				9FA24D5D262416DF4DBA0FCB /* AdoptingHomeModule.framework */,
 				5F703F19229EC05131B52073 /* AdoptingHomeModuleInterface.framework */,

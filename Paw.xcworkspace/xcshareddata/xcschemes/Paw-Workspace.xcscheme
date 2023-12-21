@@ -14,6 +14,34 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2938079BAB934D23D2C48409"
+               BuildableName = "AccountActionModule.framework"
+               BlueprintName = "AccountActionModule"
+               ReferencedContainer = "container:Modules/SharedModules/AccountActionModule/AccountActionModule.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "36E61AA0A0917A92DDC3954E"
+               BuildableName = "AccountActionModuleInterface.framework"
+               BlueprintName = "AccountActionModuleInterface"
+               ReferencedContainer = "container:Modules/SharedModules/AccountActionModule/AccountActionModule.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "A8457562E5B599B7D8615875"
                BuildableName = "AdoptingHomeModule.framework"
                BlueprintName = "AdoptingHomeModule"
@@ -365,10 +393,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A8457562E5B599B7D8615875"
-            BuildableName = "AdoptingHomeModule.framework"
-            BlueprintName = "AdoptingHomeModule"
-            ReferencedContainer = "container:Modules/DomainModules/AdoptingHomeModule/AdoptingHomeModule.xcodeproj">
+            BlueprintIdentifier = "2938079BAB934D23D2C48409"
+            BuildableName = "AccountActionModule.framework"
+            BlueprintName = "AccountActionModule"
+            ReferencedContainer = "container:Modules/SharedModules/AccountActionModule/AccountActionModule.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </LaunchAction>
@@ -381,10 +409,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A8457562E5B599B7D8615875"
-            BuildableName = "AdoptingHomeModule.framework"
-            BlueprintName = "AdoptingHomeModule"
-            ReferencedContainer = "container:Modules/DomainModules/AdoptingHomeModule/AdoptingHomeModule.xcodeproj">
+            BlueprintIdentifier = "2938079BAB934D23D2C48409"
+            BuildableName = "AccountActionModule.framework"
+            BlueprintName = "AccountActionModule"
+            ReferencedContainer = "container:Modules/SharedModules/AccountActionModule/AccountActionModule.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

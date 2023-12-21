@@ -4,9 +4,11 @@ import UIKit
 import OnboardingModuleInterface
 import TabbarModuleInterface
 import DependencyKit
+import AccountActionModuleInterface
 
 protocol OnboardiingRouterInterface : AnyObject  {
     func toTabbarController(view : OnboardiingViewControllerInterfaca?)
+    func toAccoountActionModule(view: OnboardiingViewControllerInterfaca?)
 }
 public final class  OnboardingRouter : OnboardingModuleInterfac {
    
@@ -21,11 +23,18 @@ public final class  OnboardingRouter : OnboardingModuleInterfac {
     }
 }
 extension OnboardingRouter :  OnboardiingRouterInterface  {
+   
     func toTabbarController(view: OnboardiingViewControllerInterfaca?) {
       
         @Dependency var tabbarModuleInterface : TabbarModuleInterface
         let viewController = tabbarModuleInterface.tabbarViewController()
         viewController.modalPresentationStyle = .fullScreen
+        view?.presentViewControllerAble(viewController, animated: true)
+    }
+    
+    func toAccoountActionModule(view: OnboardiingViewControllerInterfaca?) {
+        @Dependency var accountActionModule : AccountActionModuleInterface
+        let viewController = accountActionModule.accountActionViewController()
         view?.presentViewControllerAble(viewController, animated: true)
     }
     

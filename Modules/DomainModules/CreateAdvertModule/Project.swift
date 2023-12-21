@@ -27,6 +27,7 @@ let dependensies : [TargetDependency] = [
     kingfisher,
    // .external(name: "FirebaseStorage"),
     .project(target: "ModelKit", path: .relativeToRoot("Kits/SharedKits/ModelKit")),
+    .project(target: "AccountActionModuleInterface",path:.relativeToRoot("Modules/SharedModules/AccountActionModule")),
     
 ]
 
