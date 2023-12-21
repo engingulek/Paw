@@ -6,12 +6,16 @@ typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble
 protocol AdvertDetailViewControllerInterface: AnyObject ,Ables {
     func configureData(advertDetail: AdvertDetail)
     func alertMessage(title:String,message:String)
+    
+    func changeOpacityWhenSelectedImageOne(opacity:Float,defaultOpacity:Float)
+    func changeOpacityWhenSelectedImageTwo(opacity:Float,defaultOpacity:Float)
+    func changeOpacityWhenSelectedImageThree(opacity:Float,defaultOpacity:Float)
 }
 
 final class AdvertDetailViewController: UIViewController{
     
     var advertId : Int?
-    lazy var presenter: AdvertDetailPresenterInterface = AdvertDetailPresenter(view: self,advertDetailImageView: detailImageView)
+    lazy var presenter: AdvertDetailPresenterInterface = AdvertDetailPresenter(view: self)
     private lazy var detailImageView = AdvertDetailImagesImages()
     private lazy var detailInfoView = AdvertDetailInfoView()
     
@@ -46,6 +50,8 @@ final class AdvertDetailViewController: UIViewController{
 }
 
 extension AdvertDetailViewController : AdvertDetailViewControllerInterface  {
+  
+    
     func configureData(advertDetail:AdvertDetail){
        
         DispatchQueue.main.async {[weak self] in
@@ -64,6 +70,20 @@ extension AdvertDetailViewController : AdvertDetailViewControllerInterface  {
             alert.addAction(UIAlertAction(title: "Okey", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
+    }
+    
+    
+    
+    func changeOpacityWhenSelectedImageOne(opacity: Float, defaultOpacity: Float) {
+        detailImageView.changeOpacityImageOne(opacity: opacity, defaultOpacity: defaultOpacity)
+    }
+    
+    func changeOpacityWhenSelectedImageTwo(opacity: Float, defaultOpacity: Float) {
+        detailImageView.changeOpacityImageTwo(opacity: opacity, defaultOpacity: defaultOpacity)
+    }
+    
+    func changeOpacityWhenSelectedImageThree(opacity: Float, defaultOpacity: Float) {
+        detailImageView.changeOpacityImageThree(opacity: opacity, defaultOpacity: defaultOpacity)
     }
 }
 

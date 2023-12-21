@@ -23,20 +23,18 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
     
     var router: AdvertDetailRouterInterface?
     weak var view : AdvertDetailViewControllerInterface?
-    var advertDetailImageView : AdvertDetailImagesImagesInterface?
+  
     var interactor : AdvertDetailServiceProtocol
     
     var advertDetail : AdvertDetail? = nil
     
     init(router: AdvertDetailRouterInterface? = nil, 
          view: AdvertDetailViewControllerInterface?,
-         advertDetailImageView : AdvertDetailImagesImagesInterface?,
          interactor : AdvertDetailServiceProtocol = AdvertDetailService.shared
          
     ) {
         self.router = router
         self.view = view
-        self.advertDetailImageView = advertDetailImageView
         self.interactor = interactor
     }
     
@@ -94,15 +92,17 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
     }
     
     func selectedADIOne() {
-        advertDetailImageView?.changeOpacityWhenSelectedImageOne(opacity:0.50,defaultOpacity: 1)
+        view?.changeOpacityWhenSelectedImageOne(opacity: 1, defaultOpacity: 0.50)
+       
     }
     
     func selectedADITwo() {
-        advertDetailImageView?.changeOpacityWhenSelectedImageTwo(opacity:0.50,defaultOpacity: 1)
+        view?.changeOpacityWhenSelectedImageTwo(opacity:1, defaultOpacity: 0.50)
     }
     
     func selectedADIThree() {
-        advertDetailImageView?.changeOpacityWhenSelectedImageThree(opacity:0.50,defaultOpacity: 1)
+        view?.changeOpacityWhenSelectedImageThree(opacity: 1, defaultOpacity: 0.50)
+       
     }
     
     func favIconAction(advertId: Int, userId: Int) {

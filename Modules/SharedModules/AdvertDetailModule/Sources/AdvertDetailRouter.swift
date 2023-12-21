@@ -11,14 +11,12 @@ public final class AdvertDetailRouter : AdvertDetailModuleInterface {
     
     public func advertDetailViewController(id: Int) -> UIViewController {
         let view = AdvertDetailViewController()
-        let advertDetailImagesImages = AdvertDetailImagesImages()
         let router = AdvertDetailRouter()
         let inteeactor = AdvertDetailService()
         let presenter = AdvertDetailPresenter(
             router: router,
             view: view,
-            advertDetailImageView: advertDetailImagesImages,
-        interactor:inteeactor )
+            interactor:inteeactor )
         view.advertId = id
         view.presenter =  presenter
         return view
