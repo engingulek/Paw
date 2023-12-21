@@ -50,7 +50,6 @@ extension NavConAble  where Self : UIViewController{
 }
 
 // MARK: - TabbarConAble
-
 public protocol TabbarConAble {
     func tabbarisHidden(isHidden : Bool)
     func tabbarToPageWithIndex(index:Int)
@@ -65,6 +64,27 @@ extension TabbarConAble  where Self : UIViewController  {
     public func tabbarToPageWithIndex(index:Int) {
         tabBarController?.selectedIndex = index
     }
+}
+
+
+public protocol AlertMessageAble {
+    func createAlertMesssage(title:String,message:String,actionTitle:String)
+   
+}
+
+extension AlertMessageAble  where Self : UIViewController {
+    public  func createAlertMesssage(title:String,message:String,actionTitle:String){
+        let alert = UIAlertController(
+            title: title, 
+            message: message,
+            preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: actionTitle, style: .default))
+        self.present(alert, animated: true)
+        
+    }
+    
+
 }
 
 

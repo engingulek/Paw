@@ -7,7 +7,11 @@ import CommonKit
 import ModelKit
 
 
-typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble
+typealias Ables =
+UIViewControllerAble &
+NavConAble &
+TabbarConAble &
+AlertMessageAble
 
 protocol CreateAdvertViewControllerInterface : AnyObject,Ables {
     func categoryPickerViewAllComponents()
@@ -28,7 +32,7 @@ final class CreateAdvertViewController : UIViewController {
     
     
     
-    private var imageData : [Data] = []
+  
     lazy var presenter : CreateAdvertPresenterInterface = CreateAdvertPresenter(
         view: self,createAdvertView: createAdvertView)
     override func viewDidLoad() {
@@ -52,21 +56,23 @@ final class CreateAdvertViewController : UIViewController {
 }
 
 extension CreateAdvertViewController  : PHPickerViewControllerDelegate {
-    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-        imageData.removeAll()
+    func picker(_ picker: PHPickerViewController, 
+                didFinishPicking results: [PHPickerResult]) {
+        
+        var imageData : [Data] = []
         picker.dismiss(animated: true)
         for result in results {
             result.itemProvider.loadObject(ofClass: UIImage.self) { object, error in
                 if let image = object as? UIImage{
                     guard let data = image.jpegData(compressionQuality: 1.0) else {return}
-                    self.imageData.append(data)
-                    
+                    imageData.append(data)
                 }
             }
         }
+        
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-            self.createAdvertView.configureData(images: self.imageData)
-            self.presenter.getImageData(images: self.imageData)
+            self.createAdvertView.configureData(images: imageData)
+            self.presenter.getImageData(images: imageData)
         }
         
     }
@@ -74,9 +80,6 @@ extension CreateAdvertViewController  : PHPickerViewControllerDelegate {
 
 extension CreateAdvertViewController :  CreateAdvertViewControllerInterface {
    
-    
-    
-    
     func categoryPickerViewAllComponents() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }

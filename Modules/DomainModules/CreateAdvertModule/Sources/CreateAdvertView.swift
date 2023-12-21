@@ -112,8 +112,9 @@ final class CreateAdvertView : UIView {
     private lazy var maleGenderButton : UIButton = {
         let button = UIButton()
         button.setTitle("♂", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.layer.borderColor = UIColor.black.cgColor
+        button.setTitleColor(.white, for: .normal)
+        button.layer.borderColor = UIColor.red.cgColor
+        button.backgroundColor = .red
         button.layer.borderWidth = 2
         button.layer.cornerRadius = 10
         button.titleLabel?.font = .systemFont(ofSize: 20,weight: .semibold)
@@ -209,6 +210,9 @@ final class CreateAdvertView : UIView {
         button.addAction(createAdvertButtonAction, for: .touchUpInside)
         return button
     }()
+    
+    
+    
     private lazy var createAdvertButtonAction : UIAction =  UIAction { _ in
         self.delegate?.createAdvert()
     }
@@ -316,10 +320,13 @@ final class CreateAdvertView : UIView {
     
     func configureData(images:[Data]){
         print(images.count)
-        [firstImageView,secondImageView,thirdImageView].enumerated().forEach { index,imageView in
-            imageView.image = UIImage(data: images[index])
+        if images.count == 3 {
+            [firstImageView,secondImageView,thirdImageView].enumerated().forEach { index,imageView in
+                imageView.image = UIImage(data: images[index])
+            }
+            
         }
-        
+       
     }
     
    

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,9 +11,9 @@
 		09C4C157396868B9FCA17428 /* NetworkKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 92F895C2592A5E5FF0958DCE /* NetworkKit.framework */; };
 		2C3F45F4D97F8948B08C8BC1 /* CreateAdvertListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E1A59763EBB4DCE98789D2 /* CreateAdvertListRouter.swift */; };
 		3956AA6EEE669BFABC5D0BCE /* DependencyKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = F64095935ED96B51C109259E /* DependencyKit.framework */; };
+		3F390A492106E26AEBDA26AA /* CreateAdvertListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D25E942C0D0DE7812E0F75 /* CreateAdvertListPresenter.swift */; };
+		42E224CC79AA298CCF753787 /* CreateAdvertCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7897B778ABA2E59F6F74B19C /* CreateAdvertCVC.swift */; };
 		4F7A496A67B7F729B0848FFB /* CreateAdvertLisModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE1556D92F0B647370DD8DD /* CreateAdvertLisModuleInterface.swift */; };
-		7D8832BA2B3081AD00E71866 /* CreateAdvertListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8832B92B3081AD00E71866 /* CreateAdvertListPresenter.swift */; };
-		7D8832BC2B30885D00E71866 /* CreateAdvertCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8832BB2B30885D00E71866 /* CreateAdvertCVC.swift */; };
 		80EEC0EBF10EBA47930E7BC3 /* CreateAdvertListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3369A058164621D330C71B /* CreateAdvertListViewController.swift */; };
 		8D057FE796EB9C765BA7106A /* CreateAdvertListInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54B47D4A777C75B9821C64 /* CreateAdvertListInterface.swift */; };
 		8ED87231C7BC4A9089B98D8D /* CreateAdvertListModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 803E8C1C3D59D17A44B7E57C /* CreateAdvertListModuleInterface.framework */; };
@@ -73,8 +73,8 @@
 		110715ACCD5220C63178A102 /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BA9132962019DC4F105DFC /* CreateAdvertListModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CreateAdvertListModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3369A058164621D330C71B /* CreateAdvertListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertListViewController.swift; sourceTree = "<group>"; };
-		7D8832B92B3081AD00E71866 /* CreateAdvertListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertListPresenter.swift; sourceTree = "<group>"; };
-		7D8832BB2B30885D00E71866 /* CreateAdvertCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertCVC.swift; sourceTree = "<group>"; };
+		51D25E942C0D0DE7812E0F75 /* CreateAdvertListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertListPresenter.swift; sourceTree = "<group>"; };
+		7897B778ABA2E59F6F74B19C /* CreateAdvertCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertCVC.swift; sourceTree = "<group>"; };
 		803E8C1C3D59D17A44B7E57C /* CreateAdvertListModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CreateAdvertListModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CBA948D331826ABCAACC03 /* CreateAdvertListModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CreateAdvertListModule-Info.plist"; sourceTree = "<group>"; };
 		92F895C2592A5E5FF0958DCE /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,11 +164,11 @@
 		B8018399CDDDDE84D6D22B1A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				7897B778ABA2E59F6F74B19C /* CreateAdvertCVC.swift */,
 				DE54B47D4A777C75B9821C64 /* CreateAdvertListInterface.swift */,
+				51D25E942C0D0DE7812E0F75 /* CreateAdvertListPresenter.swift */,
 				F0E1A59763EBB4DCE98789D2 /* CreateAdvertListRouter.swift */,
 				4A3369A058164621D330C71B /* CreateAdvertListViewController.swift */,
-				7D8832B92B3081AD00E71866 /* CreateAdvertListPresenter.swift */,
-				7D8832BB2B30885D00E71866 /* CreateAdvertCVC.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -234,6 +234,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = E1BB821EFCEB893CBBEBF26A /* Build configuration list for PBXProject "CreateAdvertListModule" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -280,11 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D8832BA2B3081AD00E71866 /* CreateAdvertListPresenter.swift in Sources */,
+				42E224CC79AA298CCF753787 /* CreateAdvertCVC.swift in Sources */,
 				8D057FE796EB9C765BA7106A /* CreateAdvertListInterface.swift in Sources */,
+				3F390A492106E26AEBDA26AA /* CreateAdvertListPresenter.swift in Sources */,
 				2C3F45F4D97F8948B08C8BC1 /* CreateAdvertListRouter.swift in Sources */,
 				80EEC0EBF10EBA47930E7BC3 /* CreateAdvertListViewController.swift in Sources */,
-				7D8832BC2B30885D00E71866 /* CreateAdvertCVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

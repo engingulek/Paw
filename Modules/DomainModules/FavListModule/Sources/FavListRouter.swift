@@ -12,7 +12,7 @@ public final class FavListRouter : FavListModuleInterface {
     public func favListViewController() -> UIViewController {
         let viewController = FavListViewController()
         let router = FavListRouter()
-        var interactor = FavAdvertsInteractor()
+        let interactor = FavAdvertsInteractor()
         let presenter = FavListPresenter(view: viewController,router: router,interactor: interactor)
         viewController.presenter = presenter
         return viewController
