@@ -30,9 +30,4 @@ extension OnboardingRouter :  OnboardiingRouterInterface  {
         viewController.modalPresentationStyle = .fullScreen
         view?.presentViewControllerAble(viewController, animated: true)
     }
-    
-
-  
-    
-    
 }

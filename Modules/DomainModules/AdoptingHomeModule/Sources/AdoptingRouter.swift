@@ -45,7 +45,3 @@ extension AdoptingRouter : AdoptingRouterInterface {
             view?.pushViewControllerAble(viewController, animated: true)
     }
 }
-
-
-
-

@@ -31,10 +31,13 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
     private lazy var collectionview : UICollectionView  = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 5, height:UIScreen.main.bounds.height / 15 )
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 5, 
+                            height:UIScreen.main.bounds.height / 15 )
         layout.scrollDirection = .horizontal
-        let  collectionview = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionview.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
+        let  collectionview = UICollectionView(frame: .zero, 
+                                          collectionViewLayout: layout)
+        collectionview.register(CategoryCollectionViewCell.self,
+                            forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
         
         collectionview.showsHorizontalScrollIndicator = false
         collectionview.backgroundColor = UIColor.white
@@ -44,13 +47,14 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
     private lazy var tableViewActivityIndicator : UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView()
         indicator.hidesWhenStopped = true
-        indicator.color = .black
+        indicator.color = Theme.defaultTheme.themeColor.indicatorColor
         return indicator
     }()
     
     private lazy var advertTableView :  UITableView = {
         let tableView = UITableView()
-        tableView.register(AdvertTableViewCell.self, forCellReuseIdentifier: AdvertTableViewCell.identifier)
+        tableView.register(AdvertTableViewCell.self,
+                        forCellReuseIdentifier: AdvertTableViewCell.identifier)
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         return tableView
@@ -58,8 +62,8 @@ protocol AdoptingHomeViewControllerInterfaca : AnyObject,Ables {
     
     private lazy var messageLabel : UILabel = {
         let label = UILabel()
-        label.textColor = .black
-        label.font = .systemFont(ofSize: 20,weight: .semibold)
+        label.textColor = Theme.defaultTheme.themeColor.primaryTextColor
+        label.font =  Theme.defaultTheme.themeFont.primaryLabel.boldVersion
         label.isHidden = true
         return label
     }()
@@ -126,13 +130,18 @@ extension AdoptingHomeViewController : UICollectionViewDelegate,UICollectionView
         return presenter.numberOfSections()
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView,
+                    numberOfItemsInSection section: Int) -> Int {
         
         return presenter.categorNumberOfItems()
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as? CategoryCollectionViewCell else {return UICollectionViewCell()}
+    func collectionView(_ collectionView: UICollectionView, 
+                    cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: CategoryCollectionViewCell.identifier,
+            for: indexPath) as? CategoryCollectionViewCell else {return UICollectionViewCell()}
         
         let item  = presenter.categoryCellForItem(at: indexPath)
         cell.configureData(category: item.category)
@@ -144,30 +153,43 @@ extension AdoptingHomeViewController : UICollectionViewDelegate,UICollectionView
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, 
+                    didSelectItemAt indexPath: IndexPath) {
+        
         presenter.didSelectItemAt(at: indexPath)
     }
 }
 
 //MARK: UITableViewDelegate,UITableViewDataSource
 extension AdoptingHomeViewController : UITableViewDelegate,UITableViewDataSource {
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, 
+                numberOfRowsInSection section: Int) -> Int {
+         
         return presenter.numberOfRowsInSection()
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: AdvertTableViewCell.identifier, for: indexPath) as? AdvertTableViewCell else {return UITableViewCell()}
+    func tableView(_ tableView: UITableView, 
+                cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: AdvertTableViewCell.identifier,
+            for: indexPath) as? AdvertTableViewCell else {return UITableViewCell()}
+        
         let advert = presenter.cellForRowAt(at: indexPath)
         cell.configureData(advert: advert)
         cell.selectionStyle = .none
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, 
+                heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         return UIScreen.main.bounds.height / 5
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, 
+                didSelectRowAt indexPath: IndexPath) {
+        
         presenter.didSelectRowAt(at: indexPath)
     }
     
@@ -204,7 +226,6 @@ extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
             collectionview.dataSource = self
             collectionview.delegate = self
         }
-        
     }
     
     func prepareTableView() {
@@ -255,19 +276,4 @@ extension AdoptingHomeViewController : AdoptingHomeViewControllerInterfaca{
             
         }
     }
-    
-  
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

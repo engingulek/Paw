@@ -83,7 +83,7 @@ final class OnboardView : UIView {
             make.leading.equalToSuperview().offset(10)
             make.trailing.equalToSuperview().offset(-10)
             make.height.equalTo(50)
-            make.bottom.equalTo(snp.bottom).offset(-10)
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-10)
         }
     }
     
@@ -92,6 +92,3 @@ final class OnboardView : UIView {
     }
     
 }
-
-
-

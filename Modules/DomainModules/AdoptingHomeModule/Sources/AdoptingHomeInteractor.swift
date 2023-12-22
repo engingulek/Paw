@@ -2,7 +2,7 @@
 import Foundation
 import NetworkKit
 import ModelKit
-protocol AdoptingHomeServiceProtocol {
+protocol AdoptingHomeInteractorProtocol {
     func fetchCategories() async throws -> [CategoryResult]
     func fetchAdoptinAdvert() async throws -> [AdoptingAdvert]
     func advertFilterByCategory(categoryId:Int) async throws ->  [AdoptingAdvert]
@@ -12,7 +12,7 @@ protocol AdoptingHomeServiceProtocol {
         searchText:String)  async throws -> [AdoptingAdvert]
 }
 
-final class AdoptingHomeService : AdoptingHomeServiceProtocol {
+final class AdoptingHomeService : AdoptingHomeInteractorProtocol {
     
     static let shared = AdoptingHomeService()
     
@@ -73,6 +73,5 @@ final class AdoptingHomeService : AdoptingHomeServiceProtocol {
             }catch{
                 throw error
             }
-        
     }
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,15 +11,15 @@
 		2A067D029D309C6FCE749DE4 /* TuistAssets+OnboardingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A3C8C1B10322789F1DE24 /* TuistAssets+OnboardingModule.swift */; };
 		3CA22F8C6C34B7CBF0F205DE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 646BAC3F0AF89BC85645672A /* SnapKit */; };
 		401F19449352D90C52A51ECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A56FDDCFF56745A9107E53F /* Assets.xcassets */; };
+		509A381BECADC71796FE8604 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEAD012F21CA04E9A385C1 /* UIFont+Extensions.swift */; };
 		67276A869E008ABD8FBE42D2 /* CommonKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 231D6D41433FEEF74D0FCA44 /* CommonKit.framework */; };
 		6796CB09086A695AD1FACF1C /* OnboardingModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7096757BC66320007DCE86E /* OnboardingModuleInterface.swift */; };
-		7DD920002B35E87E00349B2F /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD91FFF2B35E87E00349B2F /* FontSize.swift */; };
-		7DD920032B35E9B200349B2F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD920022B35E9B200349B2F /* Theme.swift */; };
-		7DD920062B35EBE100349B2F /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD920052B35EBE100349B2F /* UIFont+Extensions.swift */; };
 		828A9BFC0AFB5B195910CB05 /* TuistBundle+OnboardingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566BD5A8A2AF50C374326034 /* TuistBundle+OnboardingModule.swift */; };
+		861BE47082A2C19B0ED862BB /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9178224DC0F8C60810310B2 /* FontSize.swift */; };
 		94514F704066AFBB36D38FA2 /* TabbarModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 0EBCABFABE4C1939EAF3C0B9 /* TabbarModuleInterface.framework */; };
 		A6C5A36779CCD576D3A8B4AA /* OnboardiingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7187CCB1C58D14AC60053790 /* OnboardiingViewController.swift */; };
 		A7F3F3BDA5043F148F9F0895 /* DependencyKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = EB3A3E3C1659084A1AE6F0A2 /* DependencyKit.framework */; };
+		A8E757988017598B7869DF22 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32AE628E39682DD2DD49652 /* Theme.swift */; };
 		B0C583814F4EFFF01EEBA053 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5862F88E0528EC32913F6 /* OnboardView.swift */; };
 		C107BD06ECD29834B71EAD0D /* OnboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5568FCDDF47C6311EED1DC /* OnboardPresenter.swift */; };
 		F3BD2AA655143415C1A448B3 /* OnboardiingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF263EA1036EAA7CBF08022 /* OnboardiingRouter.swift */; };
@@ -94,20 +94,20 @@
 		0EBCABFABE4C1939EAF3C0B9 /* TabbarModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TabbarModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		231D6D41433FEEF74D0FCA44 /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D181EE3A6CDF26529E30209 /* OnboardingModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DEEAD012F21CA04E9A385C1 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		566BD5A8A2AF50C374326034 /* TuistBundle+OnboardingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+OnboardingModule.swift"; sourceTree = "<group>"; };
 		6006C0517F34AF2F34B6511C /* OnboardingModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingModule-Info.plist"; sourceTree = "<group>"; };
 		6F517901FD839BD3A04C2113 /* OnboardingModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7187CCB1C58D14AC60053790 /* OnboardiingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardiingViewController.swift; sourceTree = "<group>"; };
-		7DD91FFF2B35E87E00349B2F /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
-		7DD920022B35E9B200349B2F /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		7DD920052B35EBE100349B2F /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		8F5568FCDDF47C6311EED1DC /* OnboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPresenter.swift; sourceTree = "<group>"; };
 		9E6A3C8C1B10322789F1DE24 /* TuistAssets+OnboardingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+OnboardingModule.swift"; sourceTree = "<group>"; };
 		ACB5862F88E0528EC32913F6 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
 		ACF263EA1036EAA7CBF08022 /* OnboardiingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardiingRouter.swift; sourceTree = "<group>"; };
 		B2F4AB108A12A8C311564E7C /* OnboardingModule_OnboardingModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingModule_OnboardingModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7096757BC66320007DCE86E /* OnboardingModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModuleInterface.swift; sourceTree = "<group>"; };
+		B9178224DC0F8C60810310B2 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		BDB01826376F4CC1AF04CB6E /* OnboardingModule_OnboardingModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingModule_OnboardingModule-Info.plist"; sourceTree = "<group>"; };
+		D32AE628E39682DD2DD49652 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		EB3A3E3C1659084A1AE6F0A2 /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,7 +150,7 @@
 		3B9039ED2CF016B05478A155 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				7DD91FFA2B35E7EA00349B2F /* Constant */,
+				EC4205DAF8D61D481431BF12 /* Constant */,
 				ACF263EA1036EAA7CBF08022 /* OnboardiingRouter.swift */,
 				7187CCB1C58D14AC60053790 /* OnboardiingViewController.swift */,
 				8F5568FCDDF47C6311EED1DC /* OnboardPresenter.swift */,
@@ -176,6 +176,14 @@
 			path = Derived;
 			sourceTree = "<group>";
 		};
+		5BC313BBF2E698B2D819F035 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3DEEAD012F21CA04E9A385C1 /* UIFont+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		6C6C76F895ABACC7803F454C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,45 +192,27 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		7DD91FFA2B35E7EA00349B2F /* Constant */ = {
-			isa = PBXGroup;
-			children = (
-				7DD920042B35EBCF00349B2F /* Extension */,
-				7DD920012B35E9A700349B2F /* Theme */,
-				7DD91FFE2B35E87600349B2F /* Size */,
-			);
-			path = Constant;
-			sourceTree = "<group>";
-		};
-		7DD91FFE2B35E87600349B2F /* Size */ = {
-			isa = PBXGroup;
-			children = (
-				7DD91FFF2B35E87E00349B2F /* FontSize.swift */,
-			);
-			path = Size;
-			sourceTree = "<group>";
-		};
-		7DD920012B35E9A700349B2F /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-				7DD920022B35E9B200349B2F /* Theme.swift */,
-			);
-			path = Theme;
-			sourceTree = "<group>";
-		};
-		7DD920042B35EBCF00349B2F /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				7DD920052B35EBE100349B2F /* UIFont+Extensions.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		954D5EDBCEDF4873EC7AD2B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A889560ABB86F2F5AB7FF6BA /* Size */ = {
+			isa = PBXGroup;
+			children = (
+				B9178224DC0F8C60810310B2 /* FontSize.swift */,
+			);
+			path = Size;
+			sourceTree = "<group>";
+		};
+		B54345DF07A20ADF9EA4F552 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				D32AE628E39682DD2DD49652 /* Theme.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		C7A96691D0B3DC1FF519D812 /* Project */ = {
@@ -252,6 +242,16 @@
 				566BD5A8A2AF50C374326034 /* TuistBundle+OnboardingModule.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		EC4205DAF8D61D481431BF12 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				5BC313BBF2E698B2D819F035 /* Extension */,
+				A889560ABB86F2F5AB7FF6BA /* Size */,
+				B54345DF07A20ADF9EA4F552 /* Theme */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		EF72315DC57188DB40B41395 /* Products */ = {
@@ -336,6 +336,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = B09C2A4DE7D1BAB19EF20DBE /* Build configuration list for PBXProject "OnboardingModule" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -399,13 +401,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A067D029D309C6FCE749DE4 /* TuistAssets+OnboardingModule.swift in Sources */,
-				7DD920032B35E9B200349B2F /* Theme.swift in Sources */,
 				828A9BFC0AFB5B195910CB05 /* TuistBundle+OnboardingModule.swift in Sources */,
-				7DD920002B35E87E00349B2F /* FontSize.swift in Sources */,
+				509A381BECADC71796FE8604 /* UIFont+Extensions.swift in Sources */,
+				861BE47082A2C19B0ED862BB /* FontSize.swift in Sources */,
+				A8E757988017598B7869DF22 /* Theme.swift in Sources */,
 				C107BD06ECD29834B71EAD0D /* OnboardPresenter.swift in Sources */,
 				B0C583814F4EFFF01EEBA053 /* OnboardView.swift in Sources */,
 				F3BD2AA655143415C1A448B3 /* OnboardiingRouter.swift in Sources */,
-				7DD920062B35EBE100349B2F /* UIFont+Extensions.swift in Sources */,
 				A6C5A36779CCD576D3A8B4AA /* OnboardiingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,9 +17,7 @@ final class AdoptingHeaderView : UIView {
     private lazy var appIcon : UIImageView = {
         let image = UIImageView()
         image.image = AdoptingHomeModuleAsset.paw.image
-        image.layer.borderWidth = 1.0
         image.layer.masksToBounds =  false
-        image.layer.borderColor = UIColor.white.cgColor
         image.layer.cornerRadius = image.frame.size.width / 2
         image.clipsToBounds = true
         return image
@@ -30,7 +28,7 @@ final class AdoptingHeaderView : UIView {
     private lazy var searchUIView : UIView = {
         let view = UIView()
         view.backgroundColor = AdoptingHomeModuleAsset.searhViewBack.color
-        view.layer.cornerRadius = 10
+        view.layer.cornerRadius = CornerRadius.small.rawValue
         return view
     }()
     
@@ -38,7 +36,9 @@ final class AdoptingHeaderView : UIView {
         let textField = UITextField()
         textField.leftViewMode = .always
         textField.placeholder = "Search Pet"
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        let imageView = UIImageView(
+            frame: CGRect(x: 0, y: 0,
+                          width: 30, height: 30))
         let image = UIImage(systemName: "magnifyingglass")?.withTintColor(.lightGray,renderingMode: .alwaysOriginal)
         imageView.image = image
         textField.leftView = imageView
@@ -50,16 +50,17 @@ final class AdoptingHeaderView : UIView {
         let button = UIButton()
         button.setTitle("Filter", for: .normal)
         button.backgroundColor = .white
-        button.setTitleColor(.red, for: .normal)
-        button.layer.borderColor = UIColor.red.cgColor
+        button.setTitleColor(Theme.defaultTheme.themeColor.labelUIColor,
+                             for: .normal)
+        button.layer.borderColor = Theme.defaultTheme.themeColor.primaryBorderColor
         button.layer.borderWidth = 1
-        button.layer.cornerRadius = 10
-        button.addAction(filterButtonAction, for: .touchUpInside)
+        button.layer.cornerRadius = CornerRadius.small.rawValue
+        button.addAction(filterButtonTapped, for: .touchUpInside)
         return button
     }()
     
     
-    private lazy var filterButtonAction : UIAction =  UIAction { _ in
+    private lazy var filterButtonTapped : UIAction =  UIAction { _ in
         self.delegate?.selectedFilterButton()
         
     }
@@ -81,11 +82,11 @@ final class AdoptingHeaderView : UIView {
     private lazy var sortButton : UIButton = {
         let button = UIButton()
         button.setTitle("Sort", for: .normal)
-        button.backgroundColor = .white
+        button.backgroundColor = Theme.defaultTheme.themeColor.primaryBackColor
         button.setTitleColor(.red, for: .normal)
-        button.layer.borderColor = UIColor.red.cgColor
+        button.layer.borderColor = Theme.defaultTheme.themeColor.primaryBorderColor
         button.layer.borderWidth = 1
-        button.layer.cornerRadius = 10
+        button.layer.cornerRadius = CornerRadius.small.rawValue
         button.menu = sortMenu
         button.showsMenuAsPrimaryAction = true
         return button
@@ -116,7 +117,6 @@ final class AdoptingHeaderView : UIView {
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        backgroundColor = .white
         confifureUI()
     }
     

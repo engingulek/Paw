@@ -6,7 +6,7 @@ import AdvertFilterModuleInterface
 protocol AdoptinHomePresenterInterface {
     var router : AdoptingRouterInterface? {get}
     var view : AdoptingHomeViewControllerInterfaca? {get}
-    var interactor : AdoptingHomeServiceProtocol {get}
+    var interactor : AdoptingHomeInteractorProtocol {get}
     
     func viewDidload()
     func viewWillAppear()
@@ -39,7 +39,7 @@ final class AdoptinHomePresenter  {
     
     var router: AdoptingRouterInterface?
     weak var view: AdoptingHomeViewControllerInterfaca?
-    var interactor: AdoptingHomeServiceProtocol
+    var interactor: AdoptingHomeInteractorProtocol
     
     private var categories : [CategoryResult] = []
     private var adoptingAdverts : [AdoptingAdvert] = []
@@ -50,7 +50,7 @@ final class AdoptinHomePresenter  {
     
     init(router: AdoptingRouterInterface? = nil,
          view: AdoptingHomeViewControllerInterfaca?,
-         interactor : AdoptingHomeServiceProtocol = AdoptingHomeService.shared) {
+         interactor : AdoptingHomeInteractorProtocol = AdoptingHomeService.shared) {
         self.router = router
         self.view = view
         self.interactor = interactor
@@ -167,7 +167,7 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
     
     // MARK: ViewDidLoad
     func viewDidload() {
-        view?.setBackColorAble(color: .white)
+        view?.setBackColorAble(color: Theme.defaultTheme.themeColor.primaryBackColor)
         view?.navigationBackButtonHiddenAble(isHidden:true)
         Task {
             @MainActor in
@@ -189,7 +189,6 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
             @MainActor in
             await fetchAdoptingAdverts()
         }
-        
     }
     
     
@@ -211,7 +210,8 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
     
     // MARK: - ToAdvertFilterController
     func toAdvertFilterController() {
-        router?.toAdvertFilter(view: view,adoptingAdverts: adoptingAdverts, delegate: self)
+        router?.toAdvertFilter(view: view,adoptingAdverts: 
+                        adoptingAdverts, delegate: self)
     }
     
     //MARK: - Sort Funcitons of Advert
@@ -263,20 +263,20 @@ extension AdoptinHomePresenter {
         let labelColor : UIColor
         
         
-        cornerRadius =  10.0
+        cornerRadius =  CornerRadius.small.rawValue
         borderWidth = 1.0
         category = categories[indexPath.item]
         
         if  category.id == selectedCategory {
-            borderColor = .red
-            backColor = .red
-            labelColor = .white
+            borderColor = Theme.defaultTheme.cellColor.primaryBorderColor
+            backColor = Theme.defaultTheme.cellColor.primaryBackColor
+            labelColor = Theme.defaultTheme.cellColor.primaryLabelColor
             
         }else{
             
-            borderColor = .black
-            backColor = .white
-            labelColor = .black
+            borderColor = Theme.defaultTheme.cellColor.secondaryBorderColor
+            backColor = Theme.defaultTheme.cellColor.secondaryBackColor
+            labelColor = Theme.defaultTheme.cellColor.secondaryLabelColor
         }
         
         return (
@@ -322,7 +322,6 @@ extension AdoptinHomePresenter {
         
     }
 }
-
 
 extension AdoptinHomePresenter : AdvertFilterControllerDelegate {
     func toAdoptingHomeViewControllerWithPopViewController(filterAdoptingAdverts: [ModelKit.AdoptingAdvert]) {
