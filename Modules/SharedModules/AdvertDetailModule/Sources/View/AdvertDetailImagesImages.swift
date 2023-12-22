@@ -105,18 +105,15 @@ final class AdvertDetailImagesImages : UIView {
   
     
     @objc private func selectedOneImage() {
-        print("first")
         self.delegate?.selectedImageOne()
     }
     
     @objc private func selectedTwoImage() {
-        print("second")
         self.delegate?.selectedImageTwo()
     }
     
     
     @objc private func selectedThreeImage() {
-        print("third")
         self.delegate?.selectedImageThree()
     }
     

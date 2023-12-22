@@ -9,6 +9,4 @@ public final class CreateAdvertRouter : CreateAdvertModuleInterface {
         let viewController = CreateAdvertViewController()
         return viewController
     }
-    
-    
 }

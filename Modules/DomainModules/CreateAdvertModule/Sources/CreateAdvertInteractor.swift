@@ -18,7 +18,6 @@ final class CreateAdvertInteractor : CreateAdvertInteractorInterface {
                  )
            
         }catch{
-            print("Create Interactor error \(error.localizedDescription)")
             throw error
         }
     }
@@ -33,7 +32,4 @@ final class CreateAdvertInteractor : CreateAdvertInteractorInterface {
             throw error
         }
     }
-    
-    
-    
 }

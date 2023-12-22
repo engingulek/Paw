@@ -22,7 +22,7 @@ let dependensies : [TargetDependency] = [
              path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule")),
     .project(
         target: "AdvertFilterModuleInterface",
-        path: .relativeToRoot("Modules/SharedModules/AdvertFilterModule")),
+        path: .relativeToRoot("Modules/DomainModules/AdvertFilterModule")),
     .project(target: "AdvertDetailModuleInterface",
              path: .relativeToRoot("Modules/SharedModules/AdvertDetailModule")),
     .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),

@@ -106,10 +106,7 @@ final class CreateAdvertCollectionViewCell : UICollectionViewCell {
             make.bottom.equalToSuperview().offset(-5)
             make.leading.equalToSuperview().offset(5)
         }
-    
-        
     }
-    
     
     func configureData(createAdvert:AdoptingAdvert){
         let urlImage = URL(string: createAdvert.images.first ?? "" )
@@ -121,7 +118,6 @@ final class CreateAdvertCollectionViewCell : UICollectionViewCell {
             .transition(.fade(1))
         ]
         )
-        
         animalName.text = createAdvert.name
         genusLabel.text = "\(createAdvert.genus)/\(createAdvert.category)"
     }

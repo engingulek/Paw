@@ -232,9 +232,6 @@ final class CreateAdvertView : UIView {
         categoryPickerView.reloadAllComponents()
     }
     
- 
-    
-    
     func maleGenderLabelChangeColor(
         backColor:UIColor,
         textColor:UIColor){
@@ -319,18 +316,12 @@ final class CreateAdvertView : UIView {
     }
     
     func configureData(images:[Data]){
-        print(images.count)
         if images.count == 3 {
             [firstImageView,secondImageView,thirdImageView].enumerated().forEach { index,imageView in
                 imageView.image = UIImage(data: images[index])
             }
-            
         }
-       
     }
-    
-   
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

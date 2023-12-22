@@ -1,11 +1,10 @@
 import UIKit
 import CommonKit
 import SnapKit
-typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble
+typealias Ables = UIViewControllerAble & NavConAble & TabbarConAble & AlertMessageAble
 
 protocol AdvertDetailViewControllerInterface: AnyObject ,Ables {
     func configureData(advertDetail: AdvertDetail)
-    func alertMessage(title:String,message:String)
     
     func changeOpacityWhenSelectedImageOne(opacity:Float,defaultOpacity:Float)
     func changeOpacityWhenSelectedImageTwo(opacity:Float,defaultOpacity:Float)
@@ -45,8 +44,6 @@ final class AdvertDetailViewController: UIViewController{
             make.bottom.equalToSuperview()
         }
     }
-    
-    
 }
 
 extension AdvertDetailViewController : AdvertDetailViewControllerInterface  {
@@ -62,28 +59,19 @@ extension AdvertDetailViewController : AdvertDetailViewControllerInterface  {
        
     }
     
-    
-    func alertMessage(title:String,message:String) {
-        DispatchQueue.main.async {[weak self] in
-            guard let self = self else { return }
-            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Okey", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
-    
-    
-    
     func changeOpacityWhenSelectedImageOne(opacity: Float, defaultOpacity: Float) {
-        detailImageView.changeOpacityImageOne(opacity: opacity, defaultOpacity: defaultOpacity)
+        detailImageView.changeOpacityImageOne(opacity: opacity, 
+                                    defaultOpacity: defaultOpacity)
     }
     
     func changeOpacityWhenSelectedImageTwo(opacity: Float, defaultOpacity: Float) {
-        detailImageView.changeOpacityImageTwo(opacity: opacity, defaultOpacity: defaultOpacity)
+        detailImageView.changeOpacityImageTwo(opacity: opacity, 
+                                    defaultOpacity: defaultOpacity)
     }
     
     func changeOpacityWhenSelectedImageThree(opacity: Float, defaultOpacity: Float) {
-        detailImageView.changeOpacityImageThree(opacity: opacity, defaultOpacity: defaultOpacity)
+        detailImageView.changeOpacityImageThree(opacity: opacity, 
+                                    defaultOpacity: defaultOpacity)
     }
 }
 

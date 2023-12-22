@@ -83,8 +83,6 @@ extension AlertMessageAble  where Self : UIViewController {
         self.present(alert, animated: true)
         
     }
-    
-
 }
 
 

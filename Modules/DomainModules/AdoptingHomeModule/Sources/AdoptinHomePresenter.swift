@@ -185,10 +185,7 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
     func viewWillAppear() {
         view?.tabbarisHidden(isHidden: false)
         view?.setNavigationBarHidden(isHidden: true, animated: true)
-        Task {
-            @MainActor in
-            await fetchAdoptingAdverts()
-        }
+        
     }
     
     
@@ -324,7 +321,8 @@ extension AdoptinHomePresenter {
 }
 
 extension AdoptinHomePresenter : AdvertFilterControllerDelegate {
-    func toAdoptingHomeViewControllerWithPopViewController(filterAdoptingAdverts: [ModelKit.AdoptingAdvert]) {
+    func toAdoptingHomeViewControllerWithPopViewController(
+        filterAdoptingAdverts: [ModelKit.AdoptingAdvert]) {
         adoptingAdverts = filterAdoptingAdverts
         view?.reloadTableView()
     }

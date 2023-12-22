@@ -37,7 +37,6 @@ final class AdvertDetailService : AdvertDetailServiceProtocol {
     
     func addAdvertToFromFavList(advertId:Int,userId:Int) async throws {
         let parameters = ["advertid":advertId,"userid":userId]
-        print(parameters)
         do{
             _ = try await NetworkManager.shared.fetch(
                 target: .addAdvertToFavList(parameters),

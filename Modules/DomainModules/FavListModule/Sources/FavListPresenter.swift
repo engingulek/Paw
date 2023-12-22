@@ -90,7 +90,6 @@ final class FavListPresenter : FavListPresenterInterface {
     }
     
     func didSelectItemAt(at indexPath : IndexPath) {
-        print(indexPath.item)
         let favAdvertId = favAdverts[indexPath.item].advertId
         router?.toAdvertDetail(view: view, id: favAdvertId)
     }

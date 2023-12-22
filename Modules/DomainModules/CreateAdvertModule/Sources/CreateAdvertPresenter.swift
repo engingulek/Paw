@@ -157,8 +157,6 @@ final class CreateAdvertPresenter {
                 "about":info?.animalInfo ?? "",
                 "userid":1,
             ]
-
-            print(parameters)
             Task {
                 @MainActor in
                 await addAdvert(parameters:parameters)

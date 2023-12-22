@@ -7,7 +7,6 @@ protocol FavAdvertCollectionViewCellDelegate {
     func selectedFavIcon(index:Int)
 }
 
-
 final class FavAdvertCollectionViewCell : UICollectionViewCell {
     static let identifier : String = "favAdvertCollectionViewCell"
     var delegate : FavAdvertCollectionViewCellDelegate?
@@ -60,10 +59,6 @@ final class FavAdvertCollectionViewCell : UICollectionViewCell {
         return uiView
     }()
     
-    
-   
-
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
@@ -105,8 +100,6 @@ final class FavAdvertCollectionViewCell : UICollectionViewCell {
             make.bottom.equalToSuperview().offset(-5)
             make.leading.equalToSuperview().offset(5)
         }
-    
-        
     }
     
     

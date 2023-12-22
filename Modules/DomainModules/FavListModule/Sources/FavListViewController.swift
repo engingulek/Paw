@@ -14,15 +14,17 @@ protocol FavListViewControllerInterface : AnyObject,Ables {
 
 
 final class FavListViewController: UIViewController {
-  lazy var presenter: FavListPresenterInterface = FavListPresenter(view: self)
+    lazy var presenter: FavListPresenterInterface = FavListPresenter(view: self)
     
     private lazy var favAdvertcollectionview : UICollectionView  = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 2.5, height:UIScreen.main.bounds.height / 4 )
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 2.5,
+                                 height:UIScreen.main.bounds.height / 4 )
         layout.scrollDirection = .vertical
         let  collectionview = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionview.register(FavAdvertCollectionViewCell.self, forCellWithReuseIdentifier: FavAdvertCollectionViewCell.identifier)
+        collectionview.register(FavAdvertCollectionViewCell.self,
+                                forCellWithReuseIdentifier: FavAdvertCollectionViewCell.identifier)
         
         collectionview.showsHorizontalScrollIndicator = false
         collectionview.backgroundColor = UIColor.white
@@ -65,17 +67,20 @@ final class FavListViewController: UIViewController {
     }
 }
 
-
+// MARK: UICollectionViewDelegate,UICollectionViewDataSource
 extension FavListViewController : UICollectionViewDelegate,UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(presenter.numberOfItems())
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
         return presenter.numberOfItems()
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-         guard let cell = favAdvertcollectionview.dequeueReusableCell(
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = favAdvertcollectionview.dequeueReusableCell(
             withReuseIdentifier: FavAdvertCollectionViewCell.identifier,
             for: indexPath) as? FavAdvertCollectionViewCell else {return UICollectionViewCell()}
+        
         let favAdvert = presenter.cellForItem(at: indexPath)
         cell.configureData(favAdvert: favAdvert)
         cell.delegate = self
@@ -83,20 +88,22 @@ extension FavListViewController : UICollectionViewDelegate,UICollectionViewDataS
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
         presenter.didSelectItemAt(at: indexPath)
     }
 }
 
-
+//MARK: FavAdvertCollectionViewCellDelegate
 extension FavListViewController: FavAdvertCollectionViewCellDelegate {
     func selectedFavIcon(index: Int) {
         presenter.deleteFavAdvertAction(index: index)
     }
 }
 
+//MARK: FavListViewControllerInterface
 extension FavListViewController : FavListViewControllerInterface {
-   
+    
     func prepareCollectionView() {
         favAdvertcollectionview.delegate = self
         favAdvertcollectionview.dataSource = self

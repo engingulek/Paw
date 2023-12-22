@@ -18,7 +18,7 @@ let interfaceTarget  = Target(
 let dependensies : [TargetDependency] = [
     .project(
         target: "AdvertFilterModuleInterface",
-        path: .relativeToRoot("Modules/SharedModules/AdvertFilterModule")),
+        path: .relativeToRoot("Modules/DomainModules/AdvertFilterModule")),
     .project(target: "AdoptingHomeModuleInterface",
              path: .relativeToRoot("Modules/DomainModules/AdoptingHomeModule")),
     .project(target: "CommonKit", path: .relativeToRoot("Kits/SharedKits/CommonKit")),

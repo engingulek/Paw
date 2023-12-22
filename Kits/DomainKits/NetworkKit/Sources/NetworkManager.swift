@@ -36,28 +36,22 @@ public final class NetworkManager : NetworkManagerProtocol  {
             )
                 .validate()
                 .serializingDecodable(T.self)
-                
-                
             
             let result = await request.response
             
             guard let response = result.response else {
-                print("invalidResponse")
                 throw NetworkError.invalidResponse
             }
             
             switch response.statusCode {
             case 200...299:
                 guard let value = result.value else {
-                    print("valueError")
                     throw NetworkError.valueError
                 }
                 return value
             case 404:
                 throw NetworkError.noRequestResource
             default:
-                print("defaultStatusCode")
-                print(response.statusCode)
                 throw NetworkError.defaultStatusCode
             }
         }

@@ -101,7 +101,7 @@
                BlueprintIdentifier = "8A76FF1C299AEF1EE7CF3653"
                BuildableName = "AdvertFilterModule.framework"
                BlueprintName = "AdvertFilterModule"
-               ReferencedContainer = "container:Modules/SharedModules/AdvertFilterModule/AdvertFilterModule.xcodeproj">
+               ReferencedContainer = "container:Modules/DomainModules/AdvertFilterModule/AdvertFilterModule.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -115,7 +115,7 @@
                BlueprintIdentifier = "76836ADCAAC48692C4F6493B"
                BuildableName = "AdvertFilterModuleInterface.framework"
                BlueprintName = "AdvertFilterModuleInterface"
-               ReferencedContainer = "container:Modules/SharedModules/AdvertFilterModule/AdvertFilterModule.xcodeproj">
+               ReferencedContainer = "container:Modules/DomainModules/AdvertFilterModule/AdvertFilterModule.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry

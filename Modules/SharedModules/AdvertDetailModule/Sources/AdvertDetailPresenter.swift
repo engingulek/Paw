@@ -14,8 +14,6 @@ protocol AdvertDetailPresenterInterface {
     func selectedADIThree()
     
     func favIconAction(advertId: Int, userId: Int)
-   
-    
 }
 
 
@@ -25,7 +23,6 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
     weak var view : AdvertDetailViewControllerInterface?
   
     var interactor : AdvertDetailServiceProtocol
-    
     var advertDetail : AdvertDetail? = nil
     
     init(router: AdvertDetailRouterInterface? = nil, 
@@ -47,10 +44,8 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
             advertDetail = result
             view?.configureData(advertDetail: advertDetail!)
         }catch{
-            print("Detail Error \(error.localizedDescription)")
             advertDetail = nil
         }
-        
     }
     
     //MARK: - Delete FavAdvert
@@ -60,8 +55,12 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
                 advertId: advertId,
                 userId: userId)
         }catch{
-            // TODO: Alert Message will add
-            view?.alertMessage(title: "Error", message: "Something went wrong")
+            
+            view?.createAlertMesssage(
+                title: "Error",
+                message: "Something went wrong",
+                actionTitle: "Ok")
+            
         }
     }
     
@@ -71,8 +70,11 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
                 advertId: advertId,
                 userId: userId)
         }catch{
-            // TODO: Alert Message will add
-            view?.alertMessage(title: "Error", message: "Something went wrong")
+            
+            view?.createAlertMesssage(
+                title: "Error",
+                message: "Something went wrong",
+                actionTitle: "Ok")
         }
     }
     
@@ -88,7 +90,13 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
     }
     
     func sendAdvertDetail() -> AdvertDetail {
-        return advertDetail ?? AdvertDetail(id: 0, images: [""], name: "", gender: "", genus: "", category: "", age: 0, city: "", about: "", userId: 0, userImage: "", userName: "", userSurname: "",favStatus: false)
+        return advertDetail ?? AdvertDetail(id: 0, images: [""], 
+                                    name: "", gender: "",
+                                    genus: "", category: "",
+                                    age: 0, city: "", about: "",
+                                    userId: 0, userImage: "",
+                                    userName: "", userSurname: "",
+                                    favStatus: false)
     }
     
     func selectedADIOne() {
@@ -109,7 +117,6 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
         guard let favStatus = advertDetail?.favStatus else {return}
         
         if favStatus{
-            print("delete")
             Task {
                 @MainActor in
                 await deleteFavAdvert(advertId: advertId, userId: userId)
@@ -122,7 +129,10 @@ final class  AdvertDetailPresenter : AdvertDetailPresenterInterface {
                 await fetchAdvertDetail(advertId: advertId, userId: userId)
             }
         }else{
-            view?.alertMessage(title: "Error", message: "Something went wrong")
+            view?.createAlertMesssage(
+                title: "Error",
+                message: "Something went wrong",
+                actionTitle: "Ok")
         }
     }
 }

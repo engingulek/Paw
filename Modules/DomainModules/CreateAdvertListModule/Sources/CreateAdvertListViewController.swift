@@ -17,7 +17,6 @@ protocol CreateAdvertListViewControllerInterface : AnyObject,Ables {
 final class CreateAdvertListViewController : UIViewController{
     lazy var presenter: CreateAdvertListPresenterInterface = CreateAdvertListPresenter(view: self)
     
-    
     private lazy var createAdvertcollectionview : UICollectionView  = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)

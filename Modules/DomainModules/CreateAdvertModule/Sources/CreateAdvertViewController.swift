@@ -14,13 +14,16 @@ TabbarConAble &
 AlertMessageAble
 
 protocol CreateAdvertViewControllerInterface : AnyObject,Ables {
+    var presenter : CreateAdvertPresenterInterface {get}
     func categoryPickerViewAllComponents()
-  
     func changeFemaleButtonColors(backColor:UIColor,textColor:UIColor)
     func changeMaleButtonColors(backColor:UIColor,textColor:UIColor)
 }
 
 final class CreateAdvertViewController : UIViewController {
+    lazy var presenter : CreateAdvertPresenterInterface = CreateAdvertPresenter(
+        view: self,
+        createAdvertView: createAdvertView)
     
     private lazy var createAdvertView = CreateAdvertView()
     
@@ -30,11 +33,6 @@ final class CreateAdvertViewController : UIViewController {
         createAdvertView.presenter = presenter
     }
     
-    
-    
-  
-    lazy var presenter : CreateAdvertPresenterInterface = CreateAdvertPresenter(
-        view: self,createAdvertView: createAdvertView)
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()

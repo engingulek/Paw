@@ -30,5 +30,4 @@ final class CreateAdvertListInteractor : CreateAdvertListInteractorInterface {
             throw error
         }
     }
-    
 }

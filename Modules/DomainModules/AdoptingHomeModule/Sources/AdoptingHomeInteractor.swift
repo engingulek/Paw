@@ -61,7 +61,7 @@ final class AdoptingHomeService : AdoptingHomeInteractorProtocol {
             throw error
         }
     }
-    
+    //MARK: - AdvertFilterBySearchTextAndCategoryId
     func advertFilterBySearchTextAndCategoryId(
         categoryId: Int,
         searchText: String) async throws -> [AdoptingAdvert] {
