@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		116F3E0727739278EAD7F456 /* AccountActionModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = C6A1E4417806184155FD7A91 /* AccountActionModuleInterface.framework */; };
 		264D5243185B060C8BDE1385 /* CreateAdvertModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876136BB7986CF36CABD58D1 /* CreateAdvertModuleInterface.swift */; };
 		2B75BB886A559DA3C7F90DDB /* CreateAdvertInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358BACA54EB8661D49C3769A /* CreateAdvertInteractor.swift */; };
 		4A048FEDE2293C77A9B9EA3B /* CommonKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = DDF34A564014DDD7DE4171D1 /* CommonKit.framework */; };
@@ -39,7 +38,6 @@
 			buildActionMask = 8;
 			dstSubfolderSpec = 16;
 			files = (
-				116F3E0727739278EAD7F456 /* AccountActionModuleInterface.framework in Dependencies */,
 				4A048FEDE2293C77A9B9EA3B /* CommonKit.framework in Dependencies */,
 				E09627B0C55DBF102C841EF2 /* CreateAdvertModuleInterface.framework in Dependencies */,
 				A7C5FE64BC45914F32614CFA /* DependencyKit.framework in Dependencies */,
@@ -81,7 +79,6 @@
 		876136BB7986CF36CABD58D1 /* CreateAdvertModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertModuleInterface.swift; sourceTree = "<group>"; };
 		9563190C13B4CD3EFBB737BD /* CreateAdvertModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CreateAdvertModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		9EF0DD32694AD2B91AEAE5A8 /* CreateAdvertModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CreateAdvertModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6A1E4417806184155FD7A91 /* AccountActionModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AccountActionModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8297476D26FC6AA802DFE18 /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D51492B3B9BECABB552986 /* CreateAdvertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertView.swift; sourceTree = "<group>"; };
 		D83E9A94B4872BB6991E5F48 /* CreateAdvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +127,6 @@
 		68CBD9D934744E109461E293 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C6A1E4417806184155FD7A91 /* AccountActionModuleInterface.framework */,
 				DDF34A564014DDD7DE4171D1 /* CommonKit.framework */,
 				41FA9286B485B5029EDFEE6E /* CreateAdvertModule.framework */,
 				9EF0DD32694AD2B91AEAE5A8 /* CreateAdvertModuleInterface.framework */,

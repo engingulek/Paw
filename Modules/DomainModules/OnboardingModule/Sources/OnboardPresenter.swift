@@ -4,7 +4,7 @@ import Foundation
 protocol OnboardPresenterInterface : AnyObject {
     func viewDidLoad()
     func selectedAdoptingView()
-    func createAccountSelected()
+    
 }
 
 final class OnboardPresenter : OnboardPresenterInterface {
@@ -28,7 +28,5 @@ extension OnboardPresenter {
         router?.toTabbarController(view: view)
     }
     
-    func createAccountSelected() {
-        router?.toAccoountActionModule(view: view)
-    }
+  
 }

@@ -11,8 +11,9 @@
 		127D6222BCF6E105C20A07F4 /* NetworkKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = C03D95D90A83D10C9A3A76E5 /* NetworkKit.framework */; };
 		12F2F2811F75AC4B80899811 /* CommonKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 5B461599F783771B805D698B /* CommonKit.framework */; };
 		7C756644DDA2A93CA7C6C279 /* AccountActionModuleInterface.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = AD07B4647BD7A2A4E0139264 /* AccountActionModuleInterface.framework */; };
-		7D4F5DA22B34D024001B3CA5 /* AccountActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F5DA12B34D024001B3CA5 /* AccountActionView.swift */; };
+		7DD91FF92B35B30900349B2F /* AccountActionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD91FF82B35B30900349B2F /* AccountActionPresenter.swift */; };
 		C1F655ED0DF4B2548AC9AB93 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6F9C471AA6561A724B1DFA84 /* SnapKit */; };
+		C97EC098862E0CFD31A49481 /* AccountActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D00ADAA383D496F36CAC60 /* AccountActionView.swift */; };
 		E61E7227901A69576153D750 /* AccountActiınModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165226491A278050D1CFFE08 /* AccountActiınModuleInterface.swift */; };
 		EEF89396ABE8E4ADE13E8F35 /* AccountActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C79116C1E021BB0B74EE4C /* AccountActionViewController.swift */; };
 /* End PBXBuildFile section */
@@ -69,10 +70,11 @@
 		5B461599F783771B805D698B /* CommonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F61EBCB303289653DCF05E5 /* AccountActionModuleInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AccountActionModuleInterface-Info.plist"; sourceTree = "<group>"; };
 		748AEF3556AC69A7240AF3EB /* AccountActionModule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AccountActionModule-Info.plist"; sourceTree = "<group>"; };
-		7D4F5DA12B34D024001B3CA5 /* AccountActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountActionView.swift; sourceTree = "<group>"; };
+		7DD91FF82B35B30900349B2F /* AccountActionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountActionPresenter.swift; sourceTree = "<group>"; };
 		AD07B4647BD7A2A4E0139264 /* AccountActionModuleInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AccountActionModuleInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB32AACB889975F207B7D38 /* AccountActionModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AccountActionModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C03D95D90A83D10C9A3A76E5 /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8D00ADAA383D496F36CAC60 /* AccountActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountActionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				474868353CCE7A8AC6529ED5 /* AccountActionRouter.swift */,
+				C8D00ADAA383D496F36CAC60 /* AccountActionView.swift */,
 				25C79116C1E021BB0B74EE4C /* AccountActionViewController.swift */,
-				7D4F5DA12B34D024001B3CA5 /* AccountActionView.swift */,
+				7DD91FF82B35B30900349B2F /* AccountActionPresenter.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -263,8 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A4BD20A9209D70694844EBA /* AccountActionRouter.swift in Sources */,
+				C97EC098862E0CFD31A49481 /* AccountActionView.swift in Sources */,
+				7DD91FF92B35B30900349B2F /* AccountActionPresenter.swift in Sources */,
 				EEF89396ABE8E4ADE13E8F35 /* AccountActionViewController.swift in Sources */,
-				7D4F5DA22B34D024001B3CA5 /* AccountActionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

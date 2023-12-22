@@ -31,9 +31,7 @@ extension OnboardiingViewController : OnboardiingViewControllerInterfaca {
 
 
 extension OnboardiingViewController :  OnboardingViewDelegate  {
-    func createAccount() {
-        presenter.createAccountSelected()
-    }
+    
     
     func toHomePage() {
         presenter.selectedAdoptingView()

@@ -1,8 +1,17 @@
 import Foundation
 import UIKit
 import SnapKit
+import CommonKit
+
+protocol AccountActionViewControllerInterface : AnyObject,UIViewControllerAble  {
+   
+    
+}
+
+
 
 final class AccountActionViewController : UIViewController {
+   lazy var presenter: AccountActionPresenterInterface = AccountActionPresenter(view: self)
     
     public override func loadView() {
         let accountActionView = AccountActionView()
@@ -11,7 +20,13 @@ final class AccountActionViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        presenter.viewDidLoad()
     }
+    
+ 
+}
+
+extension AccountActionViewController : AccountActionViewControllerInterface {
+ 
 }
 

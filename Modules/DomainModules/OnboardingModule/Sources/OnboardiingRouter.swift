@@ -4,11 +4,10 @@ import UIKit
 import OnboardingModuleInterface
 import TabbarModuleInterface
 import DependencyKit
-import AccountActionModuleInterface
+
 
 protocol OnboardiingRouterInterface : AnyObject  {
     func toTabbarController(view : OnboardiingViewControllerInterfaca?)
-    func toAccoountActionModule(view: OnboardiingViewControllerInterfaca?)
 }
 public final class  OnboardingRouter : OnboardingModuleInterfac {
    
@@ -32,12 +31,7 @@ extension OnboardingRouter :  OnboardiingRouterInterface  {
         view?.presentViewControllerAble(viewController, animated: true)
     }
     
-    func toAccoountActionModule(view: OnboardiingViewControllerInterfaca?) {
-        @Dependency var accountActionModule : AccountActionModuleInterface
-        let viewController = accountActionModule.accountActionViewController()
-        view?.presentViewControllerAble(viewController, animated: true)
-    }
-    
+
   
     
     

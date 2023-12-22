@@ -137,6 +137,19 @@ final class AccountActionView : UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func returnInfo() -> (
+        nameText:String,
+        surnameText:String,
+        emailText:String,
+        passwordText:String){
+            let nameText:String = nameTextField.text ?? ""
+            let surnameText:String = surnameTextField.text ?? ""
+            let emailText:String = emailTextField.text ?? ""
+            let passwordText:String = passwordTextField.text ?? ""
+            
+            return(nameText,surnameText,emailText,passwordText)
+    }
+    
     private func configureUI(){
         addSubview(selectedImageView)
         selectedImageView.snp.makeConstraints { make in

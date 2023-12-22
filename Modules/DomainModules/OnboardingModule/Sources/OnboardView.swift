@@ -4,7 +4,6 @@ import UIKit
 
 protocol OnboardingViewDelegate : AnyObject {
     func toHomePage()
-    func createAccount()
 }
 
 final class OnboardView : UIView {
@@ -48,7 +47,7 @@ final class OnboardView : UIView {
     }()
     
     private lazy var createAccountButtonAction : UIAction =  UIAction { _ in
-        self.delegate?.createAccount()
+       
     }
 
     private lazy var toHomePageButton : UIButton = {
