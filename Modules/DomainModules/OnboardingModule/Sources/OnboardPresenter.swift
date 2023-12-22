@@ -4,16 +4,15 @@ import Foundation
 protocol OnboardPresenterInterface : AnyObject {
     func viewDidLoad()
     func selectedAdoptingView()
-    
 }
 
 final class OnboardPresenter : OnboardPresenterInterface {
     
-    
-    var router: OnboardiingRouterInterface?
+    private var router: OnboardiingRouterInterface?
     weak var view: OnboardiingViewControllerInterfaca?
     
-    init(router: OnboardiingRouterInterface? = nil, view: OnboardiingViewControllerInterfaca?) {
+    init(router: OnboardiingRouterInterface? = nil,
+        view: OnboardiingViewControllerInterfaca?) {
         self.router = router
         self.view = view
     }
@@ -27,6 +26,4 @@ extension OnboardPresenter {
     func selectedAdoptingView() {
         router?.toTabbarController(view: view)
     }
-    
-  
 }

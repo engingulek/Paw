@@ -11,7 +11,7 @@ protocol AdoptingRouterInterface {
     func toAdvertFilter(
         view:AdoptingHomeViewControllerInterfaca?,
         adoptingAdverts:[AdoptingAdvert],
-        delefate:AdvertFilterControllerDelegate?)
+        delegate:AdvertFilterControllerDelegate?)
 }
 
 public final class AdoptingRouter : AdoptingHomeModuleInterface {
@@ -28,19 +28,21 @@ public final class AdoptingRouter : AdoptingHomeModuleInterface {
 }
 
 extension AdoptingRouter : AdoptingRouterInterface {
-    func toAdvertFilter(
-        view: AdoptingHomeViewControllerInterfaca?,
-        adoptingAdverts: [ModelKit.AdoptingAdvert],
-        delefate delegate: AdvertFilterControllerDelegate?) {
-            @Dependency var advertFilterModuleInterface : AdvertFilterModuleInterface
-            let viewController = advertFilterModuleInterface
-                .advertFilterController(adoptingAdverts: adoptingAdverts, delegate: delegate)
-            view?.pushViewControllerAble(viewController, animated: true)
-    }
     func toAdvertDetail(view : AdoptingHomeViewControllerInterfaca?,id:Int) {
         @Dependency var advertDetailHomeModuleInterface : AdvertDetailModuleInterface
         let viewController = advertDetailHomeModuleInterface.advertDetailViewController(id:id)
         view?.pushViewControllerAble(viewController, animated: true)
+    }
+    
+    func toAdvertFilter(
+        view: AdoptingHomeViewControllerInterfaca?,
+        adoptingAdverts: [ModelKit.AdoptingAdvert],
+        delegate : AdvertFilterControllerDelegate?) {
+            
+            @Dependency var advertFilterModuleInterface : AdvertFilterModuleInterface
+            let viewController = advertFilterModuleInterface
+                .advertFilterController(adoptingAdverts: adoptingAdverts, delegate: delegate)
+            view?.pushViewControllerAble(viewController, animated: true)
     }
 }
 

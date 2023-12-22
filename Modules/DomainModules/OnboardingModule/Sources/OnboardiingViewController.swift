@@ -9,12 +9,11 @@ protocol OnboardiingViewControllerInterfaca : AnyObject,Ables {
 }
 
 final class OnboardiingViewController: UIViewController{
-   
+    lazy var presenter: OnboardPresenterInterface = OnboardPresenter(view: self)
     
-   lazy var presenter: OnboardPresenterInterface = OnboardPresenter(view: self)
-    
+    private lazy var  onboardView = OnboardView()
     public override func loadView() {
-        let onboardView = OnboardView()
+        onboardView = OnboardView()
         view =  onboardView
         onboardView.delegate = self
     }
@@ -25,16 +24,11 @@ final class OnboardiingViewController: UIViewController{
     }
 }
 
-extension OnboardiingViewController : OnboardiingViewControllerInterfaca {
-    
-}
-
-
 extension OnboardiingViewController :  OnboardingViewDelegate  {
-    
-    
     func toHomePage() {
         presenter.selectedAdoptingView()
     }
-    
 }
+
+//MARK : - OnboardiingViewControllerInterfaca
+extension OnboardiingViewController : OnboardiingViewControllerInterfaca {}

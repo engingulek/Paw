@@ -211,7 +211,7 @@ extension AdoptinHomePresenter : AdoptinHomePresenterInterface {
     
     // MARK: - ToAdvertFilterController
     func toAdvertFilterController() {
-        router?.toAdvertFilter(view: view,adoptingAdverts: adoptingAdverts, delefate: self)
+        router?.toAdvertFilter(view: view,adoptingAdverts: adoptingAdverts, delegate: self)
     }
     
     //MARK: - Sort Funcitons of Advert
