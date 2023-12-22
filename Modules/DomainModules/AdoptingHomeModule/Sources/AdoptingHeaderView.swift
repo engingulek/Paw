@@ -39,10 +39,12 @@ final class AdoptingHeaderView : UIView {
         let imageView = UIImageView(
             frame: CGRect(x: 0, y: 0,
                           width: 30, height: 30))
-        let image = UIImage(systemName: "magnifyingglass")?.withTintColor(.lightGray,renderingMode: .alwaysOriginal)
+        let image = UIImage(systemName: "magnifyingglass")?
+            .withTintColor(.lightGray,renderingMode: .alwaysOriginal)
         imageView.image = image
         textField.leftView = imageView
-        textField.addTarget(self, action: #selector(searchTextFieldDidChange), for: .editingChanged)
+        textField.addTarget(self, action: #selector(searchTextFieldDidChange), 
+                        for: .editingChanged)
         return textField
     }()
     
