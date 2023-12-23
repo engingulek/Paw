@@ -8,7 +8,7 @@ This project was written to learn Tuist
 ### There are 3 Kits
 <ul>
   <li>CoreKits</li>
-  <li>DomainKits/li>
+  <li>DomainKits</li>
   <li>SharedKits</li>
 </ul>  
 
